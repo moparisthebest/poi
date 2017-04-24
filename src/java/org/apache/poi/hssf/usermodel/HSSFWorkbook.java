@@ -2269,6 +2269,27 @@ public final class HSSFWorkbook extends POIDocument implements org.apache.poi.ss
         return recalc != null && recalc.getEngineId() != 0;
     }
 
+    /**
+     * Whether a call to {@link HSSFCell#setCellFormula(String)} will validate the formula or not.
+     *
+     * @param value true if the application will validate the formula is correct
+     * @since 3.17
+     */
+    @Override
+    public void setCellFormulaValidation(final boolean value) {
+        // currently {@link HSSFCell#setCellFormula(String)} does no validation anyway, ignore
+    }
+
+    /**
+     * Whether a call to {@link HSSFCell#setCellFormula(String)} will validate the formula or not.
+     *
+     * @since 3.17
+     */
+    @Override
+    public boolean getCellFormulaValidation() {
+        return false;
+    }
+
 	/**
 	 * Changes an external referenced file to another file.
 	 * A formula in Excel which references a cell in another file is saved in two parts:

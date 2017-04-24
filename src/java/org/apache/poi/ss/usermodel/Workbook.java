@@ -686,4 +686,19 @@ public interface Workbook extends Closeable, Iterable<Sheet> {
      * @throws IOException if the object can't be embedded
      */
     int addOlePackage(byte[] oleData, String label, String fileName, String command) throws IOException;
+
+    /**
+     * Whether a call to {@link Cell#setCellFormula(String)} will validate the formula or not.
+     *
+     * @param value true if the application will validate the formula is correct
+     * @since 3.17
+     */
+    void setCellFormulaValidation(boolean value);
+
+    /**
+     * Whether a call to {@link Cell#setCellFormula(String)} will validate the formula or not.
+     *
+     * @since 3.17
+     */
+    boolean getCellFormulaValidation();
 }

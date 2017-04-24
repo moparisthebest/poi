@@ -1363,6 +1363,27 @@ public class SXSSFWorkbook implements Workbook {
     public int addOlePackage(byte[] oleData, String label, String fileName, String command) throws IOException {
         return _wb.addOlePackage(oleData, label, fileName, command);
     }
-    
+
+    /**
+     * Whether a call to {@link SXSSFCell#setCellFormula(String)} will validate the formula or not.
+     *
+     * @param value true if the application will validate the formula is correct
+     * @since 3.17
+     */
+    @Override
+    public void setCellFormulaValidation(final boolean value) {
+        // currently {@link SXSSFCell#setCellFormula(String)} does no validation anyway, ignore
+    }
+
+    /**
+     * Whether a call to {@link SXSSFCell#setCellFormula(String)} will validate the formula or not.
+     *
+     * @since 3.17
+     */
+    @Override
+    public boolean getCellFormulaValidation() {
+        return false;
+    }
+
 //end of interface implementation
 }
