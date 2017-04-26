@@ -209,6 +209,11 @@ public class XSSFWorkbook extends POIXMLDocument implements Workbook {
     private MissingCellPolicy _missingCellPolicy = MissingCellPolicy.RETURN_NULL_AND_BLANK;
 
     /**
+     * Whether a call to {@link XSSFCell#setCellFormula(String)} will validate the formula or not.
+     */
+    private boolean cellFormulaValidation = true;
+
+    /**
      * array of pictures for this workbook
      */
     private List<XSSFPictureData> pictures;
@@ -2469,5 +2474,24 @@ public class XSSFWorkbook extends POIXMLDocument implements Workbook {
         poifs.close();
 
         return oleId;
+    }
+
+    /**
+     * Whether a call to {@link XSSFCell#setCellFormula(String)} will validate the formula or not.
+     *
+     * @param value true if the application will validate the formula is correct
+     * @since 3.17
+     */
+    public void setCellFormulaValidation(final boolean value) {
+        this.cellFormulaValidation = value;
+    }
+
+    /**
+     * Whether a call to {@link XSSFCell#setCellFormula(String)} will validate the formula or not.
+     *
+     * @since 3.17
+     */
+    public boolean getCellFormulaValidation() {
+        return this.cellFormulaValidation;
     }
 }
