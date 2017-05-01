@@ -212,7 +212,7 @@ public final class HSSFName implements Name {
         if (name.matches("[A-Za-z]+\\d+")) {
             String col = name.replaceAll("\\d", "");
             String row = name.replaceAll("[A-Za-z]", "");
-            if (CellReference.cellReferenceIsWithinRange(col, row, SpreadsheetVersion.EXCEL97)) {
+            if (CellReference.cellReferenceIsWithinRange(col, row, org.apache.poi.hssf.usermodel.HSSFWorkbook.spreadsheetVersion)) {
                 throw new IllegalArgumentException("Invalid name: '"+name+"': cannot be $A$1-style cell reference");
             }
         }

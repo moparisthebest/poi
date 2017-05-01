@@ -88,9 +88,9 @@ public class CellReference {
      * digits or dot.  (They can even end in dot).
      */
     private static final Pattern NAMED_RANGE_NAME_PATTERN = Pattern.compile("[_A-Z][_.A-Z0-9]*", Pattern.CASE_INSENSITIVE);
-    //private static final String BIFF8_LAST_COLUMN = SpreadsheetVersion.EXCEL97.getLastColumnName();
+    //private static final String BIFF8_LAST_COLUMN = org.apache.poi.hssf.usermodel.HSSFWorkbook.spreadsheetVersion.getLastColumnName();
     //private static final int BIFF8_LAST_COLUMN_TEXT_LEN = BIFF8_LAST_COLUMN.length();
-    //private static final String BIFF8_LAST_ROW = String.valueOf(SpreadsheetVersion.EXCEL97.getMaxRows());
+    //private static final String BIFF8_LAST_ROW = String.valueOf(org.apache.poi.hssf.usermodel.HSSFWorkbook.spreadsheetVersion.getMaxRows());
     //private static final int BIFF8_LAST_ROW_TEXT_LEN = BIFF8_LAST_ROW.length();
 
     // FIXME: _sheetName may be null, depending on the entry point.

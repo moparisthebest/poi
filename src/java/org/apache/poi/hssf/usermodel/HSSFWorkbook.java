@@ -123,6 +123,9 @@ import org.apache.poi.util.Removal;
 public final class HSSFWorkbook extends POIDocument implements org.apache.poi.ss.usermodel.Workbook {
     private static final Pattern COMMA_PATTERN = Pattern.compile(",");
 
+    // org.apache.poi.hssf.usermodel.HSSFWorkbook.spreadsheetVersion
+    public static SpreadsheetVersion spreadsheetVersion = SpreadsheetVersion. EXCEL97;
+
     /**
      * The maximum number of cell styles in a .xls workbook.
      * The 'official' limit is 4,000, but POI allows a slightly larger number.
@@ -2325,6 +2328,6 @@ public final class HSSFWorkbook extends POIDocument implements org.apache.poi.ss
      */
     @Override
     public SpreadsheetVersion getSpreadsheetVersion() {
-        return SpreadsheetVersion.EXCEL97;
+        return org.apache.poi.hssf.usermodel.HSSFWorkbook.spreadsheetVersion;
     }
 }

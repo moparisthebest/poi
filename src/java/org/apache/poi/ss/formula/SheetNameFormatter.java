@@ -184,7 +184,7 @@ public final class SheetNameFormatter {
 	 * @see org.apache.poi.ss.util.CellReference
 	 */
 	/* package */ static boolean cellReferenceIsWithinRange(String lettersPrefix, String numbersSuffix) {
-		return CellReference.cellReferenceIsWithinRange(lettersPrefix, numbersSuffix, SpreadsheetVersion.EXCEL97);
+		return CellReference.cellReferenceIsWithinRange(lettersPrefix, numbersSuffix, org.apache.poi.hssf.usermodel.HSSFWorkbook.spreadsheetVersion);
 	}
 
 	/**

@@ -143,7 +143,7 @@ public final class RowRecordsAggregate extends RecordAggregate {
     }
 
     public RowRecord getRow(int rowIndex) {
-        int maxrow = SpreadsheetVersion.EXCEL97.getLastRowIndex();
+        int maxrow = org.apache.poi.hssf.usermodel.HSSFWorkbook.spreadsheetVersion.getLastRowIndex();
         if (rowIndex < 0 || rowIndex > maxrow) {
             throw new IllegalArgumentException("The row number must be between 0 and " + maxrow + ", but had: " + rowIndex);
         }

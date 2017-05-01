@@ -28,7 +28,7 @@ import org.apache.poi.ss.util.CellReference;
  * Optimization - compacts many blank cell references used by a single formula.
  */
 final class FormulaUsedBlankCellSet {
-	public static final class BookSheetKey {
+	public static final class BookSheetKey {// 253mb 10,567,793
 
 		private final int _bookIndex;
 		private final int _sheetIndex;

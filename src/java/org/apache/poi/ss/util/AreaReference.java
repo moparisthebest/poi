@@ -31,7 +31,7 @@ public class AreaReference {
     private static final char CELL_DELIMITER = ':';
     /** The character (') used to quote sheet names when they contain special characters */
     private static final char SPECIAL_NAME_DELIMITER = '\'';
-    private static final SpreadsheetVersion DEFAULT_SPREADSHEET_VERSION = SpreadsheetVersion.EXCEL97;
+    private static final SpreadsheetVersion DEFAULT_SPREADSHEET_VERSION = org.apache.poi.hssf.usermodel.HSSFWorkbook.spreadsheetVersion;
     
     private final CellReference _firstCell;
     private final CellReference _lastCell;

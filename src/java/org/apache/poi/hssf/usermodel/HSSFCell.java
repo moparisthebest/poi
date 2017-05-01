@@ -73,8 +73,8 @@ public class HSSFCell implements Cell {
     /**
      * The maximum  number of columns in BIFF8
      */
-    public static final int LAST_COLUMN_NUMBER  = SpreadsheetVersion.EXCEL97.getLastColumnIndex(); // 2^8 - 1
-    private static final String LAST_COLUMN_NAME  = SpreadsheetVersion.EXCEL97.getLastColumnName();
+    public static final int LAST_COLUMN_NUMBER  = org.apache.poi.hssf.usermodel.HSSFWorkbook.spreadsheetVersion.getLastColumnIndex(); // 2^8 - 1
+    private static final String LAST_COLUMN_NAME  = org.apache.poi.hssf.usermodel.HSSFWorkbook.spreadsheetVersion.getLastColumnName();
 
     public final static short        ENCODING_UNCHANGED          = -1;
     public final static short        ENCODING_COMPRESSED_UNICODE = 0;
@@ -570,7 +570,7 @@ public class HSSFCell implements Cell {
             return;
         }
 
-        if(value.length() > SpreadsheetVersion.EXCEL97.getMaxTextLength()){
+        if(value.length() > org.apache.poi.hssf.usermodel.HSSFWorkbook.spreadsheetVersion.getMaxTextLength()){
             throw new IllegalArgumentException("The maximum length of cell contents (text) is 32,767 characters");
         }
 

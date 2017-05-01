@@ -286,7 +286,7 @@ public abstract class AreaPtgBase extends OperandPtg implements AreaI {
         CellReference topLeft = new CellReference(getFirstRow(),getFirstColumn(),!isFirstRowRelative(),!isFirstColRelative());
         CellReference botRight = new CellReference(getLastRow(),getLastColumn(),!isLastRowRelative(),!isLastColRelative());
 
-        if(AreaReference.isWholeColumnReference(SpreadsheetVersion.EXCEL97, topLeft, botRight)) {
+        if(AreaReference.isWholeColumnReference(org.apache.poi.hssf.usermodel.HSSFWorkbook.spreadsheetVersion, topLeft, botRight)) {
             return (new AreaReference(topLeft, botRight)).formatAsString();
         }
         return topLeft.formatAsString() + ":" + botRight.formatAsString();
