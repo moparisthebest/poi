@@ -35,15 +35,17 @@ import org.apache.poi.util.LittleEndianOutput;
  */
 public class Formula {
 
-	private static final Formula EMPTY = new Formula(new byte[0], 0);
+	private static final Formula EMPTY = new Formula(new byte[0], 0, new Ptg[0]);
 
 	/** immutable */
 	private final byte[] _byteEncoding;
 	private final int _encodedTokenLen;
+	private Ptg[] _cache;
 
-	private Formula(byte[] byteEncoding, int encodedTokenLen) {
+	private Formula(byte[] byteEncoding, int encodedTokenLen, Ptg[] cache) {
 		_byteEncoding = byteEncoding.clone();
 		_encodedTokenLen = encodedTokenLen;
+		_cache = cache;
 //		if (false) { // set to true to eagerly check Ptg decoding
 //			LittleEndianByteArrayInputStream in = new LittleEndianByteArrayInputStream(byteEncoding);
 //			Ptg.readTokens(encodedTokenLen, in);
@@ -74,12 +76,14 @@ public class Formula {
 	public static Formula read(int encodedTokenLen, LittleEndianInput in, int totalEncodedLen) {
 		byte[] byteEncoding = new byte[totalEncodedLen];
 		in.readFully(byteEncoding);
-		return new Formula(byteEncoding, encodedTokenLen);
+		return new Formula(byteEncoding, encodedTokenLen, null);
 	}
 
 	public Ptg[] getTokens() {
+		if(_cache != null)
+			return _cache;
 		LittleEndianInput in = new LittleEndianByteArrayInputStream(_byteEncoding);
-		return Ptg.readTokens(_encodedTokenLen, in);
+		return _cache = Ptg.readTokens(_encodedTokenLen, in);
 	}
 	/**
 	 * Writes  The formula encoding is includes:
@@ -140,7 +144,7 @@ public class Formula {
 		byte[] encodedData = new byte[totalSize];
 		Ptg.serializePtgs(ptgs, encodedData, 0);
 		int encodedTokenLen = Ptg.getEncodedSizeWithoutArrayData(ptgs);
-		return new Formula(encodedData, encodedTokenLen);
+		return new Formula(encodedData, encodedTokenLen, ptgs); // todo: copy ptgs? don't think we need to
 	}
 	/**
 	 * Gets the {@link Ptg} array from the supplied {@link Formula}.
