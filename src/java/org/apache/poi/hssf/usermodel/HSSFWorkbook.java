@@ -157,6 +157,11 @@ public final class HSSFWorkbook extends POIDocument implements org.apache.poi.ss
     public final static int INITIAL_CAPACITY = Configurator.getIntValue("HSSFWorkbook.SheetInitialCapacity",3);
 
     /**
+     * SpreadsheetVersion used by this workbook, EXCEL97 in every case where we need to read or write to disk
+     */
+    public final SpreadsheetVersion spreadsheetVersion;
+
+    /**
      * this is the reference to the low level Workbook object
      */
 
@@ -220,8 +225,19 @@ public final class HSSFWorkbook extends POIDocument implements org.apache.poi.ss
         this(InternalWorkbook.createWorkbook());
     }
 
+    public HSSFWorkbook(final SpreadsheetVersion spreadsheetVersion) {
+        this(InternalWorkbook.createWorkbook(), spreadsheetVersion);
+        if(spreadsheetVersion == null)
+            throw new IllegalArgumentException("SpreadsheetVersion must be non-null");
+    }
+
     private HSSFWorkbook(InternalWorkbook book) {
+        this(book, SpreadsheetVersion.EXCEL97);
+    }
+
+    private HSSFWorkbook(InternalWorkbook book, final SpreadsheetVersion spreadsheetVersion) {
         super((DirectoryNode)null);
+        this.spreadsheetVersion = spreadsheetVersion;
         workbook = book;
         _sheets = new ArrayList<>(INITIAL_CAPACITY);
         names = new ArrayList<>(INITIAL_CAPACITY);
@@ -324,6 +340,7 @@ public final class HSSFWorkbook extends POIDocument implements org.apache.poi.ss
             throws IOException
     {
         super(directory);
+        spreadsheetVersion = SpreadsheetVersion.EXCEL97;
         String workbookName = getWorkbookDirEntryName(directory);
 
         this.preserveNodes = preserveNodes;
@@ -1303,6 +1320,12 @@ public final class HSSFWorkbook extends POIDocument implements org.apache.poi.ss
         super.close();
     }
 
+    protected void validateSpreadsheetVersionWritePossible() throws IllegalStateException {
+        if (this.spreadsheetVersion != SpreadsheetVersion.EXCEL97) {
+            throw new IllegalStateException("SpreadsheetVersion not EXCEL97, cannot write file meant only for in-memory calculations");
+        }
+    }
+
     /**
      * Write out this workbook to the currently open {@link File} via the
      *  writeable {@link POIFSFileSystem} it was opened as. 
@@ -1315,6 +1338,7 @@ public final class HSSFWorkbook extends POIDocument implements org.apache.poi.ss
      */
     @Override
     public void write() throws IOException {
+        validateSpreadsheetVersionWritePossible();
         validateInPlaceWritePossible();
         final DirectoryNode dir = getDirectory();
         
@@ -1348,6 +1372,7 @@ public final class HSSFWorkbook extends POIDocument implements org.apache.poi.ss
      */
     @Override
     public void write(File newFile) throws IOException {
+        validateSpreadsheetVersionWritePossible();
         try (POIFSFileSystem fs = POIFSFileSystem.create(newFile)) {
             write(fs);
             fs.writeFilesystem();
@@ -1371,6 +1396,7 @@ public final class HSSFWorkbook extends POIDocument implements org.apache.poi.ss
      */
     @Override
 	public void write(OutputStream stream) throws IOException {
+        validateSpreadsheetVersionWritePossible();
         try (POIFSFileSystem fs = new POIFSFileSystem()) {
             write(fs);
             fs.writeFilesystem(stream);
@@ -1379,6 +1405,7 @@ public final class HSSFWorkbook extends POIDocument implements org.apache.poi.ss
     
     /** Writes the workbook out to a brand new, empty POIFS */
     private void write(POIFSFileSystem fs) throws IOException {
+        validateSpreadsheetVersionWritePossible();
         // For tracking what we've written out, used if we're
         //  going to be preserving nodes
         List<String> excepts = new ArrayList<>(1);
@@ -2228,7 +2255,7 @@ public final class HSSFWorkbook extends POIDocument implements org.apache.poi.ss
      */
     @Override
     public SpreadsheetVersion getSpreadsheetVersion() {
-        return SpreadsheetVersion.EXCEL97;
+        return this.spreadsheetVersion;
     }
 
     @Override

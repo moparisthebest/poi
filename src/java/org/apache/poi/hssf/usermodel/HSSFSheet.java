@@ -126,7 +126,7 @@ public final class HSSFSheet implements org.apache.poi.ss.usermodel.Sheet {
      * @see org.apache.poi.hssf.usermodel.HSSFWorkbook#createSheet()
      */
     protected HSSFSheet(HSSFWorkbook workbook) {
-        _sheet = InternalSheet.createSheet();
+        _sheet = InternalSheet.createSheet(workbook.getSpreadsheetVersion());
         _rows = new TreeMap<>();
         this._workbook = workbook;
         this._book = workbook.getWorkbook();
@@ -719,7 +719,7 @@ public final class HSSFSheet implements org.apache.poi.ss.usermodel.Sheet {
         if (region.getNumberOfCells() < 2) {
             throw new IllegalArgumentException("Merged region " + region.formatAsString() + " must contain 2 or more cells");
         }
-        region.validate(SpreadsheetVersion.EXCEL97);
+        region.validate(_workbook.getSpreadsheetVersion());
 
         if (validate) {
             // throw IllegalStateException if the argument CellRangeAddress intersects with
@@ -1457,7 +1457,7 @@ public final class HSSFSheet implements org.apache.poi.ss.usermodel.Sheet {
      */
     @Override
     public void showInPane(int toprow, int leftcol) {
-        int maxrow = SpreadsheetVersion.EXCEL97.getLastRowIndex();
+        final int maxrow = _workbook.getSpreadsheetVersion().getLastRowIndex();
         if (toprow > maxrow) throw new IllegalArgumentException("Maximum row number is " + maxrow);
         
         showInPane((short)toprow, (short)leftcol);
@@ -1534,10 +1534,10 @@ public final class HSSFSheet implements org.apache.poi.ss.usermodel.Sheet {
      *
      * @param row the row number
      */
-    private static int clip(int row) {
+    private int clip(int row) {
         return Math.min(
                 Math.max(0, row),
-                SpreadsheetVersion.EXCEL97.getLastRowIndex());
+                _workbook.getSpreadsheetVersion().getLastRowIndex());
     }
 
     /**
@@ -1692,7 +1692,7 @@ public final class HSSFSheet implements org.apache.poi.ss.usermodel.Sheet {
                 }
             }
             if (endRow + n > _lastrow) {
-                _lastrow = Math.min(endRow + n, SpreadsheetVersion.EXCEL97.getLastRowIndex());
+                _lastrow = Math.min(endRow + n, _workbook.getSpreadsheetVersion().getLastRowIndex());
             }
         } else {
             // Rows are moving up
@@ -1702,7 +1702,7 @@ public final class HSSFSheet implements org.apache.poi.ss.usermodel.Sheet {
             if (endRow == _lastrow) {
                 // Need to walk backward to find the last non-blank row
                 // NOTE: n is always negative here
-                _lastrow = Math.min(endRow + n, SpreadsheetVersion.EXCEL97.getLastRowIndex());
+                _lastrow = Math.min(endRow + n, _workbook.getSpreadsheetVersion().getLastRowIndex());
                 for (int i = endRow - 1; i > endRow + n; i--) {
                     if (getRow(i) != null) {
                         _lastrow = i;
@@ -1763,7 +1763,7 @@ public final class HSSFSheet implements org.apache.poi.ss.usermodel.Sheet {
         short externSheetIndex = _book.checkExternSheet(sheetIndex);
         String sheetName = _workbook.getSheetName(sheetIndex);
         FormulaShifter formulaShifter = FormulaShifter.createForColumnShift(
-                externSheetIndex, sheetName, startColumn, endColumn, n, SpreadsheetVersion.EXCEL97);
+                externSheetIndex, sheetName, startColumn, endColumn, n, _workbook.getSpreadsheetVersion());
         updateFormulasForShift(formulaShifter); 
         // add logic for hyperlinks etc, like in shiftRows() 
     } 
@@ -1973,7 +1973,7 @@ public final class HSSFSheet implements org.apache.poi.ss.usermodel.Sheet {
     @Override
     public void setColumnBreak(int column) {
         validateColumn((short) column);
-        _sheet.getPageSettings().setColumnBreak((short) column, (short) 0, (short) SpreadsheetVersion.EXCEL97.getLastRowIndex());
+        _sheet.getPageSettings().setColumnBreak((short) column, (short) 0, (short) _workbook.getSpreadsheetVersion().getLastRowIndex());
     }
 
     /**
@@ -2003,7 +2003,7 @@ public final class HSSFSheet implements org.apache.poi.ss.usermodel.Sheet {
      * @param row the index of the row to validate, zero-based
      */
     protected void validateRow(int row) {
-        int maxrow = SpreadsheetVersion.EXCEL97.getLastRowIndex();
+        final int maxrow = _workbook.getSpreadsheetVersion().getLastRowIndex();
         if (row > maxrow) throw new IllegalArgumentException("Maximum row number is " + maxrow);
         if (row < 0) throw new IllegalArgumentException("Minumum row number is 0");
     }
@@ -2014,7 +2014,7 @@ public final class HSSFSheet implements org.apache.poi.ss.usermodel.Sheet {
      * @param column the index of the column to validate, zero-based
      */
     protected void validateColumn(int column) {
-        int maxcol = SpreadsheetVersion.EXCEL97.getLastColumnIndex();
+        final int maxcol = _workbook.getSpreadsheetVersion().getLastColumnIndex();
         if (column > maxcol) throw new IllegalArgumentException("Maximum column number is " + maxcol);
         if (column < 0) throw new IllegalArgumentException("Minimum column number is 0");
     }
@@ -2534,8 +2534,8 @@ public final class HSSFSheet implements org.apache.poi.ss.usermodel.Sheet {
     private void setRepeatingRowsAndColumns(
             CellRangeAddress rowDef, CellRangeAddress colDef) {
         int sheetIndex = _workbook.getSheetIndex(this);
-        int maxRowIndex = SpreadsheetVersion.EXCEL97.getLastRowIndex();
-        int maxColIndex = SpreadsheetVersion.EXCEL97.getLastColumnIndex();
+        final int maxRowIndex = _workbook.getSpreadsheetVersion().getLastRowIndex();
+        final int maxColIndex = _workbook.getSpreadsheetVersion().getLastColumnIndex();
 
         int col1 = -1;
         int col2 = -1;
@@ -2620,8 +2620,8 @@ public final class HSSFSheet implements org.apache.poi.ss.usermodel.Sheet {
             return null;
         }
 
-        int maxRowIndex = SpreadsheetVersion.EXCEL97.getLastRowIndex();
-        int maxColIndex = SpreadsheetVersion.EXCEL97.getLastColumnIndex();
+        final int maxRowIndex = _workbook.getSpreadsheetVersion().getLastRowIndex();
+        final int maxColIndex = _workbook.getSpreadsheetVersion().getLastColumnIndex();
 
         for (Ptg ptg : nameDefinition) {
 

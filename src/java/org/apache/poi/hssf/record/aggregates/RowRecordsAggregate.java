@@ -40,6 +40,7 @@ public final class RowRecordsAggregate extends RecordAggregate {
     private final ValueRecordsAggregate _valuesAgg;
     private final List<Record> _unknownRecords;
     private final SharedValueManager _sharedValueManager;
+    private final SpreadsheetVersion _spreadsheetVersion;
 
     // Cache values to speed up performance of
     // getStartRowNumberForBlock / getEndRowNumberForBlock, see Bugzilla 47405
@@ -47,9 +48,15 @@ public final class RowRecordsAggregate extends RecordAggregate {
 
     /** Creates a new instance of ValueRecordsAggregate */
     public RowRecordsAggregate() {
-        this(SharedValueManager.createEmpty());
+        this(SharedValueManager.createEmpty(), SpreadsheetVersion.EXCEL97);
     }
-    private RowRecordsAggregate(SharedValueManager svm) {
+    public RowRecordsAggregate(final SpreadsheetVersion spreadsheetVersion) {
+        this(SharedValueManager.createEmpty(), spreadsheetVersion);
+        if (spreadsheetVersion == null) {
+            throw new IllegalArgumentException("SpreadsheetVersion must be provided.");
+        }
+    }
+    private RowRecordsAggregate(SharedValueManager svm, final SpreadsheetVersion spreadsheetVersion) {
         if (svm == null) {
             throw new IllegalArgumentException("SharedValueManager must be provided.");
         }
@@ -57,6 +64,7 @@ public final class RowRecordsAggregate extends RecordAggregate {
         _valuesAgg = new ValueRecordsAggregate();
         _unknownRecords = new ArrayList<>();
         _sharedValueManager = svm;
+        _spreadsheetVersion = spreadsheetVersion;
     }
 
     /**
@@ -66,7 +74,7 @@ public final class RowRecordsAggregate extends RecordAggregate {
      * and table records of the current sheet).  Never <code>null</code>.
      */
     public RowRecordsAggregate(RecordStream rs, SharedValueManager svm) {
-        this(svm);
+        this(svm, SpreadsheetVersion.EXCEL97);
         while(rs.hasNext()) {
             Record rec = rs.getNext();
             switch (rec.getSid()) {
@@ -143,7 +151,7 @@ public final class RowRecordsAggregate extends RecordAggregate {
     }
 
     public RowRecord getRow(int rowIndex) {
-        int maxrow = SpreadsheetVersion.EXCEL97.getLastRowIndex();
+        int maxrow = _spreadsheetVersion.getLastRowIndex();
         if (rowIndex < 0 || rowIndex > maxrow) {
             throw new IllegalArgumentException("The row number must be between 0 and " + maxrow + ", but had: " + rowIndex);
         }

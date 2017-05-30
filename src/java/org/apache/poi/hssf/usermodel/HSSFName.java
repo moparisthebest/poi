@@ -129,7 +129,7 @@ public final class HSSFName implements Name {
      * @throws IllegalArgumentException if the name is invalid or the name already exists (case-insensitive)
      */
     public void setNameName(String nameName){
-        validateName(nameName);
+        validateName(nameName, _book.getSpreadsheetVersion());
 
         InternalWorkbook wb = _book.getWorkbook();
         _definedNameRec.setNameText(nameName);
@@ -176,7 +176,7 @@ public final class HSSFName implements Name {
      * 
      * Uniqueness: must be unique (for names with the same scope)
      */
-    private static void validateName(String name) {
+    private static void validateName(String name, SpreadsheetVersion spreadsheetVersion) {
 
         if (name.length() == 0) {
             throw new IllegalArgumentException("Name cannot be blank");
@@ -210,7 +210,7 @@ public final class HSSFName implements Name {
         if (name.matches("[A-Za-z]+\\d+")) {
             String col = name.replaceAll("\\d", "");
             String row = name.replaceAll("[A-Za-z]", "");
-            if (CellReference.cellReferenceIsWithinRange(col, row, SpreadsheetVersion.EXCEL97)) {
+            if (CellReference.cellReferenceIsWithinRange(col, row, spreadsheetVersion)) {
                 throw new IllegalArgumentException("Invalid name: '"+name+"': cannot be $A$1-style cell reference");
             }
         }
