@@ -70,11 +70,6 @@ import org.apache.poi.util.LocaleUtil;
  */
 public class HSSFCell implements Cell {
     private static final String FILE_FORMAT_NAME  = "BIFF8";
-    /**
-     * The maximum  number of columns in BIFF8
-     */
-    public static final int LAST_COLUMN_NUMBER  = SpreadsheetVersion.EXCEL97.getLastColumnIndex(); // 2^8 - 1
-    private static final String LAST_COLUMN_NAME  = SpreadsheetVersion.EXCEL97.getLastColumnName();
 
     public final static short        ENCODING_UNCHANGED          = -1;
     public final static short        ENCODING_COMPRESSED_UNICODE = 0;
@@ -105,7 +100,7 @@ public class HSSFCell implements Cell {
      */
     protected HSSFCell(HSSFWorkbook book, HSSFSheet sheet, int row, short col)
     {
-        checkBounds(col);
+        checkBounds(col, book);
         _stringValue  = null;
         _book    = book;
         _sheet   = sheet;
@@ -150,7 +145,7 @@ public class HSSFCell implements Cell {
     protected HSSFCell(HSSFWorkbook book, HSSFSheet sheet, int row, short col,
                        CellType type)
     {
-        checkBounds(col);
+        checkBounds(col, book);
         _cellType     = CellType._NONE; // Force 'setCellType' to create a first Record
         _stringValue  = null;
         _book    = book;
@@ -570,8 +565,8 @@ public class HSSFCell implements Cell {
             return;
         }
 
-        if(value.length() > SpreadsheetVersion.EXCEL97.getMaxTextLength()){
-            throw new IllegalArgumentException("The maximum length of cell contents (text) is 32,767 characters");
+        if(value.length() > _book.getSpreadsheetVersion().getMaxTextLength()){
+            throw new IllegalArgumentException("The maximum length of cell contents (text) is "+_book.getSpreadsheetVersion().getMaxTextLength()+" characters");
         }
 
         if (_cellType == CellType.FORMULA) {
@@ -977,8 +972,10 @@ public class HSSFCell implements Cell {
     /**
      * @throws RuntimeException if the bounds are exceeded.
      */
-    private static void checkBounds(int cellIndex) {
+    private static void checkBounds(int cellIndex, final HSSFWorkbook book) {
+        final int LAST_COLUMN_NUMBER  = book.getSpreadsheetVersion().getLastColumnIndex(); // 2^8 - 1
         if (cellIndex < 0 || cellIndex > LAST_COLUMN_NUMBER) {
+            final String LAST_COLUMN_NAME  = book.getSpreadsheetVersion().getLastColumnName();
             throw new IllegalArgumentException("Invalid column index (" + cellIndex
                     + ").  Allowable column range for " + FILE_FORMAT_NAME + " is (0.."
                     + LAST_COLUMN_NUMBER + ") or ('A'..'" + LAST_COLUMN_NAME + "')");

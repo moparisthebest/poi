@@ -296,7 +296,7 @@ public final class HSSFEvaluationWorkbook implements FormulaRenderingWorkbook, E
 
     @Override
     public SpreadsheetVersion getSpreadsheetVersion(){
-        return SpreadsheetVersion.EXCEL97;
+        return _uBook.getSpreadsheetVersion();
     }
 
     /**

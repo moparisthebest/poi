@@ -247,7 +247,7 @@ public final class HSSFRow implements Row, Comparable<HSSFRow> {
      */
     @Override
     public void setRowNum(int rowIndex) {
-        int maxrow = SpreadsheetVersion.EXCEL97.getLastRowIndex();
+        int maxrow = book.getSpreadsheetVersion().getLastRowIndex();
         if ((rowIndex < 0) || (rowIndex > maxrow)) {
           throw new IllegalArgumentException("Invalid row number (" + rowIndex
                   + ") outside allowable range (0.." + maxrow + ")");
