@@ -140,7 +140,7 @@ public final class FormulaParser {
         _formulaString = formula;
         _pointer=0;
         _book = book;
-        _ssVersion = book == null ? org.apache.poi.hssf.usermodel.HSSFWorkbook.spreadsheetVersion : book.getSpreadsheetVersion();
+        _ssVersion = book == null ? SpreadsheetVersion.EXCEL97 : book.getSpreadsheetVersion();
         _formulaLength = _formulaString.length();
         _sheetIndex = sheetIndex;
         _rowIndex = rowIndex;

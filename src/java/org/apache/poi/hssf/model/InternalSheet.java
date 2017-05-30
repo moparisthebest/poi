@@ -70,6 +70,7 @@ import org.apache.poi.hssf.record.aggregates.RecordAggregate.PositionTrackingVis
 import org.apache.poi.hssf.record.aggregates.RecordAggregate.RecordVisitor;
 import org.apache.poi.hssf.record.aggregates.RowRecordsAggregate;
 import org.apache.poi.hssf.record.aggregates.WorksheetProtectionBlock;
+import org.apache.poi.ss.SpreadsheetVersion;
 import org.apache.poi.ss.formula.FormulaShifter;
 import org.apache.poi.ss.util.CellRangeAddress;
 import org.apache.poi.ss.util.PaneInformation;
@@ -444,9 +445,12 @@ public final class InternalSheet {
      * @return Sheet object with all values set to defaults
      */
     public static InternalSheet createSheet() {
-        return new InternalSheet();
+        return new InternalSheet(SpreadsheetVersion.EXCEL97);
     }
-    private InternalSheet() {
+    public static InternalSheet createSheet(final SpreadsheetVersion spreadsheetVersion) {
+        return new InternalSheet(spreadsheetVersion);
+    }
+    private InternalSheet(final SpreadsheetVersion spreadsheetVersion) {
         _mergedCellsTable = new MergedCellsTable();
         List<RecordBase> records = new ArrayList<RecordBase>(32);
 
@@ -487,7 +491,7 @@ public final class InternalSheet {
         _columnInfos = columns;
         _dimensions = createDimensions();
         records.add(_dimensions);
-        _rowsAggregate = new RowRecordsAggregate();
+        _rowsAggregate = new RowRecordsAggregate(spreadsheetVersion);
         records.add(_rowsAggregate);
         // 'Sheet View Settings'
         records.add(windowTwo = createWindowTwo());

@@ -75,12 +75,12 @@ public abstract class CellRangeAddressBase {
 
 	//TODO use the correct SpreadsheetVersion
 	public final boolean isFullColumnRange() {
-		return (_firstRow == 0 && _lastRow == org.apache.poi.hssf.usermodel.HSSFWorkbook.spreadsheetVersion.getLastRowIndex())
+		return (_firstRow == 0 && _lastRow == SpreadsheetVersion.EXCEL97.getLastRowIndex())
 		  || (_firstRow == -1 && _lastRow == -1);
 	}
 	//TODO use the correct SpreadsheetVersion
 	public final boolean isFullRowRange() {
-		return (_firstCol == 0 && _lastCol == org.apache.poi.hssf.usermodel.HSSFWorkbook.spreadsheetVersion.getLastColumnIndex())
+		return (_firstCol == 0 && _lastCol == SpreadsheetVersion.EXCEL97.getLastColumnIndex())
 		  || (_firstCol == -1 && _lastCol == -1);
 	}
 

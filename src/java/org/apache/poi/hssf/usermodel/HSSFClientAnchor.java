@@ -29,8 +29,8 @@ import org.apache.poi.util.Removal;
  */
 public final class HSSFClientAnchor extends HSSFAnchor implements ClientAnchor {
 
-    public static final int MAX_COL = org.apache.poi.hssf.usermodel.HSSFWorkbook.spreadsheetVersion.getLastColumnIndex();
-    public static final int MAX_ROW = org.apache.poi.hssf.usermodel.HSSFWorkbook.spreadsheetVersion.getLastRowIndex();
+    public static final int MAX_COL = SpreadsheetVersion.EXCEL97.getLastColumnIndex();
+    public static final int MAX_ROW = SpreadsheetVersion.EXCEL97.getLastRowIndex();
 
     private EscherClientAnchorRecord _escherClientAnchor;
 

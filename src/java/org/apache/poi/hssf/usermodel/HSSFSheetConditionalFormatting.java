@@ -174,7 +174,7 @@ public final class HSSFSheetConditionalFormatting implements SheetConditionalFor
         if (regions == null) {
             throw new IllegalArgumentException("regions must not be null");
         }
-        for(CellRangeAddress range : regions) range.validate(org.apache.poi.hssf.usermodel.HSSFWorkbook.spreadsheetVersion);
+        for(CellRangeAddress range : regions) range.validate(_sheet._workbook.getSpreadsheetVersion());
 
         if (cfRules == null) {
             throw new IllegalArgumentException("cfRules must not be null");

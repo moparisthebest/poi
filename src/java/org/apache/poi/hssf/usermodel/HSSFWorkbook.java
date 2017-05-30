@@ -124,7 +124,7 @@ public final class HSSFWorkbook extends POIDocument implements org.apache.poi.ss
     private static final Pattern COMMA_PATTERN = Pattern.compile(",");
 
     // org.apache.poi.hssf.usermodel.HSSFWorkbook.spreadsheetVersion
-    public static SpreadsheetVersion spreadsheetVersion = SpreadsheetVersion. EXCEL97;
+    public final SpreadsheetVersion spreadsheetVersion;
 
     /**
      * The maximum number of cell styles in a .xls workbook.
@@ -210,8 +210,19 @@ public final class HSSFWorkbook extends POIDocument implements org.apache.poi.ss
         this(InternalWorkbook.createWorkbook());
     }
 
+    public HSSFWorkbook(final SpreadsheetVersion spreadsheetVersion) {
+        this(InternalWorkbook.createWorkbook(), spreadsheetVersion);
+        if(spreadsheetVersion == null)
+            throw new IllegalArgumentException("SpreadsheetVersion must be non-null");
+    }
+
     private HSSFWorkbook(InternalWorkbook book) {
+        this(book, SpreadsheetVersion.EXCEL97);
+    }
+
+    private HSSFWorkbook(InternalWorkbook book, final SpreadsheetVersion spreadsheetVersion) {
         super((DirectoryNode)null);
+        this.spreadsheetVersion = spreadsheetVersion;
         workbook = book;
         _sheets = new ArrayList<HSSFSheet>(INITIAL_CAPACITY);
         names = new ArrayList<HSSFName>(INITIAL_CAPACITY);
@@ -331,6 +342,7 @@ public final class HSSFWorkbook extends POIDocument implements org.apache.poi.ss
             throws IOException
     {
         super(directory);
+        spreadsheetVersion = SpreadsheetVersion.EXCEL97;
         String workbookName = getWorkbookDirEntryName(directory);
 
         this.preserveNodes = preserveNodes;
@@ -1366,6 +1378,12 @@ public final class HSSFWorkbook extends POIDocument implements org.apache.poi.ss
         super.close();
     }
 
+    protected void validateSpreadsheetVersionWritePossible() throws IllegalStateException {
+        if (this.spreadsheetVersion != SpreadsheetVersion.EXCEL97) {
+            throw new IllegalStateException("SpreadsheetVersion not EXCEL97, cannot write file meant only for in-memory calculations");
+        }
+    }
+
     /**
      * Write out this workbook to the currently open {@link File} via the
      *  writeable {@link POIFSFileSystem} it was opened as. 
@@ -1378,6 +1396,7 @@ public final class HSSFWorkbook extends POIDocument implements org.apache.poi.ss
      */
     @Override
     public void write() throws IOException {
+        validateSpreadsheetVersionWritePossible();
         validateInPlaceWritePossible();
         final DirectoryNode dir = getDirectory();
         
@@ -1411,6 +1430,7 @@ public final class HSSFWorkbook extends POIDocument implements org.apache.poi.ss
      */
     @Override
     public void write(File newFile) throws IOException {
+        validateSpreadsheetVersionWritePossible();
         POIFSFileSystem fs = POIFSFileSystem.create(newFile);
         try {
             write(fs);
@@ -1437,6 +1457,7 @@ public final class HSSFWorkbook extends POIDocument implements org.apache.poi.ss
      */
     @Override
 	public void write(OutputStream stream) throws IOException {
+        validateSpreadsheetVersionWritePossible();
         NPOIFSFileSystem fs = new NPOIFSFileSystem();
         try {
             write(fs);
@@ -1448,6 +1469,7 @@ public final class HSSFWorkbook extends POIDocument implements org.apache.poi.ss
     
     /** Writes the workbook out to a brand new, empty POIFS */
     private void write(NPOIFSFileSystem fs) throws IOException {
+        validateSpreadsheetVersionWritePossible();
         // For tracking what we've written out, used if we're
         //  going to be preserving nodes
         List<String> excepts = new ArrayList<String>(1);
@@ -2328,6 +2350,6 @@ public final class HSSFWorkbook extends POIDocument implements org.apache.poi.ss
      */
     @Override
     public SpreadsheetVersion getSpreadsheetVersion() {
-        return org.apache.poi.hssf.usermodel.HSSFWorkbook.spreadsheetVersion;
+        return this.spreadsheetVersion;
     }
 }

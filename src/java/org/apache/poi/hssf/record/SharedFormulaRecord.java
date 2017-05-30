@@ -109,7 +109,7 @@ public final class SharedFormulaRecord extends SharedValueRecordBase {
             throw new RuntimeException("Shared Formula Conversion: Coding Error");
         }
 
-        SharedFormula sf = new SharedFormula(org.apache.poi.hssf.usermodel.HSSFWorkbook.spreadsheetVersion);
+        SharedFormula sf = new SharedFormula(SpreadsheetVersion.EXCEL97);
         return sf.convertSharedFormulas(field_7_parsed_expr.getTokens(), formulaRow, formulaColumn);
     }
 
