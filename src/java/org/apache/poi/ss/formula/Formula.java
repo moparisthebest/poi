@@ -41,11 +41,12 @@ public class Formula {
 
 	private static final Formula EMPTY = new Formula(new byte[0], 0);
 
-	/** immutable */
-	private final byte[] _byteEncoding;
-	private final int _encodedTokenLen;
+	/** immutable, lazily populated */
+	private byte[] _byteEncoding;
+	private int _encodedTokenLen = -1;
+	private Ptg[] _ptgTokens;
 
-	private Formula(byte[] byteEncoding, int encodedTokenLen) {
+	private Formula(final byte[] byteEncoding, final int encodedTokenLen) {
 		_byteEncoding = byteEncoding.clone();
 		_encodedTokenLen = encodedTokenLen;
 
@@ -64,6 +65,14 @@ public class Formula {
 	public static Formula read(int encodedTokenLen, LittleEndianInput in) {
 		return read(encodedTokenLen, in, encodedTokenLen);
 	}
+
+	private Formula(final Ptg[] ptgs) {
+		// cachedTokens should only be provided by a source that promises not to mutate the array
+		// Since this class itself doesn't mutate _ptgTokens, as long as this promise is honored,
+		// _ptgTokens is immutable.
+		_ptgTokens = ptgs.clone();
+	}
+
 	/**
 	 * When there are no array constants present, <tt>encodedTokenLen</tt>==<tt>totalEncodedLen</tt>
 	 * @param encodedTokenLen number of bytes in the stream taken by the plain formula tokens
@@ -78,9 +87,49 @@ public class Formula {
 	}
 
 	public Ptg[] getTokens() {
-		LittleEndianInput in = new LittleEndianByteArrayInputStream(_byteEncoding);
-		return Ptg.readTokens(_encodedTokenLen, in);
+		if (_ptgTokens == null) {
+                	readPtgTokensFromBytes();
+		}
+		return _ptgTokens;
 	}
+
+	private byte[] getEncodedBytes() {
+		if (_byteEncoding == null) {
+			readBytesFromPtgTokens();
+		}
+		return _byteEncoding;
+	}
+
+	private int getEncodedTokenLen() {
+		if (_encodedTokenLen <= 0) {
+			readBytesFromPtgTokens();
+		}
+		return _encodedTokenLen;
+	}
+
+	private void readPtgTokensFromBytes() {
+		if (_byteEncoding == null || _encodedTokenLen <= 0) {
+			// EMPTY
+			return;
+		}
+		LittleEndianInput in = new LittleEndianByteArrayInputStream(_byteEncoding);
+		_ptgTokens = Ptg.readTokens(_encodedTokenLen, in);
+	}
+
+	private void readBytesFromPtgTokens() {
+		if (_ptgTokens == null) {
+			// EMPTY
+			return;
+		}
+		final int totalSize = Ptg.getEncodedSize(_ptgTokens);
+		final byte[] encodedData = new byte[totalSize];
+		Ptg.serializePtgs(_ptgTokens, encodedData, 0);
+		final int encodedTokenLen = Ptg.getEncodedSizeWithoutArrayData(_ptgTokens);
+		
+		_byteEncoding = encodedData;
+		_encodedTokenLen = encodedTokenLen;
+	}
+
 	/**
 	 * Writes  The formula encoding is includes:
 	 * <ul>
@@ -90,16 +139,18 @@ public class Formula {
 	 * </ul>
 	 */
 	public void serialize(LittleEndianOutput out) {
-		out.writeShort(_encodedTokenLen);
-		out.write(_byteEncoding);
+		out.writeShort(getEncodedTokenLen());
+		out.write(getEncodedBytes());
 	}
 
 	public void serializeTokens(LittleEndianOutput out) {
-		out.write(_byteEncoding, 0, _encodedTokenLen);
+		out.write(getEncodedBytes(), 0, getEncodedTokenLen());
 	}
 	public void serializeArrayConstantData(LittleEndianOutput out) {
-		int len = _byteEncoding.length-_encodedTokenLen;
-		out.write(_byteEncoding, _encodedTokenLen, len);
+		byte[] bytes = getEncodedBytes();
+                int encodedLen = getEncodedTokenLen();
+		int len = bytes.length - encodedLen;
+		out.write(bytes, encodedLen, len);
 	}
 
 
@@ -113,7 +164,7 @@ public class Formula {
 	 * Note - this value is different to <tt>tokenDataLength</tt>
 	 */
 	public int getEncodedSize() {
-		return 2 + _byteEncoding.length;
+		return 2 + getEncodedBytes().length;
 	}
 	/**
 	 * This method is often used when the formula length does not appear immediately before
@@ -123,7 +174,8 @@ public class Formula {
 	 * the leading ushort field, nor any trailing array constant data.
 	 */
 	public int getEncodedTokenSize() {
-		return _encodedTokenLen;
+	
+		return getEncodedTokenLen();
 	}
 
 	/**
@@ -132,15 +184,11 @@ public class Formula {
 	 * @param ptgs may be <code>null</code>
 	 * @return Never <code>null</code> (Possibly empty if the supplied <tt>ptgs</tt> is <code>null</code>)
 	 */
-	public static Formula create(Ptg[] ptgs) {
+	public static Formula create(final Ptg[] ptgs) {
 		if (ptgs == null || ptgs.length < 1) {
 			return EMPTY;
 		}
-		int totalSize = Ptg.getEncodedSize(ptgs);
-		byte[] encodedData = new byte[totalSize];
-		Ptg.serializePtgs(ptgs, encodedData, 0);
-		int encodedTokenLen = Ptg.getEncodedSizeWithoutArrayData(ptgs);
-		return new Formula(encodedData, encodedTokenLen);
+		return new Formula(ptgs);
 	}
 	/**
 	 * Gets the {@link Ptg} array from the supplied {@link Formula}.
@@ -172,7 +220,7 @@ public class Formula {
 	 * belongs to.  <code>null</code> if this formula is not part of an array or shared formula.
 	 */
 	public CellReference getExpReference() {
-		byte[] data = _byteEncoding;
+		final byte[] data = getEncodedBytes();
 		if (data.length != 5) {
 			// tExp and tTbl are always 5 bytes long, and the only ptg in the formula
 			return null;
@@ -185,11 +233,11 @@ public class Formula {
 			default:
 				return null;
 		}
-		int firstRow = LittleEndian.getUShort(data, 1);
-		int firstColumn = LittleEndian.getUShort(data, 3);
+		final int firstRow = LittleEndian.getUShort(data, 1);
+		final int firstColumn = LittleEndian.getUShort(data, 3);
 		return new CellReference(firstRow, firstColumn);
 	}
 	public boolean isSame(Formula other) {
-		return Arrays.equals(_byteEncoding, other._byteEncoding);
+		return Arrays.equals(getEncodedBytes(), other.getEncodedBytes());
 	}
 }
