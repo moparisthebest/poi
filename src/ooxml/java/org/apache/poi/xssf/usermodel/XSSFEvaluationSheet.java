@@ -67,7 +67,7 @@ final class XSSFEvaluationSheet implements EvaluationSheet {
     public EvaluationCell getCell(int rowIndex, int columnIndex) {
         // shortcut evaluation if reference is outside the bounds of existing data
         // see issue #61841 for impact on VLOOKUP in particular
-        if (rowIndex > _lastDefinedRow) return null;
+        // if (rowIndex > _lastDefinedRow) return null; // see https://bz.apache.org/bugzilla/show_bug.cgi?id=61841#c12 for repro of this bug, disabled for now until proper fix...
         
         // cache for performance: ~30% speedup due to caching
         if (_cellCache == null) {
