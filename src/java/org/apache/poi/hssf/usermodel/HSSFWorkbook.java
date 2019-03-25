@@ -129,7 +129,7 @@ import org.apache.poi.util.POILogger;
  * @see org.apache.poi.hssf.usermodel.HSSFSheet
  */
 @SuppressWarnings("WeakerAccess")
-public final class HSSFWorkbook extends POIDocument implements org.apache.poi.ss.usermodel.Workbook {
+public class HSSFWorkbook extends POIDocument implements org.apache.poi.ss.usermodel.Workbook {
 
     //arbitrarily selected; may need to increase
     private static final int MAX_RECORD_LENGTH = 100_000;
@@ -155,6 +155,11 @@ public final class HSSFWorkbook extends POIDocument implements org.apache.poi.ss
      */
 
     public final static int INITIAL_CAPACITY = Configurator.getIntValue("HSSFWorkbook.SheetInitialCapacity",3);
+
+    /**
+     * SpreadsheetVersion used by this workbook, EXCEL97 in every case where we need to read or write to disk
+     */
+    public final SpreadsheetVersion spreadsheetVersion;
 
     /**
      * this is the reference to the low level Workbook object
@@ -220,8 +225,19 @@ public final class HSSFWorkbook extends POIDocument implements org.apache.poi.ss
         this(InternalWorkbook.createWorkbook());
     }
 
+    protected HSSFWorkbook(final SpreadsheetVersion spreadsheetVersion) {
+        this(InternalWorkbook.createWorkbook(), spreadsheetVersion);
+        if(spreadsheetVersion == null)
+            throw new IllegalArgumentException("SpreadsheetVersion must be non-null");
+    }
+
     private HSSFWorkbook(InternalWorkbook book) {
+        this(book, SpreadsheetVersion.EXCEL97);
+    }
+
+    private HSSFWorkbook(InternalWorkbook book, final SpreadsheetVersion spreadsheetVersion) {
         super((DirectoryNode)null);
+        this.spreadsheetVersion = spreadsheetVersion;
         workbook = book;
         _sheets = new ArrayList<>(INITIAL_CAPACITY);
         names = new ArrayList<>(INITIAL_CAPACITY);
@@ -324,6 +340,7 @@ public final class HSSFWorkbook extends POIDocument implements org.apache.poi.ss
             throws IOException
     {
         super(directory);
+        spreadsheetVersion = SpreadsheetVersion.EXCEL97;
         String workbookName = getWorkbookDirEntryName(directory);
 
         this.preserveNodes = preserveNodes;
@@ -2228,7 +2245,7 @@ public final class HSSFWorkbook extends POIDocument implements org.apache.poi.ss
      */
     @Override
     public SpreadsheetVersion getSpreadsheetVersion() {
-        return SpreadsheetVersion.EXCEL97;
+        return this.spreadsheetVersion;
     }
 
     @Override
