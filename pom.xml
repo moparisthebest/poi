@@ -99,11 +99,6 @@
   </dependencies>
 
   <build>
-      <sourceDirectory>src/java</sourceDirectory>
-         <resources>
-     <resource>
-       <directory>src/resources/main</directory>
-     </resource>
-   </resources>
+
   </build>
 </project>
