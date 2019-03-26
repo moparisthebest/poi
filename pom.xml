@@ -21,60 +21,83 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>9</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.moparisthebest.poi</groupId>
+    <artifactId>poi-fast-calc</artifactId>
+    <version>3.16-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <name>POI Fast Calc</name>
+    <url>https://code.moparisthebest.com/moparisthebest/poi</url>
+    <description>POI Fast Calc - Java API To Calculate Excel formulas quickly</description>
 
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.moparisthebest.poi</groupId>
-	<artifactId>poi-fast-calc</artifactId>
-	<version>3.16</version>
-	<packaging>jar</packaging>
-	<name>Apache POI</name>
-	<url>http://poi.apache.org/</url>
-	<description>Apache POI - Java API To Access Microsoft Format Files</description>
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
 
-  <mailingLists>
-    <mailingList>
-      <name>POI Users List</name>
-      <subscribe>user-subscribe@poi.apache.org</subscribe>
-      <unsubscribe>user-unsubscribe@poi.apache.org</unsubscribe>
-      <archive>http://mail-archives.apache.org/mod_mbox/poi-user/</archive>
-    </mailingList>
-    <mailingList>
-      <name>POI Developer List</name>
-      <subscribe>dev-subscribe@poi.apache.org</subscribe>
-      <unsubscribe>dev-unsubscribe@poi.apache.org</unsubscribe>
-      <archive>http://mail-archives.apache.org/mod_mbox/poi-dev/</archive>
-    </mailingList>
-  </mailingLists>
+    <organization>
+        <name>moparisthebest.com</name>
+        <url>https://www.moparisthebest.com</url>
+    </organization>
 
-  <licenses>
-    <license>
-      <name>The Apache Software License, Version 2.0</name>
-      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-    </license>
-  </licenses>
+    <scm>
+        <connection>scm:git:https://code.moparisthebest.com/moparisthebest/poi.git</connection>
+        <developerConnection>scm:git:https://code.moparisthebest.com/moparisthebest/poi.git</developerConnection>
+        <url>https://code.moparisthebest.com/moparisthebest/poi</url>
+    </scm>
 
-  <organization>
-    <name>Apache Software Foundation</name>
-    <url>http://www.apache.org/</url>
-  </organization>
-  
-  <properties>
-    <java.version>1.6</java.version>
-    <project.build.sourceEncoding>utf8</project.build.sourceEncoding>
-    <maven.compiler.source>${java.version}</maven.compiler.source>
-    <maven.compiler.target>${java.version}</maven.compiler.target>
-  </properties>
+    <properties>
+        <java.version>1.6</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
 
-  <dependencies>    
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <scope>test</scope>
-      <version>4.12</version>
-    </dependency>
-  </dependencies>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <pushChanges>false</pushChanges>
+        <localCheckout>true</localCheckout>
 
-  <build>
+        <!-- default argline for junit tests, java 9+ requires much less memory than 6/7/8, but more runs faster -->
+        <test.argLine>-Xmx4096m</test.argLine>
+    </properties>
 
-  </build>
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+            <version>4.12</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.1</version>
+                <configuration>
+                    <verbose>true</verbose>
+                    <fork>true</fork>
+                    <argLine>${test.argLine}</argLine>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>1.6.5</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <serverId>ossrh</serverId>
+                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

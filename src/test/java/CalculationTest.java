@@ -66,6 +66,7 @@ public class CalculationTest {
 
         final int maxRows = maxRow - 1; // because we created 1 above
 
+        System.gc(); // to clean up from previous runs before we start counting
         final long start = System.currentTimeMillis();
 
         //rowNum = maxRow - 3;
