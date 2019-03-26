@@ -65,22 +65,7 @@
     <maven.compiler.target>${java.version}</maven.compiler.target>
   </properties>
 
-  <dependencies>
-    <dependency>
-      <groupId>commons-logging</groupId>
-      <artifactId>commons-logging</artifactId>
-      <version>1.2</version>
-      <scope>provided</scope>
-      <optional>true</optional>
-    </dependency>
-    <dependency>
-      <groupId>log4j</groupId>
-      <artifactId>log4j</artifactId>
-      <version>1.2.17</version>
-      <scope>runtime</scope>
-      <optional>true</optional>
-    </dependency>
-    
+  <dependencies>    
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
