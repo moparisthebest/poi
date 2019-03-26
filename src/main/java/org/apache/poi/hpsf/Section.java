@@ -25,7 +25,6 @@ import java.util.Date;
 import java.util.Map;
 import java.util.TreeMap;
 
-import org.apache.commons.collections4.bidimap.TreeBidiMap;
 import org.apache.poi.hpsf.wellknown.PropertyIDMap;
 import org.apache.poi.hpsf.wellknown.SectionIDMap;
 import org.apache.poi.util.CodePageUtil;
@@ -115,136 +114,8 @@ public class Section {
      * @exception UnsupportedEncodingException if the section's codepage is not
      * supported.
      */
-    @SuppressWarnings("unchecked")
     public Section(final byte[] src, final int offset) throws UnsupportedEncodingException {
-        int o1 = offset;
-
-        /*
-         * Read the format ID.
-         */
-        formatID = new ClassID(src, o1);
-        o1 += ClassID.LENGTH;
-
-        /*
-         * Read the offset from the stream's start and positions to
-         * the section header.
-         */
-        this.offset = LittleEndian.getUInt(src, o1);
-        o1 = (int) this.offset;
-
-        /*
-         * Read the section length.
-         */
-        size = (int) LittleEndian.getUInt(src, o1);
-        o1 += LittleEndian.INT_SIZE;
-
-        /*
-         * Read the number of properties.
-         */
-        final int propertyCount = (int) LittleEndian.getUInt(src, o1);
-        o1 += LittleEndian.INT_SIZE;
-
-        /*
-         * Read the properties. The offset is positioned at the first
-         * entry of the property list. There are two problems:
-         *
-         * 1. For each property we have to find out its length. In the
-         *    property list we find each property's ID and its offset relative
-         *    to the section's beginning. Unfortunately the properties in the
-         *    property list need not to be in ascending order, so it is not
-         *    possible to calculate the length as
-         *    (offset of property(i+1) - offset of property(i)). Before we can
-         *    that we first have to sort the property list by ascending offsets.
-         *
-         * 2. We have to read the property with ID 1 before we read other
-         *    properties, at least before other properties containing strings.
-         *    The reason is that property 1 specifies the codepage. If it is
-         *    1200, all strings are in Unicode. In other words: Before we can
-         *    read any strings we have to know whether they are in Unicode or
-         *    not. Unfortunately property 1 is not guaranteed to be the first in
-         *    a section.
-         *
-         *    The algorithm below reads the properties in two passes: The first
-         *    one looks for property ID 1 and extracts the codepage number. The
-         *    seconds pass reads the other properties.
-         */
-        /* Pass 1: Read the property list. */
-        int pass1Offset = o1;
-        long cpOffset = -1;
-        final TreeBidiMap<Long,Long> offset2Id = new TreeBidiMap<Long,Long>();
-        for (int i = 0; i < propertyCount; i++) {
-            /* Read the property ID. */
-            long id = LittleEndian.getUInt(src, pass1Offset);
-            pass1Offset += LittleEndian.INT_SIZE;
-
-            /* Offset from the section's start. */
-            long off = LittleEndian.getUInt(src, pass1Offset);
-            pass1Offset += LittleEndian.INT_SIZE;
-
-            offset2Id.put(off, id);
-            
-            if (id == PropertyIDMap.PID_CODEPAGE) {
-                cpOffset = off;
-            }
-        }
-
-        /* Look for the codepage. */
-        int codepage = -1;
-        if (cpOffset != -1) {
-            /* Read the property's value type. It must be VT_I2. */
-            long o = this.offset + cpOffset;
-            final long type = LittleEndian.getUInt(src, (int)o);
-            o += LittleEndian.INT_SIZE;
-
-            if (type != Variant.VT_I2) {
-                throw new HPSFRuntimeException
-                    ("Value type of property ID 1 is not VT_I2 but " +
-                     type + ".");
-            }
-
-            /* Read the codepage number. */
-            codepage = LittleEndian.getUShort(src, (int)o);
-        }
-        
-
-        /* Pass 2: Read all properties - including the codepage property,
-         * if available. */
-        for (Map.Entry<Long,Long> me : offset2Id.entrySet()) {
-            long off = me.getKey();
-            long id = me.getValue();
-            Property p;
-            if (id == PropertyIDMap.PID_CODEPAGE) {
-                p = new Property(PropertyIDMap.PID_CODEPAGE, Variant.VT_I2, codepage);
-            } else {
-                int pLen = propLen(offset2Id, off, size);
-                long o = this.offset + off;
-                p = new Property(id, src, o, pLen, codepage);
-            }
-            properties.put(id, p);
-        }
-
-        /*
-         * Extract the dictionary (if available).
-         */
-        dictionary = (Map<Long,String>) getProperty(0);
-    }
-
-    /**
-     * Retrieves the length of the given property (by key)
-     *
-     * @param offset2Id the offset to id map
-     * @param entryOffset the current entry key
-     * @param maxSize the maximum offset/size of the section stream
-     * @return the length of the current property
-     */
-    private static int propLen(
-        TreeBidiMap<Long,Long> offset2Id,
-        Long entryOffset,
-        long maxSize) {
-        Long nextKey = offset2Id.nextKey(entryOffset);
-        long begin = entryOffset;
-        long end = (nextKey != null) ? nextKey : maxSize;
-        return (int)(end - begin);
+        throw new UnsupportedEncodingException("support for reading these has been removed in poi-fast-calc");
     }
 
 

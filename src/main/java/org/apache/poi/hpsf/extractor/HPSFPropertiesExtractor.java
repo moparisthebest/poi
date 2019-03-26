@@ -23,7 +23,6 @@ import java.io.IOException;
 import org.apache.poi.POIDocument;
 import org.apache.poi.POIOLE2TextExtractor;
 import org.apache.poi.POITextExtractor;
-import org.apache.poi.hpsf.CustomProperties;
 import org.apache.poi.hpsf.DocumentSummaryInformation;
 import org.apache.poi.hpsf.HPSFPropertiesOnlyDocument;
 import org.apache.poi.hpsf.Property;
@@ -63,15 +62,6 @@ public class HPSFPropertiesExtractor extends POIOLE2TextExtractor {
 
         // Normal properties
         text.append( getPropertiesText(dsi) );
-
-        // Now custom ones
-        CustomProperties cps = dsi == null ? null : dsi.getCustomProperties();
-        if (cps != null) {
-            for (String key : cps.nameSet()) {
-                String val = getPropertyValueText(cps.get(key));
-                text.append(key).append(" = ").append(val).append("\n");
-            }
-        }
 
         // All done
         return text.toString();

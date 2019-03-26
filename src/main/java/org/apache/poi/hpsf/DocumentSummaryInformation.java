@@ -718,66 +718,6 @@ public class DocumentSummaryInformation extends SpecialPropertySet {
         remove1stProperty(PropertyIDMap.PID_DOCVERSION);
     }
 
-    
-    /**
-     * Gets the custom properties.
-     *
-     * @return The custom properties.
-     */
-    public CustomProperties getCustomProperties() {
-        CustomProperties cps = null;
-        if (getSectionCount() >= 2) {
-            cps = new CustomProperties();
-            final Section section = getSections().get(1);
-            final Map<Long,String> dictionary = section.getDictionary();
-            final Property[] properties = section.getProperties();
-            int propertyCount = 0;
-            for (int i = 0; i < properties.length; i++) {
-                final Property p = properties[i];
-                final long id = p.getID();
-                if (id != 0 && id != 1) {
-                    propertyCount++;
-                    final CustomProperty cp = new CustomProperty(p,
-                            dictionary.get(Long.valueOf(id)));
-                    cps.put(cp.getName(), cp);
-                }
-            }
-            if (cps.size() != propertyCount) {
-                cps.setPure(false);
-            }
-        }
-        return cps;
-    }
-
-    /**
-     * Sets the custom properties.
-     *
-     * @param customProperties The custom properties
-     */
-    public void setCustomProperties(final CustomProperties customProperties) {
-        ensureSection2();
-        final Section section = getSections().get(1);
-        final Map<Long,String> dictionary = customProperties.getDictionary();
-        section.clear();
-
-        /* Set the codepage. If both custom properties and section have a
-         * codepage, the codepage from the custom properties wins, else take the
-         * one that is defined. If none is defined, take Unicode. */
-        int cpCodepage = customProperties.getCodepage();
-        if (cpCodepage < 0) {
-            cpCodepage = section.getCodepage();
-        }
-        if (cpCodepage < 0) {
-            cpCodepage = CodePageUtil.CP_UNICODE;
-        }
-        customProperties.setCodepage(cpCodepage);
-        section.setCodepage(cpCodepage);
-        section.setDictionary(dictionary);
-        for (CustomProperty p : customProperties.values()) {
-            section.setProperty(p);
-        }
-    }
-
     /**
      * Creates section 2 if it is not already present.
      */
