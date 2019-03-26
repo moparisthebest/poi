@@ -514,22 +514,6 @@ public interface Workbook extends Closeable, Iterable<Sheet> {
     DataFormat createDataFormat();
 
     /**
-     * Adds a picture to the workbook.
-     *
-     * @param pictureData       The bytes of the picture
-     * @param format            The format of the picture.
-     *
-     * @return the index to this picture (1 based).
-     * @see #PICTURE_TYPE_EMF
-     * @see #PICTURE_TYPE_WMF
-     * @see #PICTURE_TYPE_PICT
-     * @see #PICTURE_TYPE_JPEG
-     * @see #PICTURE_TYPE_PNG
-     * @see #PICTURE_TYPE_DIB
-     */
-    int addPicture(byte[] pictureData, int format);
-
-    /**
      * Gets all pictures from the Workbook.
      *
      * @return the list of pictures (a list of {@link PictureData} objects.)

@@ -43,7 +43,6 @@ import java.util.NoSuchElementException;
 import java.util.Set;
 import java.util.regex.Pattern;
 
-import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.POIDocument;
 import org.apache.poi.ddf.EscherBSERecord;
@@ -1936,101 +1935,6 @@ public final class HSSFWorkbook extends POIDocument implements org.apache.poi.ss
         } else {
             workbook.createDrawingGroup();
         }
-    }
-
-    /**
-     * Adds a picture to the workbook.
-     *
-     * @param pictureData       The bytes of the picture
-     * @param format            The format of the picture.  One of <code>PICTURE_TYPE_*</code>
-     *
-     * @return the index to this picture (1 based).
-     * @see #PICTURE_TYPE_WMF
-     * @see #PICTURE_TYPE_EMF
-     * @see #PICTURE_TYPE_PICT
-     * @see #PICTURE_TYPE_PNG
-     * @see #PICTURE_TYPE_JPEG
-     * @see #PICTURE_TYPE_DIB
-     */
-    @SuppressWarnings("fallthrough")
-    @Override
-    public int addPicture(byte[] pictureData, int format)
-    {
-        initDrawings();
-
-        byte[] uid = DigestUtils.md5(pictureData);
-        EscherBlipRecord blipRecord;
-        int blipSize;
-        short escherTag;
-        switch (format) {
-            case PICTURE_TYPE_WMF:
-                // remove first 22 bytes if file starts with magic bytes D7-CD-C6-9A
-                // see also http://de.wikipedia.org/wiki/Windows_Metafile#Hinweise_zur_WMF-Spezifikation
-                if (LittleEndian.getInt(pictureData) == 0x9AC6CDD7) {
-                    byte picDataNoHeader[] = new byte[pictureData.length-22];
-                    System.arraycopy(pictureData, 22, picDataNoHeader, 0, pictureData.length-22);
-                    pictureData = picDataNoHeader;
-                }
-                // fall through
-            case PICTURE_TYPE_EMF:
-                EscherMetafileBlip blipRecordMeta = new EscherMetafileBlip();
-                blipRecord = blipRecordMeta;
-                blipRecordMeta.setUID(uid);
-                blipRecordMeta.setPictureData(pictureData);
-                // taken from libre office export, it won't open, if this is left to 0
-                blipRecordMeta.setFilter((byte)-2);
-                blipSize = blipRecordMeta.getCompressedSize() + 58;
-                escherTag = 0;
-                break;
-            default:
-                EscherBitmapBlip blipRecordBitmap = new EscherBitmapBlip();
-                blipRecord = blipRecordBitmap;
-                blipRecordBitmap.setUID( uid );
-                blipRecordBitmap.setMarker( (byte) 0xFF );
-                blipRecordBitmap.setPictureData( pictureData );
-                blipSize = pictureData.length + 25;
-                escherTag = (short) 0xFF;
-    	        break;
-        }
-
-        blipRecord.setRecordId((short) (EscherBlipRecord.RECORD_ID_START + format));
-        switch (format)
-        {
-            case PICTURE_TYPE_EMF:
-                blipRecord.setOptions(HSSFPictureData.MSOBI_EMF);
-                break;
-            case PICTURE_TYPE_WMF:
-                blipRecord.setOptions(HSSFPictureData.MSOBI_WMF);
-                break;
-            case PICTURE_TYPE_PICT:
-                blipRecord.setOptions(HSSFPictureData.MSOBI_PICT);
-                break;
-            case PICTURE_TYPE_PNG:
-                blipRecord.setOptions(HSSFPictureData.MSOBI_PNG);
-                break;
-            case PICTURE_TYPE_JPEG:
-                blipRecord.setOptions(HSSFPictureData.MSOBI_JPEG);
-                break;
-            case PICTURE_TYPE_DIB:
-                blipRecord.setOptions(HSSFPictureData.MSOBI_DIB);
-                break;
-            default:
-                throw new IllegalStateException("Unexpected picture format: " + format);
-        }
-
-        EscherBSERecord r = new EscherBSERecord();
-        r.setRecordId( EscherBSERecord.RECORD_ID );
-        r.setOptions( (short) ( 0x0002 | ( format << 4 ) ) );
-        r.setBlipTypeMacOS( (byte) format );
-        r.setBlipTypeWin32( (byte) format );
-        r.setUid( uid );
-        r.setTag( escherTag );
-        r.setSize( blipSize );
-        r.setRef( 0 );
-        r.setOffset( 0 );
-        r.setBlipRecord( blipRecord );
-
-        return workbook.addBSERecord( r );
     }
 
     /**
