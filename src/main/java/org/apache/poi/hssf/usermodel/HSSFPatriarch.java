@@ -80,13 +80,7 @@ public final class HSSFPatriarch implements HSSFShapeContainer, Drawing<HSSFShap
      * @param boundAggregate -low level representation of all binary data inside sheet
      */
     HSSFPatriarch(HSSFSheet sheet, EscherAggregate boundAggregate) {
-        _sheet = sheet;
-        _boundAggregate = boundAggregate;
-        _mainSpgrContainer = _boundAggregate.getEscherContainer().getChildContainers().get(0);
-        EscherContainerRecord spContainer = (EscherContainerRecord) _boundAggregate.getEscherContainer()
-                .getChildContainers().get(0).getChild(0);
-        _spgrRecord = spContainer.getChildById(EscherSpgrRecord.RECORD_ID);
-        buildShapeTree();
+        throw new IllegalStateException("support for this has been removed in poi-fast-calc");
     }
 
     /**
@@ -223,77 +217,7 @@ public final class HSSFPatriarch implements HSSFShapeContainer, Drawing<HSSFShap
 
     @Override
     public HSSFObjectData createObjectData(ClientAnchor anchor, int storageId, int pictureIndex) {
-        ObjRecord obj = new ObjRecord();
-
-        CommonObjectDataSubRecord ftCmo = new CommonObjectDataSubRecord();
-        ftCmo.setObjectType(CommonObjectDataSubRecord.OBJECT_TYPE_PICTURE);
-        // ftCmo.setObjectId(oleShape.getShapeId()); ... will be set by onCreate(...)
-        ftCmo.setLocked(true);
-        ftCmo.setPrintable(true);
-        ftCmo.setAutofill(true);
-        ftCmo.setAutoline(true);
-        ftCmo.setReserved1(0);
-        ftCmo.setReserved2(0);
-        ftCmo.setReserved3(0);
-        obj.addSubRecord(ftCmo);
-        
-        // FtCf (pictFormat) 
-        FtCfSubRecord ftCf = new FtCfSubRecord();
-        HSSFPictureData pictData = getSheet().getWorkbook().getAllPictures().get(pictureIndex-1);
-        switch (pictData.getFormat()) {
-	        case Workbook.PICTURE_TYPE_WMF:
-	        case Workbook.PICTURE_TYPE_EMF:
-	        	// this needs patch #49658 to be applied to actually work 
-	            ftCf.setFlags(FtCfSubRecord.METAFILE_BIT);
-	            break;
-	        case Workbook.PICTURE_TYPE_DIB:
-	        case Workbook.PICTURE_TYPE_PNG:
-	        case Workbook.PICTURE_TYPE_JPEG:
-	        case Workbook.PICTURE_TYPE_PICT:
-	            ftCf.setFlags(FtCfSubRecord.BITMAP_BIT);
-	            break;
-	        default:
-	            throw new IllegalStateException("Invalid picture type: " + pictData.getFormat());
-        }
-        obj.addSubRecord(ftCf);
-        // FtPioGrbit (pictFlags)
-        FtPioGrbitSubRecord ftPioGrbit = new FtPioGrbitSubRecord();
-        ftPioGrbit.setFlagByBit(FtPioGrbitSubRecord.AUTO_PICT_BIT, true);
-        obj.addSubRecord(ftPioGrbit);
-        
-        EmbeddedObjectRefSubRecord ftPictFmla = new EmbeddedObjectRefSubRecord();
-        ftPictFmla.setUnknownFormulaData(new byte[]{2, 0, 0, 0, 0});
-        ftPictFmla.setOleClassname("Paket");
-        ftPictFmla.setStorageId(storageId);
-        
-        obj.addSubRecord(ftPictFmla);
-        obj.addSubRecord(new EndSubRecord());
-
-        String entryName = "MBD"+HexDump.toHex(storageId);
-        DirectoryEntry oleRoot;
-        try {
-            DirectoryNode dn = _sheet.getWorkbook().getDirectory();
-        	if (dn == null) {
-                throw new FileNotFoundException();
-            }
-        	oleRoot = (DirectoryEntry)dn.getEntry(entryName);
-        } catch (FileNotFoundException e) {
-        	throw new IllegalStateException("trying to add ole shape without actually adding data first - use HSSFWorkbook.addOlePackage first", e);
-        }
-        
-        // create picture shape, which need to be minimal modified for oleshapes
-        HSSFPicture shape = new HSSFPicture(null, (HSSFClientAnchor)anchor);
-        shape.setPictureIndex(pictureIndex);
-        EscherContainerRecord spContainer = shape.getEscherContainer();
-        EscherSpRecord spRecord = spContainer.getChildById(EscherSpRecord.RECORD_ID);
-        spRecord.setFlags(spRecord.getFlags() |  EscherSpRecord.FLAG_OLESHAPE);
-        
-        HSSFObjectData oleShape = new HSSFObjectData(spContainer, obj, oleRoot); 
-        addShape(oleShape);
-        onCreate(oleShape);
-        
-        
-        return oleShape;
+        throw new IllegalStateException("support for this has been removed in poi-fast-calc");
     }
     
     /**
@@ -530,26 +454,6 @@ public final class HSSFPatriarch implements HSSFShapeContainer, Drawing<HSSFShap
     @NotImplemented
     public Chart createChart(ClientAnchor anchor) {
         throw new RuntimeException("NotImplemented");
-    }
-
-
-    /**
-     * create shape tree from existing escher records tree
-     */
-    void buildShapeTree() {
-        EscherContainerRecord dgContainer = _boundAggregate.getEscherContainer();
-        if (dgContainer == null) {
-            return;
-        }
-        EscherContainerRecord spgrConrainer = dgContainer.getChildContainers().get(0);
-        List<EscherContainerRecord> spgrChildren = spgrConrainer.getChildContainers();
-
-        for (int i = 0; i < spgrChildren.size(); i++) {
-            EscherContainerRecord spContainer = spgrChildren.get(i);
-            if (i != 0) {
-                HSSFShapeFactory.createShapeTree(spContainer, _boundAggregate, this, _sheet.getWorkbook().getDirectory());
-            }
-        }
     }
 
     private void setFlipFlags(HSSFShape shape){

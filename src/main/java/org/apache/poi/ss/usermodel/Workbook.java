@@ -17,7 +17,6 @@
 
 package org.apache.poi.ss.usermodel;
 
-import java.io.Closeable;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.Iterator;
@@ -33,7 +32,7 @@ import org.apache.poi.util.Removal;
  * will construct whether they are reading or writing a workbook.  It is also the
  * top level object for creating new sheets/etc.
  */
-public interface Workbook extends Closeable, Iterable<Sheet> {
+public interface Workbook extends Iterable<Sheet> {
 
     /** Extended windows meta file */
     int PICTURE_TYPE_EMF = 2;
@@ -345,25 +344,6 @@ public interface Workbook extends Closeable, Iterable<Sheet> {
     CellStyle getCellStyleAt(int idx);
 
     /**
-     * Write out this workbook to an Outputstream.
-     *
-     * @param stream - the java OutputStream you wish to write to
-     * @exception IOException if anything can't be written.
-     */
-    void write(OutputStream stream) throws IOException;
-
-    /**
-     * Close the underlying input resource (File or Stream),
-     *  from which the Workbook was read.
-     *
-     * <p>Once this has been called, no further
-     *  operations, updates or reads should be performed on the
-     *  Workbook.
-     */
-    @Override
-    void close() throws IOException;
-
-    /**
      * @return the total number of defined names in this workbook
      */
     int getNumberOfNames();
@@ -656,20 +636,6 @@ public interface Workbook extends Closeable, Iterable<Sheet> {
      * @since 3.14 beta 2
      */
     SpreadsheetVersion getSpreadsheetVersion();
-
-    /**
-     * Adds an OLE package manager object with the given content to the sheet
-     *
-     * @param oleData the payload
-     * @param label the label of the payload
-     * @param fileName the original filename
-     * @param command the command to open the payload
-     * 
-     * @return the index of the added ole object, i.e. the storage id
-     * 
-     * @throws IOException if the object can't be embedded
-     */
-    int addOlePackage(byte[] oleData, String label, String fileName, String command) throws IOException;
 
     /**
      * Whether a call to {@link Cell#setCellFormula(String)} will validate the formula or not.

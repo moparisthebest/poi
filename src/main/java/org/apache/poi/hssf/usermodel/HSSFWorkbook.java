@@ -17,16 +17,8 @@
 
 package org.apache.poi.hssf.usermodel;
 
-import static org.apache.poi.hssf.model.InternalWorkbook.OLD_WORKBOOK_DIR_ENTRY_NAME;
 import static org.apache.poi.hssf.model.InternalWorkbook.WORKBOOK_DIR_ENTRY_NAMES;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.nio.charset.Charset;
@@ -75,20 +67,7 @@ import org.apache.poi.hssf.record.SSTRecord;
 import org.apache.poi.hssf.record.UnknownRecord;
 import org.apache.poi.hssf.record.aggregates.RecordAggregate.RecordVisitor;
 import org.apache.poi.hssf.record.common.UnicodeString;
-import org.apache.poi.hssf.record.crypto.Biff8DecryptingStream;
 import org.apache.poi.hssf.util.CellReference;
-import org.apache.poi.poifs.crypt.ChunkedCipherOutputStream;
-import org.apache.poi.poifs.crypt.Decryptor;
-import org.apache.poi.poifs.crypt.Encryptor;
-import org.apache.poi.poifs.filesystem.DirectoryEntry;
-import org.apache.poi.poifs.filesystem.DirectoryNode;
-import org.apache.poi.poifs.filesystem.DocumentNode;
-import org.apache.poi.poifs.filesystem.EntryUtils;
-import org.apache.poi.poifs.filesystem.FilteringDirectoryNode;
-import org.apache.poi.poifs.filesystem.NPOIFSDocument;
-import org.apache.poi.poifs.filesystem.NPOIFSFileSystem;
-import org.apache.poi.poifs.filesystem.Ole10Native;
-import org.apache.poi.poifs.filesystem.POIFSFileSystem;
 import org.apache.poi.ss.SpreadsheetVersion;
 import org.apache.poi.ss.formula.FormulaShifter;
 import org.apache.poi.ss.formula.FormulaType;
@@ -104,9 +83,6 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.util.Configurator;
 import org.apache.poi.util.HexDump;
 import org.apache.poi.util.Internal;
-import org.apache.poi.util.LittleEndian;
-import org.apache.poi.util.LittleEndianByteArrayInputStream;
-import org.apache.poi.util.LittleEndianByteArrayOutputStream;
 import org.apache.poi.util.POILogFactory;
 import org.apache.poi.util.POILogger;
 import org.apache.poi.util.Removal;
@@ -119,7 +95,7 @@ import org.apache.poi.util.Removal;
  * @see org.apache.poi.hssf.model.InternalWorkbook
  * @see org.apache.poi.hssf.usermodel.HSSFSheet
  */
-public final class HSSFWorkbook extends POIDocument implements org.apache.poi.ss.usermodel.Workbook {
+public final class HSSFWorkbook implements org.apache.poi.ss.usermodel.Workbook {
     private static final Pattern COMMA_PATTERN = Pattern.compile(",");
 
     /**
@@ -201,14 +177,14 @@ public final class HSSFWorkbook extends POIDocument implements org.apache.poi.ss
     private UDFFinder _udfFinder = new IndexedUDFFinder(AggregatingUDFFinder.DEFAULT);
 
     public static HSSFWorkbook create(InternalWorkbook book) {
-    	return new HSSFWorkbook(book);
+    	return new HSSFWorkbook(book, SpreadsheetVersion.EXCEL2007);
     }
     /**
      * Creates new HSSFWorkbook from scratch (start here!)
      *
      */
     public HSSFWorkbook() {
-        this(InternalWorkbook.createWorkbook());
+        this(InternalWorkbook.createWorkbook(), SpreadsheetVersion.EXCEL2007);
     }
 
     public HSSFWorkbook(final SpreadsheetVersion spreadsheetVersion) {
@@ -217,208 +193,11 @@ public final class HSSFWorkbook extends POIDocument implements org.apache.poi.ss
             throw new IllegalArgumentException("SpreadsheetVersion must be non-null");
     }
 
-    private HSSFWorkbook(InternalWorkbook book) {
-        this(book, SpreadsheetVersion.EXCEL97);
-    }
-
     private HSSFWorkbook(InternalWorkbook book, final SpreadsheetVersion spreadsheetVersion) {
-        super((DirectoryNode)null);
         this.spreadsheetVersion = spreadsheetVersion;
         workbook = book;
         _sheets = new ArrayList<HSSFSheet>(INITIAL_CAPACITY);
         names = new ArrayList<HSSFName>(INITIAL_CAPACITY);
-    }
-
-    /**
-     * Given a POI POIFSFileSystem object, read in its Workbook along
-     *  with all related nodes, and populate the high and low level models.
-     * <p>This calls {@link #HSSFWorkbook(POIFSFileSystem, boolean)} with
-     *  preserve nodes set to true.
-     *
-     * @see #HSSFWorkbook(POIFSFileSystem, boolean)
-     * @see org.apache.poi.poifs.filesystem.POIFSFileSystem
-     * @exception IOException if the stream cannot be read
-     */
-    public HSSFWorkbook(POIFSFileSystem fs) throws IOException {
-        this(fs,true);
-    }
-    /**
-     * Given a POI POIFSFileSystem object, read in its Workbook along
-     *  with all related nodes, and populate the high and low level models.
-     * <p>This calls {@link #HSSFWorkbook(POIFSFileSystem, boolean)} with
-     *  preserve nodes set to true.
-     *
-     * @see #HSSFWorkbook(POIFSFileSystem, boolean)
-     * @see org.apache.poi.poifs.filesystem.POIFSFileSystem
-     * @exception IOException if the stream cannot be read
-     */
-    public HSSFWorkbook(NPOIFSFileSystem fs) throws IOException {
-        this(fs.getRoot(),true);
-    }
-
-    /**
-     * Given a POI POIFSFileSystem object, read in its Workbook and populate
-     * the high and low level models.  If you're reading in a workbook... start here!
-     *
-     * @param fs the POI filesystem that contains the Workbook stream.
-     * @param preserveNodes whether to preserve other nodes, such as
-     *        macros.  This takes more memory, so only say yes if you
-     *        need to. If set, will store all of the POIFSFileSystem
-     *        in memory
-     * @see org.apache.poi.poifs.filesystem.POIFSFileSystem
-     * @exception IOException if the stream cannot be read
-     */
-    public HSSFWorkbook(POIFSFileSystem fs, boolean preserveNodes)
-            throws IOException {
-        this(fs.getRoot(), fs, preserveNodes);
-    }
-
-    public static String getWorkbookDirEntryName(DirectoryNode directory) {
-
-        for (String wbName : WORKBOOK_DIR_ENTRY_NAMES) {
-            try {
-                directory.getEntry(wbName);
-                return wbName;
-            } catch (FileNotFoundException e) {
-                // continue - to try other options
-            }
-        }
-
-        // check for an encrypted .xlsx file - they get OLE2 wrapped
-        try {
-        	directory.getEntry(Decryptor.DEFAULT_POIFS_ENTRY);
-        	throw new EncryptedDocumentException("The supplied spreadsheet seems to be an Encrypted .xlsx file. " +
-        			"It must be decrypted before use by XSSF, it cannot be used by HSSF");
-        } catch (FileNotFoundException e) {
-            // fall through
-        }
-
-        // check for previous version of file format
-        try {
-            directory.getEntry(OLD_WORKBOOK_DIR_ENTRY_NAME);
-            throw new OldExcelFormatException("The supplied spreadsheet seems to be Excel 5.0/7.0 (BIFF5) format. "
-                    + "POI only supports BIFF8 format (from Excel versions 97/2000/XP/2003)");
-        } catch (FileNotFoundException e) {
-            // fall through
-        }
-
-        throw new IllegalArgumentException("The supplied POIFSFileSystem does not contain a BIFF8 'Workbook' entry. "
-            + "Is it really an excel file? Had: " + directory.getEntryNames());
-    }
-
-    /**
-     * given a POI POIFSFileSystem object, and a specific directory
-     *  within it, read in its Workbook and populate the high and
-     *  low level models.  If you're reading in a workbook...start here.
-     *
-     * @param directory the POI filesystem directory to process from
-     * @param fs the POI filesystem that contains the Workbook stream.
-     * @param preserveNodes whether to preserve other nodes, such as
-     *        macros.  This takes more memory, so only say yes if you
-     *        need to. If set, will store all of the POIFSFileSystem
-     *        in memory
-     * @see org.apache.poi.poifs.filesystem.POIFSFileSystem
-     * @exception IOException if the stream cannot be read
-     */
-    public HSSFWorkbook(DirectoryNode directory, POIFSFileSystem fs, boolean preserveNodes)
-            throws IOException
-    {
-       this(directory, preserveNodes);
-    }
-
-    /**
-     * given a POI POIFSFileSystem object, and a specific directory
-     *  within it, read in its Workbook and populate the high and
-     *  low level models.  If you're reading in a workbook...start here.
-     *
-     * @param directory the POI filesystem directory to process from
-     * @param preserveNodes whether to preserve other nodes, such as
-     *        macros.  This takes more memory, so only say yes if you
-     *        need to. If set, will store all of the POIFSFileSystem
-     *        in memory
-     * @see org.apache.poi.poifs.filesystem.POIFSFileSystem
-     * @exception IOException if the stream cannot be read
-     */
-    public HSSFWorkbook(DirectoryNode directory, boolean preserveNodes)
-            throws IOException
-    {
-        super(directory);
-        spreadsheetVersion = SpreadsheetVersion.EXCEL97;
-        String workbookName = getWorkbookDirEntryName(directory);
-
-        this.preserveNodes = preserveNodes;
-
-        // If we're not preserving nodes, don't track the
-        //  POIFS any more
-        if(! preserveNodes) {
-            clearDirectory();
-        }
-
-        _sheets = new ArrayList<HSSFSheet>(INITIAL_CAPACITY);
-        names  = new ArrayList<HSSFName>(INITIAL_CAPACITY);
-
-        // Grab the data from the workbook stream, however
-        //  it happens to be spelled.
-        InputStream stream = directory.createDocumentInputStream(workbookName);
-
-        List<Record> records = RecordFactory.createRecords(stream);
-
-        workbook = InternalWorkbook.createWorkbook(records);
-        setPropertiesFromWorkbook(workbook);
-        int recOffset = workbook.getNumRecords();
-
-        // convert all LabelRecord records to LabelSSTRecord
-        convertLabelRecords(records, recOffset);
-        RecordStream rs = new RecordStream(records, recOffset);
-        while (rs.hasNext()) {
-            try {
-                InternalSheet sheet = InternalSheet.createSheet(rs);
-                _sheets.add(new HSSFSheet(this, sheet));
-            } catch (UnsupportedBOFType eb) {
-                // Hopefully there's a supported one after this!
-                log.log(POILogger.WARN, "Unsupported BOF found of type " + eb.getType());
-            }
-        }
-
-        for (int i = 0 ; i < workbook.getNumNames() ; ++i){
-            NameRecord nameRecord = workbook.getNameRecord(i);
-            HSSFName name = new HSSFName(this, nameRecord, workbook.getNameCommentRecord(nameRecord));
-            names.add(name);
-        }
-    }
-
-    /**
-     * Companion to HSSFWorkbook(POIFSFileSystem), this constructs the
-     *  POI filesystem around your {@link InputStream}, including all nodes.
-     * <p>This calls {@link #HSSFWorkbook(InputStream, boolean)} with
-     *  preserve nodes set to true.
-     *
-     * @see #HSSFWorkbook(InputStream, boolean)
-     * @see #HSSFWorkbook(POIFSFileSystem)
-     * @see org.apache.poi.poifs.filesystem.POIFSFileSystem
-     * @exception IOException if the stream cannot be read
-     */
-    public HSSFWorkbook(InputStream s) throws IOException {
-        this(s,true);
-    }
-
-    /**
-     * Companion to HSSFWorkbook(POIFSFileSystem), this constructs the
-     * POI filesystem around your {@link InputStream}.
-     *
-     * @param s  the POI filesystem that contains the Workbook stream.
-     * @param preserveNodes whether to preserve other nodes, such as
-     *        macros.  This takes more memory, so only say yes if you
-     *        need to.
-     * @see org.apache.poi.poifs.filesystem.POIFSFileSystem
-     * @see #HSSFWorkbook(POIFSFileSystem)
-     * @exception IOException if the stream cannot be read
-     */
-    @SuppressWarnings("resource")   // NPOIFSFileSystem always closes the stream
-    public HSSFWorkbook(InputStream s, boolean preserveNodes)
-            throws IOException
-    {
-        this(new NPOIFSFileSystem(s).getRoot(), preserveNodes);
     }
 
     /**
@@ -1366,136 +1145,9 @@ public final class HSSFWorkbook extends POIDocument implements org.apache.poi.ss
         return new HSSFCellStyle((short)idx, xfr, this);
     }
 
-    /**
-     * Closes the underlying {@link NPOIFSFileSystem} from which
-     *  the Workbook was read, if any.
-     *
-     * <p>Once this has been called, no further
-     *  operations, updates or reads should be performed on the 
-     *  Workbook.
-     */
-    @Override
-    public void close() throws IOException {
-        super.close();
-    }
-
     protected void validateSpreadsheetVersionWritePossible() throws IllegalStateException {
         if (this.spreadsheetVersion != SpreadsheetVersion.EXCEL97) {
             throw new IllegalStateException("SpreadsheetVersion not EXCEL97, cannot write file meant only for in-memory calculations");
-        }
-    }
-
-    /**
-     * Write out this workbook to the currently open {@link File} via the
-     *  writeable {@link POIFSFileSystem} it was opened as. 
-     *  
-     * <p>This will fail (with an {@link IllegalStateException} if the
-     *  Workbook was opened read-only, opened from an {@link InputStream}
-     *   instead of a File, or if this is not the root document. For those cases, 
-     *   you must use {@link #write(OutputStream)} or {@link #write(File)} to 
-     *   write to a brand new document.
-     */
-    @Override
-    public void write() throws IOException {
-        validateSpreadsheetVersionWritePossible();
-        validateInPlaceWritePossible();
-        final DirectoryNode dir = getDirectory();
-        
-        // Update the Workbook stream in the file
-        DocumentNode workbookNode = (DocumentNode)dir.getEntry(
-                getWorkbookDirEntryName(dir));
-        NPOIFSDocument workbookDoc = new NPOIFSDocument(workbookNode);
-        workbookDoc.replaceContents(new ByteArrayInputStream(getBytes()));
-        
-        // Update the properties streams in the file
-        writeProperties();
-        
-        // Sync with the File on disk
-        dir.getFileSystem().writeFilesystem();
-    }
-    
-    /**
-     * Method write - write out this workbook to a new {@link File}. Constructs
-     * a new POI POIFSFileSystem, passes in the workbook binary representation and
-     * writes it out. If the file exists, it will be replaced, otherwise a new one
-     * will be created.
-     * 
-     * Note that you cannot write to the currently open File using this method.
-     * If you opened your Workbook from a File, you <i>must</i> use the {@link #write()}
-     * method instead!
-     * 
-     * @param newFile The new File you wish to write the XLS to
-     *
-     * @exception IOException if anything can't be written.
-     * @see org.apache.poi.poifs.filesystem.POIFSFileSystem
-     */
-    @Override
-    public void write(File newFile) throws IOException {
-        validateSpreadsheetVersionWritePossible();
-        POIFSFileSystem fs = POIFSFileSystem.create(newFile);
-        try {
-            write(fs);
-            fs.writeFilesystem();
-        } finally {
-            fs.close();
-        }
-    }
-    
-    /**
-     * Method write - write out this workbook to an {@link OutputStream}. Constructs
-     * a new POI POIFSFileSystem, passes in the workbook binary representation and
-     * writes it out.
-     * 
-     * If {@code stream} is a {@link java.io.FileOutputStream} on a networked drive
-     * or has a high cost/latency associated with each written byte,
-     * consider wrapping the OutputStream in a {@link java.io.BufferedOutputStream}
-     * to improve write performance.
-     *
-     * @param stream - the java OutputStream you wish to write the XLS to
-     *
-     * @exception IOException if anything can't be written.
-     * @see org.apache.poi.poifs.filesystem.POIFSFileSystem
-     */
-    @Override
-	public void write(OutputStream stream) throws IOException {
-        validateSpreadsheetVersionWritePossible();
-        NPOIFSFileSystem fs = new NPOIFSFileSystem();
-        try {
-            write(fs);
-            fs.writeFilesystem(stream);
-        } finally {
-            fs.close();
-        }
-    }
-    
-    /** Writes the workbook out to a brand new, empty POIFS */
-    private void write(NPOIFSFileSystem fs) throws IOException {
-        validateSpreadsheetVersionWritePossible();
-        // For tracking what we've written out, used if we're
-        //  going to be preserving nodes
-        List<String> excepts = new ArrayList<String>(1);
-
-        // Write out the Workbook stream
-        fs.createDocument(new ByteArrayInputStream(getBytes()), "Workbook");
-
-        // Write out our HPFS properties, if we have them
-        writeProperties(fs, excepts);
-
-        if (preserveNodes) {
-            // Don't write out the old Workbook, we'll be doing our new one
-            // If the file had an "incorrect" name for the workbook stream,
-            // don't write the old one as we'll use the correct name shortly
-            excepts.addAll(Arrays.asList(WORKBOOK_DIR_ENTRY_NAMES));
-
-            // Copy over all the other nodes to our new poifs
-            EntryUtils.copyNodes(
-                    new FilteringDirectoryNode(getDirectory(), excepts)
-                    , new FilteringDirectoryNode(fs.getRoot(), excepts)
-                    );
-
-            // YK: preserve StorageClsid, it is important for embedded workbooks,
-            // see Bugzilla 47920
-            fs.getRoot().setStorageClsid(getDirectory().getStorageClsid());
         }
     }
 
@@ -1526,125 +1178,6 @@ public final class HSSFWorkbook extends POIDocument implements org.apache.poi.ss
                 result += rec.serialize(offset + result, data);
             }
             return result;
-        }
-    }
-
-
-    /**
-     * Method getBytes - get the bytes of just the HSSF portions of the XLS file.
-     * Use this to construct a POI POIFSFileSystem yourself.
-     *
-     *
-     * @return byte[] array containing the binary representation of this workbook and all contained
-     *         sheets, rows, cells, etc.
-     */
-    public byte[] getBytes() {
-        if (log.check( POILogger.DEBUG )) {
-            log.log(DEBUG, "HSSFWorkbook.getBytes()");
-        }
-        
-        HSSFSheet[] sheets = getSheets();
-        int nSheets = sheets.length;
-
-
-        // before getting the workbook size we must tell the sheets that
-        // serialization is about to occur.
-        workbook.preSerialize();
-        for (HSSFSheet sheet : sheets) {
-            sheet.getSheet().preSerialize();
-            sheet.preSerialize();
-        }
-
-        int totalsize = workbook.getSize();
-
-        // pre-calculate all the sheet sizes and set BOF indexes
-        SheetRecordCollector[] srCollectors = new SheetRecordCollector[nSheets];
-        for (int k = 0; k < nSheets; k++) {
-            workbook.setSheetBof(k, totalsize);
-            SheetRecordCollector src = new SheetRecordCollector();
-            sheets[k].getSheet().visitContainedRecords(src, totalsize);
-            totalsize += src.getTotalSize();
-            srCollectors[k] = src;
-        }
-
-        byte[] retval = new byte[totalsize];
-        int pos = workbook.serialize(0, retval);
-
-        for (int k = 0; k < nSheets; k++) {
-            SheetRecordCollector src = srCollectors[k];
-            int serializedSize = src.serialize(pos, retval);
-            if (serializedSize != src.getTotalSize()) {
-                // Wrong offset values have been passed in the call to setSheetBof() above.
-                // For books with more than one sheet, this discrepancy would cause excel
-                // to report errors and loose data while reading the workbook
-                throw new IllegalStateException("Actual serialized sheet size (" + serializedSize
-                        + ") differs from pre-calculated size (" + src.getTotalSize()
-                        + ") for sheet (" + k + ")");
-                // TODO - add similar sanity check to ensure that Sheet.serializeIndexRecord() does not write mis-aligned offsets either
-            }
-            pos += serializedSize;
-        }
-
-        encryptBytes(retval);
-        
-        return retval;
-    }
-
-    @SuppressWarnings("resource")
-    protected void encryptBytes(byte buf[]) {
-        int initialOffset = 0;
-        FilePassRecord fpr = null;
-        for (Record r : workbook.getRecords()) {
-            initialOffset += r.getRecordSize();
-            if (r instanceof FilePassRecord) {
-                fpr = (FilePassRecord)r;
-                break;
-            }
-        }
-        if (fpr == null) {
-            return;
-        }
-        
-        LittleEndianByteArrayInputStream plain = new LittleEndianByteArrayInputStream(buf, 0); // NOSONAR
-        LittleEndianByteArrayOutputStream leos = new LittleEndianByteArrayOutputStream(buf, 0); // NOSONAR
-        Encryptor enc = fpr.getEncryptionInfo().getEncryptor();
-        enc.setChunkSize(Biff8DecryptingStream.RC4_REKEYING_INTERVAL);
-        byte tmp[] = new byte[1024];
-        try {
-            ChunkedCipherOutputStream os = enc.getDataStream(leos, initialOffset);
-            int totalBytes = 0;
-            while (totalBytes < buf.length) {
-                plain.read(tmp, 0, 4);
-                final int sid = LittleEndian.getUShort(tmp, 0);
-                final int len = LittleEndian.getUShort(tmp, 2);
-                boolean isPlain = Biff8DecryptingStream.isNeverEncryptedRecord(sid);
-                os.setNextRecordSize(len, isPlain);
-                os.writePlain(tmp, 0, 4);
-                if (sid == BoundSheetRecord.sid) {
-                    // special case for the field_1_position_of_BOF (=lbPlyPos) field of
-                    // the BoundSheet8 record which must be unencrypted
-                    byte bsrBuf[] = new byte[len];
-                    plain.readFully(bsrBuf);
-                    os.writePlain(bsrBuf, 0, 4);
-                    os.write(bsrBuf, 4, len-4);
-                } else {
-                    int todo = len;
-                    while (todo > 0) {
-                        int nextLen = Math.min(todo, tmp.length);
-                        plain.readFully(tmp, 0, nextLen);
-                        if (isPlain) {
-                            os.writePlain(tmp, 0, nextLen);
-                        } else {
-                            os.write(tmp, 0, nextLen);
-                        }
-                        todo -= nextLen;
-                    }
-                }
-                totalBytes += 4 + len;
-            }
-            os.close();
-        } catch (Exception e) {
-            throw new EncryptedDocumentException(e);
         }
     }
     
@@ -1997,65 +1530,6 @@ public final class HSSFWorkbook extends POIDocument implements org.apache.poi.ss
     }
 
     /**
-     * Adds an OLE package manager object with the given POIFS to the sheet
-     *
-     * @param poiData an POIFS containing the embedded document, to be added
-     * @param label the label of the payload
-     * @param fileName the original filename
-     * @param command the command to open the payload
-     * @return the index of the added ole object
-     * @throws IOException if the object can't be embedded
-     */
-    public int addOlePackage(POIFSFileSystem poiData, String label, String fileName, String command)
-    throws IOException {
-    	DirectoryNode root = poiData.getRoot();
-    	Map<String,ClassID> olemap = getOleMap();
-    	for (Map.Entry<String,ClassID> entry : olemap.entrySet()) {
-    		if (root.hasEntry(entry.getKey())) {
-    			root.setStorageClsid(entry.getValue());
-    			break;
-    		}
-    	}
-
-    	ByteArrayOutputStream bos = new ByteArrayOutputStream();
-    	poiData.writeFilesystem(bos);
-        return addOlePackage(bos.toByteArray(), label, fileName, command);
-    }
-
-    @Override
-    public int addOlePackage(byte[] oleData, String label, String fileName, String command)
-    throws IOException {
-    	// check if we were created by POIFS otherwise create a new dummy POIFS for storing the package data
-    	if (initDirectory()) {
-    		preserveNodes = true;
-    	}
-
-        // get free MBD-Node
-        int storageId = 0;
-        DirectoryEntry oleDir = null;
-        do {
-            String storageStr = "MBD"+ HexDump.toHex(++storageId);
-            if (!getDirectory().hasEntry(storageStr)) {
-                oleDir = getDirectory().createDirectory(storageStr);
-                oleDir.setStorageClsid(ClassID.OLE10_PACKAGE);
-            }
-        } while (oleDir == null);
-
-        // the following data was taken from an example libre office document
-        // beside this "\u0001Ole" record there were several other records, e.g. CompObj,
-        // OlePresXXX, but it seems, that they aren't neccessary
-        byte oleBytes[] = { 1, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-        oleDir.createDocument("\u0001Ole", new ByteArrayInputStream(oleBytes));
-
-        Ole10Native oleNative = new Ole10Native(label, fileName, command, oleData);
-        ByteArrayOutputStream bos = new ByteArrayOutputStream();
-        oleNative.writeOut(bos);
-        oleDir.createDocument(Ole10Native.OLE10_NATIVE, new ByteArrayInputStream(bos.toByteArray()));
-
-    	return storageId;
-    }
-
-    /**
      * Adds the LinkTable records required to allow formulas referencing
      *  the specified external workbook to be added to this one. Allows
      *  formulas such as "[MyOtherWorkbook]Sheet3!$A$5" to be added to the
@@ -2232,15 +1706,6 @@ public final class HSSFWorkbook extends POIDocument implements org.apache.poi.ss
 	 */
     public boolean changeExternalReference(String oldUrl, String newUrl) {
     	return workbook.changeExternalReference(oldUrl, newUrl);
-    }
-
-    /** 
-     * @deprecated POI 3.16 beta 1. use {@link POIDocument#getDirectory()} instead
-     */
-    @Deprecated
-    @Removal(version="3.18")
-    public DirectoryNode getRootDirectory(){
-        return getDirectory();
     }
     
     @Internal

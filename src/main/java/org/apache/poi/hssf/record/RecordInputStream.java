@@ -22,7 +22,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Locale;
 
-import org.apache.poi.hssf.dev.BiffViewer;
 import org.apache.poi.hssf.record.crypto.Biff8DecryptingStream;
 import org.apache.poi.poifs.crypt.EncryptionInfo;
 import org.apache.poi.util.Internal;

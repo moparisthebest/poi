@@ -1,5 +1,6 @@
 //package org.apache.poi.hssf.usermodel.examples;
 
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.junit.Test;
 import org.apache.poi.ss.SpreadsheetVersion;
 import org.apache.poi.ss.usermodel.*;
@@ -39,9 +40,9 @@ public class CalculationTest {
 
     public static void runAssert(final int maxRow, final double expected) {
         //runAssert(new org.apache.poi.hssf.usermodel.GenericSSEvaluationWorkbook(), maxRow, expected);
-        runAssert(new org.apache.poi.hssf.usermodel.HSSFWorkbook(SpreadsheetVersion.EXCEL2007), maxRow, expected);
+        runAssert(new org.apache.poi.hssf.usermodel.HSSFWorkbook(), maxRow, expected);
         if(maxRow <= SpreadsheetVersion.EXCEL97.getMaxRows())
-            runAssert(new org.apache.poi.hssf.usermodel.HSSFWorkbook(), maxRow, expected);
+            runAssert(new org.apache.poi.hssf.usermodel.HSSFWorkbook(SpreadsheetVersion.EXCEL97), maxRow, expected);
         //runAssert(newXSSFWorkbookNoFormulaValidation(), maxRow, expected);
     }
 

@@ -42,7 +42,6 @@ import org.apache.poi.ddf.EscherRecord;
 import org.apache.poi.ddf.EscherSimpleProperty;
 import org.apache.poi.ddf.EscherSpRecord;
 import org.apache.poi.ddf.EscherSplitMenuColorsRecord;
-import org.apache.poi.hssf.extractor.OldExcelExtractor;
 import org.apache.poi.hssf.record.BOFRecord;
 import org.apache.poi.hssf.record.BackupRecord;
 import org.apache.poi.hssf.record.BookBoolRecord;
