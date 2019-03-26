@@ -15,14 +15,14 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.usermodel;
+package com.moparisthebest.poi.hssf.usermodel;
 
 import java.text.DecimalFormat;
 import java.text.Format;
 import java.util.Locale;
 
-import org.apache.poi.ss.usermodel.DataFormatter;
-import org.apache.poi.util.LocaleUtil;
+import com.moparisthebest.poi.ss.usermodel.DataFormatter;
+import com.moparisthebest.poi.util.LocaleUtil;
 
 /**
  * HSSFDataFormatter contains methods for formatting the value stored in an

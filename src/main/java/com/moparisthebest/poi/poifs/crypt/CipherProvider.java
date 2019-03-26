@@ -15,9 +15,9 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.poifs.crypt;
+package com.moparisthebest.poi.poifs.crypt;
 
-import org.apache.poi.EncryptedDocumentException;
+import com.moparisthebest.poi.EncryptedDocumentException;
 
 public enum CipherProvider {
     rc4("RC4", 1, "Microsoft Base Cryptographic Provider v1.0"),

@@ -17,19 +17,19 @@
 ==================================================================== */
 
 
-package org.apache.poi.poifs.filesystem;
+package com.moparisthebest.poi.poifs.filesystem;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.util.Iterator;
 import java.util.List;
 
-import org.apache.poi.poifs.common.POIFSConstants;
-import org.apache.poi.poifs.property.RootProperty;
-import org.apache.poi.poifs.storage.BATBlock;
-import org.apache.poi.poifs.storage.BATBlock.BATBlockAndIndex;
-import org.apache.poi.poifs.storage.BlockAllocationTableWriter;
-import org.apache.poi.poifs.storage.HeaderBlock;
+import com.moparisthebest.poi.poifs.common.POIFSConstants;
+import com.moparisthebest.poi.poifs.property.RootProperty;
+import com.moparisthebest.poi.poifs.storage.BATBlock;
+import com.moparisthebest.poi.poifs.storage.BATBlock.BATBlockAndIndex;
+import com.moparisthebest.poi.poifs.storage.BlockAllocationTableWriter;
+import com.moparisthebest.poi.poifs.storage.HeaderBlock;
 
 /**
  * This class handles the MiniStream (small block store)

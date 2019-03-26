@@ -15,10 +15,10 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula.udf;
+package com.moparisthebest.poi.ss.formula.udf;
 
-import org.apache.poi.ss.formula.atp.AnalysisToolPak;
-import org.apache.poi.ss.formula.functions.FreeRefFunction;
+import com.moparisthebest.poi.ss.formula.atp.AnalysisToolPak;
+import com.moparisthebest.poi.ss.formula.functions.FreeRefFunction;
 
 /**
  * Common interface for "Add-in" libraries and user defined function libraries.

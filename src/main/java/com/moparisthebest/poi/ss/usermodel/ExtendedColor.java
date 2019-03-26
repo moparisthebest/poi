@@ -14,16 +14,16 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 ==================================================================== */
-package org.apache.poi.ss.usermodel;
+package com.moparisthebest.poi.ss.usermodel;
 
 import java.util.Locale;
 
-import org.apache.poi.hssf.util.HSSFColor;
+import com.moparisthebest.poi.hssf.util.HSSFColor;
 
 /**
  * Represents a XSSF-style color (based on either a
- *  {@link org.apache.poi.xssf.usermodel.XSSFColor} or a
- *  {@link org.apache.poi.hssf.record.common.ExtendedColor} 
+ *  {@link com.moparisthebest.poi.xssf.usermodel.XSSFColor} or a
+ *  {@link com.moparisthebest.poi.hssf.record.common.ExtendedColor} 
  */
 public abstract class ExtendedColor implements Color {
     protected void setColor(java.awt.Color clr) {

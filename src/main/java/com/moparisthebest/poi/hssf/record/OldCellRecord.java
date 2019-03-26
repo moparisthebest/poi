@@ -15,9 +15,9 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.record;
+package com.moparisthebest.poi.hssf.record;
 
-import org.apache.poi.util.HexDump;
+import com.moparisthebest.poi.util.HexDump;
 
 /**
  * Base class for all old (Biff 2 - Biff 4) cell value records 
@@ -57,7 +57,7 @@ public abstract class OldCellRecord {
     /**
      * get the index to the ExtendedFormat, for non-Biff2
      *
-     * @see org.apache.poi.hssf.record.ExtendedFormatRecord
+     * @see com.moparisthebest.poi.hssf.record.ExtendedFormatRecord
      * @return index to the XF record
      */
     public final short getXFIndex() {

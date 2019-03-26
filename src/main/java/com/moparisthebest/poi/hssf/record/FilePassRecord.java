@@ -15,24 +15,24 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.record;
+package com.moparisthebest.poi.hssf.record;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
-import org.apache.poi.EncryptedDocumentException;
-import org.apache.poi.poifs.crypt.EncryptionInfo;
-import org.apache.poi.poifs.crypt.EncryptionMode;
-import org.apache.poi.poifs.crypt.binaryrc4.BinaryRC4EncryptionHeader;
-import org.apache.poi.poifs.crypt.binaryrc4.BinaryRC4EncryptionVerifier;
-import org.apache.poi.poifs.crypt.cryptoapi.CryptoAPIEncryptionHeader;
-import org.apache.poi.poifs.crypt.cryptoapi.CryptoAPIEncryptionVerifier;
-import org.apache.poi.poifs.crypt.xor.XOREncryptionHeader;
-import org.apache.poi.poifs.crypt.xor.XOREncryptionVerifier;
-import org.apache.poi.util.HexDump;
-import org.apache.poi.util.LittleEndianByteArrayOutputStream;
-import org.apache.poi.util.LittleEndianOutput;
-import org.apache.poi.util.LittleEndianOutputStream;
+import com.moparisthebest.poi.EncryptedDocumentException;
+import com.moparisthebest.poi.poifs.crypt.EncryptionInfo;
+import com.moparisthebest.poi.poifs.crypt.EncryptionMode;
+import com.moparisthebest.poi.poifs.crypt.binaryrc4.BinaryRC4EncryptionHeader;
+import com.moparisthebest.poi.poifs.crypt.binaryrc4.BinaryRC4EncryptionVerifier;
+import com.moparisthebest.poi.poifs.crypt.cryptoapi.CryptoAPIEncryptionHeader;
+import com.moparisthebest.poi.poifs.crypt.cryptoapi.CryptoAPIEncryptionVerifier;
+import com.moparisthebest.poi.poifs.crypt.xor.XOREncryptionHeader;
+import com.moparisthebest.poi.poifs.crypt.xor.XOREncryptionVerifier;
+import com.moparisthebest.poi.util.HexDump;
+import com.moparisthebest.poi.util.LittleEndianByteArrayOutputStream;
+import com.moparisthebest.poi.util.LittleEndianOutput;
+import com.moparisthebest.poi.util.LittleEndianOutputStream;
 
 /**
  * Title: File Pass Record (0x002F) <p>

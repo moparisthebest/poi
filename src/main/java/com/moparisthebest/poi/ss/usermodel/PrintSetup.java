@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.usermodel;
+package com.moparisthebest.poi.ss.usermodel;
 
 public interface PrintSetup {
     /** Whatever the printer's default paper size is */

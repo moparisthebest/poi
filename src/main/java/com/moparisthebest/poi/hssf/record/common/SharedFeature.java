@@ -15,9 +15,9 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.record.common;
+package com.moparisthebest.poi.hssf.record.common;
 
-import org.apache.poi.util.LittleEndianOutput;
+import com.moparisthebest.poi.util.LittleEndianOutput;
 
 /**
  * Common Interface for all Shared Features

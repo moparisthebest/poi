@@ -15,10 +15,10 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.record.aggregates;
+package com.moparisthebest.poi.hssf.record.aggregates;
 
-import org.apache.poi.hssf.record.Record;
-import org.apache.poi.hssf.record.RecordBase;
+import com.moparisthebest.poi.hssf.record.Record;
+import com.moparisthebest.poi.hssf.record.RecordBase;
 
 /**
  * <tt>RecordAggregate</tt>s are groups of of BIFF <tt>Record</tt>s that are typically stored

@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula;
+package com.moparisthebest.poi.ss.formula;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -23,17 +23,17 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.ConditionalFormatting;
-import org.apache.poi.ss.usermodel.ConditionalFormattingRule;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.SheetConditionalFormatting;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.ss.util.CellRangeAddress;
-import org.apache.poi.ss.util.CellRangeAddressBase;
-import org.apache.poi.ss.util.CellReference;
-import org.apache.poi.ss.util.SheetUtil;
+import com.moparisthebest.poi.ss.usermodel.Cell;
+import com.moparisthebest.poi.ss.usermodel.ConditionalFormatting;
+import com.moparisthebest.poi.ss.usermodel.ConditionalFormattingRule;
+import com.moparisthebest.poi.ss.usermodel.Row;
+import com.moparisthebest.poi.ss.usermodel.Sheet;
+import com.moparisthebest.poi.ss.usermodel.SheetConditionalFormatting;
+import com.moparisthebest.poi.ss.usermodel.Workbook;
+import com.moparisthebest.poi.ss.util.CellRangeAddress;
+import com.moparisthebest.poi.ss.util.CellRangeAddressBase;
+import com.moparisthebest.poi.ss.util.CellReference;
+import com.moparisthebest.poi.ss.util.SheetUtil;
 
 /**
  * Evaluates Conditional Formatting constraints.<p/>

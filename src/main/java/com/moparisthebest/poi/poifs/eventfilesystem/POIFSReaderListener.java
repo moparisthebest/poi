@@ -17,7 +17,7 @@
 ==================================================================== */
         
 
-package org.apache.poi.poifs.eventfilesystem;
+package com.moparisthebest.poi.poifs.eventfilesystem;
 
 /**
  * Interface POIFSReaderListener

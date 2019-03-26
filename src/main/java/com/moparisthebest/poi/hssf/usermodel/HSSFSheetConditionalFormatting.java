@@ -15,20 +15,20 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.usermodel;
+package com.moparisthebest.poi.hssf.usermodel;
 
-import org.apache.poi.hssf.record.CFRule12Record;
-import org.apache.poi.hssf.record.CFRuleBase;
-import org.apache.poi.hssf.record.CFRuleRecord;
-import org.apache.poi.hssf.record.aggregates.CFRecordsAggregate;
-import org.apache.poi.hssf.record.aggregates.ConditionalFormattingTable;
-import org.apache.poi.ss.SpreadsheetVersion;
-import org.apache.poi.ss.usermodel.ConditionalFormatting;
-import org.apache.poi.ss.usermodel.ConditionalFormattingRule;
-import org.apache.poi.ss.usermodel.ExtendedColor;
-import org.apache.poi.ss.usermodel.IconMultiStateFormatting.IconSet;
-import org.apache.poi.ss.usermodel.SheetConditionalFormatting;
-import org.apache.poi.ss.util.CellRangeAddress;
+import com.moparisthebest.poi.hssf.record.CFRule12Record;
+import com.moparisthebest.poi.hssf.record.CFRuleBase;
+import com.moparisthebest.poi.hssf.record.CFRuleRecord;
+import com.moparisthebest.poi.hssf.record.aggregates.CFRecordsAggregate;
+import com.moparisthebest.poi.hssf.record.aggregates.ConditionalFormattingTable;
+import com.moparisthebest.poi.ss.SpreadsheetVersion;
+import com.moparisthebest.poi.ss.usermodel.ConditionalFormatting;
+import com.moparisthebest.poi.ss.usermodel.ConditionalFormattingRule;
+import com.moparisthebest.poi.ss.usermodel.ExtendedColor;
+import com.moparisthebest.poi.ss.usermodel.IconMultiStateFormatting.IconSet;
+import com.moparisthebest.poi.ss.usermodel.SheetConditionalFormatting;
+import com.moparisthebest.poi.ss.util.CellRangeAddress;
 
 /**
  * The 'Conditional Formatting' facet of <tt>HSSFSheet</tt>
@@ -48,7 +48,7 @@ public final class HSSFSheetConditionalFormatting implements SheetConditionalFor
      * TODO - formulas containing cell references are currently not parsed properly
      *
      * @param comparisonOperation - a constant value from
-     *		 <tt>{@link org.apache.poi.hssf.record.CFRuleBase.ComparisonOperator}</tt>: <p>
+     *		 <tt>{@link com.moparisthebest.poi.hssf.record.CFRuleBase.ComparisonOperator}</tt>: <p>
      * <ul>
      *		 <li>BETWEEN</li>
      *		 <li>NOT_BETWEEN</li>
@@ -62,8 +62,8 @@ public final class HSSFSheetConditionalFormatting implements SheetConditionalFor
      * </p>
      * @param formula1 - formula for the valued, compared with the cell
      * @param formula2 - second formula (only used with
-     * {@link org.apache.poi.hssf.record.CFRuleBase.ComparisonOperator#BETWEEN}) and
-     * {@link org.apache.poi.hssf.record.CFRuleBase.ComparisonOperator#NOT_BETWEEN} operations)
+     * {@link com.moparisthebest.poi.hssf.record.CFRuleBase.ComparisonOperator#BETWEEN}) and
+     * {@link com.moparisthebest.poi.hssf.record.CFRuleBase.ComparisonOperator#NOT_BETWEEN} operations)
      */
     public HSSFConditionalFormattingRule createConditionalFormattingRule(
             byte comparisonOperation,

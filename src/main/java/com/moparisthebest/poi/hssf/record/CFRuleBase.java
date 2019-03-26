@@ -15,21 +15,21 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.record;
+package com.moparisthebest.poi.hssf.record;
 
-import org.apache.poi.hssf.model.HSSFFormulaParser;
-import org.apache.poi.hssf.record.cf.BorderFormatting;
-import org.apache.poi.hssf.record.cf.FontFormatting;
-import org.apache.poi.hssf.record.cf.PatternFormatting;
-import org.apache.poi.hssf.usermodel.HSSFSheet;
-import org.apache.poi.ss.formula.Formula;
-import org.apache.poi.ss.formula.FormulaType;
-import org.apache.poi.ss.formula.ptg.Ptg;
-import org.apache.poi.util.BitField;
-import org.apache.poi.util.BitFieldFactory;
-import org.apache.poi.util.LittleEndianOutput;
-import org.apache.poi.util.POILogFactory;
-import org.apache.poi.util.POILogger;
+import com.moparisthebest.poi.hssf.model.HSSFFormulaParser;
+import com.moparisthebest.poi.hssf.record.cf.BorderFormatting;
+import com.moparisthebest.poi.hssf.record.cf.FontFormatting;
+import com.moparisthebest.poi.hssf.record.cf.PatternFormatting;
+import com.moparisthebest.poi.hssf.usermodel.HSSFSheet;
+import com.moparisthebest.poi.ss.formula.Formula;
+import com.moparisthebest.poi.ss.formula.FormulaType;
+import com.moparisthebest.poi.ss.formula.ptg.Ptg;
+import com.moparisthebest.poi.util.BitField;
+import com.moparisthebest.poi.util.BitFieldFactory;
+import com.moparisthebest.poi.util.LittleEndianOutput;
+import com.moparisthebest.poi.util.POILogFactory;
+import com.moparisthebest.poi.util.POILogger;
 
 /**
  * Conditional Formatting Rules. This can hold old-style rules
@@ -40,7 +40,7 @@ import org.apache.poi.util.POILogger;
  *  for their rules.</p>
  */
 public abstract class CFRuleBase extends StandardRecord implements Cloneable {
-    // FIXME: Merge with org.apache.poi.ss.usermodel.ComparisonOperator and rewrite as an enum
+    // FIXME: Merge with com.moparisthebest.poi.ss.usermodel.ComparisonOperator and rewrite as an enum
     public static final class ComparisonOperator {
         public static final byte NO_COMPARISON = 0;
         public static final byte BETWEEN       = 1;

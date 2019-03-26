@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hpsf;
+package com.moparisthebest.poi.hpsf;
 
 import java.util.Collections;
 import java.util.HashMap;

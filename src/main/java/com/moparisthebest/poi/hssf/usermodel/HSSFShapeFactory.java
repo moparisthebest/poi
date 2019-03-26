@@ -15,27 +15,27 @@
  *    limitations under the License.
  */
 
-package org.apache.poi.hssf.usermodel;
+package com.moparisthebest.poi.hssf.usermodel;
 
 import java.util.List;
 import java.util.Map;
 
-import org.apache.poi.ddf.EscherClientDataRecord;
-import org.apache.poi.ddf.EscherContainerRecord;
-import org.apache.poi.ddf.EscherOptRecord;
-import org.apache.poi.ddf.EscherProperties;
-import org.apache.poi.ddf.EscherProperty;
-import org.apache.poi.ddf.EscherRecord;
-import org.apache.poi.ddf.EscherTextboxRecord;
-import org.apache.poi.hssf.record.CommonObjectDataSubRecord;
-import org.apache.poi.hssf.record.EmbeddedObjectRefSubRecord;
-import org.apache.poi.hssf.record.EscherAggregate;
-import org.apache.poi.hssf.record.ObjRecord;
-import org.apache.poi.hssf.record.Record;
-import org.apache.poi.hssf.record.SubRecord;
-import org.apache.poi.hssf.record.TextObjectRecord;
-import org.apache.poi.poifs.filesystem.DirectoryNode;
-import org.apache.poi.util.RecordFormatException;
+import com.moparisthebest.poi.ddf.EscherClientDataRecord;
+import com.moparisthebest.poi.ddf.EscherContainerRecord;
+import com.moparisthebest.poi.ddf.EscherOptRecord;
+import com.moparisthebest.poi.ddf.EscherProperties;
+import com.moparisthebest.poi.ddf.EscherProperty;
+import com.moparisthebest.poi.ddf.EscherRecord;
+import com.moparisthebest.poi.ddf.EscherTextboxRecord;
+import com.moparisthebest.poi.hssf.record.CommonObjectDataSubRecord;
+import com.moparisthebest.poi.hssf.record.EmbeddedObjectRefSubRecord;
+import com.moparisthebest.poi.hssf.record.EscherAggregate;
+import com.moparisthebest.poi.hssf.record.ObjRecord;
+import com.moparisthebest.poi.hssf.record.Record;
+import com.moparisthebest.poi.hssf.record.SubRecord;
+import com.moparisthebest.poi.hssf.record.TextObjectRecord;
+import com.moparisthebest.poi.poifs.filesystem.DirectoryNode;
+import com.moparisthebest.poi.util.RecordFormatException;
 
 /**
  * Factory class for producing Excel Shapes from Escher records

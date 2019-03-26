@@ -15,12 +15,12 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula;
+package com.moparisthebest.poi.ss.formula;
 
-import org.apache.poi.ss.formula.eval.FunctionNameEval;
-import org.apache.poi.ss.formula.eval.NotImplementedFunctionException;
-import org.apache.poi.ss.formula.eval.ValueEval;
-import org.apache.poi.ss.formula.functions.FreeRefFunction;
+import com.moparisthebest.poi.ss.formula.eval.FunctionNameEval;
+import com.moparisthebest.poi.ss.formula.eval.NotImplementedFunctionException;
+import com.moparisthebest.poi.ss.formula.eval.ValueEval;
+import com.moparisthebest.poi.ss.formula.functions.FreeRefFunction;
 /**
  *
  * Common entry point for all user-defined (non-built-in) functions (where

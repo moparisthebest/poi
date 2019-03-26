@@ -15,13 +15,13 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.poifs.crypt.cryptoapi;
+package com.moparisthebest.poi.poifs.crypt.cryptoapi;
 
-import org.apache.poi.poifs.crypt.ChainingMode;
-import org.apache.poi.poifs.crypt.CipherAlgorithm;
-import org.apache.poi.poifs.crypt.HashAlgorithm;
-import org.apache.poi.poifs.crypt.standard.StandardEncryptionVerifier;
-import org.apache.poi.util.LittleEndianInput;
+import com.moparisthebest.poi.poifs.crypt.ChainingMode;
+import com.moparisthebest.poi.poifs.crypt.CipherAlgorithm;
+import com.moparisthebest.poi.poifs.crypt.HashAlgorithm;
+import com.moparisthebest.poi.poifs.crypt.standard.StandardEncryptionVerifier;
+import com.moparisthebest.poi.util.LittleEndianInput;
 
 public class CryptoAPIEncryptionVerifier extends StandardEncryptionVerifier implements Cloneable {
 

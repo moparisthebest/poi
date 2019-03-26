@@ -15,12 +15,12 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula.ptg;
+package com.moparisthebest.poi.ss.formula.ptg;
 
 import java.util.Locale;
 
-import org.apache.poi.ss.formula.function.FunctionMetadata;
-import org.apache.poi.ss.formula.function.FunctionMetadataRegistry;
+import com.moparisthebest.poi.ss.formula.function.FunctionMetadata;
+import com.moparisthebest.poi.ss.formula.function.FunctionMetadataRegistry;
 
 /**
  * This class provides the base functionality for Excel sheet functions

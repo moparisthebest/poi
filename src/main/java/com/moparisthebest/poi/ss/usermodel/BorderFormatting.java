@@ -17,9 +17,9 @@
  * ====================================================================
  */
 
-package org.apache.poi.ss.usermodel;
+package com.moparisthebest.poi.ss.usermodel;
 
-import org.apache.poi.util.Removal;
+import com.moparisthebest.poi.util.Removal;
 
 /**
  * High level representation for Border Formatting component

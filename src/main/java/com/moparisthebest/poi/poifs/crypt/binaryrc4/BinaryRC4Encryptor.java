@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.poifs.crypt.binaryrc4;
+package com.moparisthebest.poi.poifs.crypt.binaryrc4;
 
 import java.io.File;
 import java.io.IOException;
@@ -28,16 +28,16 @@ import java.util.Random;
 import javax.crypto.Cipher;
 import javax.crypto.SecretKey;
 
-import org.apache.poi.EncryptedDocumentException;
-import org.apache.poi.poifs.crypt.ChunkedCipherOutputStream;
-import org.apache.poi.poifs.crypt.CryptoFunctions;
-import org.apache.poi.poifs.crypt.DataSpaceMapUtils;
-import org.apache.poi.poifs.crypt.EncryptionInfo;
-import org.apache.poi.poifs.crypt.Encryptor;
-import org.apache.poi.poifs.crypt.HashAlgorithm;
-import org.apache.poi.poifs.crypt.standard.EncryptionRecord;
-import org.apache.poi.poifs.filesystem.DirectoryNode;
-import org.apache.poi.util.LittleEndianByteArrayOutputStream;
+import com.moparisthebest.poi.EncryptedDocumentException;
+import com.moparisthebest.poi.poifs.crypt.ChunkedCipherOutputStream;
+import com.moparisthebest.poi.poifs.crypt.CryptoFunctions;
+import com.moparisthebest.poi.poifs.crypt.DataSpaceMapUtils;
+import com.moparisthebest.poi.poifs.crypt.EncryptionInfo;
+import com.moparisthebest.poi.poifs.crypt.Encryptor;
+import com.moparisthebest.poi.poifs.crypt.HashAlgorithm;
+import com.moparisthebest.poi.poifs.crypt.standard.EncryptionRecord;
+import com.moparisthebest.poi.poifs.filesystem.DirectoryNode;
+import com.moparisthebest.poi.util.LittleEndianByteArrayOutputStream;
 
 public class BinaryRC4Encryptor extends Encryptor implements Cloneable {
 

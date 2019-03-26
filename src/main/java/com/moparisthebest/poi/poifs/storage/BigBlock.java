@@ -17,7 +17,7 @@
 ==================================================================== */
         
 
-package org.apache.poi.poifs.storage;
+package com.moparisthebest.poi.poifs.storage;
 
 /**
  * Abstract base class of all POIFS block storage classes. All
@@ -33,8 +33,8 @@ package org.apache.poi.poifs.storage;
 import java.io.IOException;
 import java.io.OutputStream;
 
-import org.apache.poi.poifs.common.POIFSBigBlockSize;
-import org.apache.poi.poifs.common.POIFSConstants;
+import com.moparisthebest.poi.poifs.common.POIFSBigBlockSize;
+import com.moparisthebest.poi.poifs.common.POIFSConstants;
 
 abstract class BigBlock
     implements BlockWritable

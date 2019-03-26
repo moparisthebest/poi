@@ -15,20 +15,20 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula.functions;
+package com.moparisthebest.poi.ss.formula.functions;
 
-import org.apache.poi.ss.formula.FormulaParseException;
-import org.apache.poi.ss.formula.FormulaParser;
-import org.apache.poi.ss.formula.FormulaParsingWorkbook;
-import org.apache.poi.ss.formula.OperationEvaluationContext;
-import org.apache.poi.ss.formula.eval.BlankEval;
-import org.apache.poi.ss.formula.eval.ErrorEval;
-import org.apache.poi.ss.formula.eval.EvaluationException;
-import org.apache.poi.ss.formula.eval.MissingArgEval;
-import org.apache.poi.ss.formula.eval.OperandResolver;
-import org.apache.poi.ss.formula.eval.ValueEval;
-import org.apache.poi.ss.formula.ptg.Area3DPxg;
-import org.apache.poi.ss.usermodel.Table;
+import com.moparisthebest.poi.ss.formula.FormulaParseException;
+import com.moparisthebest.poi.ss.formula.FormulaParser;
+import com.moparisthebest.poi.ss.formula.FormulaParsingWorkbook;
+import com.moparisthebest.poi.ss.formula.OperationEvaluationContext;
+import com.moparisthebest.poi.ss.formula.eval.BlankEval;
+import com.moparisthebest.poi.ss.formula.eval.ErrorEval;
+import com.moparisthebest.poi.ss.formula.eval.EvaluationException;
+import com.moparisthebest.poi.ss.formula.eval.MissingArgEval;
+import com.moparisthebest.poi.ss.formula.eval.OperandResolver;
+import com.moparisthebest.poi.ss.formula.eval.ValueEval;
+import com.moparisthebest.poi.ss.formula.ptg.Area3DPxg;
+import com.moparisthebest.poi.ss.usermodel.Table;
 
 /**
  * Implementation for Excel function INDIRECT<p/>

@@ -14,9 +14,9 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 ==================================================================== */
-package org.apache.poi.ss.usermodel;
+package com.moparisthebest.poi.ss.usermodel;
 
-import org.apache.poi.ss.util.CellRangeAddressList;
+import com.moparisthebest.poi.ss.util.CellRangeAddressList;
 
 /**
  * @author <a href="rjankiraman@emptoris.com">Radhakrishnan J</a>

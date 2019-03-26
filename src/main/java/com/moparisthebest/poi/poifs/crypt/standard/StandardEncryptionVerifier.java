@@ -14,15 +14,15 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 ==================================================================== */
-package org.apache.poi.poifs.crypt.standard;
+package com.moparisthebest.poi.poifs.crypt.standard;
 
-import org.apache.poi.EncryptedDocumentException;
-import org.apache.poi.poifs.crypt.ChainingMode;
-import org.apache.poi.poifs.crypt.CipherAlgorithm;
-import org.apache.poi.poifs.crypt.EncryptionVerifier;
-import org.apache.poi.poifs.crypt.HashAlgorithm;
-import org.apache.poi.util.LittleEndianByteArrayOutputStream;
-import org.apache.poi.util.LittleEndianInput;
+import com.moparisthebest.poi.EncryptedDocumentException;
+import com.moparisthebest.poi.poifs.crypt.ChainingMode;
+import com.moparisthebest.poi.poifs.crypt.CipherAlgorithm;
+import com.moparisthebest.poi.poifs.crypt.EncryptionVerifier;
+import com.moparisthebest.poi.poifs.crypt.HashAlgorithm;
+import com.moparisthebest.poi.util.LittleEndianByteArrayOutputStream;
+import com.moparisthebest.poi.util.LittleEndianInput;
 
 /**
  * Used when checking if a key is valid for a document 

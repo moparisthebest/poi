@@ -15,14 +15,14 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula.functions;
+package com.moparisthebest.poi.ss.formula.functions;
 
-import org.apache.poi.ss.formula.eval.BoolEval;
-import org.apache.poi.ss.formula.eval.EvaluationException;
-import org.apache.poi.ss.formula.eval.OperandResolver;
-import org.apache.poi.ss.formula.eval.ValueEval;
-import org.apache.poi.ss.formula.functions.LookupUtils.ValueVector;
-import org.apache.poi.ss.formula.TwoDEval;
+import com.moparisthebest.poi.ss.formula.eval.BoolEval;
+import com.moparisthebest.poi.ss.formula.eval.EvaluationException;
+import com.moparisthebest.poi.ss.formula.eval.OperandResolver;
+import com.moparisthebest.poi.ss.formula.eval.ValueEval;
+import com.moparisthebest.poi.ss.formula.functions.LookupUtils.ValueVector;
+import com.moparisthebest.poi.ss.formula.TwoDEval;
 /**
  * Implementation of the HLOOKUP() function.<p/>
  *

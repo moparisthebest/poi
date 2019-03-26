@@ -15,10 +15,10 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.record;
+package com.moparisthebest.poi.hssf.record;
 
-import org.apache.poi.util.HexDump;
-import org.apache.poi.util.LittleEndianOutput;
+import com.moparisthebest.poi.util.HexDump;
+import com.moparisthebest.poi.util.LittleEndianOutput;
 
 /**
  * Base class for all cell value records (implementors of {@link CellValueRecordInterface}).
@@ -52,7 +52,7 @@ public abstract class CellRecord extends StandardRecord implements CellValueReco
     /**
      * set the index to the ExtendedFormat
      *
-     * @see org.apache.poi.hssf.record.ExtendedFormatRecord
+     * @see com.moparisthebest.poi.hssf.record.ExtendedFormatRecord
      * @param xf index to the XF record
      */
     @Override
@@ -73,7 +73,7 @@ public abstract class CellRecord extends StandardRecord implements CellValueReco
     /**
      * get the index to the ExtendedFormat
      *
-     * @see org.apache.poi.hssf.record.ExtendedFormatRecord
+     * @see com.moparisthebest.poi.hssf.record.ExtendedFormatRecord
      * @return index to the XF record
      */
     @Override

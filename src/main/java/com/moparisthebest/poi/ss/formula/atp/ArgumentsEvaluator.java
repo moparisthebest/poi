@@ -15,18 +15,18 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula.atp;
+package com.moparisthebest.poi.ss.formula.atp;
 
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-import org.apache.poi.ss.formula.eval.AreaEvalBase;
-import org.apache.poi.ss.formula.eval.EvaluationException;
-import org.apache.poi.ss.formula.eval.OperandResolver;
-import org.apache.poi.ss.formula.eval.StringEval;
-import org.apache.poi.ss.formula.eval.ValueEval;
-import org.apache.poi.ss.usermodel.DateUtil;
+import com.moparisthebest.poi.ss.formula.eval.AreaEvalBase;
+import com.moparisthebest.poi.ss.formula.eval.EvaluationException;
+import com.moparisthebest.poi.ss.formula.eval.OperandResolver;
+import com.moparisthebest.poi.ss.formula.eval.StringEval;
+import com.moparisthebest.poi.ss.formula.eval.ValueEval;
+import com.moparisthebest.poi.ss.usermodel.DateUtil;
 
 /**
  * Evaluator for formula arguments.

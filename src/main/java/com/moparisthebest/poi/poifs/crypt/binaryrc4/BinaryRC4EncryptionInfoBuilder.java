@@ -15,11 +15,11 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.poifs.crypt.binaryrc4;
+package com.moparisthebest.poi.poifs.crypt.binaryrc4;
 
 import java.io.IOException;
-import org.apache.poi.poifs.crypt.*;
-import org.apache.poi.util.LittleEndianInput;
+import com.moparisthebest.poi.poifs.crypt.*;
+import com.moparisthebest.poi.util.LittleEndianInput;
 
 public class BinaryRC4EncryptionInfoBuilder implements EncryptionInfoBuilder {
 

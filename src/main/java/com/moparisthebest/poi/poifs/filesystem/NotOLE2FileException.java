@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
         
-package org.apache.poi.poifs.filesystem;
+package com.moparisthebest.poi.poifs.filesystem;
 
 import java.io.IOException;
 

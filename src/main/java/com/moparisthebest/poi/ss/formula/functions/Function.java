@@ -15,12 +15,12 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula.functions;
+package com.moparisthebest.poi.ss.formula.functions;
 
-import org.apache.poi.ss.formula.eval.BlankEval;
-import org.apache.poi.ss.formula.eval.ErrorEval;
-import org.apache.poi.ss.formula.eval.MissingArgEval;
-import org.apache.poi.ss.formula.eval.ValueEval;
+import com.moparisthebest.poi.ss.formula.eval.BlankEval;
+import com.moparisthebest.poi.ss.formula.eval.ErrorEval;
+import com.moparisthebest.poi.ss.formula.eval.MissingArgEval;
+import com.moparisthebest.poi.ss.formula.eval.ValueEval;
 
 /**
  * Common interface for all implementations of Excel built-in functions.

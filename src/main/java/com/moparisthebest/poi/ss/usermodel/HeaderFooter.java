@@ -14,11 +14,11 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 ==================================================================== */
-package org.apache.poi.ss.usermodel;
+package com.moparisthebest.poi.ss.usermodel;
 
 /**
- * Common interface for {@link org.apache.poi.ss.usermodel.Header} and
- *  {@link org.apache.poi.ss.usermodel.Footer}.
+ * Common interface for {@link com.moparisthebest.poi.ss.usermodel.Header} and
+ *  {@link com.moparisthebest.poi.ss.usermodel.Footer}.
  */
 public interface HeaderFooter {
     /**

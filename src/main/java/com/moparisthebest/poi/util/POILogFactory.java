@@ -17,7 +17,7 @@
 ==================================================================== */
 
 
-package org.apache.poi.util;
+package com.moparisthebest.poi.util;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -79,7 +79,7 @@ public final class POILogFactory {
         //  between class loading and first use
         if(_loggerClassName == null) {
         	try {
-        		_loggerClassName = System.getProperty("org.apache.poi.util.POILogger");
+        		_loggerClassName = System.getProperty("com.moparisthebest.poi.util.POILogger");
         	} catch(Exception e) {
                 // ignore any exception here
             }

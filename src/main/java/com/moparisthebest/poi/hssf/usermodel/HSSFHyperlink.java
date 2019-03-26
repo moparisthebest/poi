@@ -14,12 +14,12 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 ==================================================================== */
-package org.apache.poi.hssf.usermodel;
+package com.moparisthebest.poi.hssf.usermodel;
 
-import org.apache.poi.common.usermodel.HyperlinkType;
-import org.apache.poi.hssf.record.HyperlinkRecord;
-import org.apache.poi.ss.usermodel.Hyperlink;
-import org.apache.poi.util.Internal;
+import com.moparisthebest.poi.common.usermodel.HyperlinkType;
+import com.moparisthebest.poi.hssf.record.HyperlinkRecord;
+import com.moparisthebest.poi.ss.usermodel.Hyperlink;
+import com.moparisthebest.poi.util.Internal;
 
 /**
  * Represents an Excel hyperlink.

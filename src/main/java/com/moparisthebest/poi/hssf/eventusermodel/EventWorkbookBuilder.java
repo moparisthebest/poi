@@ -14,20 +14,20 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 ==================================================================== */
-package org.apache.poi.hssf.eventusermodel;
+package com.moparisthebest.poi.hssf.eventusermodel;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.poi.hssf.model.HSSFFormulaParser;
-import org.apache.poi.hssf.model.InternalWorkbook;
-import org.apache.poi.hssf.record.BoundSheetRecord;
-import org.apache.poi.hssf.record.EOFRecord;
-import org.apache.poi.hssf.record.ExternSheetRecord;
-import org.apache.poi.hssf.record.Record;
-import org.apache.poi.hssf.record.SSTRecord;
-import org.apache.poi.hssf.record.SupBookRecord;
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import com.moparisthebest.poi.hssf.model.HSSFFormulaParser;
+import com.moparisthebest.poi.hssf.model.InternalWorkbook;
+import com.moparisthebest.poi.hssf.record.BoundSheetRecord;
+import com.moparisthebest.poi.hssf.record.EOFRecord;
+import com.moparisthebest.poi.hssf.record.ExternSheetRecord;
+import com.moparisthebest.poi.hssf.record.Record;
+import com.moparisthebest.poi.hssf.record.SSTRecord;
+import com.moparisthebest.poi.hssf.record.SupBookRecord;
+import com.moparisthebest.poi.hssf.usermodel.HSSFWorkbook;
 
 /**
  * When working with the EventUserModel, if you want to

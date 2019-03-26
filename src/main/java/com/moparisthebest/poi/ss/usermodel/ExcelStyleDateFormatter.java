@@ -14,11 +14,11 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 ==================================================================== */
-package org.apache.poi.ss.usermodel;
+package com.moparisthebest.poi.ss.usermodel;
 
 import java.util.*;
 
-import org.apache.poi.util.LocaleUtil;
+import com.moparisthebest.poi.util.LocaleUtil;
 
 import java.math.RoundingMode;
 import java.text.*;

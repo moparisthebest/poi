@@ -15,11 +15,11 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.util;
+package com.moparisthebest.poi.ss.util;
 
 import java.util.Locale;
 
-import org.apache.poi.ss.usermodel.Cell;
+import com.moparisthebest.poi.ss.usermodel.Cell;
 
 /**
  * <p>This class is a container for POI usermodel row=0 column=0 cell references.

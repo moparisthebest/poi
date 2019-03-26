@@ -15,12 +15,12 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.record;
+package com.moparisthebest.poi.hssf.record;
 
-import org.apache.poi.util.HexDump;
-import org.apache.poi.util.LittleEndianOutput;
-import org.apache.poi.util.BitField;
-import org.apache.poi.util.BitFieldFactory;
+import com.moparisthebest.poi.util.HexDump;
+import com.moparisthebest.poi.util.LittleEndianOutput;
+import com.moparisthebest.poi.util.BitField;
+import com.moparisthebest.poi.util.BitFieldFactory;
 
 /**
  * Title: COLINFO Record (0x007D)<p>
@@ -104,7 +104,7 @@ public final class ColumnInfoRecord extends StandardRecord implements Cloneable 
     /**
      * set the columns' default format info
      * @param xfi - the extended format index
-     * @see org.apache.poi.hssf.record.ExtendedFormatRecord
+     * @see com.moparisthebest.poi.hssf.record.ExtendedFormatRecord
      */
     public void setXFIndex(int xfi) {
         _xfIndex = xfi;
@@ -160,7 +160,7 @@ public final class ColumnInfoRecord extends StandardRecord implements Cloneable 
     /**
      * get the columns' default format info
      * @return the extended format index
-     * @see org.apache.poi.hssf.record.ExtendedFormatRecord
+     * @see com.moparisthebest.poi.hssf.record.ExtendedFormatRecord
      */
     public int getXFIndex() {
         return _xfIndex;

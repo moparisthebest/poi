@@ -15,9 +15,9 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hpsf;
+package com.moparisthebest.poi.hpsf;
 
-import org.apache.poi.util.Removal;
+import com.moparisthebest.poi.util.Removal;
 
 /**
  * Interface for the convenience classes {@link SummaryInformation}

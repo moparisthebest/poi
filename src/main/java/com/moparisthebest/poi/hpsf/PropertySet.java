@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hpsf;
+package com.moparisthebest.poi.hpsf;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -29,15 +29,15 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
-import org.apache.poi.EmptyFileException;
-import org.apache.poi.hpsf.wellknown.PropertyIDMap;
-import org.apache.poi.hpsf.wellknown.SectionIDMap;
-import org.apache.poi.poifs.filesystem.DirectoryEntry;
-import org.apache.poi.poifs.filesystem.Entry;
-import org.apache.poi.util.IOUtils;
-import org.apache.poi.util.LittleEndian;
-import org.apache.poi.util.LittleEndianConsts;
-import org.apache.poi.util.NotImplemented;
+import com.moparisthebest.poi.EmptyFileException;
+import com.moparisthebest.poi.hpsf.wellknown.PropertyIDMap;
+import com.moparisthebest.poi.hpsf.wellknown.SectionIDMap;
+import com.moparisthebest.poi.poifs.filesystem.DirectoryEntry;
+import com.moparisthebest.poi.poifs.filesystem.Entry;
+import com.moparisthebest.poi.util.IOUtils;
+import com.moparisthebest.poi.util.LittleEndian;
+import com.moparisthebest.poi.util.LittleEndianConsts;
+import com.moparisthebest.poi.util.NotImplemented;
 
 /**
  * Represents a property set in the Horrible Property Set Format

@@ -15,7 +15,7 @@
   limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.format;
+package com.moparisthebest.poi.ss.format;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -28,13 +28,13 @@ import java.util.regex.Pattern;
 
 import javax.swing.JLabel;
 
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.CellType;
-import org.apache.poi.ss.usermodel.ConditionalFormatting;
-import org.apache.poi.ss.usermodel.ConditionalFormattingRule;
-import org.apache.poi.ss.usermodel.DataFormatter;
-import org.apache.poi.ss.usermodel.DateUtil;
-import org.apache.poi.ss.util.DateFormatConverter;
+import com.moparisthebest.poi.ss.usermodel.Cell;
+import com.moparisthebest.poi.ss.usermodel.CellType;
+import com.moparisthebest.poi.ss.usermodel.ConditionalFormatting;
+import com.moparisthebest.poi.ss.usermodel.ConditionalFormattingRule;
+import com.moparisthebest.poi.ss.usermodel.DataFormatter;
+import com.moparisthebest.poi.ss.usermodel.DateUtil;
+import com.moparisthebest.poi.ss.util.DateFormatConverter;
 
 /**
  * Format a value according to the standard Excel behavior.  This "standard" is

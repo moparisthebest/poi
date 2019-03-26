@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.poifs.macros;
+package com.moparisthebest.poi.poifs.macros;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -25,7 +25,7 @@ import java.io.OutputStreamWriter;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import org.apache.poi.util.StringUtil;
+import com.moparisthebest.poi.util.StringUtil;
 
 /**
  * This tool extracts out the source of all VBA Modules of an office file,

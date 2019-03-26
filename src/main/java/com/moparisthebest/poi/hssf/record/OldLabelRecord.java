@@ -15,11 +15,11 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.record;
+package com.moparisthebest.poi.hssf.record;
 
-import org.apache.poi.util.HexDump;
-import org.apache.poi.util.POILogFactory;
-import org.apache.poi.util.POILogger;
+import com.moparisthebest.poi.util.HexDump;
+import com.moparisthebest.poi.util.POILogFactory;
+import com.moparisthebest.poi.util.POILogger;
 
 /**
  * Biff2 - Biff 4 Label Record (0x0004 / 0x0204) - read only support for 

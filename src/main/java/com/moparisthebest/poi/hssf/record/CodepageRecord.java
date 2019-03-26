@@ -17,10 +17,10 @@
 ==================================================================== */
         
 
-package org.apache.poi.hssf.record;
+package com.moparisthebest.poi.hssf.record;
 
-import org.apache.poi.util.CodePageUtil;
-import org.apache.poi.util.LittleEndianOutput;
+import com.moparisthebest.poi.util.CodePageUtil;
+import com.moparisthebest.poi.util.LittleEndianOutput;
 
 /**
  * Title: Codepage Record

@@ -15,11 +15,11 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.record.common;
+package com.moparisthebest.poi.hssf.record.common;
 
-import org.apache.poi.hssf.record.RecordInputStream;
-import org.apache.poi.ss.util.CellRangeAddress;
-import org.apache.poi.util.LittleEndianOutput;
+import com.moparisthebest.poi.hssf.record.RecordInputStream;
+import com.moparisthebest.poi.ss.util.CellRangeAddress;
+import com.moparisthebest.poi.util.LittleEndianOutput;
 
 /**
  * Title: FtrHeader (Future Record Header) common record part

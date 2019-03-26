@@ -18,12 +18,12 @@
  * Created on May 8, 2005
  *
  */
-package org.apache.poi.ss.formula.eval;
+package com.moparisthebest.poi.ss.formula.eval;
 
-import org.apache.poi.ss.formula.ptg.IntPtg;
-import org.apache.poi.ss.formula.ptg.NumberPtg;
-import org.apache.poi.ss.formula.ptg.Ptg;
-import org.apache.poi.ss.util.NumberToTextConverter;
+import com.moparisthebest.poi.ss.formula.ptg.IntPtg;
+import com.moparisthebest.poi.ss.formula.ptg.NumberPtg;
+import com.moparisthebest.poi.ss.formula.ptg.Ptg;
+import com.moparisthebest.poi.ss.util.NumberToTextConverter;
 
 /**
  * @author Amol S. Deshmukh &lt; amolweb at ya hoo dot com &gt;

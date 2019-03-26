@@ -15,9 +15,9 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.record.common;
+package com.moparisthebest.poi.hssf.record.common;
 
-import org.apache.poi.ss.util.CellRangeAddress;
+import com.moparisthebest.poi.ss.util.CellRangeAddress;
 
 /**
  * Title: Future Record, a newer (largely Excel 2007+) record

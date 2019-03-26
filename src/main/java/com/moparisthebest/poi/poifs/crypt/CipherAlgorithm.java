@@ -15,9 +15,9 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.poifs.crypt;
+package com.moparisthebest.poi.poifs.crypt;
 
-import org.apache.poi.EncryptedDocumentException;
+import com.moparisthebest.poi.EncryptedDocumentException;
 
 public enum CipherAlgorithm {
     // key size for rc4: 0x00000028 - 0x00000080 (inclusive) with 8-bit increments

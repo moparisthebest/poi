@@ -15,11 +15,11 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula.constant;
+package com.moparisthebest.poi.ss.formula.constant;
 
-import org.apache.poi.util.LittleEndianInput;
-import org.apache.poi.util.LittleEndianOutput;
-import org.apache.poi.util.StringUtil;
+import com.moparisthebest.poi.util.LittleEndianInput;
+import com.moparisthebest.poi.util.LittleEndianOutput;
+import com.moparisthebest.poi.util.StringUtil;
 
 /**
  * To support Constant Values (2.5.7) as required by the CRN record.

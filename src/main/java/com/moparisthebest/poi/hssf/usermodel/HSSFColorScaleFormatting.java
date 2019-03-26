@@ -15,21 +15,21 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.usermodel;
+package com.moparisthebest.poi.hssf.usermodel;
 
-import org.apache.poi.hssf.record.CFRule12Record;
-import org.apache.poi.hssf.record.cf.ColorGradientFormatting;
-import org.apache.poi.hssf.record.cf.ColorGradientThreshold;
-import org.apache.poi.hssf.record.cf.Threshold;
-import org.apache.poi.hssf.record.common.ExtendedColor;
-import org.apache.poi.ss.usermodel.Color;
-import org.apache.poi.ss.usermodel.ConditionalFormattingThreshold;
+import com.moparisthebest.poi.hssf.record.CFRule12Record;
+import com.moparisthebest.poi.hssf.record.cf.ColorGradientFormatting;
+import com.moparisthebest.poi.hssf.record.cf.ColorGradientThreshold;
+import com.moparisthebest.poi.hssf.record.cf.Threshold;
+import com.moparisthebest.poi.hssf.record.common.ExtendedColor;
+import com.moparisthebest.poi.ss.usermodel.Color;
+import com.moparisthebest.poi.ss.usermodel.ConditionalFormattingThreshold;
 
 /**
  * High level representation for Color Scale / Color Gradient 
  *  Formatting component of Conditional Formatting settings
  */
-public final class HSSFColorScaleFormatting implements org.apache.poi.ss.usermodel.ColorScaleFormatting {
+public final class HSSFColorScaleFormatting implements com.moparisthebest.poi.ss.usermodel.ColorScaleFormatting {
     private final HSSFSheet sheet;
     private final CFRule12Record cfRule12Record;
     private final ColorGradientFormatting colorFormatting;

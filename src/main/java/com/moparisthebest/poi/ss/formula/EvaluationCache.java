@@ -15,21 +15,21 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula;
+package com.moparisthebest.poi.ss.formula;
 
-import org.apache.poi.ss.formula.FormulaCellCache.IEntryOperation;
-import org.apache.poi.ss.formula.FormulaUsedBlankCellSet.BookSheetKey;
-import org.apache.poi.ss.formula.PlainCellCache.Loc;
-import org.apache.poi.ss.formula.eval.BlankEval;
-import org.apache.poi.ss.formula.eval.BoolEval;
-import org.apache.poi.ss.formula.eval.ErrorEval;
-import org.apache.poi.ss.formula.eval.NumberEval;
-import org.apache.poi.ss.formula.eval.StringEval;
-import org.apache.poi.ss.formula.eval.ValueEval;
-import org.apache.poi.ss.usermodel.CellType;
+import com.moparisthebest.poi.ss.formula.FormulaCellCache.IEntryOperation;
+import com.moparisthebest.poi.ss.formula.FormulaUsedBlankCellSet.BookSheetKey;
+import com.moparisthebest.poi.ss.formula.PlainCellCache.Loc;
+import com.moparisthebest.poi.ss.formula.eval.BlankEval;
+import com.moparisthebest.poi.ss.formula.eval.BoolEval;
+import com.moparisthebest.poi.ss.formula.eval.ErrorEval;
+import com.moparisthebest.poi.ss.formula.eval.NumberEval;
+import com.moparisthebest.poi.ss.formula.eval.StringEval;
+import com.moparisthebest.poi.ss.formula.eval.ValueEval;
+import com.moparisthebest.poi.ss.usermodel.CellType;
 
 /**
- * Performance optimisation for {@link org.apache.poi.ss.usermodel.FormulaEvaluator}.
+ * Performance optimisation for {@link com.moparisthebest.poi.ss.usermodel.FormulaEvaluator}.
  * This class stores previously calculated values of already visited cells,
  * to avoid unnecessary re-calculation when the same cells are referenced multiple times
  *

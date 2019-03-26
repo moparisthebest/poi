@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.util;
+package com.moparisthebest.poi.ss.util;
 
 import java.awt.font.FontRenderContext;
 import java.awt.font.TextAttribute;
@@ -26,18 +26,18 @@ import java.text.AttributedString;
 import java.util.Locale;
 import java.util.Map;
 
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.CellStyle;
-import org.apache.poi.ss.usermodel.CellType;
-import org.apache.poi.ss.usermodel.CellValue;
-import org.apache.poi.ss.usermodel.DataFormatter;
-import org.apache.poi.ss.usermodel.Font;
-import org.apache.poi.ss.usermodel.FormulaEvaluator;
-import org.apache.poi.ss.usermodel.RichTextString;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.util.Internal;
+import com.moparisthebest.poi.ss.usermodel.Cell;
+import com.moparisthebest.poi.ss.usermodel.CellStyle;
+import com.moparisthebest.poi.ss.usermodel.CellType;
+import com.moparisthebest.poi.ss.usermodel.CellValue;
+import com.moparisthebest.poi.ss.usermodel.DataFormatter;
+import com.moparisthebest.poi.ss.usermodel.Font;
+import com.moparisthebest.poi.ss.usermodel.FormulaEvaluator;
+import com.moparisthebest.poi.ss.usermodel.RichTextString;
+import com.moparisthebest.poi.ss.usermodel.Row;
+import com.moparisthebest.poi.ss.usermodel.Sheet;
+import com.moparisthebest.poi.ss.usermodel.Workbook;
+import com.moparisthebest.poi.util.Internal;
 
 
 /**
@@ -63,7 +63,7 @@ public class SheetUtil {
     /**
      *  Dummy formula evaluator that does nothing.
      *  YK: The only reason of having this class is that
-     *  {@link org.apache.poi.ss.usermodel.DataFormatter#formatCellValue(org.apache.poi.ss.usermodel.Cell)}
+     *  {@link com.moparisthebest.poi.ss.usermodel.DataFormatter#formatCellValue(com.moparisthebest.poi.ss.usermodel.Cell)}
      *  returns formula string for formula cells. Dummy evaluator makes it to format the cached formula result.
      *
      *  See Bugzilla #50021

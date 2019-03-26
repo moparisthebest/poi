@@ -15,15 +15,15 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.record;
+package com.moparisthebest.poi.hssf.record;
 
-import org.apache.poi.hssf.record.cont.ContinuableRecord;
-import org.apache.poi.hssf.record.cont.ContinuableRecordOutput;
-import org.apache.poi.ss.formula.ptg.Area3DPtg;
-import org.apache.poi.ss.formula.ptg.Ptg;
-import org.apache.poi.ss.formula.ptg.Ref3DPtg;
-import org.apache.poi.ss.formula.Formula;
-import org.apache.poi.util.*;
+import com.moparisthebest.poi.hssf.record.cont.ContinuableRecord;
+import com.moparisthebest.poi.hssf.record.cont.ContinuableRecordOutput;
+import com.moparisthebest.poi.ss.formula.ptg.Area3DPtg;
+import com.moparisthebest.poi.ss.formula.ptg.Ptg;
+import com.moparisthebest.poi.ss.formula.ptg.Ref3DPtg;
+import com.moparisthebest.poi.ss.formula.Formula;
+import com.moparisthebest.poi.util.*;
 
 /**
  * Title:        DEFINEDNAME Record (0x0018)<p>

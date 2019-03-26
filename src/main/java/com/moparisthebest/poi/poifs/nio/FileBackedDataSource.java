@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.poifs.nio;
+package com.moparisthebest.poi.poifs.nio;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -32,10 +32,10 @@ import java.security.PrivilegedAction;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.poi.util.IOUtils;
-import org.apache.poi.util.POILogFactory;
-import org.apache.poi.util.POILogger;
-import org.apache.poi.util.SuppressForbidden;
+import com.moparisthebest.poi.util.IOUtils;
+import com.moparisthebest.poi.util.POILogFactory;
+import com.moparisthebest.poi.util.POILogger;
+import com.moparisthebest.poi.util.SuppressForbidden;
 
 /**
  * A POIFS {@link DataSource} backed by a File

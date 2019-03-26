@@ -16,10 +16,10 @@
 ==================================================================== */
 
 
-package org.apache.poi.ss.formula.functions;
+package com.moparisthebest.poi.ss.formula.functions;
 
-import org.apache.poi.ss.formula.eval.ErrorEval;
-import org.apache.poi.ss.formula.eval.EvaluationException;
+import com.moparisthebest.poi.ss.formula.eval.ErrorEval;
+import com.moparisthebest.poi.ss.formula.eval.EvaluationException;
 
 /**
  * Calculates Modified internal rate of return. Syntax is MIRR(cash_flow_values, finance_rate, reinvest_rate)

@@ -15,18 +15,18 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula.functions;
+package com.moparisthebest.poi.ss.formula.functions;
 
-import org.apache.poi.ss.formula.TwoDEval;
-import org.apache.poi.ss.formula.eval.AreaEval;
-import org.apache.poi.ss.formula.eval.BlankEval;
-import org.apache.poi.ss.formula.eval.ErrorEval;
-import org.apache.poi.ss.formula.eval.EvaluationException;
-import org.apache.poi.ss.formula.eval.NumberEval;
-import org.apache.poi.ss.formula.eval.NumericValueEval;
-import org.apache.poi.ss.formula.eval.RefEval;
-import org.apache.poi.ss.formula.eval.StringEval;
-import org.apache.poi.ss.formula.eval.ValueEval;
+import com.moparisthebest.poi.ss.formula.TwoDEval;
+import com.moparisthebest.poi.ss.formula.eval.AreaEval;
+import com.moparisthebest.poi.ss.formula.eval.BlankEval;
+import com.moparisthebest.poi.ss.formula.eval.ErrorEval;
+import com.moparisthebest.poi.ss.formula.eval.EvaluationException;
+import com.moparisthebest.poi.ss.formula.eval.NumberEval;
+import com.moparisthebest.poi.ss.formula.eval.NumericValueEval;
+import com.moparisthebest.poi.ss.formula.eval.RefEval;
+import com.moparisthebest.poi.ss.formula.eval.StringEval;
+import com.moparisthebest.poi.ss.formula.eval.ValueEval;
 
 
 /**

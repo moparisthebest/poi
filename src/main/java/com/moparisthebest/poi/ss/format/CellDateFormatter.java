@@ -14,7 +14,7 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 ==================================================================== */
-package org.apache.poi.ss.format;
+package com.moparisthebest.poi.ss.format;
 
 import java.text.AttributedCharacterIterator;
 import java.text.CharacterIterator;
@@ -26,7 +26,7 @@ import java.util.Formatter;
 import java.util.Locale;
 import java.util.regex.Matcher;
 
-import org.apache.poi.util.LocaleUtil;
+import com.moparisthebest.poi.util.LocaleUtil;
 
 /**
  * Formats a date value.

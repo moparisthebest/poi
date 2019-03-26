@@ -17,7 +17,7 @@
  * ====================================================================
  */
 
-package org.apache.poi.ss.usermodel;
+package com.moparisthebest.poi.ss.usermodel;
 
 /**
  * These values are needed by various conditional formatting evaluation filter types

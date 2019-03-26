@@ -15,12 +15,12 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.record.cont;
+package com.moparisthebest.poi.hssf.record.cont;
 
-import org.apache.poi.hssf.record.ContinueRecord;
-import org.apache.poi.hssf.record.Record;
-import org.apache.poi.util.LittleEndianByteArrayOutputStream;
-import org.apache.poi.util.LittleEndianOutput;
+import com.moparisthebest.poi.hssf.record.ContinueRecord;
+import com.moparisthebest.poi.hssf.record.Record;
+import com.moparisthebest.poi.util.LittleEndianByteArrayOutputStream;
+import com.moparisthebest.poi.util.LittleEndianOutput;
 
 /**
  * Common superclass of all records that can produce {@link ContinueRecord}s while being serialized.

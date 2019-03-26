@@ -15,11 +15,11 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ddf;
+package com.moparisthebest.poi.ddf;
 
-import org.apache.poi.util.HexDump;
-import org.apache.poi.util.HexRead;
-import org.apache.poi.util.LittleEndian;
+import com.moparisthebest.poi.util.HexDump;
+import com.moparisthebest.poi.util.HexRead;
+import com.moparisthebest.poi.util.LittleEndian;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;

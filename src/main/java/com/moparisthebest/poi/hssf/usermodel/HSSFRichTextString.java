@@ -15,16 +15,16 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.usermodel;
+package com.moparisthebest.poi.hssf.usermodel;
 
 import java.util.Iterator;
 
-import org.apache.poi.hssf.model.InternalWorkbook;
-import org.apache.poi.hssf.record.LabelSSTRecord;
-import org.apache.poi.hssf.record.common.UnicodeString;
-import org.apache.poi.hssf.record.common.UnicodeString.FormatRun;
-import org.apache.poi.ss.usermodel.Font;
-import org.apache.poi.ss.usermodel.RichTextString;
+import com.moparisthebest.poi.hssf.model.InternalWorkbook;
+import com.moparisthebest.poi.hssf.record.LabelSSTRecord;
+import com.moparisthebest.poi.hssf.record.common.UnicodeString;
+import com.moparisthebest.poi.hssf.record.common.UnicodeString.FormatRun;
+import com.moparisthebest.poi.ss.usermodel.Font;
+import com.moparisthebest.poi.ss.usermodel.RichTextString;
 /**
  * Rich text unicode string.  These strings can have fonts applied to
  * arbitary parts of the string.

@@ -15,15 +15,15 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula.functions;
+package com.moparisthebest.poi.ss.formula.functions;
 
-import org.apache.poi.ss.formula.TwoDEval;
-import org.apache.poi.ss.formula.eval.ErrorEval;
-import org.apache.poi.ss.formula.eval.MissingArgEval;
-import org.apache.poi.ss.formula.eval.NumberEval;
-import org.apache.poi.ss.formula.eval.ValueEval;
-import org.apache.poi.ss.formula.functions.CountUtils.I_MatchPredicate;
-import org.apache.poi.ss.formula.functions.CountUtils.I_MatchAreaPredicate;
+import com.moparisthebest.poi.ss.formula.TwoDEval;
+import com.moparisthebest.poi.ss.formula.eval.ErrorEval;
+import com.moparisthebest.poi.ss.formula.eval.MissingArgEval;
+import com.moparisthebest.poi.ss.formula.eval.NumberEval;
+import com.moparisthebest.poi.ss.formula.eval.ValueEval;
+import com.moparisthebest.poi.ss.formula.functions.CountUtils.I_MatchPredicate;
+import com.moparisthebest.poi.ss.formula.functions.CountUtils.I_MatchAreaPredicate;
 
 /**
  * Counts the number of cells that contain numeric data within

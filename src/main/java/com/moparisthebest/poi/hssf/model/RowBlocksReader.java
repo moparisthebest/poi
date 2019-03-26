@@ -15,20 +15,20 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.model;
+package com.moparisthebest.poi.hssf.model;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.poi.hssf.record.ArrayRecord;
-import org.apache.poi.hssf.record.FormulaRecord;
-import org.apache.poi.hssf.record.MergeCellsRecord;
-import org.apache.poi.hssf.record.Record;
-import org.apache.poi.hssf.record.SharedFormulaRecord;
-import org.apache.poi.hssf.record.TableRecord;
-import org.apache.poi.hssf.record.aggregates.MergedCellsTable;
-import org.apache.poi.hssf.record.aggregates.SharedValueManager;
-import org.apache.poi.ss.util.CellReference;
+import com.moparisthebest.poi.hssf.record.ArrayRecord;
+import com.moparisthebest.poi.hssf.record.FormulaRecord;
+import com.moparisthebest.poi.hssf.record.MergeCellsRecord;
+import com.moparisthebest.poi.hssf.record.Record;
+import com.moparisthebest.poi.hssf.record.SharedFormulaRecord;
+import com.moparisthebest.poi.hssf.record.TableRecord;
+import com.moparisthebest.poi.hssf.record.aggregates.MergedCellsTable;
+import com.moparisthebest.poi.hssf.record.aggregates.SharedValueManager;
+import com.moparisthebest.poi.ss.util.CellReference;
 
 /**
  * Segregates the 'Row Blocks' section of a single sheet into plain row/cell records and

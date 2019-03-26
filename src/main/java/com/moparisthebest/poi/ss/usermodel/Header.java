@@ -15,14 +15,14 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.usermodel;
+package com.moparisthebest.poi.ss.usermodel;
 
 /**
  * Common definition of a HSSF or XSSF page header.
  * For a list of all the different fields that can be
  *  placed into a header, such as page number,
  *  bold, underline etc, see 
- *  {@link org.apache.poi.ss.usermodel.HeaderFooter}.
+ *  {@link com.moparisthebest.poi.ss.usermodel.HeaderFooter}.
  */
 public interface Header extends HeaderFooter {
     /**

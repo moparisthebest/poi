@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula;
+package com.moparisthebest.poi.ss.formula;
 
 public class NameIdentifier {
     private final String _name;

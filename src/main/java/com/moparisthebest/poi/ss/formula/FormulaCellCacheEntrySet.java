@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula;
+package com.moparisthebest.poi.ss.formula;
 
 /**
  * A custom implementation of {@link java.util.HashSet} in order to reduce memory consumption.

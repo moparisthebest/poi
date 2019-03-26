@@ -14,12 +14,12 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 ==================================================================== */
-package org.apache.poi.hpsf;
+package com.moparisthebest.poi.hpsf;
 
 import java.io.IOException;
 import java.io.OutputStream;
 
-import org.apache.poi.util.LittleEndian;
+import com.moparisthebest.poi.util.LittleEndian;
 
 class Filetime
 {

@@ -15,24 +15,24 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula;
+package com.moparisthebest.poi.ss.formula;
 
-import org.apache.poi.ss.SpreadsheetVersion;
-import org.apache.poi.ss.formula.ptg.Area2DPtgBase;
-import org.apache.poi.ss.formula.ptg.Area3DPtg;
-import org.apache.poi.ss.formula.ptg.Area3DPxg;
-import org.apache.poi.ss.formula.ptg.AreaErrPtg;
-import org.apache.poi.ss.formula.ptg.AreaPtg;
-import org.apache.poi.ss.formula.ptg.AreaPtgBase;
-import org.apache.poi.ss.formula.ptg.Deleted3DPxg;
-import org.apache.poi.ss.formula.ptg.DeletedArea3DPtg;
-import org.apache.poi.ss.formula.ptg.DeletedRef3DPtg;
-import org.apache.poi.ss.formula.ptg.Ptg;
-import org.apache.poi.ss.formula.ptg.Ref3DPtg;
-import org.apache.poi.ss.formula.ptg.Ref3DPxg;
-import org.apache.poi.ss.formula.ptg.RefErrorPtg;
-import org.apache.poi.ss.formula.ptg.RefPtg;
-import org.apache.poi.ss.formula.ptg.RefPtgBase;
+import com.moparisthebest.poi.ss.SpreadsheetVersion;
+import com.moparisthebest.poi.ss.formula.ptg.Area2DPtgBase;
+import com.moparisthebest.poi.ss.formula.ptg.Area3DPtg;
+import com.moparisthebest.poi.ss.formula.ptg.Area3DPxg;
+import com.moparisthebest.poi.ss.formula.ptg.AreaErrPtg;
+import com.moparisthebest.poi.ss.formula.ptg.AreaPtg;
+import com.moparisthebest.poi.ss.formula.ptg.AreaPtgBase;
+import com.moparisthebest.poi.ss.formula.ptg.Deleted3DPxg;
+import com.moparisthebest.poi.ss.formula.ptg.DeletedArea3DPtg;
+import com.moparisthebest.poi.ss.formula.ptg.DeletedRef3DPtg;
+import com.moparisthebest.poi.ss.formula.ptg.Ptg;
+import com.moparisthebest.poi.ss.formula.ptg.Ref3DPtg;
+import com.moparisthebest.poi.ss.formula.ptg.Ref3DPxg;
+import com.moparisthebest.poi.ss.formula.ptg.RefErrorPtg;
+import com.moparisthebest.poi.ss.formula.ptg.RefPtg;
+import com.moparisthebest.poi.ss.formula.ptg.RefPtgBase;
 
 
 /**
@@ -70,7 +70,7 @@ public final class FormulaShifter {
     /**
      * Create an instance for shifting row.
      *
-     * For example, this will be called on {@link org.apache.poi.hssf.usermodel.HSSFSheet#shiftRows(int, int, int)} }
+     * For example, this will be called on {@link com.moparisthebest.poi.hssf.usermodel.HSSFSheet#shiftRows(int, int, int)} }
      */
     private FormulaShifter(int externSheetIndex, String sheetName, int firstMovedIndex, int lastMovedIndex, int amountToMove,
             ShiftMode mode, SpreadsheetVersion version) {
@@ -94,7 +94,7 @@ public final class FormulaShifter {
     /**
      * Create an instance for shifting sheets.
      *
-     * For example, this will be called on {@link org.apache.poi.hssf.usermodel.HSSFWorkbook#setSheetOrder(String, int)}  
+     * For example, this will be called on {@link com.moparisthebest.poi.hssf.usermodel.HSSFWorkbook#setSheetOrder(String, int)}  
      */
     private FormulaShifter(int srcSheetIndex, int dstSheetIndex) {
         _externSheetIndex = _firstMovedIndex = _lastMovedIndex = _amountToMove = -1;

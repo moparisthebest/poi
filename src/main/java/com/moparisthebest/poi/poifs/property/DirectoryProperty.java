@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.poifs.property;
+package com.moparisthebest.poi.poifs.property;
 
 import java.io.IOException;
 import java.io.Serializable;

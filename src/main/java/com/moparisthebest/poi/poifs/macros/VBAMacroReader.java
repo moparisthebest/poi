@@ -15,10 +15,10 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.poifs.macros;
+package com.moparisthebest.poi.poifs.macros;
 
-import static org.apache.poi.util.StringUtil.startsWithIgnoreCase;
-import static org.apache.poi.util.StringUtil.endsWithIgnoreCase;
+import static com.moparisthebest.poi.util.StringUtil.startsWithIgnoreCase;
+import static com.moparisthebest.poi.util.StringUtil.endsWithIgnoreCase;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -34,16 +34,16 @@ import java.util.Map;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
-import org.apache.poi.poifs.filesystem.DirectoryNode;
-import org.apache.poi.poifs.filesystem.DocumentInputStream;
-import org.apache.poi.poifs.filesystem.DocumentNode;
-import org.apache.poi.poifs.filesystem.Entry;
-import org.apache.poi.poifs.filesystem.NPOIFSFileSystem;
-import org.apache.poi.poifs.filesystem.OfficeXmlFileException;
-import org.apache.poi.util.CodePageUtil;
-import org.apache.poi.util.HexDump;
-import org.apache.poi.util.IOUtils;
-import org.apache.poi.util.RLEDecompressingInputStream;
+import com.moparisthebest.poi.poifs.filesystem.DirectoryNode;
+import com.moparisthebest.poi.poifs.filesystem.DocumentInputStream;
+import com.moparisthebest.poi.poifs.filesystem.DocumentNode;
+import com.moparisthebest.poi.poifs.filesystem.Entry;
+import com.moparisthebest.poi.poifs.filesystem.NPOIFSFileSystem;
+import com.moparisthebest.poi.poifs.filesystem.OfficeXmlFileException;
+import com.moparisthebest.poi.util.CodePageUtil;
+import com.moparisthebest.poi.util.HexDump;
+import com.moparisthebest.poi.util.IOUtils;
+import com.moparisthebest.poi.util.RLEDecompressingInputStream;
 
 /**
  * <p>Finds all VBA Macros in an office file (OLE2/POIFS and OOXML/OPC),
@@ -51,7 +51,7 @@ import org.apache.poi.util.RLEDecompressingInputStream;
  * </p>
  * <p>
  * <b>NOTE:</b> This does not read macros from .ppt files.
- * See org.apache.poi.hslf.usermodel.TestBugs.getMacrosFromHSLF() in the scratchpad
+ * See com.moparisthebest.poi.hslf.usermodel.TestBugs.getMacrosFromHSLF() in the scratchpad
  * module for an example of how to do this. Patches that make macro
  * extraction from .ppt more elegant are welcomed!
  * </p>

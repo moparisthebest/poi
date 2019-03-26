@@ -17,15 +17,15 @@
 ==================================================================== */
         
 
-package org.apache.poi.poifs.storage;
+package com.moparisthebest.poi.poifs.storage;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.nio.ByteBuffer;
 
-import org.apache.poi.poifs.common.POIFSBigBlockSize;
-import org.apache.poi.poifs.common.POIFSConstants;
+import com.moparisthebest.poi.poifs.common.POIFSBigBlockSize;
+import com.moparisthebest.poi.poifs.common.POIFSConstants;
 
 /**
  * The block containing the archive header

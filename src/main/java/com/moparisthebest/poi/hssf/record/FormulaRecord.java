@@ -15,13 +15,13 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.record;
+package com.moparisthebest.poi.hssf.record;
 
-import org.apache.poi.ss.formula.Formula;
-import org.apache.poi.ss.formula.eval.ErrorEval;
-import org.apache.poi.ss.formula.ptg.Ptg;
-import org.apache.poi.ss.usermodel.CellType;
-import org.apache.poi.util.*;
+import com.moparisthebest.poi.ss.formula.Formula;
+import com.moparisthebest.poi.ss.formula.eval.ErrorEval;
+import com.moparisthebest.poi.ss.formula.ptg.Ptg;
+import com.moparisthebest.poi.ss.usermodel.CellType;
+import com.moparisthebest.poi.util.*;
 
 /**
  * Formula Record (0x0006).
@@ -88,7 +88,7 @@ public final class FormulaRecord extends CellRecord implements Cloneable {
 				case EMPTY:
 					break;
 				default:
-					throw new org.apache.poi.util.RecordFormatException("Bad special value code (" + result[0] + ")");
+					throw new com.moparisthebest.poi.util.RecordFormatException("Bad special value code (" + result[0] + ")");
 			}
 			return new SpecialCachedValue(result);
 		}

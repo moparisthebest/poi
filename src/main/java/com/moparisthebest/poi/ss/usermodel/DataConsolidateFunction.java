@@ -17,9 +17,9 @@
  * ====================================================================
  */
 
-package org.apache.poi.ss.usermodel;
+package com.moparisthebest.poi.ss.usermodel;
 
-import org.apache.poi.util.Beta;
+import com.moparisthebest.poi.util.Beta;
 
 /**
  * Enum mapping the values of STDataConsolidateFunction

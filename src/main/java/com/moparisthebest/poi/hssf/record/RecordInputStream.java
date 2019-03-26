@@ -15,19 +15,19 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.record;
+package com.moparisthebest.poi.hssf.record;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Locale;
 
-import org.apache.poi.hssf.record.crypto.Biff8DecryptingStream;
-import org.apache.poi.poifs.crypt.EncryptionInfo;
-import org.apache.poi.util.Internal;
-import org.apache.poi.util.LittleEndianConsts;
-import org.apache.poi.util.LittleEndianInput;
-import org.apache.poi.util.LittleEndianInputStream;
+import com.moparisthebest.poi.hssf.record.crypto.Biff8DecryptingStream;
+import com.moparisthebest.poi.poifs.crypt.EncryptionInfo;
+import com.moparisthebest.poi.util.Internal;
+import com.moparisthebest.poi.util.LittleEndianConsts;
+import com.moparisthebest.poi.util.LittleEndianInput;
+import com.moparisthebest.poi.util.LittleEndianInputStream;
 
 /**
  * Title:  Record Input Stream<P>

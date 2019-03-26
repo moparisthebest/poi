@@ -14,16 +14,16 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 ==================================================================== */
-package org.apache.poi.hssf.usermodel;
+package com.moparisthebest.poi.hssf.usermodel;
 
 import java.util.HashSet;
 
-import org.apache.poi.hssf.record.ExtendedFormatRecord;
-import org.apache.poi.hssf.record.FontRecord;
-import org.apache.poi.hssf.record.common.UnicodeString;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.CellType;
-import org.apache.poi.ss.usermodel.Row;
+import com.moparisthebest.poi.hssf.record.ExtendedFormatRecord;
+import com.moparisthebest.poi.hssf.record.FontRecord;
+import com.moparisthebest.poi.hssf.record.common.UnicodeString;
+import com.moparisthebest.poi.ss.usermodel.Cell;
+import com.moparisthebest.poi.ss.usermodel.CellType;
+import com.moparisthebest.poi.ss.usermodel.Row;
 
 /**
  * Excel can get cranky if you give it files containing too

@@ -17,12 +17,12 @@
 ==================================================================== */
 
 
-package org.apache.poi.poifs.filesystem;
+package com.moparisthebest.poi.poifs.filesystem;
 
 import java.io.*;
 
-import org.apache.poi.poifs.dev.POIFSViewable;
-import org.apache.poi.util.CloseIgnoringInputStream;
+import com.moparisthebest.poi.poifs.dev.POIFSViewable;
+import com.moparisthebest.poi.util.CloseIgnoringInputStream;
 
 /**
  * Transition class for the move from {@link POIFSFileSystem} to 

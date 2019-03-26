@@ -15,10 +15,10 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.usermodel.charts;
+package com.moparisthebest.poi.ss.usermodel.charts;
 
-import org.apache.poi.ss.usermodel.Chart;
-import org.apache.poi.util.Beta;
+import com.moparisthebest.poi.ss.usermodel.Chart;
+import com.moparisthebest.poi.util.Beta;
 
 /**
  * A base for all charts data types.

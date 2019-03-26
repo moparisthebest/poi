@@ -15,12 +15,12 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.util;
+package com.moparisthebest.poi.hssf.util;
 
-import org.apache.poi.hssf.usermodel.HSSFSheet;
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import org.apache.poi.ss.util.RegionUtil;
-import org.apache.poi.ss.util.CellRangeAddress;
+import com.moparisthebest.poi.hssf.usermodel.HSSFSheet;
+import com.moparisthebest.poi.hssf.usermodel.HSSFWorkbook;
+import com.moparisthebest.poi.ss.util.RegionUtil;
+import com.moparisthebest.poi.ss.util.CellRangeAddress;
 
 /**
  * Various utility functions that make working with a region of cells easier.

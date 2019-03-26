@@ -15,11 +15,11 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula.ptg;
-import org.apache.poi.ss.formula.function.FunctionMetadata;
-import org.apache.poi.ss.formula.function.FunctionMetadataRegistry;
-import org.apache.poi.util.LittleEndianInput;
-import org.apache.poi.util.LittleEndianOutput;
+package com.moparisthebest.poi.ss.formula.ptg;
+import com.moparisthebest.poi.ss.formula.function.FunctionMetadata;
+import com.moparisthebest.poi.ss.formula.function.FunctionMetadataRegistry;
+import com.moparisthebest.poi.util.LittleEndianInput;
+import com.moparisthebest.poi.util.LittleEndianOutput;
 
 /**
  * @author Jason Height (jheight at chariot dot net dot au)

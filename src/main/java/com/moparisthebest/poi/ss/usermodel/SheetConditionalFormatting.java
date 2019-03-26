@@ -17,10 +17,10 @@
  * ====================================================================
  */
 
-package org.apache.poi.ss.usermodel;
+package com.moparisthebest.poi.ss.usermodel;
 
-import org.apache.poi.ss.usermodel.IconMultiStateFormatting.IconSet;
-import org.apache.poi.ss.util.CellRangeAddress;
+import com.moparisthebest.poi.ss.usermodel.IconMultiStateFormatting.IconSet;
+import com.moparisthebest.poi.ss.util.CellRangeAddress;
 
 /**
  * The 'Conditional Formatting' facet of <tt>Sheet</tt>

@@ -15,17 +15,17 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.util;
+package com.moparisthebest.poi.hssf.util;
 
-import org.apache.poi.hssf.usermodel.HSSFCell;
-import org.apache.poi.hssf.usermodel.HSSFCellStyle;
-import org.apache.poi.hssf.usermodel.HSSFFont;
-import org.apache.poi.hssf.usermodel.HSSFRow;
-import org.apache.poi.hssf.usermodel.HSSFSheet;
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import org.apache.poi.ss.usermodel.HorizontalAlignment;
-import org.apache.poi.ss.util.CellUtil;
-import org.apache.poi.util.Removal;
+import com.moparisthebest.poi.hssf.usermodel.HSSFCell;
+import com.moparisthebest.poi.hssf.usermodel.HSSFCellStyle;
+import com.moparisthebest.poi.hssf.usermodel.HSSFFont;
+import com.moparisthebest.poi.hssf.usermodel.HSSFRow;
+import com.moparisthebest.poi.hssf.usermodel.HSSFSheet;
+import com.moparisthebest.poi.hssf.usermodel.HSSFWorkbook;
+import com.moparisthebest.poi.ss.usermodel.HorizontalAlignment;
+import com.moparisthebest.poi.ss.util.CellUtil;
+import com.moparisthebest.poi.util.Removal;
 
 /**
  * Various utility functions that make working with a cells and rows easier.  The various
@@ -35,7 +35,7 @@ import org.apache.poi.util.Removal;
  * creating too many styles.  there is an upper limit in Excel on the number of styles that
  * can be supported.
  * 
- * @deprecated 3.15 beta2. Use {@link org.apache.poi.ss.util.CellUtil} instead.
+ * @deprecated 3.15 beta2. Use {@link com.moparisthebest.poi.ss.util.CellUtil} instead.
  */
 @Deprecated
 @Removal(version="3.17")
@@ -51,7 +51,7 @@ public final class HSSFCellUtil {
      * @param  rowIndex  The 0 based row number
      * @param  sheet       The sheet that the row is part of.
      * @return             The row indicated by the rowCounter
-     * @deprecated 3.15 beta2. Removed in 3.17. Use {@link org.apache.poi.ss.util.CellUtil#getRow} instead.
+     * @deprecated 3.15 beta2. Removed in 3.17. Use {@link com.moparisthebest.poi.ss.util.CellUtil#getRow} instead.
      */
     public static HSSFRow getRow(int rowIndex, HSSFSheet sheet) {
     	return (HSSFRow) CellUtil.getRow(rowIndex, sheet);
@@ -64,7 +64,7 @@ public final class HSSFCellUtil {
      * @param  row     The row that the cell is part of
      * @param  columnIndex  The column index that the cell is in.
      * @return         The cell indicated by the column.
-     * @deprecated 3.15 beta2. Removed in 3.17. Use {@link org.apache.poi.ss.util.CellUtil#getCell} instead.
+     * @deprecated 3.15 beta2. Removed in 3.17. Use {@link com.moparisthebest.poi.ss.util.CellUtil#getCell} instead.
      */
     public static HSSFCell getCell(HSSFRow row, int columnIndex) {
         return (HSSFCell) CellUtil.getCell(row, columnIndex);
@@ -78,7 +78,7 @@ public final class HSSFCellUtil {
      * @param  value   The value of the cell
      * @param  style   If the style is not null, then set
      * @return         A new HSSFCell
-     * @deprecated 3.15 beta2. Removed in 3.17. Use {@link org.apache.poi.ss.util.CellUtil#createCell} instead.
+     * @deprecated 3.15 beta2. Removed in 3.17. Use {@link com.moparisthebest.poi.ss.util.CellUtil#createCell} instead.
      */
     public static HSSFCell createCell(HSSFRow row, int column, String value, HSSFCellStyle style) {
     	return (HSSFCell) CellUtil.createCell(row, column, value, style);
@@ -91,7 +91,7 @@ public final class HSSFCellUtil {
      * @param  column  the column index to create the cell in
      * @param  value   The value of the cell
      * @return         A new HSSFCell.
-     * @deprecated 3.15 beta2. Removed in 3.17. Use {@link org.apache.poi.ss.util.CellUtil#createCell} instead.
+     * @deprecated 3.15 beta2. Removed in 3.17. Use {@link com.moparisthebest.poi.ss.util.CellUtil#createCell} instead.
      */
     public static HSSFCell createCell(HSSFRow row, int column, String value) {
         return createCell( row, column, value, null );
@@ -103,7 +103,7 @@ public final class HSSFCellUtil {
      * @param  cell     the cell to set the alignment for
      * @param  workbook               The workbook that is being worked with.
      * @param  align  the column alignment to use.
-     * @deprecated 3.15 beta2. Removed in 3.17. Use {@link org.apache.poi.ss.util.CellUtil#setAlignment} instead.
+     * @deprecated 3.15 beta2. Removed in 3.17. Use {@link com.moparisthebest.poi.ss.util.CellUtil#setAlignment} instead.
      *
      * @see HSSFCellStyle for alignment options
      */
@@ -115,7 +115,7 @@ public final class HSSFCellUtil {
      *
      * @param  cell     the cell to set the alignment for
      * @param  align  the column alignment to use.
-     * @deprecated 3.15 beta2. Removed in 3.17. Use {@link org.apache.poi.ss.util.CellUtil#setAlignment} instead.
+     * @deprecated 3.15 beta2. Removed in 3.17. Use {@link com.moparisthebest.poi.ss.util.CellUtil#setAlignment} instead.
      *
      * @see HSSFCellStyle for alignment options
      */
@@ -129,7 +129,7 @@ public final class HSSFCellUtil {
      * @param  cell     the cell to set the alignment for
      * @param  workbook  The workbook that is being worked with.
      * @param  font  The HSSFFont that you want to set.
-     * @deprecated 3.15 beta2. Removed in 3.17. Use {@link org.apache.poi.ss.util.CellUtil#setFont} instead.
+     * @deprecated 3.15 beta2. Removed in 3.17. Use {@link com.moparisthebest.poi.ss.util.CellUtil#setFont} instead.
      */
     public static void setFont(HSSFCell cell, HSSFWorkbook workbook, HSSFFont font) {
     	CellUtil.setFont(cell, font);
@@ -146,7 +146,7 @@ public final class HSSFCellUtil {
      * @param  propertyName           The name of the property that is to be changed.
      * @param  propertyValue          The value of the property that is to be changed.
      * @param  cell                   The cell that needs it's style changes
-     * @deprecated 3.15 beta2. Removed in 3.17. Use {@link org.apache.poi.ss.util.CellUtil#setCellStyleProperty} instead.
+     * @deprecated 3.15 beta2. Removed in 3.17. Use {@link com.moparisthebest.poi.ss.util.CellUtil#setCellStyleProperty} instead.
      */
     public static void setCellStyleProperty(HSSFCell cell, HSSFWorkbook workbook,
 			String propertyName, Object propertyValue) {
@@ -160,7 +160,7 @@ public final class HSSFCellUtil {
      * @param  cell  The cell to check for unicode values
      * @return       translated to unicode (the cell is modified in-place and returned)
      * 
-     * @deprecated 3.15 beta2. Removed in 3.17. Use {@link org.apache.poi.ss.util.CellUtil#translateUnicodeValues} instead.
+     * @deprecated 3.15 beta2. Removed in 3.17. Use {@link com.moparisthebest.poi.ss.util.CellUtil#translateUnicodeValues} instead.
      */
     public static HSSFCell translateUnicodeValues(HSSFCell cell){
     	CellUtil.translateUnicodeValues(cell);

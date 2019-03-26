@@ -15,15 +15,15 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula;
+package com.moparisthebest.poi.ss.formula;
 
-import org.apache.poi.ss.formula.eval.BlankEval;
-import org.apache.poi.ss.formula.eval.BoolEval;
-import org.apache.poi.ss.formula.eval.ErrorEval;
-import org.apache.poi.ss.formula.eval.NumberEval;
-import org.apache.poi.ss.formula.eval.StringEval;
-import org.apache.poi.ss.formula.eval.ValueEval;
-import org.apache.poi.ss.formula.IEvaluationListener.ICacheEntry;
+import com.moparisthebest.poi.ss.formula.eval.BlankEval;
+import com.moparisthebest.poi.ss.formula.eval.BoolEval;
+import com.moparisthebest.poi.ss.formula.eval.ErrorEval;
+import com.moparisthebest.poi.ss.formula.eval.NumberEval;
+import com.moparisthebest.poi.ss.formula.eval.StringEval;
+import com.moparisthebest.poi.ss.formula.eval.ValueEval;
+import com.moparisthebest.poi.ss.formula.IEvaluationListener.ICacheEntry;
 
 /**
  * Stores the parameters that identify the evaluation of one cell.<br/>

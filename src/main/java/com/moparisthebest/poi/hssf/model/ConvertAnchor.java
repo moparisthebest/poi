@@ -15,14 +15,14 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.model;
+package com.moparisthebest.poi.hssf.model;
 
-import org.apache.poi.ddf.EscherRecord;
-import org.apache.poi.ddf.EscherClientAnchorRecord;
-import org.apache.poi.ddf.EscherChildAnchorRecord;
-import org.apache.poi.hssf.usermodel.HSSFAnchor;
-import org.apache.poi.hssf.usermodel.HSSFClientAnchor;
-import org.apache.poi.hssf.usermodel.HSSFChildAnchor;
+import com.moparisthebest.poi.ddf.EscherRecord;
+import com.moparisthebest.poi.ddf.EscherClientAnchorRecord;
+import com.moparisthebest.poi.ddf.EscherChildAnchorRecord;
+import com.moparisthebest.poi.hssf.usermodel.HSSFAnchor;
+import com.moparisthebest.poi.hssf.usermodel.HSSFClientAnchor;
+import com.moparisthebest.poi.hssf.usermodel.HSSFChildAnchor;
 
 /**
  *

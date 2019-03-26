@@ -14,12 +14,12 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 ==================================================================== */
-package org.apache.poi.ss.format;
+package com.moparisthebest.poi.ss.format;
 
 import java.util.Formatter;
 import java.util.Locale;
 
-import org.apache.poi.util.LocaleUtil;
+import com.moparisthebest.poi.util.LocaleUtil;
 
 /**
  * A formatter for the default "General" cell format.

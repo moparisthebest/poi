@@ -15,9 +15,9 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula;
+package com.moparisthebest.poi.ss.formula;
 
-import org.apache.poi.util.Internal;
+import com.moparisthebest.poi.util.Internal;
 
 /**
  * Abstracts a sheet for the purpose of formula evaluation.<br/>

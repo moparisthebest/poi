@@ -15,14 +15,14 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.util;
+package com.moparisthebest.poi.hssf.util;
 
 /**
  * Common conversion functions between Excel style A1, C27 style
  *  cell references, and POI usermodel style row=0, column=0
  *  style references.
  */
-public final class CellReference extends org.apache.poi.ss.util.CellReference {
+public final class CellReference extends com.moparisthebest.poi.ss.util.CellReference {
     /**
      * Create an cell ref from a string representation.  Sheet names containing special characters should be
      * delimited and escaped as per normal syntax rules for formulas.

@@ -15,15 +15,15 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.record.aggregates;
+package com.moparisthebest.poi.hssf.record.aggregates;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.poi.hssf.model.RecordStream;
-import org.apache.poi.hssf.record.MergeCellsRecord;
-import org.apache.poi.ss.util.CellRangeAddress;
-import org.apache.poi.ss.util.CellRangeAddressList;
+import com.moparisthebest.poi.hssf.model.RecordStream;
+import com.moparisthebest.poi.hssf.record.MergeCellsRecord;
+import com.moparisthebest.poi.ss.util.CellRangeAddress;
+import com.moparisthebest.poi.ss.util.CellRangeAddressList;
 
 /**
  * 

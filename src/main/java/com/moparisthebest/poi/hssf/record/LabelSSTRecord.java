@@ -15,10 +15,10 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.record;
+package com.moparisthebest.poi.hssf.record;
 
-import org.apache.poi.util.HexDump;
-import org.apache.poi.util.LittleEndianOutput;
+import com.moparisthebest.poi.util.HexDump;
+import com.moparisthebest.poi.util.LittleEndianOutput;
 
 /**
  * Title:        Label SST Record<P>
@@ -42,7 +42,7 @@ public final class LabelSSTRecord extends CellRecord implements Cloneable {
      * set the index to the string in the SSTRecord
      *
      * @param index - of string in the SST Table
-     * @see org.apache.poi.hssf.record.SSTRecord
+     * @see com.moparisthebest.poi.hssf.record.SSTRecord
      */
     public void setSSTIndex(int index) {
         field_4_sst_index = index;
@@ -53,7 +53,7 @@ public final class LabelSSTRecord extends CellRecord implements Cloneable {
      * get the index to the string in the SSTRecord
      *
      * @return index of string in the SST Table
-     * @see org.apache.poi.hssf.record.SSTRecord
+     * @see com.moparisthebest.poi.hssf.record.SSTRecord
      */
     public int getSSTIndex() {
         return field_4_sst_index;

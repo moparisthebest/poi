@@ -17,7 +17,7 @@
 ==================================================================== */
         
 
-package org.apache.poi.poifs.dev;
+package com.moparisthebest.poi.poifs.dev;
 
 import java.util.Iterator;
 

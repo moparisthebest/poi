@@ -14,7 +14,7 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 ==================================================================== */
-package org.apache.poi.hssf.eventusermodel;
+package com.moparisthebest.poi.hssf.eventusermodel;
 
 import java.text.NumberFormat;
 import java.util.ArrayList;
@@ -23,17 +23,17 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
-import org.apache.poi.hssf.record.CellValueRecordInterface;
-import org.apache.poi.hssf.record.ExtendedFormatRecord;
-import org.apache.poi.hssf.record.FormatRecord;
-import org.apache.poi.hssf.record.FormulaRecord;
-import org.apache.poi.hssf.record.NumberRecord;
-import org.apache.poi.hssf.record.Record;
-import org.apache.poi.hssf.usermodel.HSSFDataFormat;
-import org.apache.poi.hssf.usermodel.HSSFDataFormatter;
-import org.apache.poi.util.LocaleUtil;
-import org.apache.poi.util.POILogFactory;
-import org.apache.poi.util.POILogger;
+import com.moparisthebest.poi.hssf.record.CellValueRecordInterface;
+import com.moparisthebest.poi.hssf.record.ExtendedFormatRecord;
+import com.moparisthebest.poi.hssf.record.FormatRecord;
+import com.moparisthebest.poi.hssf.record.FormulaRecord;
+import com.moparisthebest.poi.hssf.record.NumberRecord;
+import com.moparisthebest.poi.hssf.record.Record;
+import com.moparisthebest.poi.hssf.usermodel.HSSFDataFormat;
+import com.moparisthebest.poi.hssf.usermodel.HSSFDataFormatter;
+import com.moparisthebest.poi.util.LocaleUtil;
+import com.moparisthebest.poi.util.POILogFactory;
+import com.moparisthebest.poi.util.POILogger;
 
 /**
  * A proxy HSSFListener that keeps track of the document formatting records, and

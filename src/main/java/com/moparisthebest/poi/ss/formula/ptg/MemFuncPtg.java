@@ -15,10 +15,10 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula.ptg;
+package com.moparisthebest.poi.ss.formula.ptg;
 
-import org.apache.poi.util.LittleEndianInput;
-import org.apache.poi.util.LittleEndianOutput;
+import com.moparisthebest.poi.util.LittleEndianInput;
+import com.moparisthebest.poi.util.LittleEndianOutput;
 
 /**
  * @author Glen Stampoultzis (glens at apache.org)

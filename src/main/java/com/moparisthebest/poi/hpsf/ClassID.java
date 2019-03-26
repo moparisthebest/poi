@@ -15,12 +15,12 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hpsf;
+package com.moparisthebest.poi.hpsf;
 
 import java.util.Arrays;
 
-import org.apache.poi.util.HexDump;
-import org.apache.poi.util.StringUtil;
+import com.moparisthebest.poi.util.HexDump;
+import com.moparisthebest.poi.util.StringUtil;
 
 /**
  *  <p>Represents a class ID (16 bytes). Unlike other little-endian

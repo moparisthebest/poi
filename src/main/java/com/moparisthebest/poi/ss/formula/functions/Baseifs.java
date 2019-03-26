@@ -17,17 +17,17 @@
  * ====================================================================
  */
 
-package org.apache.poi.ss.formula.functions;
+package com.moparisthebest.poi.ss.formula.functions;
 
-import org.apache.poi.ss.formula.OperationEvaluationContext;
-import org.apache.poi.ss.formula.eval.AreaEval;
-import org.apache.poi.ss.formula.eval.ErrorEval;
-import org.apache.poi.ss.formula.eval.EvaluationException;
-import org.apache.poi.ss.formula.eval.NumberEval;
-import org.apache.poi.ss.formula.eval.RefEval;
-import org.apache.poi.ss.formula.eval.ValueEval;
-import org.apache.poi.ss.formula.functions.CountUtils.I_MatchPredicate;
-import org.apache.poi.ss.formula.functions.Countif.ErrorMatcher;
+import com.moparisthebest.poi.ss.formula.OperationEvaluationContext;
+import com.moparisthebest.poi.ss.formula.eval.AreaEval;
+import com.moparisthebest.poi.ss.formula.eval.ErrorEval;
+import com.moparisthebest.poi.ss.formula.eval.EvaluationException;
+import com.moparisthebest.poi.ss.formula.eval.NumberEval;
+import com.moparisthebest.poi.ss.formula.eval.RefEval;
+import com.moparisthebest.poi.ss.formula.eval.ValueEval;
+import com.moparisthebest.poi.ss.formula.functions.CountUtils.I_MatchPredicate;
+import com.moparisthebest.poi.ss.formula.functions.Countif.ErrorMatcher;
 
 /**
  * Base class for SUMIFS() and COUNTIFS() functions, as they share much of the same logic, 

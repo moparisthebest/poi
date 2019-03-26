@@ -17,14 +17,14 @@
 ==================================================================== */
         
 
-package org.apache.poi.poifs.filesystem;
+package com.moparisthebest.poi.poifs.filesystem;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import org.apache.poi.poifs.dev.POIFSViewable;
-import org.apache.poi.poifs.property.DocumentProperty;
+import com.moparisthebest.poi.poifs.dev.POIFSViewable;
+import com.moparisthebest.poi.poifs.property.DocumentProperty;
 
 /**
  * Simple implementation of DocumentEntry for OPOIFS

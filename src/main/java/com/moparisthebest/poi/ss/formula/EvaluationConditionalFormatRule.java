@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula;
+package com.moparisthebest.poi.ss.formula;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -26,24 +26,24 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import org.apache.poi.ss.formula.eval.BlankEval;
-import org.apache.poi.ss.formula.eval.BoolEval;
-import org.apache.poi.ss.formula.eval.ErrorEval;
-import org.apache.poi.ss.formula.eval.NumberEval;
-import org.apache.poi.ss.formula.eval.RefEval;
-import org.apache.poi.ss.formula.eval.StringEval;
-import org.apache.poi.ss.formula.eval.ValueEval;
-import org.apache.poi.ss.formula.functions.AggregateFunction;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.CellType;
-import org.apache.poi.ss.usermodel.ConditionFilterData;
-import org.apache.poi.ss.usermodel.ConditionFilterType;
-import org.apache.poi.ss.usermodel.ConditionType;
-import org.apache.poi.ss.usermodel.ConditionalFormatting;
-import org.apache.poi.ss.usermodel.ConditionalFormattingRule;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.util.CellRangeAddress;
+import com.moparisthebest.poi.ss.formula.eval.BlankEval;
+import com.moparisthebest.poi.ss.formula.eval.BoolEval;
+import com.moparisthebest.poi.ss.formula.eval.ErrorEval;
+import com.moparisthebest.poi.ss.formula.eval.NumberEval;
+import com.moparisthebest.poi.ss.formula.eval.RefEval;
+import com.moparisthebest.poi.ss.formula.eval.StringEval;
+import com.moparisthebest.poi.ss.formula.eval.ValueEval;
+import com.moparisthebest.poi.ss.formula.functions.AggregateFunction;
+import com.moparisthebest.poi.ss.usermodel.Cell;
+import com.moparisthebest.poi.ss.usermodel.CellType;
+import com.moparisthebest.poi.ss.usermodel.ConditionFilterData;
+import com.moparisthebest.poi.ss.usermodel.ConditionFilterType;
+import com.moparisthebest.poi.ss.usermodel.ConditionType;
+import com.moparisthebest.poi.ss.usermodel.ConditionalFormatting;
+import com.moparisthebest.poi.ss.usermodel.ConditionalFormattingRule;
+import com.moparisthebest.poi.ss.usermodel.Row;
+import com.moparisthebest.poi.ss.usermodel.Sheet;
+import com.moparisthebest.poi.ss.util.CellRangeAddress;
 
 /**
  * Abstracted and cached version of a Conditional Format rule for use with a

@@ -15,20 +15,20 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula;
+package com.moparisthebest.poi.ss.formula;
 
-import org.apache.poi.ss.formula.ptg.AbstractFunctionPtg;
-import org.apache.poi.ss.formula.ptg.AttrPtg;
-import org.apache.poi.ss.formula.ptg.ControlPtg;
-import org.apache.poi.ss.formula.ptg.FuncVarPtg;
-import org.apache.poi.ss.formula.ptg.IntersectionPtg;
-import org.apache.poi.ss.formula.ptg.MemAreaPtg;
-import org.apache.poi.ss.formula.ptg.MemFuncPtg;
-import org.apache.poi.ss.formula.ptg.Ptg;
-import org.apache.poi.ss.formula.ptg.RangePtg;
-import org.apache.poi.ss.formula.ptg.UnionPtg;
-import org.apache.poi.ss.formula.ptg.ValueOperatorPtg;
-import org.apache.poi.util.Removal;
+import com.moparisthebest.poi.ss.formula.ptg.AbstractFunctionPtg;
+import com.moparisthebest.poi.ss.formula.ptg.AttrPtg;
+import com.moparisthebest.poi.ss.formula.ptg.ControlPtg;
+import com.moparisthebest.poi.ss.formula.ptg.FuncVarPtg;
+import com.moparisthebest.poi.ss.formula.ptg.IntersectionPtg;
+import com.moparisthebest.poi.ss.formula.ptg.MemAreaPtg;
+import com.moparisthebest.poi.ss.formula.ptg.MemFuncPtg;
+import com.moparisthebest.poi.ss.formula.ptg.Ptg;
+import com.moparisthebest.poi.ss.formula.ptg.RangePtg;
+import com.moparisthebest.poi.ss.formula.ptg.UnionPtg;
+import com.moparisthebest.poi.ss.formula.ptg.ValueOperatorPtg;
+import com.moparisthebest.poi.util.Removal;
 
 /**
  * This class performs 'operand class' transformation. Non-base tokens are classified into three

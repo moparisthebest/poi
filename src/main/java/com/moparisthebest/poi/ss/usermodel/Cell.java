@@ -15,16 +15,16 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.usermodel;
+package com.moparisthebest.poi.ss.usermodel;
 
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Map;
 
-import org.apache.poi.ss.formula.FormulaParseException;
-import org.apache.poi.ss.util.CellAddress;
-import org.apache.poi.ss.util.CellRangeAddress;
-import org.apache.poi.util.Removal;
+import com.moparisthebest.poi.ss.formula.FormulaParseException;
+import com.moparisthebest.poi.ss.util.CellAddress;
+import com.moparisthebest.poi.ss.util.CellRangeAddress;
+import com.moparisthebest.poi.util.Removal;
 
 /**
  * High level representation of a cell in a row of a spreadsheet.
@@ -393,11 +393,11 @@ public interface Cell {
      * the Workbook.</p>
      * 
      * <p>To change the style of a cell without affecting other cells that use the same style,
-     * use {@link org.apache.poi.ss.util.CellUtil#setCellStyleProperties(Cell, Map)}</p>
+     * use {@link com.moparisthebest.poi.ss.util.CellUtil#setCellStyleProperties(Cell, Map)}</p>
      *
      * @param style  reference contained in the workbook.
      * If the value is null then the style information is removed causing the cell to used the default workbook style.
-     * @see org.apache.poi.ss.usermodel.Workbook#createCellStyle()
+     * @see com.moparisthebest.poi.ss.usermodel.Workbook#createCellStyle()
      */
     void setCellStyle(CellStyle style);
 

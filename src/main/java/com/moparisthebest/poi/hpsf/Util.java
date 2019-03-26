@@ -15,15 +15,15 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hpsf;
+package com.moparisthebest.poi.hpsf;
 
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.Date;
 
-import org.apache.poi.util.Internal;
-import org.apache.poi.util.SuppressForbidden;
+import com.moparisthebest.poi.util.Internal;
+import com.moparisthebest.poi.util.SuppressForbidden;
 
 /**
  * <p>Provides various static utility methods.</p>

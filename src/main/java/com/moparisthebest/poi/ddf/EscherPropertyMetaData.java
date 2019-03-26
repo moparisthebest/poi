@@ -16,7 +16,7 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ddf;
+package com.moparisthebest.poi.ddf;
 
 /**
  * This class stores the type and description of an escher property.

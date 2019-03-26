@@ -17,12 +17,12 @@
 ==================================================================== */
         
 
-package org.apache.poi.poifs.filesystem;
+package com.moparisthebest.poi.poifs.filesystem;
 
 import java.io.File;
 
-import org.apache.poi.util.POILogFactory;
-import org.apache.poi.util.POILogger;
+import com.moparisthebest.poi.util.POILogFactory;
+import com.moparisthebest.poi.util.POILogger;
 
 /**
  * Class POIFSDocumentPath

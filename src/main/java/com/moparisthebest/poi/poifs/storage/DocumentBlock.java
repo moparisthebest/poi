@@ -15,16 +15,16 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.poifs.storage;
+package com.moparisthebest.poi.poifs.storage;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.Arrays;
 
-import org.apache.poi.poifs.common.POIFSBigBlockSize;
-import org.apache.poi.poifs.common.POIFSConstants;
-import org.apache.poi.util.IOUtils;
+import com.moparisthebest.poi.poifs.common.POIFSBigBlockSize;
+import com.moparisthebest.poi.poifs.common.POIFSConstants;
+import com.moparisthebest.poi.util.IOUtils;
 
 /**
  * A block of document data.

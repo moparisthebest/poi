@@ -15,13 +15,13 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.usermodel;
+package com.moparisthebest.poi.hssf.usermodel;
 
-import org.apache.poi.hssf.util.HSSFColor;
-import org.apache.poi.util.NotImplemented;
-import org.apache.poi.util.POILogFactory;
-import org.apache.poi.util.POILogger;
-import org.apache.poi.util.SuppressForbidden;
+import com.moparisthebest.poi.hssf.util.HSSFColor;
+import com.moparisthebest.poi.util.NotImplemented;
+import com.moparisthebest.poi.util.POILogFactory;
+import com.moparisthebest.poi.util.POILogger;
+import com.moparisthebest.poi.util.SuppressForbidden;
 
 import java.awt.*;
 import java.awt.image.ImageObserver;

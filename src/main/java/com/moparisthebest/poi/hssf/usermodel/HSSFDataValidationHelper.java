@@ -15,13 +15,13 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.usermodel;
+package com.moparisthebest.poi.hssf.usermodel;
 
-import org.apache.poi.ss.usermodel.DataValidation;
-import org.apache.poi.ss.usermodel.DataValidationConstraint;
-import org.apache.poi.ss.usermodel.DataValidationHelper;
-import org.apache.poi.ss.usermodel.DataValidationConstraint.ValidationType;
-import org.apache.poi.ss.util.CellRangeAddressList;
+import com.moparisthebest.poi.ss.usermodel.DataValidation;
+import com.moparisthebest.poi.ss.usermodel.DataValidationConstraint;
+import com.moparisthebest.poi.ss.usermodel.DataValidationHelper;
+import com.moparisthebest.poi.ss.usermodel.DataValidationConstraint.ValidationType;
+import com.moparisthebest.poi.ss.util.CellRangeAddressList;
 
 /**
  * Helper for working with Data Validation
@@ -40,7 +40,7 @@ public class HSSFDataValidationHelper implements DataValidationHelper {
 	 * (non-Javadoc)
 	 * 
 	 * @see
-	 * org.apache.poi.ss.usermodel.DataValidationHelper#createDateConstraint
+	 * com.moparisthebest.poi.ss.usermodel.DataValidationHelper#createDateConstraint
 	 * (int, java.lang.String, java.lang.String, java.lang.String)
 	 */
 	public DataValidationConstraint createDateConstraint(int operatorType, String formula1, String formula2, String dateFormat) {
@@ -51,7 +51,7 @@ public class HSSFDataValidationHelper implements DataValidationHelper {
 	 * (non-Javadoc)
 	 * 
 	 * @see
-	 * org.apache.poi.ss.usermodel.DataValidationHelper#createExplicitListConstraint
+	 * com.moparisthebest.poi.ss.usermodel.DataValidationHelper#createExplicitListConstraint
 	 * (java.lang.String[])
 	 */
 	public DataValidationConstraint createExplicitListConstraint(String[] listOfValues) {
@@ -62,7 +62,7 @@ public class HSSFDataValidationHelper implements DataValidationHelper {
 	 * (non-Javadoc)
 	 * 
 	 * @see
-	 * org.apache.poi.ss.usermodel.DataValidationHelper#createFormulaListConstraint
+	 * com.moparisthebest.poi.ss.usermodel.DataValidationHelper#createFormulaListConstraint
 	 * (java.lang.String)
 	 */
 	public DataValidationConstraint createFormulaListConstraint(String listFormula) {
@@ -83,7 +83,7 @@ public class HSSFDataValidationHelper implements DataValidationHelper {
 	 * (non-Javadoc)
 	 * 
 	 * @see
-	 * org.apache.poi.ss.usermodel.DataValidationHelper#createNumericConstraint
+	 * com.moparisthebest.poi.ss.usermodel.DataValidationHelper#createNumericConstraint
 	 * (int, java.lang.String, java.lang.String)
 	 */
 	public DataValidationConstraint createDecimalConstraint(int operatorType, String formula1, String formula2) {
@@ -94,7 +94,7 @@ public class HSSFDataValidationHelper implements DataValidationHelper {
 	 * (non-Javadoc)
 	 * 
 	 * @see
-	 * org.apache.poi.ss.usermodel.DataValidationHelper#createTextLengthConstraint
+	 * com.moparisthebest.poi.ss.usermodel.DataValidationHelper#createTextLengthConstraint
 	 * (int, java.lang.String, java.lang.String)
 	 */
 	public DataValidationConstraint createTextLengthConstraint(int operatorType, String formula1, String formula2) {
@@ -105,7 +105,7 @@ public class HSSFDataValidationHelper implements DataValidationHelper {
 	 * (non-Javadoc)
 	 * 
 	 * @see
-	 * org.apache.poi.ss.usermodel.DataValidationHelper#createTimeConstraint
+	 * com.moparisthebest.poi.ss.usermodel.DataValidationHelper#createTimeConstraint
 	 * (int, java.lang.String, java.lang.String, java.lang.String)
 	 */
 	public DataValidationConstraint createTimeConstraint(int operatorType, String formula1, String formula2) {
@@ -122,9 +122,9 @@ public class HSSFDataValidationHelper implements DataValidationHelper {
 	 * (non-Javadoc)
 	 * 
 	 * @see
-	 * org.apache.poi.ss.usermodel.DataValidationHelper#createValidation(org
+	 * com.moparisthebest.poi.ss.usermodel.DataValidationHelper#createValidation(org
 	 * .apache.poi.ss.usermodel.DataValidationConstraint,
-	 * org.apache.poi.ss.util.CellRangeAddressList)
+	 * com.moparisthebest.poi.ss.util.CellRangeAddressList)
 	 */
 	public DataValidation createValidation(DataValidationConstraint constraint, CellRangeAddressList cellRangeAddressList) {
 		return new HSSFDataValidation(cellRangeAddressList, constraint); 

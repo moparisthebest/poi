@@ -14,12 +14,12 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 ==================================================================== */
-package org.apache.poi.common.usermodel;
+package com.moparisthebest.poi.common.usermodel;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import org.apache.poi.util.Internal;
+import com.moparisthebest.poi.util.Internal;
 
 /**
  * @since POI 3.15 beta 3

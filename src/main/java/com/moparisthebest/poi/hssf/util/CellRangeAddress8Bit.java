@@ -15,11 +15,11 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.util;
+package com.moparisthebest.poi.hssf.util;
 
-import org.apache.poi.ss.util.CellRangeAddressBase;
-import org.apache.poi.util.LittleEndianInput;
-import org.apache.poi.util.LittleEndianOutput;
+import com.moparisthebest.poi.ss.util.CellRangeAddressBase;
+import com.moparisthebest.poi.util.LittleEndianInput;
+import com.moparisthebest.poi.util.LittleEndianOutput;
 
 /**
  * See OOO documentation: excelfileformat.pdf sec 2.5.14 - 'Cell Range Address'<p/>

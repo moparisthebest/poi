@@ -17,7 +17,7 @@
 ==================================================================== */
         
 
-package org.apache.poi.poifs.filesystem;
+package com.moparisthebest.poi.poifs.filesystem;
 
 /**
  * Class POIFSWriterEvent

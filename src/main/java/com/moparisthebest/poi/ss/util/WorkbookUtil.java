@@ -15,10 +15,10 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.util;
+package com.moparisthebest.poi.ss.util;
 
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.util.Removal;
+import com.moparisthebest.poi.ss.usermodel.Workbook;
+import com.moparisthebest.poi.util.Removal;
 
 
 /**
@@ -29,7 +29,7 @@ public class WorkbookUtil {
 	/**
 	 * Creates a valid sheet name, which is conform to the rules.
 	 * In any case, the result safely can be used for 
-	 * {@link org.apache.poi.ss.usermodel.Workbook#setSheetName(int, String)}.
+	 * {@link com.moparisthebest.poi.ss.usermodel.Workbook#setSheetName(int, String)}.
 	 * <br>
 	 * Rules:
 	 * <ul>
@@ -52,7 +52,7 @@ public class WorkbookUtil {
     /**
      * Creates a valid sheet name, which is conform to the rules.
      * In any case, the result safely can be used for
-     * {@link org.apache.poi.ss.usermodel.Workbook#setSheetName(int, String)}.
+     * {@link com.moparisthebest.poi.ss.usermodel.Workbook#setSheetName(int, String)}.
      * <br>
      * Rules:
      * <ul>
@@ -170,7 +170,7 @@ public class WorkbookUtil {
      *      {@link Workbook#SHEET_STATE_VISIBLE},
      *      {@link Workbook#SHEET_STATE_HIDDEN} or
      *      {@link Workbook#SHEET_STATE_VERY_HIDDEN}
-     * @deprecated POI 3.16 beta 2. Use {@link org.apache.poi.ss.usermodel.SheetVisibility} instead.
+     * @deprecated POI 3.16 beta 2. Use {@link com.moparisthebest.poi.ss.usermodel.SheetVisibility} instead.
      */
     @Removal(version="3.18")
     @Deprecated

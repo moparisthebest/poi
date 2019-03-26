@@ -16,31 +16,31 @@
 ==================================================================== */
 
 
-package org.apache.poi.hssf.usermodel;
+package com.moparisthebest.poi.hssf.usermodel;
 
 import java.util.List;
 
-import org.apache.poi.hssf.model.InternalWorkbook;
-import org.apache.poi.hssf.record.ExtendedFormatRecord;
-import org.apache.poi.hssf.record.FontRecord;
-import org.apache.poi.hssf.record.FormatRecord;
-import org.apache.poi.hssf.record.StyleRecord;
-import org.apache.poi.hssf.util.HSSFColor;
-import org.apache.poi.hssf.util.HSSFColor.HSSFColorPredefined;
-import org.apache.poi.ss.usermodel.BorderStyle;
-import org.apache.poi.ss.usermodel.CellStyle;
-import org.apache.poi.ss.usermodel.FillPatternType;
-import org.apache.poi.ss.usermodel.Font;
-import org.apache.poi.ss.usermodel.HorizontalAlignment;
-import org.apache.poi.ss.usermodel.VerticalAlignment;
-import org.apache.poi.util.Removal;
+import com.moparisthebest.poi.hssf.model.InternalWorkbook;
+import com.moparisthebest.poi.hssf.record.ExtendedFormatRecord;
+import com.moparisthebest.poi.hssf.record.FontRecord;
+import com.moparisthebest.poi.hssf.record.FormatRecord;
+import com.moparisthebest.poi.hssf.record.StyleRecord;
+import com.moparisthebest.poi.hssf.util.HSSFColor;
+import com.moparisthebest.poi.hssf.util.HSSFColor.HSSFColorPredefined;
+import com.moparisthebest.poi.ss.usermodel.BorderStyle;
+import com.moparisthebest.poi.ss.usermodel.CellStyle;
+import com.moparisthebest.poi.ss.usermodel.FillPatternType;
+import com.moparisthebest.poi.ss.usermodel.Font;
+import com.moparisthebest.poi.ss.usermodel.HorizontalAlignment;
+import com.moparisthebest.poi.ss.usermodel.VerticalAlignment;
+import com.moparisthebest.poi.util.Removal;
 
 /**
  * High level representation of the style of a cell in a sheet of a workbook.
  *
- * @see org.apache.poi.hssf.usermodel.HSSFWorkbook#createCellStyle()
- * @see org.apache.poi.hssf.usermodel.HSSFWorkbook#getCellStyleAt(int)
- * @see org.apache.poi.hssf.usermodel.HSSFCell#setCellStyle(HSSFCellStyle)
+ * @see com.moparisthebest.poi.hssf.usermodel.HSSFWorkbook#createCellStyle()
+ * @see com.moparisthebest.poi.hssf.usermodel.HSSFWorkbook#getCellStyleAt(int)
+ * @see com.moparisthebest.poi.hssf.usermodel.HSSFCell#setCellStyle(HSSFCellStyle)
  */
 public final class HSSFCellStyle implements CellStyle {
     private final ExtendedFormatRecord _format;
@@ -90,7 +90,7 @@ public final class HSSFCellStyle implements CellStyle {
 
     /**
      * set the data format (must be a valid format)
-     * @see org.apache.poi.hssf.usermodel.HSSFDataFormat
+     * @see com.moparisthebest.poi.hssf.usermodel.HSSFDataFormat
      */
     @Override
     public void setDataFormat(short fmt)
@@ -100,7 +100,7 @@ public final class HSSFCellStyle implements CellStyle {
 
     /**
      * get the index of the format
-     * @see org.apache.poi.hssf.usermodel.HSSFDataFormat
+     * @see com.moparisthebest.poi.hssf.usermodel.HSSFDataFormat
      */
     @Override
     public short getDataFormat()
@@ -123,7 +123,7 @@ public final class HSSFCellStyle implements CellStyle {
     /**
      * Get the contents of the format string, by looking up
      *  the DataFormat against the bound workbook
-     * @see org.apache.poi.hssf.usermodel.HSSFDataFormat
+     * @see com.moparisthebest.poi.hssf.usermodel.HSSFDataFormat
      * @return the format string or "General" if not found
      */
     @Override
@@ -145,11 +145,11 @@ public final class HSSFCellStyle implements CellStyle {
     /**
      * Get the contents of the format string, by looking up
      *  the DataFormat against the supplied workbook
-     * @see org.apache.poi.hssf.usermodel.HSSFDataFormat
+     * @see com.moparisthebest.poi.hssf.usermodel.HSSFDataFormat
      *
      * @return the format string or "General" if not found
      */
-    public String getDataFormatString(org.apache.poi.ss.usermodel.Workbook workbook) {
+    public String getDataFormatString(com.moparisthebest.poi.ss.usermodel.Workbook workbook) {
         HSSFDataFormat format = new HSSFDataFormat( ((HSSFWorkbook)workbook).getWorkbook() );
 
         int idx = getDataFormat();
@@ -158,9 +158,9 @@ public final class HSSFCellStyle implements CellStyle {
     /**
      * Get the contents of the format string, by looking up
      *  the DataFormat against the supplied low level workbook
-     * @see org.apache.poi.hssf.usermodel.HSSFDataFormat
+     * @see com.moparisthebest.poi.hssf.usermodel.HSSFDataFormat
      */
-    public String getDataFormatString(org.apache.poi.hssf.model.InternalWorkbook workbook) {
+    public String getDataFormatString(com.moparisthebest.poi.hssf.model.InternalWorkbook workbook) {
         HSSFDataFormat format = new HSSFDataFormat( workbook );
 
         return format.getFormat(getDataFormat());
@@ -169,8 +169,8 @@ public final class HSSFCellStyle implements CellStyle {
     /**
      * set the font for this style
      * @param font  a font object created or retreived from the HSSFWorkbook object
-     * @see org.apache.poi.hssf.usermodel.HSSFWorkbook#createFont()
-     * @see org.apache.poi.hssf.usermodel.HSSFWorkbook#getFontAt(short)
+     * @see com.moparisthebest.poi.hssf.usermodel.HSSFWorkbook#createFont()
+     * @see com.moparisthebest.poi.hssf.usermodel.HSSFWorkbook#getFontAt(short)
      */
     @Override
     public void setFont(Font font) {
@@ -184,7 +184,7 @@ public final class HSSFCellStyle implements CellStyle {
 
     /**
      * gets the index of the font for this style
-     * @see org.apache.poi.hssf.usermodel.HSSFWorkbook#getFontAt(short)
+     * @see com.moparisthebest.poi.hssf.usermodel.HSSFWorkbook#getFontAt(short)
      */
     @Override
     public short getFontIndex()
@@ -195,10 +195,10 @@ public final class HSSFCellStyle implements CellStyle {
     /**
      * gets the font for this style
      * @param parentWorkbook The HSSFWorkbook that this style belongs to
-     * @see org.apache.poi.hssf.usermodel.HSSFCellStyle#getFontIndex()
-     * @see org.apache.poi.hssf.usermodel.HSSFWorkbook#getFontAt(short)
+     * @see com.moparisthebest.poi.hssf.usermodel.HSSFCellStyle#getFontIndex()
+     * @see com.moparisthebest.poi.hssf.usermodel.HSSFWorkbook#getFontAt(short)
      */
-    public HSSFFont getFont(org.apache.poi.ss.usermodel.Workbook parentWorkbook) {
+    public HSSFFont getFont(com.moparisthebest.poi.ss.usermodel.Workbook parentWorkbook) {
         return ((HSSFWorkbook) parentWorkbook).getFontAt(getFontIndex());
     }
 
@@ -721,7 +721,7 @@ public final class HSSFCellStyle implements CellStyle {
 
     /**
      * get the color to use for the left border
-     * @see org.apache.poi.hssf.usermodel.HSSFPalette#getColor(short)
+     * @see com.moparisthebest.poi.hssf.usermodel.HSSFPalette#getColor(short)
      * @return The index of the color definition
      */
     @Override
@@ -742,7 +742,7 @@ public final class HSSFCellStyle implements CellStyle {
 
     /**
      * get the color to use for the left border
-     * @see org.apache.poi.hssf.usermodel.HSSFPalette#getColor(short)
+     * @see com.moparisthebest.poi.hssf.usermodel.HSSFPalette#getColor(short)
      * @return The index of the color definition
      */
     @Override
@@ -763,7 +763,7 @@ public final class HSSFCellStyle implements CellStyle {
 
     /**
      * get the color to use for the top border
-     * @see org.apache.poi.hssf.usermodel.HSSFPalette#getColor(short)
+     * @see com.moparisthebest.poi.hssf.usermodel.HSSFPalette#getColor(short)
      * @return The index of the color definition
      */
     @Override
@@ -784,7 +784,7 @@ public final class HSSFCellStyle implements CellStyle {
 
     /**
      * get the color to use for the left border
-     * @see org.apache.poi.hssf.usermodel.HSSFPalette#getColor(short)
+     * @see com.moparisthebest.poi.hssf.usermodel.HSSFPalette#getColor(short)
      * @return The index of the color definition
      */
     @Override
@@ -923,7 +923,7 @@ public final class HSSFCellStyle implements CellStyle {
      * Get the background fill color.
      * Note - many cells are actually filled with a foreground
      *  fill, not a background fill - see {@link #getFillForegroundColor()}
-     * @see org.apache.poi.hssf.usermodel.HSSFPalette#getColor(short)
+     * @see com.moparisthebest.poi.hssf.usermodel.HSSFPalette#getColor(short)
      * @return fill color
      */
     @Override
@@ -964,7 +964,7 @@ public final class HSSFCellStyle implements CellStyle {
      * Get the foreground fill color.
      * Many cells are filled with this, instead of a
      *  background color ({@link #getFillBackgroundColor()})
-     * @see org.apache.poi.hssf.usermodel.HSSFPalette#getColor(short)
+     * @see com.moparisthebest.poi.hssf.usermodel.HSSFPalette#getColor(short)
      * @return fill color
      */
     @Override

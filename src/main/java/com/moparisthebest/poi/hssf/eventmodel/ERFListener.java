@@ -15,9 +15,9 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.eventmodel;
+package com.moparisthebest.poi.hssf.eventmodel;
 
-import org.apache.poi.hssf.record.Record;
+import com.moparisthebest.poi.hssf.record.Record;
 
 /**
  * An ERFListener is registered with the EventRecordFactory.

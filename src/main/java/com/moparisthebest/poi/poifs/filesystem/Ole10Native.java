@@ -15,16 +15,16 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.poifs.filesystem;
+package com.moparisthebest.poi.poifs.filesystem;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 
-import org.apache.poi.util.LittleEndian;
-import org.apache.poi.util.LittleEndianConsts;
-import org.apache.poi.util.LittleEndianOutputStream;
-import org.apache.poi.util.StringUtil;
+import com.moparisthebest.poi.util.LittleEndian;
+import com.moparisthebest.poi.util.LittleEndianConsts;
+import com.moparisthebest.poi.util.LittleEndianOutputStream;
+import com.moparisthebest.poi.util.StringUtil;
 
 /**
  * Represents an Ole10Native record which is wrapped around certain binary

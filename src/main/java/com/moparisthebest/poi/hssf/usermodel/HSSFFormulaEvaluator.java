@@ -15,25 +15,25 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.usermodel;
+package com.moparisthebest.poi.hssf.usermodel;
 
 import java.util.Map;
 
-import org.apache.poi.ss.formula.BaseFormulaEvaluator;
-import org.apache.poi.ss.formula.CollaboratingWorkbooksEnvironment;
-import org.apache.poi.ss.formula.IStabilityClassifier;
-import org.apache.poi.ss.formula.WorkbookEvaluator;
-import org.apache.poi.ss.formula.eval.BoolEval;
-import org.apache.poi.ss.formula.eval.ErrorEval;
-import org.apache.poi.ss.formula.eval.NumericValueEval;
-import org.apache.poi.ss.formula.eval.StringValueEval;
-import org.apache.poi.ss.formula.eval.ValueEval;
-import org.apache.poi.ss.formula.udf.UDFFinder;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.CellValue;
-import org.apache.poi.ss.usermodel.FormulaEvaluator;
-import org.apache.poi.ss.usermodel.RichTextString;
-import org.apache.poi.ss.usermodel.Workbook;
+import com.moparisthebest.poi.ss.formula.BaseFormulaEvaluator;
+import com.moparisthebest.poi.ss.formula.CollaboratingWorkbooksEnvironment;
+import com.moparisthebest.poi.ss.formula.IStabilityClassifier;
+import com.moparisthebest.poi.ss.formula.WorkbookEvaluator;
+import com.moparisthebest.poi.ss.formula.eval.BoolEval;
+import com.moparisthebest.poi.ss.formula.eval.ErrorEval;
+import com.moparisthebest.poi.ss.formula.eval.NumericValueEval;
+import com.moparisthebest.poi.ss.formula.eval.StringValueEval;
+import com.moparisthebest.poi.ss.formula.eval.ValueEval;
+import com.moparisthebest.poi.ss.formula.udf.UDFFinder;
+import com.moparisthebest.poi.ss.usermodel.Cell;
+import com.moparisthebest.poi.ss.usermodel.CellValue;
+import com.moparisthebest.poi.ss.usermodel.FormulaEvaluator;
+import com.moparisthebest.poi.ss.usermodel.RichTextString;
+import com.moparisthebest.poi.ss.usermodel.Workbook;
 
 /**
  * Evaluates formula cells.<p/>

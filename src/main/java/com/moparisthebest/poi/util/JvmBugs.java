@@ -14,7 +14,7 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 ==================================================================== */
-package org.apache.poi.util;
+package com.moparisthebest.poi.util;
 
 import java.util.Locale;
 
@@ -30,14 +30,14 @@ public class JvmBugs {
      * For performance reasons, this method only checks for a windows jvm
      * with version 1.6.0_45 and 1.7.0_21.
      * 
-     * Set system property "org.apache.poi.JvmBugs.LineBreakMeasurer.ignore" to "true"
+     * Set system property "com.moparisthebest.poi.JvmBugs.LineBreakMeasurer.ignore" to "true"
      * to bypass this check and use the normal fonts.
      * 
      * @return true, if jvm is bugged, caller code should use Lucida Sans
      * instead of Calibri and Lucida Bright instead of Cambria
      *
-     * @see <a href="http://svn.apache.org/viewvc/poi/trunk/src/ooxml/testcases/org/apache/poi/xslf/usermodel/TestPPTX2PNG.java?view=markup">Workaround for XSLF</a>
-     * @see <a href="http://svn.apache.org/viewvc/poi/trunk/src/testcases/org/apache/poi/ss/usermodel/BaseTestSheetAutosizeColumn.java?view=markup">Workaround for XSSF and HSSF</a>
+     * @see <a href="http://svn.apache.org/viewvc/poi/trunk/src/ooxml/testcases/com.moparisthebest.poi/xslf/usermodel/TestPPTX2PNG.java?view=markup">Workaround for XSLF</a>
+     * @see <a href="http://svn.apache.org/viewvc/poi/trunk/src/testcases/com.moparisthebest.poi/ss/usermodel/BaseTestSheetAutosizeColumn.java?view=markup">Workaround for XSSF and HSSF</a>
      * @see <a href="https://issues.apache.org/bugzilla/show_bug.cgi?id=54904">POI Bug #54904</a>
      * @see <a href="http://bugs.java.com/view_bug.do?bug_id=6501991">JDK Bug #6501991</a>
      * @see <a href="https://bitbucket.org/fakraemer/line-break-measurer-test">LineBreakMeasurerTest</a>
@@ -45,7 +45,7 @@ public class JvmBugs {
     public static boolean hasLineBreakMeasurerBug() {
         String version = System.getProperty("java.version");
         String os = System.getProperty("os.name").toLowerCase(Locale.ROOT);
-        boolean ignore = Boolean.getBoolean("org.apache.poi.JvmBugs.LineBreakMeasurer.ignore");
+        boolean ignore = Boolean.getBoolean("com.moparisthebest.poi.JvmBugs.LineBreakMeasurer.ignore");
         boolean hasBug = (!ignore && (os.contains("win") && ("1.6.0_45".equals(version) || "1.7.0_21".equals(version))));
         if (hasBug) {
             LOG.log(POILogger.WARN, "JVM has LineBreakMeasurer bug - see POI bug #54904 - caller code might default to Lucida Sans");

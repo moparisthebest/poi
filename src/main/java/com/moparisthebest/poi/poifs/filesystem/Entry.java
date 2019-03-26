@@ -17,7 +17,7 @@
 ==================================================================== */
         
 
-package org.apache.poi.poifs.filesystem;
+package com.moparisthebest.poi.poifs.filesystem;
 
 /**
  * This interface provides access to an object managed by a Filesystem

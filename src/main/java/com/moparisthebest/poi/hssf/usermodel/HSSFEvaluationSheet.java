@@ -15,11 +15,11 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.usermodel;
+package com.moparisthebest.poi.hssf.usermodel;
 
-import org.apache.poi.ss.formula.EvaluationCell;
-import org.apache.poi.ss.formula.EvaluationSheet;
-import org.apache.poi.util.Internal;
+import com.moparisthebest.poi.ss.formula.EvaluationCell;
+import com.moparisthebest.poi.ss.formula.EvaluationSheet;
+import com.moparisthebest.poi.util.Internal;
 
 /**
  * HSSF wrapper for a sheet under evaluation

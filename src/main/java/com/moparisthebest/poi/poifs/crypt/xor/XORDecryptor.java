@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.poifs.crypt.xor;
+package com.moparisthebest.poi.poifs.crypt.xor;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -25,13 +25,13 @@ import javax.crypto.Cipher;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
 
-import org.apache.poi.EncryptedDocumentException;
-import org.apache.poi.poifs.crypt.ChunkedCipherInputStream;
-import org.apache.poi.poifs.crypt.CryptoFunctions;
-import org.apache.poi.poifs.crypt.Decryptor;
-import org.apache.poi.poifs.crypt.EncryptionInfo;
-import org.apache.poi.poifs.filesystem.DirectoryNode;
-import org.apache.poi.util.LittleEndian;
+import com.moparisthebest.poi.EncryptedDocumentException;
+import com.moparisthebest.poi.poifs.crypt.ChunkedCipherInputStream;
+import com.moparisthebest.poi.poifs.crypt.CryptoFunctions;
+import com.moparisthebest.poi.poifs.crypt.Decryptor;
+import com.moparisthebest.poi.poifs.crypt.EncryptionInfo;
+import com.moparisthebest.poi.poifs.filesystem.DirectoryNode;
+import com.moparisthebest.poi.util.LittleEndian;
 
 public class XORDecryptor extends Decryptor implements Cloneable {
     private long length = -1L;

@@ -15,13 +15,13 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.poifs.filesystem;
+package com.moparisthebest.poi.poifs.filesystem;
 
-import org.apache.poi.EncryptedDocumentException;
-import org.apache.poi.poifs.common.POIFSConstants;
-import org.apache.poi.poifs.crypt.Decryptor;
-import org.apache.poi.poifs.crypt.EncryptionInfo;
-import org.apache.poi.util.IOUtils;
+import com.moparisthebest.poi.EncryptedDocumentException;
+import com.moparisthebest.poi.poifs.common.POIFSConstants;
+import com.moparisthebest.poi.poifs.crypt.Decryptor;
+import com.moparisthebest.poi.poifs.crypt.EncryptionInfo;
+import com.moparisthebest.poi.util.IOUtils;
 
 import java.io.FilterInputStream;
 import java.io.IOException;

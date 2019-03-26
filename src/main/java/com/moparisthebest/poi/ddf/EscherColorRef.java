@@ -15,10 +15,10 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ddf;
+package com.moparisthebest.poi.ddf;
 
-import org.apache.poi.util.BitField;
-import org.apache.poi.util.LittleEndian;
+import com.moparisthebest.poi.util.BitField;
+import com.moparisthebest.poi.util.LittleEndian;
 
 /**
  * An OfficeArtCOLORREF structure entry which also handles color extension opid data
@@ -267,7 +267,7 @@ public class EscherColorRef {
     /**
      * @return index of the scheme color or -1 if {@link #hasSchemeIndexFlag()} is {@code false}
      * 
-     * @see org.apache.poi.hslf.record.ColorSchemeAtom#getColor(int)
+     * @see com.moparisthebest.poi.hslf.record.ColorSchemeAtom#getColor(int)
      */
     public int getSchemeIndex() {
         if (!hasSchemeIndexFlag()) return -1;
@@ -284,7 +284,7 @@ public class EscherColorRef {
     /**
      * @return index of system color table or -1 if {@link #hasSysIndexFlag()} is {@code false}
      * 
-     * @see org.apache.poi.sl.usermodel.PresetColor
+     * @see com.moparisthebest.poi.sl.usermodel.PresetColor
      */
     public int getSysIndex() {
         return (hasSysIndexFlag()) ? getIndex() : -1;

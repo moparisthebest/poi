@@ -15,13 +15,13 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.usermodel;
+package com.moparisthebest.poi.hssf.usermodel;
 
 import java.util.Locale;
 
-import org.apache.poi.hssf.record.PaletteRecord;
-import org.apache.poi.hssf.util.HSSFColor;
-import org.apache.poi.hssf.util.HSSFColor.HSSFColorPredefined;
+import com.moparisthebest.poi.hssf.record.PaletteRecord;
+import com.moparisthebest.poi.hssf.util.HSSFColor;
+import com.moparisthebest.poi.hssf.util.HSSFColor.HSSFColorPredefined;
 
 /**
  * Represents a workbook color palette.

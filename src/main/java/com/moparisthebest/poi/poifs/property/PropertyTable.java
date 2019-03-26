@@ -15,19 +15,19 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.poifs.property;
+package com.moparisthebest.poi.poifs.property;
 
 import java.io.IOException;
 import java.io.OutputStream;
 
-import org.apache.poi.poifs.common.POIFSBigBlockSize;
-import org.apache.poi.poifs.storage.BlockWritable;
-import org.apache.poi.poifs.storage.HeaderBlock;
-import org.apache.poi.poifs.storage.PropertyBlock;
-import org.apache.poi.poifs.storage.RawDataBlockList;
+import com.moparisthebest.poi.poifs.common.POIFSBigBlockSize;
+import com.moparisthebest.poi.poifs.storage.BlockWritable;
+import com.moparisthebest.poi.poifs.storage.HeaderBlock;
+import com.moparisthebest.poi.poifs.storage.PropertyBlock;
+import com.moparisthebest.poi.poifs.storage.RawDataBlockList;
 
 /**
- * This class embodies the Property Table for the {@link org.apache.poi.poifs.filesystem.POIFSFileSystem}; 
+ * This class embodies the Property Table for the {@link com.moparisthebest.poi.poifs.filesystem.POIFSFileSystem}; 
  *  this is basically the directory for all of the documents in the
  * filesystem.
  *

@@ -15,7 +15,7 @@
  limitations under the License.
  ==================================================================== */
 
-package org.apache.poi.ddf;
+package com.moparisthebest.poi.ddf;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.usermodel;
+package com.moparisthebest.poi.hssf.usermodel;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -26,33 +26,33 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import org.apache.poi.ddf.EscherComplexProperty;
-import org.apache.poi.ddf.EscherContainerRecord;
-import org.apache.poi.ddf.EscherDgRecord;
-import org.apache.poi.ddf.EscherOptRecord;
-import org.apache.poi.ddf.EscherProperty;
-import org.apache.poi.ddf.EscherSpRecord;
-import org.apache.poi.ddf.EscherSpgrRecord;
-import org.apache.poi.hssf.model.DrawingManager2;
-import org.apache.poi.hssf.record.CommonObjectDataSubRecord;
-import org.apache.poi.hssf.record.EmbeddedObjectRefSubRecord;
-import org.apache.poi.hssf.record.EndSubRecord;
-import org.apache.poi.hssf.record.EscherAggregate;
-import org.apache.poi.hssf.record.FtCfSubRecord;
-import org.apache.poi.hssf.record.FtPioGrbitSubRecord;
-import org.apache.poi.hssf.record.NoteRecord;
-import org.apache.poi.hssf.record.ObjRecord;
-import org.apache.poi.hssf.util.CellReference;
-import org.apache.poi.poifs.filesystem.DirectoryEntry;
-import org.apache.poi.poifs.filesystem.DirectoryNode;
-import org.apache.poi.ss.usermodel.Chart;
-import org.apache.poi.ss.usermodel.ClientAnchor;
-import org.apache.poi.ss.usermodel.Drawing;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.util.HexDump;
-import org.apache.poi.util.Internal;
-import org.apache.poi.util.NotImplemented;
-import org.apache.poi.util.StringUtil;
+import com.moparisthebest.poi.ddf.EscherComplexProperty;
+import com.moparisthebest.poi.ddf.EscherContainerRecord;
+import com.moparisthebest.poi.ddf.EscherDgRecord;
+import com.moparisthebest.poi.ddf.EscherOptRecord;
+import com.moparisthebest.poi.ddf.EscherProperty;
+import com.moparisthebest.poi.ddf.EscherSpRecord;
+import com.moparisthebest.poi.ddf.EscherSpgrRecord;
+import com.moparisthebest.poi.hssf.model.DrawingManager2;
+import com.moparisthebest.poi.hssf.record.CommonObjectDataSubRecord;
+import com.moparisthebest.poi.hssf.record.EmbeddedObjectRefSubRecord;
+import com.moparisthebest.poi.hssf.record.EndSubRecord;
+import com.moparisthebest.poi.hssf.record.EscherAggregate;
+import com.moparisthebest.poi.hssf.record.FtCfSubRecord;
+import com.moparisthebest.poi.hssf.record.FtPioGrbitSubRecord;
+import com.moparisthebest.poi.hssf.record.NoteRecord;
+import com.moparisthebest.poi.hssf.record.ObjRecord;
+import com.moparisthebest.poi.hssf.util.CellReference;
+import com.moparisthebest.poi.poifs.filesystem.DirectoryEntry;
+import com.moparisthebest.poi.poifs.filesystem.DirectoryNode;
+import com.moparisthebest.poi.ss.usermodel.Chart;
+import com.moparisthebest.poi.ss.usermodel.ClientAnchor;
+import com.moparisthebest.poi.ss.usermodel.Drawing;
+import com.moparisthebest.poi.ss.usermodel.Workbook;
+import com.moparisthebest.poi.util.HexDump;
+import com.moparisthebest.poi.util.Internal;
+import com.moparisthebest.poi.util.NotImplemented;
+import com.moparisthebest.poi.util.StringUtil;
 
 /**
  * The patriarch is the toplevel container for shapes in a sheet.  It does
@@ -265,7 +265,7 @@ public final class HSSFPatriarch implements HSSFShapeContainer, Drawing<HSSFShap
     /**
      * YK: used to create autofilters
      *
-     * @see org.apache.poi.hssf.usermodel.HSSFSheet#setAutoFilter(org.apache.poi.ss.util.CellRangeAddress)
+     * @see com.moparisthebest.poi.hssf.usermodel.HSSFSheet#setAutoFilter(com.moparisthebest.poi.ss.util.CellRangeAddress)
      */
     HSSFSimpleShape createComboBox(HSSFAnchor anchor) {
         HSSFCombobox shape = new HSSFCombobox(null, anchor);

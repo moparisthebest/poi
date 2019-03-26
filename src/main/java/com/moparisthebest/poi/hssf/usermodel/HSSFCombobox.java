@@ -15,11 +15,11 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.usermodel;
+package com.moparisthebest.poi.hssf.usermodel;
 
-import org.apache.poi.ddf.*;
-import org.apache.poi.hssf.record.*;
-import org.apache.poi.ss.usermodel.ClientAnchor.AnchorType;
+import com.moparisthebest.poi.ddf.*;
+import com.moparisthebest.poi.hssf.record.*;
+import com.moparisthebest.poi.ss.usermodel.ClientAnchor.AnchorType;
 
 /**
  * 

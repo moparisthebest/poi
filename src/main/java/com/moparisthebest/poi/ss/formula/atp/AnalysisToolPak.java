@@ -8,7 +8,7 @@
  * ====================================================================
  */
 
-package org.apache.poi.ss.formula.atp;
+package com.moparisthebest.poi.ss.formula.atp;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -17,29 +17,29 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.TreeSet;
 
-import org.apache.poi.ss.formula.OperationEvaluationContext;
-import org.apache.poi.ss.formula.eval.NotImplementedFunctionException;
-import org.apache.poi.ss.formula.eval.ValueEval;
-import org.apache.poi.ss.formula.function.FunctionMetadata;
-import org.apache.poi.ss.formula.function.FunctionMetadataRegistry;
-import org.apache.poi.ss.formula.functions.Bin2Dec;
-import org.apache.poi.ss.formula.functions.Complex;
-import org.apache.poi.ss.formula.functions.Countifs;
-import org.apache.poi.ss.formula.functions.Dec2Bin;
-import org.apache.poi.ss.formula.functions.Dec2Hex;
-import org.apache.poi.ss.formula.functions.Delta;
-import org.apache.poi.ss.formula.functions.EDate;
-import org.apache.poi.ss.formula.functions.EOMonth;
-import org.apache.poi.ss.formula.functions.FactDouble;
-import org.apache.poi.ss.formula.functions.FreeRefFunction;
-import org.apache.poi.ss.formula.functions.Hex2Dec;
-import org.apache.poi.ss.formula.functions.ImReal;
-import org.apache.poi.ss.formula.functions.Imaginary;
-import org.apache.poi.ss.formula.functions.Oct2Dec;
-import org.apache.poi.ss.formula.functions.Quotient;
-import org.apache.poi.ss.formula.functions.Sumifs;
-import org.apache.poi.ss.formula.functions.WeekNum;
-import org.apache.poi.ss.formula.udf.UDFFinder;
+import com.moparisthebest.poi.ss.formula.OperationEvaluationContext;
+import com.moparisthebest.poi.ss.formula.eval.NotImplementedFunctionException;
+import com.moparisthebest.poi.ss.formula.eval.ValueEval;
+import com.moparisthebest.poi.ss.formula.function.FunctionMetadata;
+import com.moparisthebest.poi.ss.formula.function.FunctionMetadataRegistry;
+import com.moparisthebest.poi.ss.formula.functions.Bin2Dec;
+import com.moparisthebest.poi.ss.formula.functions.Complex;
+import com.moparisthebest.poi.ss.formula.functions.Countifs;
+import com.moparisthebest.poi.ss.formula.functions.Dec2Bin;
+import com.moparisthebest.poi.ss.formula.functions.Dec2Hex;
+import com.moparisthebest.poi.ss.formula.functions.Delta;
+import com.moparisthebest.poi.ss.formula.functions.EDate;
+import com.moparisthebest.poi.ss.formula.functions.EOMonth;
+import com.moparisthebest.poi.ss.formula.functions.FactDouble;
+import com.moparisthebest.poi.ss.formula.functions.FreeRefFunction;
+import com.moparisthebest.poi.ss.formula.functions.Hex2Dec;
+import com.moparisthebest.poi.ss.formula.functions.ImReal;
+import com.moparisthebest.poi.ss.formula.functions.Imaginary;
+import com.moparisthebest.poi.ss.formula.functions.Oct2Dec;
+import com.moparisthebest.poi.ss.formula.functions.Quotient;
+import com.moparisthebest.poi.ss.formula.functions.Sumifs;
+import com.moparisthebest.poi.ss.formula.functions.WeekNum;
+import com.moparisthebest.poi.ss.formula.udf.UDFFinder;
 
 /**
  * Analysis Toolpack Function Definitions

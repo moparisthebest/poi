@@ -15,18 +15,18 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.poifs.crypt.xor;
+package com.moparisthebest.poi.poifs.crypt.xor;
 
 import java.io.IOException;
 
-import org.apache.poi.poifs.crypt.ChainingMode;
-import org.apache.poi.poifs.crypt.CipherAlgorithm;
-import org.apache.poi.poifs.crypt.Decryptor;
-import org.apache.poi.poifs.crypt.EncryptionInfo;
-import org.apache.poi.poifs.crypt.EncryptionInfoBuilder;
-import org.apache.poi.poifs.crypt.Encryptor;
-import org.apache.poi.poifs.crypt.HashAlgorithm;
-import org.apache.poi.util.LittleEndianInput;
+import com.moparisthebest.poi.poifs.crypt.ChainingMode;
+import com.moparisthebest.poi.poifs.crypt.CipherAlgorithm;
+import com.moparisthebest.poi.poifs.crypt.Decryptor;
+import com.moparisthebest.poi.poifs.crypt.EncryptionInfo;
+import com.moparisthebest.poi.poifs.crypt.EncryptionInfoBuilder;
+import com.moparisthebest.poi.poifs.crypt.Encryptor;
+import com.moparisthebest.poi.poifs.crypt.HashAlgorithm;
+import com.moparisthebest.poi.util.LittleEndianInput;
 
 public class XOREncryptionInfoBuilder implements EncryptionInfoBuilder {
 

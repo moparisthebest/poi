@@ -15,13 +15,13 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.util;
+package com.moparisthebest.poi.ss.util;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
 
-import org.apache.poi.ss.SpreadsheetVersion;
+import com.moparisthebest.poi.ss.SpreadsheetVersion;
 
 public class AreaReference {
 

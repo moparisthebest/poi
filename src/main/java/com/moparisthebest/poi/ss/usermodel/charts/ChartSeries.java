@@ -15,9 +15,9 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.usermodel.charts;
+package com.moparisthebest.poi.ss.usermodel.charts;
 
-import org.apache.poi.ss.util.CellReference;
+import com.moparisthebest.poi.ss.util.CellReference;
 
 /**
  * Basic settings for all chart series.

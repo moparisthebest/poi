@@ -15,17 +15,17 @@
  * limitations under the License.
  */
 
-package org.apache.poi.ss.usermodel;
+package com.moparisthebest.poi.ss.usermodel;
 import java.text.FieldPosition;
 import java.text.Format;
 import java.text.ParsePosition;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.apache.poi.ss.format.SimpleFraction;
-import org.apache.poi.ss.formula.eval.NotImplementedException;
-import org.apache.poi.util.POILogFactory;
-import org.apache.poi.util.POILogger;
+import com.moparisthebest.poi.ss.format.SimpleFraction;
+import com.moparisthebest.poi.ss.formula.eval.NotImplementedException;
+import com.moparisthebest.poi.util.POILogFactory;
+import com.moparisthebest.poi.util.POILogger;
 
 /**
  * <p>Format class that handles Excel style fractions, such as "# #/#" and "#/###"</p>

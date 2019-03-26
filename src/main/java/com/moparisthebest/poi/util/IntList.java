@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.util;
+package com.moparisthebest.poi.util;
 
 /**
  * A List of int's; as full an implementation of the java.util.List

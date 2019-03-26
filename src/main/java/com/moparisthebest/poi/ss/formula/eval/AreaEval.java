@@ -15,10 +15,10 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula.eval;
+package com.moparisthebest.poi.ss.formula.eval;
 
-import org.apache.poi.ss.formula.ThreeDEval;
-import org.apache.poi.ss.formula.TwoDEval;
+import com.moparisthebest.poi.ss.formula.ThreeDEval;
+import com.moparisthebest.poi.ss.formula.TwoDEval;
 /**
  * Evaluation of 2D (Row+Column) and 3D (Sheet+Row+Column) areas
  */

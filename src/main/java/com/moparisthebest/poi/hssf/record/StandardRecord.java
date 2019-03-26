@@ -15,10 +15,10 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.record;
+package com.moparisthebest.poi.hssf.record;
 
-import org.apache.poi.util.LittleEndianByteArrayOutputStream;
-import org.apache.poi.util.LittleEndianOutput;
+import com.moparisthebest.poi.util.LittleEndianByteArrayOutputStream;
+import com.moparisthebest.poi.util.LittleEndianOutput;
 
 /**
  * Subclasses of this class (the majority of BIFF records) are non-continuable.  This allows for
@@ -34,7 +34,7 @@ public abstract class StandardRecord extends Record {
      * Write the data content of this BIFF record including the sid and record length.
      * <p>
      * The subclass must write the exact number of bytes as reported by
-     *  {@link org.apache.poi.hssf.record.Record#getRecordSize()}}
+     *  {@link com.moparisthebest.poi.hssf.record.Record#getRecordSize()}}
      */
 	@Override
 	public final int serialize(int offset, byte[] data) {
@@ -57,7 +57,7 @@ public abstract class StandardRecord extends Record {
      * have already been written by the superclass.
      * <p>
      * The number of bytes written must equal the record size reported by
-     *  {@link org.apache.poi.hssf.record.Record#getRecordSize()}} minus four
+     *  {@link com.moparisthebest.poi.hssf.record.Record#getRecordSize()}} minus four
      *  ( record header consisting of a 'ushort sid' and 'ushort reclength' has already been written
      *  by their superclass).
      * 

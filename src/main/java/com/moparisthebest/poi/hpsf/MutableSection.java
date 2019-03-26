@@ -15,11 +15,11 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hpsf;
+package com.moparisthebest.poi.hpsf;
 
 import java.io.UnsupportedEncodingException;
 
-import org.apache.poi.util.Removal;
+import com.moparisthebest.poi.util.Removal;
 
 /**
  * <p>Adds writing capability to the {@link Section} class.</p>

@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula;
+package com.moparisthebest.poi.ss.formula;
 
 /**
  * This exception thrown when a supplied formula has incorrect syntax (or syntax currently not

@@ -15,9 +15,9 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.poifs.crypt;
+package com.moparisthebest.poi.poifs.crypt;
 
-import org.apache.poi.EncryptedDocumentException;
+import com.moparisthebest.poi.EncryptedDocumentException;
 
 public enum HashAlgorithm {
     none     (         "", 0x0000,           "",  0,               "", false),

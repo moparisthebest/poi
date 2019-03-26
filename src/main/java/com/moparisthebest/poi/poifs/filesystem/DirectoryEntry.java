@@ -17,7 +17,7 @@
 ==================================================================== */
 
 
-package org.apache.poi.poifs.filesystem;
+package com.moparisthebest.poi.poifs.filesystem;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -25,7 +25,7 @@ import java.io.InputStream;
 import java.util.Iterator;
 import java.util.Set;
 
-import org.apache.poi.hpsf.ClassID;
+import com.moparisthebest.poi.hpsf.ClassID;
 
 /**
  * This interface defines methods specific to Directory objects

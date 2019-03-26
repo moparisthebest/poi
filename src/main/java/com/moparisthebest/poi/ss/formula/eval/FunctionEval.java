@@ -15,16 +15,16 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula.eval;
+package com.moparisthebest.poi.ss.formula.eval;
 
 import java.util.Collection;
 import java.util.Collections;
 import java.util.TreeSet;
 
-import org.apache.poi.ss.formula.atp.AnalysisToolPak;
-import org.apache.poi.ss.formula.function.FunctionMetadata;
-import org.apache.poi.ss.formula.function.FunctionMetadataRegistry;
-import org.apache.poi.ss.formula.functions.*;
+import com.moparisthebest.poi.ss.formula.atp.AnalysisToolPak;
+import com.moparisthebest.poi.ss.formula.function.FunctionMetadata;
+import com.moparisthebest.poi.ss.formula.function.FunctionMetadataRegistry;
+import com.moparisthebest.poi.ss.formula.functions.*;
 
 /**
  * Mappings from the Excel functions to our evaluation implementations

@@ -14,10 +14,10 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 ==================================================================== */
-package org.apache.poi.ss.usermodel;
+package com.moparisthebest.poi.ss.usermodel;
 
-import org.apache.poi.common.usermodel.HyperlinkType;
-import org.apache.poi.util.Removal;
+import com.moparisthebest.poi.common.usermodel.HyperlinkType;
+import com.moparisthebest.poi.util.Removal;
 
 /**
  * An object that handles instantiating concrete
@@ -72,7 +72,7 @@ public interface CreationHelper {
      * Creates a ClientAnchor. Use this object to position drawing object in a sheet
      *
      * @return a ClientAnchor instance
-     * @see org.apache.poi.ss.usermodel.Drawing
+     * @see com.moparisthebest.poi.ss.usermodel.Drawing
      */
     ClientAnchor createClientAnchor();
 }

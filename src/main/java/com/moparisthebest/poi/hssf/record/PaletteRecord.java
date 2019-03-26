@@ -15,12 +15,12 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.record;
+package com.moparisthebest.poi.hssf.record;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.poi.util.LittleEndianOutput;
+import com.moparisthebest.poi.util.LittleEndianOutput;
 
 /**
  * PaletteRecord (0x0092) - Supports custom palettes.

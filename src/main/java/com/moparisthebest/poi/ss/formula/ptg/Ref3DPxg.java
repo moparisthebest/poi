@@ -15,13 +15,13 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula.ptg;
+package com.moparisthebest.poi.ss.formula.ptg;
 
-import org.apache.poi.ss.formula.SheetIdentifier;
-import org.apache.poi.ss.formula.SheetNameFormatter;
-import org.apache.poi.ss.formula.SheetRangeIdentifier;
-import org.apache.poi.ss.util.CellReference;
-import org.apache.poi.util.LittleEndianOutput;
+import com.moparisthebest.poi.ss.formula.SheetIdentifier;
+import com.moparisthebest.poi.ss.formula.SheetNameFormatter;
+import com.moparisthebest.poi.ss.formula.SheetRangeIdentifier;
+import com.moparisthebest.poi.ss.util.CellReference;
+import com.moparisthebest.poi.util.LittleEndianOutput;
 
 /**
  * <p>Title:        XSSF 3D Reference</p>

@@ -14,11 +14,11 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 ==================================================================== */
-package org.apache.poi.poifs.crypt;
+package com.moparisthebest.poi.poifs.crypt;
 
 import java.io.IOException;
 
-import org.apache.poi.util.LittleEndianInput;
+import com.moparisthebest.poi.util.LittleEndianInput;
 
 public interface EncryptionInfoBuilder {
     /**

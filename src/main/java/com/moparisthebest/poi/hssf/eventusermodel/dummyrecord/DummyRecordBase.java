@@ -15,10 +15,10 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.eventusermodel.dummyrecord;
+package com.moparisthebest.poi.hssf.eventusermodel.dummyrecord;
 
-import org.apache.poi.hssf.record.Record;
-import org.apache.poi.hssf.record.RecordFormatException;
+import com.moparisthebest.poi.hssf.record.Record;
+import com.moparisthebest.poi.hssf.record.RecordFormatException;
 
 /**
  */

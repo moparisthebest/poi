@@ -15,29 +15,29 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula;
+package com.moparisthebest.poi.ss.formula;
 
-import org.apache.poi.ss.SpreadsheetVersion;
-import org.apache.poi.ss.formula.CollaboratingWorkbooksEnvironment.WorkbookNotFoundException;
-import org.apache.poi.ss.formula.EvaluationWorkbook.ExternalName;
-import org.apache.poi.ss.formula.EvaluationWorkbook.ExternalSheet;
-import org.apache.poi.ss.formula.EvaluationWorkbook.ExternalSheetRange;
-import org.apache.poi.ss.formula.eval.AreaEval;
-import org.apache.poi.ss.formula.eval.ErrorEval;
-import org.apache.poi.ss.formula.eval.ExternalNameEval;
-import org.apache.poi.ss.formula.eval.FunctionNameEval;
-import org.apache.poi.ss.formula.eval.RefEval;
-import org.apache.poi.ss.formula.eval.ValueEval;
-import org.apache.poi.ss.formula.functions.FreeRefFunction;
-import org.apache.poi.ss.formula.ptg.Area3DPtg;
-import org.apache.poi.ss.formula.ptg.Area3DPxg;
-import org.apache.poi.ss.formula.ptg.NameXPtg;
-import org.apache.poi.ss.formula.ptg.NameXPxg;
-import org.apache.poi.ss.formula.ptg.Ptg;
-import org.apache.poi.ss.formula.ptg.Ref3DPtg;
-import org.apache.poi.ss.formula.ptg.Ref3DPxg;
-import org.apache.poi.ss.util.CellReference;
-import org.apache.poi.ss.util.CellReference.NameType;
+import com.moparisthebest.poi.ss.SpreadsheetVersion;
+import com.moparisthebest.poi.ss.formula.CollaboratingWorkbooksEnvironment.WorkbookNotFoundException;
+import com.moparisthebest.poi.ss.formula.EvaluationWorkbook.ExternalName;
+import com.moparisthebest.poi.ss.formula.EvaluationWorkbook.ExternalSheet;
+import com.moparisthebest.poi.ss.formula.EvaluationWorkbook.ExternalSheetRange;
+import com.moparisthebest.poi.ss.formula.eval.AreaEval;
+import com.moparisthebest.poi.ss.formula.eval.ErrorEval;
+import com.moparisthebest.poi.ss.formula.eval.ExternalNameEval;
+import com.moparisthebest.poi.ss.formula.eval.FunctionNameEval;
+import com.moparisthebest.poi.ss.formula.eval.RefEval;
+import com.moparisthebest.poi.ss.formula.eval.ValueEval;
+import com.moparisthebest.poi.ss.formula.functions.FreeRefFunction;
+import com.moparisthebest.poi.ss.formula.ptg.Area3DPtg;
+import com.moparisthebest.poi.ss.formula.ptg.Area3DPxg;
+import com.moparisthebest.poi.ss.formula.ptg.NameXPtg;
+import com.moparisthebest.poi.ss.formula.ptg.NameXPxg;
+import com.moparisthebest.poi.ss.formula.ptg.Ptg;
+import com.moparisthebest.poi.ss.formula.ptg.Ref3DPtg;
+import com.moparisthebest.poi.ss.formula.ptg.Ref3DPxg;
+import com.moparisthebest.poi.ss.util.CellReference;
+import com.moparisthebest.poi.ss.util.CellReference.NameType;
 
 /**
  * Contains all the contextual information required to evaluate an operation

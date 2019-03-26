@@ -15,11 +15,11 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.record;
+package com.moparisthebest.poi.hssf.record;
 
 import java.io.UnsupportedEncodingException;
 
-import org.apache.poi.util.CodePageUtil;
+import com.moparisthebest.poi.util.CodePageUtil;
 
 
 /**

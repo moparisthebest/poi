@@ -15,68 +15,68 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula;
+package com.moparisthebest.poi.ss.formula;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.regex.Pattern;
 
-import org.apache.poi.ss.SpreadsheetVersion;
-import org.apache.poi.ss.formula.constant.ErrorConstant;
-import org.apache.poi.ss.formula.function.FunctionMetadata;
-import org.apache.poi.ss.formula.function.FunctionMetadataRegistry;
-import org.apache.poi.ss.formula.ptg.AbstractFunctionPtg;
-import org.apache.poi.ss.formula.ptg.AddPtg;
-import org.apache.poi.ss.formula.ptg.Area3DPxg;
-import org.apache.poi.ss.formula.ptg.AreaPtg;
-import org.apache.poi.ss.formula.ptg.ArrayPtg;
-import org.apache.poi.ss.formula.ptg.AttrPtg;
-import org.apache.poi.ss.formula.ptg.BoolPtg;
-import org.apache.poi.ss.formula.ptg.ConcatPtg;
-import org.apache.poi.ss.formula.ptg.DividePtg;
-import org.apache.poi.ss.formula.ptg.EqualPtg;
-import org.apache.poi.ss.formula.ptg.ErrPtg;
-import org.apache.poi.ss.formula.ptg.FuncPtg;
-import org.apache.poi.ss.formula.ptg.FuncVarPtg;
-import org.apache.poi.ss.formula.ptg.GreaterEqualPtg;
-import org.apache.poi.ss.formula.ptg.GreaterThanPtg;
-import org.apache.poi.ss.formula.ptg.IntPtg;
-import org.apache.poi.ss.formula.ptg.IntersectionPtg;
-import org.apache.poi.ss.formula.ptg.LessEqualPtg;
-import org.apache.poi.ss.formula.ptg.LessThanPtg;
-import org.apache.poi.ss.formula.ptg.MemAreaPtg;
-import org.apache.poi.ss.formula.ptg.MemFuncPtg;
-import org.apache.poi.ss.formula.ptg.MissingArgPtg;
-import org.apache.poi.ss.formula.ptg.MultiplyPtg;
-import org.apache.poi.ss.formula.ptg.NamePtg;
-import org.apache.poi.ss.formula.ptg.NameXPtg;
-import org.apache.poi.ss.formula.ptg.NameXPxg;
-import org.apache.poi.ss.formula.ptg.NotEqualPtg;
-import org.apache.poi.ss.formula.ptg.NumberPtg;
-import org.apache.poi.ss.formula.ptg.OperandPtg;
-import org.apache.poi.ss.formula.ptg.OperationPtg;
-import org.apache.poi.ss.formula.ptg.ParenthesisPtg;
-import org.apache.poi.ss.formula.ptg.PercentPtg;
-import org.apache.poi.ss.formula.ptg.PowerPtg;
-import org.apache.poi.ss.formula.ptg.Ptg;
-import org.apache.poi.ss.formula.ptg.RangePtg;
-import org.apache.poi.ss.formula.ptg.RefPtg;
-import org.apache.poi.ss.formula.ptg.StringPtg;
-import org.apache.poi.ss.formula.ptg.SubtractPtg;
-import org.apache.poi.ss.formula.ptg.UnaryMinusPtg;
-import org.apache.poi.ss.formula.ptg.UnaryPlusPtg;
-import org.apache.poi.ss.formula.ptg.UnionPtg;
-import org.apache.poi.ss.formula.ptg.ValueOperatorPtg;
-import org.apache.poi.ss.usermodel.FormulaError;
-import org.apache.poi.ss.usermodel.Name;
-import org.apache.poi.ss.usermodel.Table;
-import org.apache.poi.ss.util.AreaReference;
-import org.apache.poi.ss.util.CellReference;
-import org.apache.poi.ss.util.CellReference.NameType;
-import org.apache.poi.util.Internal;
-import org.apache.poi.util.POILogFactory;
-import org.apache.poi.util.POILogger;
+import com.moparisthebest.poi.ss.SpreadsheetVersion;
+import com.moparisthebest.poi.ss.formula.constant.ErrorConstant;
+import com.moparisthebest.poi.ss.formula.function.FunctionMetadata;
+import com.moparisthebest.poi.ss.formula.function.FunctionMetadataRegistry;
+import com.moparisthebest.poi.ss.formula.ptg.AbstractFunctionPtg;
+import com.moparisthebest.poi.ss.formula.ptg.AddPtg;
+import com.moparisthebest.poi.ss.formula.ptg.Area3DPxg;
+import com.moparisthebest.poi.ss.formula.ptg.AreaPtg;
+import com.moparisthebest.poi.ss.formula.ptg.ArrayPtg;
+import com.moparisthebest.poi.ss.formula.ptg.AttrPtg;
+import com.moparisthebest.poi.ss.formula.ptg.BoolPtg;
+import com.moparisthebest.poi.ss.formula.ptg.ConcatPtg;
+import com.moparisthebest.poi.ss.formula.ptg.DividePtg;
+import com.moparisthebest.poi.ss.formula.ptg.EqualPtg;
+import com.moparisthebest.poi.ss.formula.ptg.ErrPtg;
+import com.moparisthebest.poi.ss.formula.ptg.FuncPtg;
+import com.moparisthebest.poi.ss.formula.ptg.FuncVarPtg;
+import com.moparisthebest.poi.ss.formula.ptg.GreaterEqualPtg;
+import com.moparisthebest.poi.ss.formula.ptg.GreaterThanPtg;
+import com.moparisthebest.poi.ss.formula.ptg.IntPtg;
+import com.moparisthebest.poi.ss.formula.ptg.IntersectionPtg;
+import com.moparisthebest.poi.ss.formula.ptg.LessEqualPtg;
+import com.moparisthebest.poi.ss.formula.ptg.LessThanPtg;
+import com.moparisthebest.poi.ss.formula.ptg.MemAreaPtg;
+import com.moparisthebest.poi.ss.formula.ptg.MemFuncPtg;
+import com.moparisthebest.poi.ss.formula.ptg.MissingArgPtg;
+import com.moparisthebest.poi.ss.formula.ptg.MultiplyPtg;
+import com.moparisthebest.poi.ss.formula.ptg.NamePtg;
+import com.moparisthebest.poi.ss.formula.ptg.NameXPtg;
+import com.moparisthebest.poi.ss.formula.ptg.NameXPxg;
+import com.moparisthebest.poi.ss.formula.ptg.NotEqualPtg;
+import com.moparisthebest.poi.ss.formula.ptg.NumberPtg;
+import com.moparisthebest.poi.ss.formula.ptg.OperandPtg;
+import com.moparisthebest.poi.ss.formula.ptg.OperationPtg;
+import com.moparisthebest.poi.ss.formula.ptg.ParenthesisPtg;
+import com.moparisthebest.poi.ss.formula.ptg.PercentPtg;
+import com.moparisthebest.poi.ss.formula.ptg.PowerPtg;
+import com.moparisthebest.poi.ss.formula.ptg.Ptg;
+import com.moparisthebest.poi.ss.formula.ptg.RangePtg;
+import com.moparisthebest.poi.ss.formula.ptg.RefPtg;
+import com.moparisthebest.poi.ss.formula.ptg.StringPtg;
+import com.moparisthebest.poi.ss.formula.ptg.SubtractPtg;
+import com.moparisthebest.poi.ss.formula.ptg.UnaryMinusPtg;
+import com.moparisthebest.poi.ss.formula.ptg.UnaryPlusPtg;
+import com.moparisthebest.poi.ss.formula.ptg.UnionPtg;
+import com.moparisthebest.poi.ss.formula.ptg.ValueOperatorPtg;
+import com.moparisthebest.poi.ss.usermodel.FormulaError;
+import com.moparisthebest.poi.ss.usermodel.Name;
+import com.moparisthebest.poi.ss.usermodel.Table;
+import com.moparisthebest.poi.ss.util.AreaReference;
+import com.moparisthebest.poi.ss.util.CellReference;
+import com.moparisthebest.poi.ss.util.CellReference.NameType;
+import com.moparisthebest.poi.util.Internal;
+import com.moparisthebest.poi.util.POILogFactory;
+import com.moparisthebest.poi.util.POILogger;
 
 /**
  * This class parses a formula string into a List of tokens in RPN order.
@@ -132,9 +132,9 @@ public final class FormulaParser {
      *  parse results.
      * This class is recommended only for single threaded use.
      *
-     * If you have a {@link org.apache.poi.hssf.usermodel.HSSFWorkbook}, and not a
-     *  {@link org.apache.poi.ss.usermodel.Workbook}, then use the convenience method on
-     *  {@link org.apache.poi.hssf.usermodel.HSSFFormulaEvaluator}
+     * If you have a {@link com.moparisthebest.poi.hssf.usermodel.HSSFWorkbook}, and not a
+     *  {@link com.moparisthebest.poi.ss.usermodel.Workbook}, then use the convenience method on
+     *  {@link com.moparisthebest.poi.hssf.usermodel.HSSFFormulaEvaluator}
      */
     private FormulaParser(String formula, FormulaParsingWorkbook book, int sheetIndex, int rowIndex) {
         _formulaString = formula;
@@ -148,7 +148,7 @@ public final class FormulaParser {
 
     /**
      * Parse a formula into an array of tokens
-     * Side effect: creates name ({@link org.apache.poi.ss.usermodel.Workbook#createName})
+     * Side effect: creates name ({@link com.moparisthebest.poi.ss.usermodel.Workbook#createName})
      *     if formula contains unrecognized names (names are likely UDFs)
      *
      * @param formula     the formula to parse
@@ -173,7 +173,7 @@ public final class FormulaParser {
 
     /**
      * Parse a formula into an array of tokens
-     * Side effect: creates name ({@link org.apache.poi.ss.usermodel.Workbook#createName})
+     * Side effect: creates name ({@link com.moparisthebest.poi.ss.usermodel.Workbook#createName})
      *     if formula contains unrecognized names (names are likely UDFs)
      *
      * @param formula     the formula to parse
@@ -1003,7 +1003,7 @@ public final class FormulaParser {
     /**
      * Matches a zero or one letter-runs followed by zero or one digit-runs.
      * Either or both runs man optionally be prefixed with a single '$'.
-     * (copied+modified from {@link org.apache.poi.ss.util.CellReference#CELL_REF_PATTERN})
+     * (copied+modified from {@link com.moparisthebest.poi.ss.util.CellReference#CELL_REF_PATTERN})
      */
     private static final Pattern CELL_REF_PATTERN = Pattern.compile("(\\$?[A-Za-z]+)?(\\$?[0-9]+)?");
 

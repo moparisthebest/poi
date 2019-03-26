@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.util;
+package com.moparisthebest.poi.util;
 
 import java.io.FilterOutputStream;
 import java.io.IOException;

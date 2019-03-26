@@ -15,10 +15,10 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.record;
+package com.moparisthebest.poi.hssf.record;
 
-import org.apache.poi.util.HexDump;
-import org.apache.poi.util.LittleEndianOutput;
+import com.moparisthebest.poi.util.HexDump;
+import com.moparisthebest.poi.util.LittleEndianOutput;
 
 /**
  * Title:        Continue Record(0x003C) - Helper class used primarily for SST Records <P>

@@ -17,7 +17,7 @@
 ==================================================================== */
         
 
-package org.apache.poi.hssf.record;
+package com.moparisthebest.poi.hssf.record;
 
 /**
  * Used by records to indicate invalid format/data.<P>
@@ -27,7 +27,7 @@ package org.apache.poi.hssf.record;
  */
 
 public class RecordFormatException
-    extends org.apache.poi.util.RecordFormatException
+    extends com.moparisthebest.poi.util.RecordFormatException
 {
     public RecordFormatException(String exception)
     {

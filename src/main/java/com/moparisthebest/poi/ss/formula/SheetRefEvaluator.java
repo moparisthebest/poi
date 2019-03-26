@@ -15,12 +15,12 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula;
+package com.moparisthebest.poi.ss.formula;
 
-import org.apache.poi.ss.formula.eval.ValueEval;
-import org.apache.poi.ss.formula.ptg.FuncVarPtg;
-import org.apache.poi.ss.formula.ptg.Ptg;
-import org.apache.poi.ss.usermodel.CellType;
+import com.moparisthebest.poi.ss.formula.eval.ValueEval;
+import com.moparisthebest.poi.ss.formula.ptg.FuncVarPtg;
+import com.moparisthebest.poi.ss.formula.ptg.Ptg;
+import com.moparisthebest.poi.ss.usermodel.CellType;
 
 /**
  * Evaluator for cells within a specific Sheet
@@ -57,7 +57,7 @@ final class SheetRefEvaluator {
 
     /**
      * @return  whether cell at rowIndex and columnIndex is a subtotal
-     * @see org.apache.poi.ss.formula.functions.Subtotal
+     * @see com.moparisthebest.poi.ss.formula.functions.Subtotal
      */
     public boolean isSubTotal(int rowIndex, int columnIndex){
         boolean subtotal = false;

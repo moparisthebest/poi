@@ -15,22 +15,22 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.poifs.crypt;
+package com.moparisthebest.poi.poifs.crypt;
 
 import java.io.IOException;
 import java.nio.charset.Charset;
 
-import org.apache.poi.EncryptedDocumentException;
-import org.apache.poi.poifs.crypt.standard.EncryptionRecord;
-import org.apache.poi.poifs.filesystem.DirectoryEntry;
-import org.apache.poi.poifs.filesystem.DocumentEntry;
-import org.apache.poi.poifs.filesystem.POIFSWriterEvent;
-import org.apache.poi.poifs.filesystem.POIFSWriterListener;
-import org.apache.poi.util.LittleEndianByteArrayOutputStream;
-import org.apache.poi.util.LittleEndianConsts;
-import org.apache.poi.util.LittleEndianInput;
-import org.apache.poi.util.LittleEndianOutput;
-import org.apache.poi.util.StringUtil;
+import com.moparisthebest.poi.EncryptedDocumentException;
+import com.moparisthebest.poi.poifs.crypt.standard.EncryptionRecord;
+import com.moparisthebest.poi.poifs.filesystem.DirectoryEntry;
+import com.moparisthebest.poi.poifs.filesystem.DocumentEntry;
+import com.moparisthebest.poi.poifs.filesystem.POIFSWriterEvent;
+import com.moparisthebest.poi.poifs.filesystem.POIFSWriterListener;
+import com.moparisthebest.poi.util.LittleEndianByteArrayOutputStream;
+import com.moparisthebest.poi.util.LittleEndianConsts;
+import com.moparisthebest.poi.util.LittleEndianInput;
+import com.moparisthebest.poi.util.LittleEndianOutput;
+import com.moparisthebest.poi.util.StringUtil;
 
 public class DataSpaceMapUtils {
     public static void addDefaultDataSpace(DirectoryEntry dir) throws IOException {

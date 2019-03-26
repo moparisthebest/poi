@@ -15,11 +15,11 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula.constant;
+package com.moparisthebest.poi.ss.formula.constant;
 
-import org.apache.poi.ss.usermodel.FormulaError;
-import org.apache.poi.util.POILogFactory;
-import org.apache.poi.util.POILogger;
+import com.moparisthebest.poi.ss.usermodel.FormulaError;
+import com.moparisthebest.poi.util.POILogFactory;
+import com.moparisthebest.poi.util.POILogger;
 /**
  * Represents a constant error code value as encoded in a constant values array. <p/>
  * 

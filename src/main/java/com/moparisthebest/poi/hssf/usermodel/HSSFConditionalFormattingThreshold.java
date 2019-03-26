@@ -15,18 +15,18 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.usermodel;
+package com.moparisthebest.poi.hssf.usermodel;
 
-import static org.apache.poi.hssf.record.CFRuleBase.parseFormula;
-import static org.apache.poi.hssf.usermodel.HSSFConditionalFormattingRule.toFormulaString;
+import static com.moparisthebest.poi.hssf.record.CFRuleBase.parseFormula;
+import static com.moparisthebest.poi.hssf.usermodel.HSSFConditionalFormattingRule.toFormulaString;
 
-import org.apache.poi.hssf.record.cf.Threshold;
+import com.moparisthebest.poi.hssf.record.cf.Threshold;
 
 /**
  * High level representation for Icon / Multi-State / Databar /
  *  Colour Scale change thresholds
  */
-public final class HSSFConditionalFormattingThreshold implements org.apache.poi.ss.usermodel.ConditionalFormattingThreshold {
+public final class HSSFConditionalFormattingThreshold implements com.moparisthebest.poi.ss.usermodel.ConditionalFormattingThreshold {
     private final Threshold threshold;
     private final HSSFSheet sheet;
     private final HSSFWorkbook workbook;

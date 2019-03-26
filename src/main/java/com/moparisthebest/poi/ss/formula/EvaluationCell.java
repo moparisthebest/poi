@@ -15,9 +15,9 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula;
+package com.moparisthebest.poi.ss.formula;
 
-import org.apache.poi.ss.usermodel.CellType;
+import com.moparisthebest.poi.ss.usermodel.CellType;
 
 /**
  * Abstracts a cell for the purpose of formula evaluation.  This interface represents both formula

@@ -15,10 +15,10 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula.eval;
+package com.moparisthebest.poi.ss.formula.eval;
 
-import org.apache.poi.ss.formula.functions.Fixed2ArgFunction;
-import org.apache.poi.ss.formula.functions.Function;
+import com.moparisthebest.poi.ss.formula.functions.Fixed2ArgFunction;
+import com.moparisthebest.poi.ss.formula.functions.Function;
 
 /**
  * @author Josh Micich

@@ -15,22 +15,22 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.usermodel.helpers;
+package com.moparisthebest.poi.hssf.usermodel.helpers;
 
-import org.apache.poi.hssf.usermodel.HSSFSheet;
-import org.apache.poi.ss.formula.FormulaShifter;
-import org.apache.poi.ss.formula.eval.NotImplementedException;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.helpers.RowShifter;
-import org.apache.poi.util.Internal;
-import org.apache.poi.util.NotImplemented;
-import org.apache.poi.util.POILogFactory;
-import org.apache.poi.util.POILogger;
+import com.moparisthebest.poi.hssf.usermodel.HSSFSheet;
+import com.moparisthebest.poi.ss.formula.FormulaShifter;
+import com.moparisthebest.poi.ss.formula.eval.NotImplementedException;
+import com.moparisthebest.poi.ss.usermodel.Row;
+import com.moparisthebest.poi.ss.usermodel.helpers.RowShifter;
+import com.moparisthebest.poi.util.Internal;
+import com.moparisthebest.poi.util.NotImplemented;
+import com.moparisthebest.poi.util.POILogFactory;
+import com.moparisthebest.poi.util.POILogger;
 
 /**
  * Helper for shifting rows up or down
  * 
- * When possible, code should be implemented in the RowShifter abstract class to avoid duplication with {@link org.apache.poi.xssf.usermodel.helpers.XSSFRowShifter}
+ * When possible, code should be implemented in the RowShifter abstract class to avoid duplication with {@link com.moparisthebest.poi.xssf.usermodel.helpers.XSSFRowShifter}
  */
 public final class HSSFRowShifter extends RowShifter {
     private static final POILogger logger = POILogFactory.getLogger(HSSFRowShifter.class);

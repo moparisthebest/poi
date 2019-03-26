@@ -14,12 +14,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.apache.poi.util;
+package com.moparisthebest.poi.util;
 
 import java.io.IOException;
 import java.io.InputStream;
 
-import org.apache.poi.util.SuppressForbidden;
+import com.moparisthebest.poi.util.SuppressForbidden;
 
 /**
  * This is a stream that will only supply bytes up to a certain length - if its

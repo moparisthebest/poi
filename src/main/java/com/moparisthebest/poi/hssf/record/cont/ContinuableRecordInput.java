@@ -17,11 +17,11 @@
  * ====================================================================
  */
 
-package org.apache.poi.hssf.record.cont;
+package com.moparisthebest.poi.hssf.record.cont;
 
-import org.apache.poi.hssf.record.RecordInputStream;
-import org.apache.poi.hssf.record.ContinueRecord;
-import org.apache.poi.util.LittleEndianInput;
+import com.moparisthebest.poi.hssf.record.RecordInputStream;
+import com.moparisthebest.poi.hssf.record.ContinueRecord;
+import com.moparisthebest.poi.util.LittleEndianInput;
 
 /**
  * A decorated {@link RecordInputStream} that can read primitive data types
@@ -44,7 +44,7 @@ import org.apache.poi.util.LittleEndianInput;
  *
  * <p>
  * YK: For now (March 2011) this class is only used to read
- *   @link org.apache.poi.hssf.record.common.UnicodeString.ExtRst} blocks of a UnicodeString.
+ *   @link com.moparisthebest.poi.hssf.record.common.UnicodeString.ExtRst} blocks of a UnicodeString.
  *
  * </p>
  */

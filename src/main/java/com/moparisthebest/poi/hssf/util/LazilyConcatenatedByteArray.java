@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.util;
+package com.moparisthebest.poi.hssf.util;
 
 import java.util.ArrayList;
 import java.util.List;

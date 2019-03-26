@@ -15,23 +15,23 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hpsf.extractor;
+package com.moparisthebest.poi.hpsf.extractor;
 
 import java.io.File;
 import java.io.IOException;
 
-import org.apache.poi.POIDocument;
-import org.apache.poi.POIOLE2TextExtractor;
-import org.apache.poi.POITextExtractor;
-import org.apache.poi.hpsf.DocumentSummaryInformation;
-import org.apache.poi.hpsf.HPSFPropertiesOnlyDocument;
-import org.apache.poi.hpsf.Property;
-import org.apache.poi.hpsf.PropertySet;
-import org.apache.poi.hpsf.SpecialPropertySet;
-import org.apache.poi.hpsf.SummaryInformation;
-import org.apache.poi.hpsf.wellknown.PropertyIDMap;
-import org.apache.poi.poifs.filesystem.NPOIFSFileSystem;
-import org.apache.poi.poifs.filesystem.POIFSFileSystem;
+import com.moparisthebest.poi.POIDocument;
+import com.moparisthebest.poi.POIOLE2TextExtractor;
+import com.moparisthebest.poi.POITextExtractor;
+import com.moparisthebest.poi.hpsf.DocumentSummaryInformation;
+import com.moparisthebest.poi.hpsf.HPSFPropertiesOnlyDocument;
+import com.moparisthebest.poi.hpsf.Property;
+import com.moparisthebest.poi.hpsf.PropertySet;
+import com.moparisthebest.poi.hpsf.SpecialPropertySet;
+import com.moparisthebest.poi.hpsf.SummaryInformation;
+import com.moparisthebest.poi.hpsf.wellknown.PropertyIDMap;
+import com.moparisthebest.poi.poifs.filesystem.NPOIFSFileSystem;
+import com.moparisthebest.poi.poifs.filesystem.POIFSFileSystem;
 
 /**
  * Extracts all of the HPSF properties, both

@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.util;
+package com.moparisthebest.poi.util;
 
 import java.io.ByteArrayOutputStream;
 import java.io.Closeable;
@@ -28,7 +28,7 @@ import java.nio.channels.ReadableByteChannel;
 import java.util.zip.CRC32;
 import java.util.zip.Checksum;
 
-import org.apache.poi.EmptyFileException;
+import com.moparisthebest.poi.EmptyFileException;
 
 public final class IOUtils {
     private static final POILogger logger = POILogFactory.getLogger( IOUtils.class );

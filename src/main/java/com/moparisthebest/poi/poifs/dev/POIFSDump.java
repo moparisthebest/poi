@@ -14,7 +14,7 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 ==================================================================== */
-package org.apache.poi.poifs.dev;
+package com.moparisthebest.poi.poifs.dev;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -24,16 +24,16 @@ import java.io.OutputStream;
 import java.nio.ByteBuffer;
 import java.util.Iterator;
 
-import org.apache.poi.poifs.common.POIFSConstants;
-import org.apache.poi.poifs.filesystem.DirectoryEntry;
-import org.apache.poi.poifs.filesystem.DocumentInputStream;
-import org.apache.poi.poifs.filesystem.DocumentNode;
-import org.apache.poi.poifs.filesystem.Entry;
-import org.apache.poi.poifs.filesystem.NPOIFSFileSystem;
-import org.apache.poi.poifs.filesystem.NPOIFSStream;
-import org.apache.poi.poifs.property.NPropertyTable;
-import org.apache.poi.poifs.storage.HeaderBlock;
-import org.apache.poi.util.IOUtils;
+import com.moparisthebest.poi.poifs.common.POIFSConstants;
+import com.moparisthebest.poi.poifs.filesystem.DirectoryEntry;
+import com.moparisthebest.poi.poifs.filesystem.DocumentInputStream;
+import com.moparisthebest.poi.poifs.filesystem.DocumentNode;
+import com.moparisthebest.poi.poifs.filesystem.Entry;
+import com.moparisthebest.poi.poifs.filesystem.NPOIFSFileSystem;
+import com.moparisthebest.poi.poifs.filesystem.NPOIFSStream;
+import com.moparisthebest.poi.poifs.property.NPropertyTable;
+import com.moparisthebest.poi.poifs.storage.HeaderBlock;
+import com.moparisthebest.poi.util.IOUtils;
 
 /**
  * Dump internal structure of a OLE2 file into file system

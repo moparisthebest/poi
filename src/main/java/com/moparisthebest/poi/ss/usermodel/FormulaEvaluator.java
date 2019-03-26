@@ -15,11 +15,11 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.usermodel;
+package com.moparisthebest.poi.ss.usermodel;
 
 import java.util.Map;
 
-import org.apache.poi.util.Internal;
+import com.moparisthebest.poi.util.Internal;
 
 /**
  * Evaluates formula cells.<p/>
@@ -164,7 +164,7 @@ public interface FormulaEvaluator {
      * With this method you can control how POI handles such missing references:
      * <ul>
      *     <li>by default ignoreMissingWorkbooks=false and POI throws 
-     *     {@link org.apache.poi.ss.formula.CollaboratingWorkbooksEnvironment.WorkbookNotFoundException}
+     *     {@link com.moparisthebest.poi.ss.formula.CollaboratingWorkbooksEnvironment.WorkbookNotFoundException}
      *     if an external reference cannot be resolved</li>
      *     <li>if ignoreMissingWorkbooks=true then POI uses cached formula result
      *     that already exists in the main workbook</li>

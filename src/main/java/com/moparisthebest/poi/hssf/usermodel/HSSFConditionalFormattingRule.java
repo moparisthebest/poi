@@ -15,24 +15,24 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.usermodel;
+package com.moparisthebest.poi.hssf.usermodel;
 
-import org.apache.poi.hssf.model.HSSFFormulaParser;
-import org.apache.poi.hssf.record.CFRule12Record;
-import org.apache.poi.hssf.record.CFRuleBase;
-import org.apache.poi.hssf.record.CFRuleBase.ComparisonOperator;
-import org.apache.poi.hssf.record.CFRuleRecord;
-import org.apache.poi.hssf.record.cf.BorderFormatting;
-import org.apache.poi.hssf.record.cf.ColorGradientFormatting;
-import org.apache.poi.hssf.record.cf.DataBarFormatting;
-import org.apache.poi.hssf.record.cf.FontFormatting;
-import org.apache.poi.hssf.record.cf.IconMultiStateFormatting;
-import org.apache.poi.hssf.record.cf.PatternFormatting;
-import org.apache.poi.ss.formula.ptg.Ptg;
-import org.apache.poi.ss.usermodel.ConditionFilterData;
-import org.apache.poi.ss.usermodel.ConditionFilterType;
-import org.apache.poi.ss.usermodel.ConditionType;
-import org.apache.poi.ss.usermodel.ConditionalFormattingRule;
+import com.moparisthebest.poi.hssf.model.HSSFFormulaParser;
+import com.moparisthebest.poi.hssf.record.CFRule12Record;
+import com.moparisthebest.poi.hssf.record.CFRuleBase;
+import com.moparisthebest.poi.hssf.record.CFRuleBase.ComparisonOperator;
+import com.moparisthebest.poi.hssf.record.CFRuleRecord;
+import com.moparisthebest.poi.hssf.record.cf.BorderFormatting;
+import com.moparisthebest.poi.hssf.record.cf.ColorGradientFormatting;
+import com.moparisthebest.poi.hssf.record.cf.DataBarFormatting;
+import com.moparisthebest.poi.hssf.record.cf.FontFormatting;
+import com.moparisthebest.poi.hssf.record.cf.IconMultiStateFormatting;
+import com.moparisthebest.poi.hssf.record.cf.PatternFormatting;
+import com.moparisthebest.poi.ss.formula.ptg.Ptg;
+import com.moparisthebest.poi.ss.usermodel.ConditionFilterData;
+import com.moparisthebest.poi.ss.usermodel.ConditionFilterType;
+import com.moparisthebest.poi.ss.usermodel.ConditionType;
+import com.moparisthebest.poi.ss.usermodel.ConditionalFormattingRule;
 
 /**
  *
@@ -63,7 +63,7 @@ public final class HSSFConditionalFormattingRule implements ConditionalFormattin
      * Only newer style formatting rules have priorities. For older ones,
      *  we don't know priority for these, other than definition/model order, 
      *  which appears to be what Excel uses.
-     * @see org.apache.poi.ss.usermodel.ConditionalFormattingRule#getPriority()
+     * @see com.moparisthebest.poi.ss.usermodel.ConditionalFormattingRule#getPriority()
      */
     public int getPriority() {
         CFRule12Record rule12 = getCFRule12Record(false);
@@ -73,7 +73,7 @@ public final class HSSFConditionalFormattingRule implements ConditionalFormattin
     
     /**
      * Always true for HSSF files, per Microsoft Excel documentation
-     * @see org.apache.poi.ss.usermodel.ConditionalFormattingRule#getStopIfTrue()
+     * @see com.moparisthebest.poi.ss.usermodel.ConditionalFormattingRule#getStopIfTrue()
      */
     public boolean getStopIfTrue() {
         return true;
@@ -260,7 +260,7 @@ public final class HSSFConditionalFormattingRule implements ConditionalFormattin
 
     /**
      * always null (not a filter condition) or {@link ConditionFilterType#FILTER} if it is.
-     * @see org.apache.poi.ss.usermodel.ConditionalFormattingRule#getConditionFilterType()
+     * @see com.moparisthebest.poi.ss.usermodel.ConditionalFormattingRule#getConditionFilterType()
      */
     public ConditionFilterType getConditionFilterType() {
         return getConditionType() == ConditionType.FILTER ? ConditionFilterType.FILTER : null;

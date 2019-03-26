@@ -15,16 +15,16 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.record;
+package com.moparisthebest.poi.hssf.record;
 
-import org.apache.poi.hssf.record.cont.ContinuableRecord;
-import org.apache.poi.hssf.record.cont.ContinuableRecordOutput;
-import org.apache.poi.ss.formula.ptg.OperandPtg;
-import org.apache.poi.ss.formula.ptg.Ptg;
-import org.apache.poi.hssf.usermodel.HSSFRichTextString;
-import org.apache.poi.util.BitField;
-import org.apache.poi.util.BitFieldFactory;
-import org.apache.poi.util.HexDump;
+import com.moparisthebest.poi.hssf.record.cont.ContinuableRecord;
+import com.moparisthebest.poi.hssf.record.cont.ContinuableRecordOutput;
+import com.moparisthebest.poi.ss.formula.ptg.OperandPtg;
+import com.moparisthebest.poi.ss.formula.ptg.Ptg;
+import com.moparisthebest.poi.hssf.usermodel.HSSFRichTextString;
+import com.moparisthebest.poi.util.BitField;
+import com.moparisthebest.poi.util.BitFieldFactory;
+import com.moparisthebest.poi.util.HexDump;
 
 /**
  * The TXO record (0x01B6) is used to define the properties of a text box. It is

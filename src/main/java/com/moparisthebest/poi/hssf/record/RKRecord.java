@@ -15,10 +15,10 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.record;
+package com.moparisthebest.poi.hssf.record;
 
-import org.apache.poi.hssf.util.RKUtil;
-import org.apache.poi.util.LittleEndianOutput;
+import com.moparisthebest.poi.hssf.util.RKUtil;
+import com.moparisthebest.poi.util.LittleEndianOutput;
 
 /**
  * Title:        RK Record (0x027E)<p>
@@ -31,7 +31,7 @@ import org.apache.poi.util.LittleEndianOutput;
  *
  * REFERENCE:  PG 376 Microsoft Excel 97 Developer's Kit (ISBN: 1-57231-498-2)
  * 
- * @see org.apache.poi.hssf.record.NumberRecord
+ * @see com.moparisthebest.poi.hssf.record.NumberRecord
  */
 public final class RKRecord extends CellRecord {
     public final static short sid                      = 0x027E;

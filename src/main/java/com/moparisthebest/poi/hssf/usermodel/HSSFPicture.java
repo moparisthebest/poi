@@ -15,31 +15,31 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.usermodel;
+package com.moparisthebest.poi.hssf.usermodel;
 
 import java.awt.Dimension;
 import java.io.ByteArrayInputStream;
 
-import org.apache.poi.ddf.DefaultEscherRecordFactory;
-import org.apache.poi.ddf.EscherBSERecord;
-import org.apache.poi.ddf.EscherBlipRecord;
-import org.apache.poi.ddf.EscherClientDataRecord;
-import org.apache.poi.ddf.EscherComplexProperty;
-import org.apache.poi.ddf.EscherContainerRecord;
-import org.apache.poi.ddf.EscherOptRecord;
-import org.apache.poi.ddf.EscherProperties;
-import org.apache.poi.ddf.EscherSimpleProperty;
-import org.apache.poi.ddf.EscherTextboxRecord;
-import org.apache.poi.hssf.model.InternalWorkbook;
-import org.apache.poi.hssf.record.CommonObjectDataSubRecord;
-import org.apache.poi.hssf.record.EscherAggregate;
-import org.apache.poi.hssf.record.ObjRecord;
-import org.apache.poi.ss.usermodel.ClientAnchor.AnchorType;
-import org.apache.poi.ss.usermodel.Picture;
-import org.apache.poi.ss.util.ImageUtils;
-import org.apache.poi.util.POILogFactory;
-import org.apache.poi.util.POILogger;
-import org.apache.poi.util.StringUtil;
+import com.moparisthebest.poi.ddf.DefaultEscherRecordFactory;
+import com.moparisthebest.poi.ddf.EscherBSERecord;
+import com.moparisthebest.poi.ddf.EscherBlipRecord;
+import com.moparisthebest.poi.ddf.EscherClientDataRecord;
+import com.moparisthebest.poi.ddf.EscherComplexProperty;
+import com.moparisthebest.poi.ddf.EscherContainerRecord;
+import com.moparisthebest.poi.ddf.EscherOptRecord;
+import com.moparisthebest.poi.ddf.EscherProperties;
+import com.moparisthebest.poi.ddf.EscherSimpleProperty;
+import com.moparisthebest.poi.ddf.EscherTextboxRecord;
+import com.moparisthebest.poi.hssf.model.InternalWorkbook;
+import com.moparisthebest.poi.hssf.record.CommonObjectDataSubRecord;
+import com.moparisthebest.poi.hssf.record.EscherAggregate;
+import com.moparisthebest.poi.hssf.record.ObjRecord;
+import com.moparisthebest.poi.ss.usermodel.ClientAnchor.AnchorType;
+import com.moparisthebest.poi.ss.usermodel.Picture;
+import com.moparisthebest.poi.ss.util.ImageUtils;
+import com.moparisthebest.poi.util.POILogFactory;
+import com.moparisthebest.poi.util.POILogger;
+import com.moparisthebest.poi.util.StringUtil;
 
 /**
  * Represents a escher picture.  Eg. A GIF, JPEG etc...

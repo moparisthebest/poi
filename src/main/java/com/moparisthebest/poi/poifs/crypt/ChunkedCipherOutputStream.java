@@ -14,9 +14,9 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 ==================================================================== */
-package org.apache.poi.poifs.crypt;
+package com.moparisthebest.poi.poifs.crypt;
 
-import static org.apache.poi.poifs.crypt.Decryptor.DEFAULT_POIFS_ENTRY;
+import static com.moparisthebest.poi.poifs.crypt.Decryptor.DEFAULT_POIFS_ENTRY;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -32,17 +32,17 @@ import javax.crypto.Cipher;
 import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.ShortBufferException;
 
-import org.apache.poi.EncryptedDocumentException;
-import org.apache.poi.poifs.filesystem.DirectoryNode;
-import org.apache.poi.poifs.filesystem.POIFSWriterEvent;
-import org.apache.poi.poifs.filesystem.POIFSWriterListener;
-import org.apache.poi.util.IOUtils;
-import org.apache.poi.util.Internal;
-import org.apache.poi.util.LittleEndian;
-import org.apache.poi.util.LittleEndianConsts;
-import org.apache.poi.util.POILogFactory;
-import org.apache.poi.util.POILogger;
-import org.apache.poi.util.TempFile;
+import com.moparisthebest.poi.EncryptedDocumentException;
+import com.moparisthebest.poi.poifs.filesystem.DirectoryNode;
+import com.moparisthebest.poi.poifs.filesystem.POIFSWriterEvent;
+import com.moparisthebest.poi.poifs.filesystem.POIFSWriterListener;
+import com.moparisthebest.poi.util.IOUtils;
+import com.moparisthebest.poi.util.Internal;
+import com.moparisthebest.poi.util.LittleEndian;
+import com.moparisthebest.poi.util.LittleEndianConsts;
+import com.moparisthebest.poi.util.POILogFactory;
+import com.moparisthebest.poi.util.POILogger;
+import com.moparisthebest.poi.util.TempFile;
 
 @Internal
 public abstract class ChunkedCipherOutputStream extends FilterOutputStream {

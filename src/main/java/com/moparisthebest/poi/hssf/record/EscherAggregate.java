@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.record;
+package com.moparisthebest.poi.hssf.record;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -26,18 +26,18 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.poi.ddf.DefaultEscherRecordFactory;
-import org.apache.poi.ddf.EscherClientDataRecord;
-import org.apache.poi.ddf.EscherContainerRecord;
-import org.apache.poi.ddf.EscherDgRecord;
-import org.apache.poi.ddf.EscherRecord;
-import org.apache.poi.ddf.EscherRecordFactory;
-import org.apache.poi.ddf.EscherSerializationListener;
-import org.apache.poi.ddf.EscherSpRecord;
-import org.apache.poi.ddf.EscherSpgrRecord;
-import org.apache.poi.ddf.EscherTextboxRecord;
-import org.apache.poi.util.POILogFactory;
-import org.apache.poi.util.POILogger;
+import com.moparisthebest.poi.ddf.DefaultEscherRecordFactory;
+import com.moparisthebest.poi.ddf.EscherClientDataRecord;
+import com.moparisthebest.poi.ddf.EscherContainerRecord;
+import com.moparisthebest.poi.ddf.EscherDgRecord;
+import com.moparisthebest.poi.ddf.EscherRecord;
+import com.moparisthebest.poi.ddf.EscherRecordFactory;
+import com.moparisthebest.poi.ddf.EscherSerializationListener;
+import com.moparisthebest.poi.ddf.EscherSpRecord;
+import com.moparisthebest.poi.ddf.EscherSpgrRecord;
+import com.moparisthebest.poi.ddf.EscherTextboxRecord;
+import com.moparisthebest.poi.util.POILogFactory;
+import com.moparisthebest.poi.util.POILogger;
 
 /**
  * This class is used to aggregate the MSODRAWING and OBJ record

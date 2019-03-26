@@ -15,13 +15,13 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.record.aggregates;
+package com.moparisthebest.poi.hssf.record.aggregates;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.poi.hssf.model.RecordStream;
-import org.apache.poi.hssf.record.*;
+import com.moparisthebest.poi.hssf.model.RecordStream;
+import com.moparisthebest.poi.hssf.record.*;
 
 /**
  * Manages the all the records associated with a chart sub-stream.<p>

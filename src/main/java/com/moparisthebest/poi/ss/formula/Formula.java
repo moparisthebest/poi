@@ -15,18 +15,18 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula;
+package com.moparisthebest.poi.ss.formula;
 
 import java.util.Arrays;
 
-import org.apache.poi.ss.formula.ptg.ExpPtg;
-import org.apache.poi.ss.formula.ptg.Ptg;
-import org.apache.poi.ss.formula.ptg.TblPtg;
-import org.apache.poi.ss.util.CellReference;
-import org.apache.poi.util.LittleEndian;
-import org.apache.poi.util.LittleEndianByteArrayInputStream;
-import org.apache.poi.util.LittleEndianInput;
-import org.apache.poi.util.LittleEndianOutput;
+import com.moparisthebest.poi.ss.formula.ptg.ExpPtg;
+import com.moparisthebest.poi.ss.formula.ptg.Ptg;
+import com.moparisthebest.poi.ss.formula.ptg.TblPtg;
+import com.moparisthebest.poi.ss.util.CellReference;
+import com.moparisthebest.poi.util.LittleEndian;
+import com.moparisthebest.poi.util.LittleEndianByteArrayInputStream;
+import com.moparisthebest.poi.util.LittleEndianInput;
+import com.moparisthebest.poi.util.LittleEndianOutput;
 
 /**
  * Encapsulates an encoded formula token array.
@@ -166,8 +166,8 @@ public class Formula {
 	}
 
 	/**
-	 * Gets the locator for the corresponding {@link org.apache.poi.hssf.record.SharedFormulaRecord},
-     * {@link org.apache.poi.hssf.record.ArrayRecord} or {@link org.apache.poi.hssf.record.TableRecord}
+	 * Gets the locator for the corresponding {@link com.moparisthebest.poi.hssf.record.SharedFormulaRecord},
+     * {@link com.moparisthebest.poi.hssf.record.ArrayRecord} or {@link com.moparisthebest.poi.hssf.record.TableRecord}
      * if this formula belongs to such a grouping.  The {@link CellReference}
 	 * returned by this method will  match the top left corner of the range of that grouping.
 	 * The return value is usually not the same as the location of the cell containing this formula.

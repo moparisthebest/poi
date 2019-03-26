@@ -14,9 +14,9 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 ==================================================================== */
-package org.apache.poi.poifs.crypt.standard;
+package com.moparisthebest.poi.poifs.crypt.standard;
 
-import org.apache.poi.util.LittleEndianByteArrayOutputStream;
+import com.moparisthebest.poi.util.LittleEndianByteArrayOutputStream;
 
 public interface EncryptionRecord {
     void write(LittleEndianByteArrayOutputStream os);

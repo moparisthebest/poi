@@ -14,15 +14,15 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 ==================================================================== */
-package org.apache.poi.poifs.crypt.cryptoapi;
+package com.moparisthebest.poi.poifs.crypt.cryptoapi;
 
 import java.io.ByteArrayOutputStream;
 import java.security.GeneralSecurityException;
 
 import javax.crypto.Cipher;
 
-import org.apache.poi.EncryptedDocumentException;
-import org.apache.poi.util.Internal;
+import com.moparisthebest.poi.EncryptedDocumentException;
+import com.moparisthebest.poi.util.Internal;
 
 /**
  * An OutputStream for the document entries within the encrypted stream

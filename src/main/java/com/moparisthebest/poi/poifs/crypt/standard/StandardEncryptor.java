@@ -15,10 +15,10 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.poifs.crypt.standard;
+package com.moparisthebest.poi.poifs.crypt.standard;
 
-import static org.apache.poi.poifs.crypt.DataSpaceMapUtils.createEncryptionEntry;
-import static org.apache.poi.poifs.crypt.standard.StandardDecryptor.generateSecretKey;
+import static com.moparisthebest.poi.poifs.crypt.DataSpaceMapUtils.createEncryptionEntry;
+import static com.moparisthebest.poi.poifs.crypt.standard.StandardDecryptor.generateSecretKey;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -36,22 +36,22 @@ import javax.crypto.Cipher;
 import javax.crypto.CipherOutputStream;
 import javax.crypto.SecretKey;
 
-import org.apache.poi.EncryptedDocumentException;
-import org.apache.poi.poifs.crypt.CryptoFunctions;
-import org.apache.poi.poifs.crypt.DataSpaceMapUtils;
-import org.apache.poi.poifs.crypt.EncryptionInfo;
-import org.apache.poi.poifs.crypt.EncryptionVerifier;
-import org.apache.poi.poifs.crypt.Encryptor;
-import org.apache.poi.poifs.filesystem.DirectoryNode;
-import org.apache.poi.poifs.filesystem.POIFSWriterEvent;
-import org.apache.poi.poifs.filesystem.POIFSWriterListener;
-import org.apache.poi.util.IOUtils;
-import org.apache.poi.util.LittleEndianByteArrayOutputStream;
-import org.apache.poi.util.LittleEndianConsts;
-import org.apache.poi.util.LittleEndianOutputStream;
-import org.apache.poi.util.POILogFactory;
-import org.apache.poi.util.POILogger;
-import org.apache.poi.util.TempFile;
+import com.moparisthebest.poi.EncryptedDocumentException;
+import com.moparisthebest.poi.poifs.crypt.CryptoFunctions;
+import com.moparisthebest.poi.poifs.crypt.DataSpaceMapUtils;
+import com.moparisthebest.poi.poifs.crypt.EncryptionInfo;
+import com.moparisthebest.poi.poifs.crypt.EncryptionVerifier;
+import com.moparisthebest.poi.poifs.crypt.Encryptor;
+import com.moparisthebest.poi.poifs.filesystem.DirectoryNode;
+import com.moparisthebest.poi.poifs.filesystem.POIFSWriterEvent;
+import com.moparisthebest.poi.poifs.filesystem.POIFSWriterListener;
+import com.moparisthebest.poi.util.IOUtils;
+import com.moparisthebest.poi.util.LittleEndianByteArrayOutputStream;
+import com.moparisthebest.poi.util.LittleEndianConsts;
+import com.moparisthebest.poi.util.LittleEndianOutputStream;
+import com.moparisthebest.poi.util.POILogFactory;
+import com.moparisthebest.poi.util.POILogger;
+import com.moparisthebest.poi.util.TempFile;
 
 public class StandardEncryptor extends Encryptor implements Cloneable {
     private static final POILogger logger = POILogFactory.getLogger(StandardEncryptor.class);

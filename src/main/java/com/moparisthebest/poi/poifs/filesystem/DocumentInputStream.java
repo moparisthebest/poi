@@ -15,13 +15,13 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.poifs.filesystem;
+package com.moparisthebest.poi.poifs.filesystem;
 
 import java.io.IOException;
 import java.io.InputStream;
 
-import org.apache.poi.util.LittleEndianInput;
-import org.apache.poi.util.SuppressForbidden;
+import com.moparisthebest.poi.util.LittleEndianInput;
+import com.moparisthebest.poi.util.SuppressForbidden;
 
 /**
  * This class provides methods to read a DocumentEntry managed by a

@@ -17,12 +17,12 @@
 ==================================================================== */
         
 
-package org.apache.poi.hssf.record;
+package com.moparisthebest.poi.hssf.record;
 
-import org.apache.poi.hssf.record.common.UnicodeString;
-import org.apache.poi.util.IntMapper;
-import org.apache.poi.util.POILogFactory;
-import org.apache.poi.util.POILogger;
+import com.moparisthebest.poi.hssf.record.common.UnicodeString;
+import com.moparisthebest.poi.util.IntMapper;
+import com.moparisthebest.poi.util.POILogFactory;
+import com.moparisthebest.poi.util.POILogger;
 
 /**
  * Handles the task of deserializing a SST string.  The two main entry points are

@@ -15,16 +15,16 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.usermodel;
+package com.moparisthebest.poi.ss.usermodel;
 
 import java.util.List;
 
-import org.apache.poi.ss.usermodel.charts.ChartData;
-import org.apache.poi.ss.usermodel.charts.ChartAxis;
-import org.apache.poi.ss.usermodel.charts.ChartLegend;
-import org.apache.poi.ss.usermodel.charts.ManuallyPositionable;
-import org.apache.poi.ss.usermodel.charts.ChartDataFactory;
-import org.apache.poi.ss.usermodel.charts.ChartAxisFactory;
+import com.moparisthebest.poi.ss.usermodel.charts.ChartData;
+import com.moparisthebest.poi.ss.usermodel.charts.ChartAxis;
+import com.moparisthebest.poi.ss.usermodel.charts.ChartLegend;
+import com.moparisthebest.poi.ss.usermodel.charts.ManuallyPositionable;
+import com.moparisthebest.poi.ss.usermodel.charts.ChartDataFactory;
+import com.moparisthebest.poi.ss.usermodel.charts.ChartAxisFactory;
 
 /**
  * High level representation of a chart.

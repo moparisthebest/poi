@@ -17,9 +17,9 @@
 ==================================================================== */
         
 
-package org.apache.poi.hssf.record;
+package com.moparisthebest.poi.hssf.record;
 
-import org.apache.poi.util.LittleEndianOutput;
+import com.moparisthebest.poi.util.LittleEndianOutput;
 
 /**
  * Title:        Calc Mode Record<P>
@@ -30,7 +30,7 @@ import org.apache.poi.util.LittleEndianOutput;
  * @author Andrew C. Oliver (acoliver at apache dot org)
  * @author Jason Height (jheight at chariot dot net dot au)
  * @version 2.0-pre
- * @see org.apache.poi.hssf.record.CalcCountRecord
+ * @see com.moparisthebest.poi.hssf.record.CalcCountRecord
  */
 
 public final class CalcModeRecord extends StandardRecord implements Cloneable {

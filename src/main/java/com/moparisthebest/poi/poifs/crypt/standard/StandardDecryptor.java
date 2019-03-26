@@ -14,9 +14,9 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 ==================================================================== */
-package org.apache.poi.poifs.crypt.standard;
+package com.moparisthebest.poi.poifs.crypt.standard;
 
-import static org.apache.poi.poifs.crypt.CryptoFunctions.hashPassword;
+import static com.moparisthebest.poi.poifs.crypt.CryptoFunctions.hashPassword;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -29,17 +29,17 @@ import javax.crypto.CipherInputStream;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
 
-import org.apache.poi.EncryptedDocumentException;
-import org.apache.poi.poifs.crypt.ChainingMode;
-import org.apache.poi.poifs.crypt.CryptoFunctions;
-import org.apache.poi.poifs.crypt.Decryptor;
-import org.apache.poi.poifs.crypt.EncryptionHeader;
-import org.apache.poi.poifs.crypt.EncryptionVerifier;
-import org.apache.poi.poifs.crypt.HashAlgorithm;
-import org.apache.poi.poifs.filesystem.DirectoryNode;
-import org.apache.poi.poifs.filesystem.DocumentInputStream;
-import org.apache.poi.util.BoundedInputStream;
-import org.apache.poi.util.LittleEndian;
+import com.moparisthebest.poi.EncryptedDocumentException;
+import com.moparisthebest.poi.poifs.crypt.ChainingMode;
+import com.moparisthebest.poi.poifs.crypt.CryptoFunctions;
+import com.moparisthebest.poi.poifs.crypt.Decryptor;
+import com.moparisthebest.poi.poifs.crypt.EncryptionHeader;
+import com.moparisthebest.poi.poifs.crypt.EncryptionVerifier;
+import com.moparisthebest.poi.poifs.crypt.HashAlgorithm;
+import com.moparisthebest.poi.poifs.filesystem.DirectoryNode;
+import com.moparisthebest.poi.poifs.filesystem.DocumentInputStream;
+import com.moparisthebest.poi.util.BoundedInputStream;
+import com.moparisthebest.poi.util.LittleEndian;
 
 /**
  */

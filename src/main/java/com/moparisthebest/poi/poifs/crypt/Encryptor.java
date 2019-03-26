@@ -14,7 +14,7 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 ==================================================================== */
-package org.apache.poi.poifs.crypt;
+package com.moparisthebest.poi.poifs.crypt;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -23,11 +23,11 @@ import java.security.GeneralSecurityException;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
 
-import org.apache.poi.EncryptedDocumentException;
-import org.apache.poi.poifs.filesystem.DirectoryNode;
-import org.apache.poi.poifs.filesystem.NPOIFSFileSystem;
-import org.apache.poi.poifs.filesystem.OPOIFSFileSystem;
-import org.apache.poi.poifs.filesystem.POIFSFileSystem;
+import com.moparisthebest.poi.EncryptedDocumentException;
+import com.moparisthebest.poi.poifs.filesystem.DirectoryNode;
+import com.moparisthebest.poi.poifs.filesystem.NPOIFSFileSystem;
+import com.moparisthebest.poi.poifs.filesystem.OPOIFSFileSystem;
+import com.moparisthebest.poi.poifs.filesystem.POIFSFileSystem;
 
 public abstract class Encryptor implements Cloneable {
     protected static final String DEFAULT_POIFS_ENTRY = Decryptor.DEFAULT_POIFS_ENTRY;

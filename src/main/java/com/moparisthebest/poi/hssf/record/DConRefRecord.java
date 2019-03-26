@@ -16,13 +16,13 @@
  *    limitations under the License.
  * ====================================================================
  */
-package org.apache.poi.hssf.record;
+package com.moparisthebest.poi.hssf.record;
 
 import java.util.Arrays;
 
-import org.apache.poi.util.LittleEndian;
-import org.apache.poi.util.LittleEndianOutput;
-import org.apache.poi.util.StringUtil;
+import com.moparisthebest.poi.util.LittleEndian;
+import com.moparisthebest.poi.util.LittleEndianOutput;
+import com.moparisthebest.poi.util.StringUtil;
 
 /**
  * DConRef records specify a range in a workbook (internal or external) that serves as a data source
@@ -129,7 +129,7 @@ public class DConRefRecord extends StandardRecord
         charCount = LittleEndian.getUShort(data, offset);
         offset += LittleEndian.SHORT_SIZE;
         if (charCount < 2)
-            throw new org.apache.poi.hssf.record.RecordFormatException(
+            throw new com.moparisthebest.poi.hssf.record.RecordFormatException(
                     "Character count must be >= 2");
 
         charType = LittleEndian.getUByte(data, offset);

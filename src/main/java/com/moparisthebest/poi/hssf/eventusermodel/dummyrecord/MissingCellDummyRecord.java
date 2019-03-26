@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.eventusermodel.dummyrecord;
+package com.moparisthebest.poi.hssf.eventusermodel.dummyrecord;
 
 
 /**

@@ -15,15 +15,15 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hpsf;
+package com.moparisthebest.poi.hpsf;
 
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.poi.hpsf.wellknown.PropertyIDMap;
-import org.apache.poi.hpsf.wellknown.SectionIDMap;
-import org.apache.poi.util.CodePageUtil;
+import com.moparisthebest.poi.hpsf.wellknown.PropertyIDMap;
+import com.moparisthebest.poi.hpsf.wellknown.SectionIDMap;
+import com.moparisthebest.poi.util.CodePageUtil;
 
 /**
  * Convenience class representing a DocumentSummary Information stream in a

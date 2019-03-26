@@ -14,17 +14,17 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 ==================================================================== */
-package org.apache.poi.poifs.crypt.standard;
+package com.moparisthebest.poi.poifs.crypt.standard;
 
 import java.io.IOException;
 
-import org.apache.poi.EncryptedDocumentException;
-import org.apache.poi.poifs.crypt.ChainingMode;
-import org.apache.poi.poifs.crypt.CipherAlgorithm;
-import org.apache.poi.poifs.crypt.EncryptionInfo;
-import org.apache.poi.poifs.crypt.EncryptionInfoBuilder;
-import org.apache.poi.poifs.crypt.HashAlgorithm;
-import org.apache.poi.util.LittleEndianInput;
+import com.moparisthebest.poi.EncryptedDocumentException;
+import com.moparisthebest.poi.poifs.crypt.ChainingMode;
+import com.moparisthebest.poi.poifs.crypt.CipherAlgorithm;
+import com.moparisthebest.poi.poifs.crypt.EncryptionInfo;
+import com.moparisthebest.poi.poifs.crypt.EncryptionInfoBuilder;
+import com.moparisthebest.poi.poifs.crypt.HashAlgorithm;
+import com.moparisthebest.poi.util.LittleEndianInput;
 
 public class StandardEncryptionInfoBuilder implements EncryptionInfoBuilder {
 

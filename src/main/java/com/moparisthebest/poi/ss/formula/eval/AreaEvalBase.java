@@ -15,10 +15,10 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula.eval;
+package com.moparisthebest.poi.ss.formula.eval;
 
-import org.apache.poi.ss.formula.SheetRange;
-import org.apache.poi.ss.formula.ptg.AreaI;
+import com.moparisthebest.poi.ss.formula.SheetRange;
+import com.moparisthebest.poi.ss.formula.ptg.AreaI;
 
 /**
  * @author Josh Micich

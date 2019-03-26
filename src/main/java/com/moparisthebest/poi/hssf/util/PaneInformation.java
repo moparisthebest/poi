@@ -15,13 +15,13 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.util;
+package com.moparisthebest.poi.hssf.util;
 
 /**
  * Holds information regarding a split plane or freeze plane for a sheet.
- * @deprecated POI 3.15 beta 3. Use {@link org.apache.poi.ss.util.PaneInformation} instead.
+ * @deprecated POI 3.15 beta 3. Use {@link com.moparisthebest.poi.ss.util.PaneInformation} instead.
  */
-public class PaneInformation extends org.apache.poi.ss.util.PaneInformation
+public class PaneInformation extends com.moparisthebest.poi.ss.util.PaneInformation
 {
         public PaneInformation(short x, short y, short top, short left, byte active, boolean frozen) {
                 super(x, y, top, left, active, frozen);

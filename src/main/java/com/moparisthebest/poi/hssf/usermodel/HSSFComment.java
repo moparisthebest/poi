@@ -14,23 +14,23 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 ==================================================================== */
-package org.apache.poi.hssf.usermodel;
+package com.moparisthebest.poi.hssf.usermodel;
 
-import org.apache.poi.ddf.DefaultEscherRecordFactory;
-import org.apache.poi.ddf.EscherBSERecord;
-import org.apache.poi.ddf.EscherContainerRecord;
-import org.apache.poi.ddf.EscherOptRecord;
-import org.apache.poi.ddf.EscherProperties;
-import org.apache.poi.ddf.EscherSimpleProperty;
-import org.apache.poi.hssf.record.CommonObjectDataSubRecord;
-import org.apache.poi.hssf.record.EndSubRecord;
-import org.apache.poi.hssf.record.NoteRecord;
-import org.apache.poi.hssf.record.NoteStructureSubRecord;
-import org.apache.poi.hssf.record.ObjRecord;
-import org.apache.poi.hssf.record.TextObjectRecord;
-import org.apache.poi.ss.usermodel.ClientAnchor;
-import org.apache.poi.ss.usermodel.Comment;
-import org.apache.poi.ss.util.CellAddress;
+import com.moparisthebest.poi.ddf.DefaultEscherRecordFactory;
+import com.moparisthebest.poi.ddf.EscherBSERecord;
+import com.moparisthebest.poi.ddf.EscherContainerRecord;
+import com.moparisthebest.poi.ddf.EscherOptRecord;
+import com.moparisthebest.poi.ddf.EscherProperties;
+import com.moparisthebest.poi.ddf.EscherSimpleProperty;
+import com.moparisthebest.poi.hssf.record.CommonObjectDataSubRecord;
+import com.moparisthebest.poi.hssf.record.EndSubRecord;
+import com.moparisthebest.poi.hssf.record.NoteRecord;
+import com.moparisthebest.poi.hssf.record.NoteStructureSubRecord;
+import com.moparisthebest.poi.hssf.record.ObjRecord;
+import com.moparisthebest.poi.hssf.record.TextObjectRecord;
+import com.moparisthebest.poi.ss.usermodel.ClientAnchor;
+import com.moparisthebest.poi.ss.usermodel.Comment;
+import com.moparisthebest.poi.ss.util.CellAddress;
 
 /**
  * Represents a cell comment - a sticky note associated with a cell.

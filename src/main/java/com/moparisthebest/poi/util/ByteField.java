@@ -17,9 +17,9 @@
 ==================================================================== */
         
 
-package org.apache.poi.util;
+package com.moparisthebest.poi.util;
 
-import org.apache.poi.util.LittleEndian.BufferUnderrunException;
+import com.moparisthebest.poi.util.LittleEndian.BufferUnderrunException;
 
 import java.io.*;
 import java.nio.BufferUnderflowException;

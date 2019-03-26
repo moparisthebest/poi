@@ -15,11 +15,11 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.usermodel;
+package com.moparisthebest.poi.ss.usermodel;
 
 import java.io.IOException;
 
-import org.apache.poi.poifs.filesystem.DirectoryEntry;
+import com.moparisthebest.poi.poifs.filesystem.DirectoryEntry;
 
 /**
  * Common interface for OLE shapes, i.e. shapes linked to embedded documents

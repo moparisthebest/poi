@@ -15,15 +15,15 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula.ptg;
+package com.moparisthebest.poi.ss.formula.ptg;
 
-import org.apache.poi.ss.SpreadsheetVersion;
-import org.apache.poi.ss.util.AreaReference;
-import org.apache.poi.ss.util.CellReference;
-import org.apache.poi.util.BitField;
-import org.apache.poi.util.BitFieldFactory;
-import org.apache.poi.util.LittleEndianInput;
-import org.apache.poi.util.LittleEndianOutput;
+import com.moparisthebest.poi.ss.SpreadsheetVersion;
+import com.moparisthebest.poi.ss.util.AreaReference;
+import com.moparisthebest.poi.ss.util.CellReference;
+import com.moparisthebest.poi.util.BitField;
+import com.moparisthebest.poi.util.BitFieldFactory;
+import com.moparisthebest.poi.util.LittleEndianInput;
+import com.moparisthebest.poi.util.LittleEndianOutput;
 
 /**
  * Specifies a rectangular area of cells A1:A4 for instance.

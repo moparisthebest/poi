@@ -15,19 +15,19 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.usermodel;
+package com.moparisthebest.poi.hssf.usermodel;
 
-import org.apache.poi.hssf.record.CFRuleBase;
-import org.apache.poi.hssf.record.cf.BorderFormatting;
-import org.apache.poi.hssf.util.HSSFColor;
-import org.apache.poi.ss.usermodel.BorderStyle;
-import org.apache.poi.ss.usermodel.Color;
+import com.moparisthebest.poi.hssf.record.CFRuleBase;
+import com.moparisthebest.poi.hssf.record.cf.BorderFormatting;
+import com.moparisthebest.poi.hssf.util.HSSFColor;
+import com.moparisthebest.poi.ss.usermodel.BorderStyle;
+import com.moparisthebest.poi.ss.usermodel.Color;
 
 /**
  * High level representation for Border Formatting component
  * of Conditional Formatting settings
  */
-public final class HSSFBorderFormatting implements org.apache.poi.ss.usermodel.BorderFormatting {
+public final class HSSFBorderFormatting implements com.moparisthebest.poi.ss.usermodel.BorderFormatting {
     private final HSSFWorkbook workbook;
     private final CFRuleBase cfRuleRecord;
     private final BorderFormatting borderFormatting;

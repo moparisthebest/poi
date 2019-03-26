@@ -15,13 +15,13 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.util;
+package com.moparisthebest.poi.hssf.util;
 
 /**
  * Utility class for helping convert RK numbers.
  *
- * @see org.apache.poi.hssf.record.MulRKRecord
- * @see org.apache.poi.hssf.record.RKRecord
+ * @see com.moparisthebest.poi.hssf.record.MulRKRecord
+ * @see com.moparisthebest.poi.hssf.record.RKRecord
  */
 public final class RKUtil {
     private RKUtil() {

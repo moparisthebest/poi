@@ -14,7 +14,7 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 ==================================================================== */
-package org.apache.poi.poifs.crypt;
+package com.moparisthebest.poi.poifs.crypt;
 
 import java.nio.charset.Charset;
 import java.security.DigestException;
@@ -33,11 +33,11 @@ import javax.crypto.SecretKey;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.RC2ParameterSpec;
 
-import org.apache.poi.EncryptedDocumentException;
-import org.apache.poi.util.Internal;
-import org.apache.poi.util.LittleEndian;
-import org.apache.poi.util.LittleEndianConsts;
-import org.apache.poi.util.StringUtil;
+import com.moparisthebest.poi.EncryptedDocumentException;
+import com.moparisthebest.poi.util.Internal;
+import com.moparisthebest.poi.util.LittleEndian;
+import com.moparisthebest.poi.util.LittleEndianConsts;
+import com.moparisthebest.poi.util.StringUtil;
 
 /**
  * Helper functions used for standard and agile encryption

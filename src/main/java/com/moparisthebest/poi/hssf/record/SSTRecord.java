@@ -15,15 +15,15 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.record;
+package com.moparisthebest.poi.hssf.record;
 
 import java.util.Iterator;
 
-import org.apache.poi.hssf.record.common.UnicodeString;
-import org.apache.poi.hssf.record.cont.ContinuableRecord;
-import org.apache.poi.hssf.record.cont.ContinuableRecordOutput;
-import org.apache.poi.util.IntMapper;
-import org.apache.poi.util.LittleEndianConsts;
+import com.moparisthebest.poi.hssf.record.common.UnicodeString;
+import com.moparisthebest.poi.hssf.record.cont.ContinuableRecord;
+import com.moparisthebest.poi.hssf.record.cont.ContinuableRecordOutput;
+import com.moparisthebest.poi.util.IntMapper;
+import com.moparisthebest.poi.util.LittleEndianConsts;
 
 /**
  * Title:        Static String Table Record (0x00FC)<p>
@@ -32,8 +32,8 @@ import org.apache.poi.util.LittleEndianConsts;
  * 
  * REFERENCE:    PG 389 Microsoft Excel 97 Developer's Kit (ISBN: 1-57231-498-2)
  *
- * @see org.apache.poi.hssf.record.LabelSSTRecord
- * @see org.apache.poi.hssf.record.ContinueRecord
+ * @see com.moparisthebest.poi.hssf.record.LabelSSTRecord
+ * @see com.moparisthebest.poi.hssf.record.ContinueRecord
  */
 public final class SSTRecord extends ContinuableRecord {
     public static final short sid = 0x00FC;

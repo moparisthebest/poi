@@ -18,7 +18,7 @@
    Alfresco Software has modified source of this file
    The details of changes as svn diff can be found in svn at location root/projects/3rd-party/src 
 ==================================================================== */
-package org.apache.poi.ss.usermodel;
+package com.moparisthebest.poi.ss.usermodel;
 
 import java.math.BigDecimal;
 import java.math.MathContext;

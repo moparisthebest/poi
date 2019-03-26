@@ -15,10 +15,10 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula.functions;
+package com.moparisthebest.poi.ss.formula.functions;
 
-import org.apache.poi.ss.formula.eval.NotImplementedFunctionException;
-import org.apache.poi.ss.formula.eval.ValueEval;
+import com.moparisthebest.poi.ss.formula.eval.NotImplementedFunctionException;
+import com.moparisthebest.poi.ss.formula.eval.ValueEval;
 
 /**
  * This is the default implementation of a Function class.

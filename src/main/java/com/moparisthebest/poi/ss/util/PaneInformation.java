@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.util;
+package com.moparisthebest.poi.ss.util;
 
 /**
  * Holds information regarding a split plane or freeze plane for a sheet.

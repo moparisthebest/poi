@@ -15,17 +15,17 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.record;
+package com.moparisthebest.poi.hssf.record;
 
-import org.apache.poi.hssf.record.common.FeatFormulaErr2;
-import org.apache.poi.hssf.record.common.FeatProtection;
-import org.apache.poi.hssf.record.common.FeatSmartTag;
-import org.apache.poi.hssf.record.common.FtrHeader;
-import org.apache.poi.hssf.record.common.SharedFeature;
-import org.apache.poi.ss.util.CellRangeAddress;
-import org.apache.poi.util.LittleEndianOutput;
-import org.apache.poi.util.POILogFactory;
-import org.apache.poi.util.POILogger;
+import com.moparisthebest.poi.hssf.record.common.FeatFormulaErr2;
+import com.moparisthebest.poi.hssf.record.common.FeatProtection;
+import com.moparisthebest.poi.hssf.record.common.FeatSmartTag;
+import com.moparisthebest.poi.hssf.record.common.FtrHeader;
+import com.moparisthebest.poi.hssf.record.common.SharedFeature;
+import com.moparisthebest.poi.ss.util.CellRangeAddress;
+import com.moparisthebest.poi.util.LittleEndianOutput;
+import com.moparisthebest.poi.util.POILogFactory;
+import com.moparisthebest.poi.util.POILogger;
 
 /**
  * Title: Feat (Feature) Record

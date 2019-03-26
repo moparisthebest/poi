@@ -17,7 +17,7 @@
  * ====================================================================
  */
 
-package org.apache.poi.ss.usermodel;
+package com.moparisthebest.poi.ss.usermodel;
 
 /**
  * Represents a description of a conditional formatting rule

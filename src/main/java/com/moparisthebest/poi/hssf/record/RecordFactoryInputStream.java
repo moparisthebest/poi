@@ -14,19 +14,19 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 ==================================================================== */
-package org.apache.poi.hssf.record;
+package com.moparisthebest.poi.hssf.record;
 
 import java.io.InputStream;
 import java.security.GeneralSecurityException;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.poi.EncryptedDocumentException;
-import org.apache.poi.hssf.eventusermodel.HSSFEventFactory;
-import org.apache.poi.hssf.eventusermodel.HSSFListener;
-import org.apache.poi.hssf.record.crypto.Biff8EncryptionKey;
-import org.apache.poi.poifs.crypt.Decryptor;
-import org.apache.poi.poifs.crypt.EncryptionInfo;
+import com.moparisthebest.poi.EncryptedDocumentException;
+import com.moparisthebest.poi.hssf.eventusermodel.HSSFEventFactory;
+import com.moparisthebest.poi.hssf.eventusermodel.HSSFListener;
+import com.moparisthebest.poi.hssf.record.crypto.Biff8EncryptionKey;
+import com.moparisthebest.poi.poifs.crypt.Decryptor;
+import com.moparisthebest.poi.poifs.crypt.EncryptionInfo;
 
 /**
  * A stream based way to get at complete records, with

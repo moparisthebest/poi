@@ -15,10 +15,10 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.usermodel;
+package com.moparisthebest.poi.hssf.usermodel;
 
-import org.apache.poi.ddf.*;
-import org.apache.poi.hssf.record.*;
+import com.moparisthebest.poi.ddf.*;
+import com.moparisthebest.poi.hssf.record.*;
 
 /**
  * A textbox is a shape that may hold a rich text string.

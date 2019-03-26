@@ -15,11 +15,11 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.poifs.storage;
+package com.moparisthebest.poi.poifs.storage;
 
 import java.io.IOException;
 
-import org.apache.poi.util.Internal;
+import com.moparisthebest.poi.util.Internal;
 
 /**
  * A simple implementation of BlockList

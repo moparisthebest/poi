@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hpsf;
+package com.moparisthebest.poi.hpsf;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -25,10 +25,10 @@ import java.util.Date;
 import java.util.Map;
 import java.util.TreeMap;
 
-import org.apache.poi.hpsf.wellknown.PropertyIDMap;
-import org.apache.poi.hpsf.wellknown.SectionIDMap;
-import org.apache.poi.util.CodePageUtil;
-import org.apache.poi.util.LittleEndian;
+import com.moparisthebest.poi.hpsf.wellknown.PropertyIDMap;
+import com.moparisthebest.poi.hpsf.wellknown.SectionIDMap;
+import com.moparisthebest.poi.util.CodePageUtil;
+import com.moparisthebest.poi.util.LittleEndian;
 
 /**
  * Represents a section in a {@link PropertySet}.
@@ -123,7 +123,7 @@ public class Section {
      * Returns the format ID. The format ID is the "type" of the
      * section. For example, if the format ID of the first {@link
      * Section} contains the bytes specified by
-     * {@code org.apache.poi.hpsf.wellknown.SectionIDMap.SUMMARY_INFORMATION_ID}
+     * {@code com.moparisthebest.poi.hpsf.wellknown.SectionIDMap.SUMMARY_INFORMATION_ID}
      * the section (and thus the property set) is a SummaryInformation.
      *
      * @return The format ID

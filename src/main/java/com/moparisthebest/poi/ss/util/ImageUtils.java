@@ -14,9 +14,9 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 ==================================================================== */
-package org.apache.poi.ss.util;
+package com.moparisthebest.poi.ss.util;
 
-import static org.apache.poi.util.Units.EMU_PER_PIXEL;
+import static com.moparisthebest.poi.util.Units.EMU_PER_PIXEL;
 
 import java.awt.Dimension;
 import java.awt.image.BufferedImage;
@@ -29,16 +29,16 @@ import javax.imageio.ImageIO;
 import javax.imageio.ImageReader;
 import javax.imageio.stream.ImageInputStream;
 
-import org.apache.poi.hssf.usermodel.HSSFClientAnchor;
-import org.apache.poi.ss.usermodel.ClientAnchor;
-import org.apache.poi.ss.usermodel.Picture;
-import org.apache.poi.ss.usermodel.PictureData;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.util.POILogFactory;
-import org.apache.poi.util.POILogger;
-import org.apache.poi.util.Units;
+import com.moparisthebest.poi.hssf.usermodel.HSSFClientAnchor;
+import com.moparisthebest.poi.ss.usermodel.ClientAnchor;
+import com.moparisthebest.poi.ss.usermodel.Picture;
+import com.moparisthebest.poi.ss.usermodel.PictureData;
+import com.moparisthebest.poi.ss.usermodel.Row;
+import com.moparisthebest.poi.ss.usermodel.Sheet;
+import com.moparisthebest.poi.ss.usermodel.Workbook;
+import com.moparisthebest.poi.util.POILogFactory;
+import com.moparisthebest.poi.util.POILogger;
+import com.moparisthebest.poi.util.Units;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
@@ -54,8 +54,8 @@ public class ImageUtils {
      * Return the dimension of this image
      *
      * @param is the stream containing the image data
-     * @param type type of the picture: {@link org.apache.poi.ss.usermodel.Workbook#PICTURE_TYPE_JPEG},
-     * {@link org.apache.poi.ss.usermodel.Workbook#PICTURE_TYPE_PNG} or {@link org.apache.poi.ss.usermodel.Workbook#PICTURE_TYPE_DIB}
+     * @param type type of the picture: {@link com.moparisthebest.poi.ss.usermodel.Workbook#PICTURE_TYPE_JPEG},
+     * {@link com.moparisthebest.poi.ss.usermodel.Workbook#PICTURE_TYPE_PNG} or {@link com.moparisthebest.poi.ss.usermodel.Workbook#PICTURE_TYPE_DIB}
      *
      * @return image dimension in pixels
      */

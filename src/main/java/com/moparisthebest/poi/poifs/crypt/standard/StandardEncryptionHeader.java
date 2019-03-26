@@ -14,25 +14,25 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 ==================================================================== */
-package org.apache.poi.poifs.crypt.standard;
+package com.moparisthebest.poi.poifs.crypt.standard;
 
-import static org.apache.poi.poifs.crypt.EncryptionInfo.flagAES;
-import static org.apache.poi.poifs.crypt.EncryptionInfo.flagCryptoAPI;
+import static com.moparisthebest.poi.poifs.crypt.EncryptionInfo.flagAES;
+import static com.moparisthebest.poi.poifs.crypt.EncryptionInfo.flagCryptoAPI;
 
 import java.io.IOException;
 import java.io.InputStream;
 
-import org.apache.poi.hssf.record.RecordInputStream;
-import org.apache.poi.poifs.crypt.ChainingMode;
-import org.apache.poi.poifs.crypt.CipherAlgorithm;
-import org.apache.poi.poifs.crypt.CipherProvider;
-import org.apache.poi.poifs.crypt.EncryptionHeader;
-import org.apache.poi.poifs.crypt.HashAlgorithm;
-import org.apache.poi.util.LittleEndianByteArrayOutputStream;
-import org.apache.poi.util.LittleEndianConsts;
-import org.apache.poi.util.LittleEndianInput;
-import org.apache.poi.util.LittleEndianOutput;
-import org.apache.poi.util.StringUtil;
+import com.moparisthebest.poi.hssf.record.RecordInputStream;
+import com.moparisthebest.poi.poifs.crypt.ChainingMode;
+import com.moparisthebest.poi.poifs.crypt.CipherAlgorithm;
+import com.moparisthebest.poi.poifs.crypt.CipherProvider;
+import com.moparisthebest.poi.poifs.crypt.EncryptionHeader;
+import com.moparisthebest.poi.poifs.crypt.HashAlgorithm;
+import com.moparisthebest.poi.util.LittleEndianByteArrayOutputStream;
+import com.moparisthebest.poi.util.LittleEndianConsts;
+import com.moparisthebest.poi.util.LittleEndianInput;
+import com.moparisthebest.poi.util.LittleEndianOutput;
+import com.moparisthebest.poi.util.StringUtil;
 
 public class StandardEncryptionHeader extends EncryptionHeader implements EncryptionRecord, Cloneable {
 

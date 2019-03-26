@@ -15,29 +15,29 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.usermodel;
+package com.moparisthebest.poi.hssf.usermodel;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
-import org.apache.poi.ddf.EscherBoolProperty;
-import org.apache.poi.ddf.EscherChildAnchorRecord;
-import org.apache.poi.ddf.EscherClientAnchorRecord;
-import org.apache.poi.ddf.EscherComplexProperty;
-import org.apache.poi.ddf.EscherContainerRecord;
-import org.apache.poi.ddf.EscherOptRecord;
-import org.apache.poi.ddf.EscherProperties;
-import org.apache.poi.ddf.EscherProperty;
-import org.apache.poi.ddf.EscherRGBProperty;
-import org.apache.poi.ddf.EscherSimpleProperty;
-import org.apache.poi.ddf.EscherSpRecord;
-import org.apache.poi.hssf.record.CommonObjectDataSubRecord;
-import org.apache.poi.hssf.record.ObjRecord;
-import org.apache.poi.ss.usermodel.Shape;
-import org.apache.poi.util.LittleEndian;
-import org.apache.poi.util.POILogFactory;
-import org.apache.poi.util.POILogger;
-import org.apache.poi.util.StringUtil;
+import com.moparisthebest.poi.ddf.EscherBoolProperty;
+import com.moparisthebest.poi.ddf.EscherChildAnchorRecord;
+import com.moparisthebest.poi.ddf.EscherClientAnchorRecord;
+import com.moparisthebest.poi.ddf.EscherComplexProperty;
+import com.moparisthebest.poi.ddf.EscherContainerRecord;
+import com.moparisthebest.poi.ddf.EscherOptRecord;
+import com.moparisthebest.poi.ddf.EscherProperties;
+import com.moparisthebest.poi.ddf.EscherProperty;
+import com.moparisthebest.poi.ddf.EscherRGBProperty;
+import com.moparisthebest.poi.ddf.EscherSimpleProperty;
+import com.moparisthebest.poi.ddf.EscherSpRecord;
+import com.moparisthebest.poi.hssf.record.CommonObjectDataSubRecord;
+import com.moparisthebest.poi.hssf.record.ObjRecord;
+import com.moparisthebest.poi.ss.usermodel.Shape;
+import com.moparisthebest.poi.util.LittleEndian;
+import com.moparisthebest.poi.util.POILogFactory;
+import com.moparisthebest.poi.util.POILogger;
+import com.moparisthebest.poi.util.StringUtil;
 
 /**
  * An abstract shape.

@@ -15,13 +15,13 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula;
+package com.moparisthebest.poi.ss.formula;
 
-import org.apache.poi.ss.formula.eval.AreaEval;
-import org.apache.poi.ss.formula.eval.ValueEval;
+import com.moparisthebest.poi.ss.formula.eval.AreaEval;
+import com.moparisthebest.poi.ss.formula.eval.ValueEval;
 
 /**
- * Common interface of {@link AreaEval} and {@link org.apache.poi.ss.formula.eval.AreaEvalBase},
+ * Common interface of {@link AreaEval} and {@link com.moparisthebest.poi.ss.formula.eval.AreaEvalBase},
  * for 2D (row+column) evaluations
  */
 public interface TwoDEval extends ValueEval {

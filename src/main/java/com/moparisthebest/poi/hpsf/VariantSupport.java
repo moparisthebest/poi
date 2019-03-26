@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hpsf;
+package com.moparisthebest.poi.hpsf;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -24,10 +24,10 @@ import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 
-import org.apache.poi.util.CodePageUtil;
-import org.apache.poi.util.POILogFactory;
-import org.apache.poi.util.POILogger;
-import org.apache.poi.util.Removal;
+import com.moparisthebest.poi.util.CodePageUtil;
+import com.moparisthebest.poi.util.POILogFactory;
+import com.moparisthebest.poi.util.POILogger;
+import com.moparisthebest.poi.util.Removal;
 
 /**
  * Supports reading and writing of variant data.<p>

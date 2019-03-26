@@ -15,29 +15,29 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.record;
+package com.moparisthebest.poi.hssf.record;
 
 import java.util.Arrays;
 
-import org.apache.poi.hssf.record.cf.ColorGradientFormatting;
-import org.apache.poi.hssf.record.cf.ColorGradientThreshold;
-import org.apache.poi.hssf.record.cf.DataBarFormatting;
-import org.apache.poi.hssf.record.cf.DataBarThreshold;
-import org.apache.poi.hssf.record.cf.IconMultiStateFormatting;
-import org.apache.poi.hssf.record.cf.IconMultiStateThreshold;
-import org.apache.poi.hssf.record.cf.Threshold;
-import org.apache.poi.hssf.record.common.ExtendedColor;
-import org.apache.poi.hssf.record.common.FtrHeader;
-import org.apache.poi.hssf.record.common.FutureRecord;
-import org.apache.poi.hssf.usermodel.HSSFSheet;
-import org.apache.poi.ss.formula.Formula;
-import org.apache.poi.ss.formula.ptg.Ptg;
-import org.apache.poi.ss.usermodel.ConditionalFormattingThreshold.RangeType;
-import org.apache.poi.ss.usermodel.IconMultiStateFormatting.IconSet;
-import org.apache.poi.ss.util.CellRangeAddress;
-import org.apache.poi.util.HexDump;
-import org.apache.poi.util.LittleEndianOutput;
-import org.apache.poi.util.POILogger;
+import com.moparisthebest.poi.hssf.record.cf.ColorGradientFormatting;
+import com.moparisthebest.poi.hssf.record.cf.ColorGradientThreshold;
+import com.moparisthebest.poi.hssf.record.cf.DataBarFormatting;
+import com.moparisthebest.poi.hssf.record.cf.DataBarThreshold;
+import com.moparisthebest.poi.hssf.record.cf.IconMultiStateFormatting;
+import com.moparisthebest.poi.hssf.record.cf.IconMultiStateThreshold;
+import com.moparisthebest.poi.hssf.record.cf.Threshold;
+import com.moparisthebest.poi.hssf.record.common.ExtendedColor;
+import com.moparisthebest.poi.hssf.record.common.FtrHeader;
+import com.moparisthebest.poi.hssf.record.common.FutureRecord;
+import com.moparisthebest.poi.hssf.usermodel.HSSFSheet;
+import com.moparisthebest.poi.ss.formula.Formula;
+import com.moparisthebest.poi.ss.formula.ptg.Ptg;
+import com.moparisthebest.poi.ss.usermodel.ConditionalFormattingThreshold.RangeType;
+import com.moparisthebest.poi.ss.usermodel.IconMultiStateFormatting.IconSet;
+import com.moparisthebest.poi.ss.util.CellRangeAddress;
+import com.moparisthebest.poi.util.HexDump;
+import com.moparisthebest.poi.util.LittleEndianOutput;
+import com.moparisthebest.poi.util.POILogger;
 
 /**
  * Conditional Formatting v12 Rule Record (0x087A). 

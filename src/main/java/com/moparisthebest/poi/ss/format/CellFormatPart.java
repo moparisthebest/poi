@@ -14,9 +14,9 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 ==================================================================== */
-package org.apache.poi.ss.format;
+package com.moparisthebest.poi.ss.format;
 
-import org.apache.poi.hssf.util.HSSFColor;
+import com.moparisthebest.poi.hssf.util.HSSFColor;
 
 import javax.swing.*;
 
@@ -27,8 +27,8 @@ import java.util.TreeMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import static org.apache.poi.ss.format.CellFormatter.logger;
-import static org.apache.poi.ss.format.CellFormatter.quote;
+import static com.moparisthebest.poi.ss.format.CellFormatter.logger;
+import static com.moparisthebest.poi.ss.format.CellFormatter.quote;
 
 /**
  * Objects of this class represent a single part of a cell format expression.

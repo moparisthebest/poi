@@ -15,17 +15,17 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.usermodel;
+package com.moparisthebest.poi.hssf.usermodel;
 
-import org.apache.poi.hssf.model.HSSFFormulaParser;
-import org.apache.poi.hssf.model.InternalWorkbook;
-import org.apache.poi.hssf.record.NameCommentRecord;
-import org.apache.poi.hssf.record.NameRecord;
-import org.apache.poi.ss.SpreadsheetVersion;
-import org.apache.poi.ss.formula.FormulaType;
-import org.apache.poi.ss.formula.ptg.Ptg;
-import org.apache.poi.ss.usermodel.Name;
-import org.apache.poi.ss.util.CellReference;
+import com.moparisthebest.poi.hssf.model.HSSFFormulaParser;
+import com.moparisthebest.poi.hssf.model.InternalWorkbook;
+import com.moparisthebest.poi.hssf.record.NameCommentRecord;
+import com.moparisthebest.poi.hssf.record.NameRecord;
+import com.moparisthebest.poi.ss.SpreadsheetVersion;
+import com.moparisthebest.poi.ss.formula.FormulaType;
+import com.moparisthebest.poi.ss.formula.ptg.Ptg;
+import com.moparisthebest.poi.ss.usermodel.Name;
+import com.moparisthebest.poi.ss.util.CellReference;
 
 /**
  * High Level Representation of a 'defined name' which could be a 'built-in' name,
@@ -41,7 +41,7 @@ public final class HSSFName implements Name {
      * Creates new HSSFName   - called by HSSFWorkbook to create a name from
      * scratch.
      *
-     * @see org.apache.poi.hssf.usermodel.HSSFWorkbook#createName()
+     * @see com.moparisthebest.poi.hssf.usermodel.HSSFWorkbook#createName()
      * @param name the Name Record
      * @param book workbook object associated with the sheet.
      */
@@ -52,7 +52,7 @@ public final class HSSFName implements Name {
      * Creates new HSSFName   - called by HSSFWorkbook to create a name from
      * scratch.
      *
-     * @see org.apache.poi.hssf.usermodel.HSSFWorkbook#createName()
+     * @see com.moparisthebest.poi.hssf.usermodel.HSSFWorkbook#createName()
      * @param name the Name Record
      * @param comment the Name Comment Record, optional.
      * @param book workbook object associated with the sheet.

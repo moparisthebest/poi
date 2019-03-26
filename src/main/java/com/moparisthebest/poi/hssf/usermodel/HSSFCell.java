@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.usermodel;
+package com.moparisthebest.poi.hssf.usermodel;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -23,38 +23,38 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
-import org.apache.poi.hssf.model.HSSFFormulaParser;
-import org.apache.poi.hssf.model.InternalWorkbook;
-import org.apache.poi.hssf.record.BlankRecord;
-import org.apache.poi.hssf.record.BoolErrRecord;
-import org.apache.poi.hssf.record.CellValueRecordInterface;
-import org.apache.poi.hssf.record.ExtendedFormatRecord;
-import org.apache.poi.hssf.record.FormulaRecord;
-import org.apache.poi.hssf.record.HyperlinkRecord;
-import org.apache.poi.hssf.record.LabelSSTRecord;
-import org.apache.poi.hssf.record.NumberRecord;
-import org.apache.poi.hssf.record.Record;
-import org.apache.poi.hssf.record.RecordBase;
-import org.apache.poi.hssf.record.aggregates.FormulaRecordAggregate;
-import org.apache.poi.hssf.record.common.UnicodeString;
-import org.apache.poi.ss.SpreadsheetVersion;
-import org.apache.poi.ss.formula.FormulaType;
-import org.apache.poi.ss.formula.eval.ErrorEval;
-import org.apache.poi.ss.formula.ptg.ExpPtg;
-import org.apache.poi.ss.formula.ptg.Ptg;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.CellStyle;
-import org.apache.poi.ss.usermodel.CellType;
-import org.apache.poi.ss.usermodel.Comment;
-import org.apache.poi.ss.usermodel.FormulaError;
-import org.apache.poi.ss.usermodel.Hyperlink;
-import org.apache.poi.ss.usermodel.RichTextString;
-import org.apache.poi.ss.util.CellAddress;
-import org.apache.poi.ss.util.CellRangeAddress;
-import org.apache.poi.ss.util.CellReference;
-import org.apache.poi.ss.util.NumberToTextConverter;
-import org.apache.poi.util.Internal;
-import org.apache.poi.util.LocaleUtil;
+import com.moparisthebest.poi.hssf.model.HSSFFormulaParser;
+import com.moparisthebest.poi.hssf.model.InternalWorkbook;
+import com.moparisthebest.poi.hssf.record.BlankRecord;
+import com.moparisthebest.poi.hssf.record.BoolErrRecord;
+import com.moparisthebest.poi.hssf.record.CellValueRecordInterface;
+import com.moparisthebest.poi.hssf.record.ExtendedFormatRecord;
+import com.moparisthebest.poi.hssf.record.FormulaRecord;
+import com.moparisthebest.poi.hssf.record.HyperlinkRecord;
+import com.moparisthebest.poi.hssf.record.LabelSSTRecord;
+import com.moparisthebest.poi.hssf.record.NumberRecord;
+import com.moparisthebest.poi.hssf.record.Record;
+import com.moparisthebest.poi.hssf.record.RecordBase;
+import com.moparisthebest.poi.hssf.record.aggregates.FormulaRecordAggregate;
+import com.moparisthebest.poi.hssf.record.common.UnicodeString;
+import com.moparisthebest.poi.ss.SpreadsheetVersion;
+import com.moparisthebest.poi.ss.formula.FormulaType;
+import com.moparisthebest.poi.ss.formula.eval.ErrorEval;
+import com.moparisthebest.poi.ss.formula.ptg.ExpPtg;
+import com.moparisthebest.poi.ss.formula.ptg.Ptg;
+import com.moparisthebest.poi.ss.usermodel.Cell;
+import com.moparisthebest.poi.ss.usermodel.CellStyle;
+import com.moparisthebest.poi.ss.usermodel.CellType;
+import com.moparisthebest.poi.ss.usermodel.Comment;
+import com.moparisthebest.poi.ss.usermodel.FormulaError;
+import com.moparisthebest.poi.ss.usermodel.Hyperlink;
+import com.moparisthebest.poi.ss.usermodel.RichTextString;
+import com.moparisthebest.poi.ss.util.CellAddress;
+import com.moparisthebest.poi.ss.util.CellRangeAddress;
+import com.moparisthebest.poi.ss.util.CellReference;
+import com.moparisthebest.poi.ss.util.NumberToTextConverter;
+import com.moparisthebest.poi.util.Internal;
+import com.moparisthebest.poi.util.LocaleUtil;
 
 /**
  * High level representation of a cell in a row of a spreadsheet.
@@ -96,7 +96,7 @@ public class HSSFCell implements Cell {
      * @param row   - the row of this cell
      * @param col   - the column for this cell
      *
-     * @see org.apache.poi.hssf.usermodel.HSSFRow#createCell(int)
+     * @see com.moparisthebest.poi.hssf.usermodel.HSSFRow#createCell(int)
      */
     protected HSSFCell(HSSFWorkbook book, HSSFSheet sheet, int row, short col)
     {
@@ -140,7 +140,7 @@ public class HSSFCell implements Cell {
      * @param row   - the row of this cell
      * @param col   - the column for this cell
      * @param type  - Type of cell
-     * @see org.apache.poi.hssf.usermodel.HSSFRow#createCell(int,int)
+     * @see com.moparisthebest.poi.hssf.usermodel.HSSFRow#createCell(int,int)
      */
     protected HSSFCell(HSSFWorkbook book, HSSFSheet sheet, int row, short col,
                        CellType type)
@@ -916,11 +916,11 @@ public class HSSFCell implements Cell {
      * the HSSFWorkbook.</p>
      * 
      * <p>To change the style of a cell without affecting other cells that use the same style,
-     * use {@link org.apache.poi.ss.util.CellUtil#setCellStyleProperties(org.apache.poi.ss.usermodel.Cell, java.util.Map)}</p>
+     * use {@link com.moparisthebest.poi.ss.util.CellUtil#setCellStyleProperties(com.moparisthebest.poi.ss.usermodel.Cell, java.util.Map)}</p>
      *
      * @param style  reference contained in the workbook
-     * @see org.apache.poi.hssf.usermodel.HSSFWorkbook#createCellStyle()
-     * @see org.apache.poi.hssf.usermodel.HSSFWorkbook#getCellStyleAt(int)
+     * @see com.moparisthebest.poi.hssf.usermodel.HSSFWorkbook#createCellStyle()
+     * @see com.moparisthebest.poi.hssf.usermodel.HSSFWorkbook#getCellStyleAt(int)
      */
     public void setCellStyle(CellStyle style) {
         setCellStyle( (HSSFCellStyle)style );
@@ -949,7 +949,7 @@ public class HSSFCell implements Cell {
     /**
      * get the style for the cell.  This is a reference to a cell style contained in the workbook
      * object.
-     * @see org.apache.poi.hssf.usermodel.HSSFWorkbook#getCellStyleAt(int)
+     * @see com.moparisthebest.poi.hssf.usermodel.HSSFWorkbook#getCellStyleAt(int)
      */
     public HSSFCellStyle getCellStyle()
     {
@@ -1223,10 +1223,10 @@ public class HSSFCell implements Cell {
      *
      * @see #setCellType(int)
      * @see #setCellFormula(String)
-     * @see HSSFRow#removeCell(org.apache.poi.ss.usermodel.Cell)
-     * @see org.apache.poi.hssf.usermodel.HSSFSheet#removeRow(org.apache.poi.ss.usermodel.Row)
-     * @see org.apache.poi.hssf.usermodel.HSSFSheet#shiftRows(int, int, int)
-     * @see org.apache.poi.hssf.usermodel.HSSFSheet#addMergedRegion(org.apache.poi.ss.util.CellRangeAddress)
+     * @see HSSFRow#removeCell(com.moparisthebest.poi.ss.usermodel.Cell)
+     * @see com.moparisthebest.poi.hssf.usermodel.HSSFSheet#removeRow(com.moparisthebest.poi.ss.usermodel.Row)
+     * @see com.moparisthebest.poi.hssf.usermodel.HSSFSheet#shiftRows(int, int, int)
+     * @see com.moparisthebest.poi.hssf.usermodel.HSSFSheet#addMergedRegion(com.moparisthebest.poi.ss.util.CellRangeAddress)
      * @throws IllegalStateException if modification is not allowed
      */
     void notifyArrayFormulaChanging(){

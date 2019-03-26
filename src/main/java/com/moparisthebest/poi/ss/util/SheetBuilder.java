@@ -14,15 +14,15 @@
    See the License for the specific language governing permissions and
    limitations under the License.
    ==================================================================== */
-package org.apache.poi.ss.util;
+package com.moparisthebest.poi.ss.util;
 
 import java.util.Calendar;
 import java.util.Date;
 
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Cell;
+import com.moparisthebest.poi.ss.usermodel.Sheet;
+import com.moparisthebest.poi.ss.usermodel.Workbook;
+import com.moparisthebest.poi.ss.usermodel.Row;
+import com.moparisthebest.poi.ss.usermodel.Cell;
 
 /**
  * Class {@code SheetBuilder} provides an easy way of building workbook sheets

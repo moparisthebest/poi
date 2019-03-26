@@ -15,14 +15,14 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.record.chart;
+package com.moparisthebest.poi.hssf.record.chart;
 
-import org.apache.poi.hssf.record.RecordInputStream;
-import org.apache.poi.hssf.record.StandardRecord;
-import org.apache.poi.util.BitField;
-import org.apache.poi.util.BitFieldFactory;
-import org.apache.poi.util.HexDump;
-import org.apache.poi.util.LittleEndianOutput;
+import com.moparisthebest.poi.hssf.record.RecordInputStream;
+import com.moparisthebest.poi.hssf.record.StandardRecord;
+import com.moparisthebest.poi.util.BitField;
+import com.moparisthebest.poi.util.BitFieldFactory;
+import com.moparisthebest.poi.util.HexDump;
+import com.moparisthebest.poi.util.LittleEndianOutput;
 
 /**
  * Class ChartFormatRecord (0x1014)<p>

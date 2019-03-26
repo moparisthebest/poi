@@ -15,11 +15,11 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.util;
+package com.moparisthebest.poi.ss.util;
 
 import java.util.Locale;
 
-import static org.apache.poi.ss.util.IEEEDouble.*;
+import static com.moparisthebest.poi.ss.util.IEEEDouble.*;
 
 /**
  * Excel compares numbers using different rules to those of java, so

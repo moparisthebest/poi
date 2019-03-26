@@ -15,14 +15,14 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula;
+package com.moparisthebest.poi.ss.formula;
 
-import org.apache.poi.ss.formula.eval.AreaEval;
-import org.apache.poi.ss.formula.eval.RefEvalBase;
-import org.apache.poi.ss.formula.eval.ValueEval;
-import org.apache.poi.ss.formula.ptg.AreaI;
-import org.apache.poi.ss.formula.ptg.AreaI.OffsetArea;
-import org.apache.poi.ss.util.CellReference;
+import com.moparisthebest.poi.ss.formula.eval.AreaEval;
+import com.moparisthebest.poi.ss.formula.eval.RefEvalBase;
+import com.moparisthebest.poi.ss.formula.eval.ValueEval;
+import com.moparisthebest.poi.ss.formula.ptg.AreaI;
+import com.moparisthebest.poi.ss.formula.ptg.AreaI.OffsetArea;
+import com.moparisthebest.poi.ss.util.CellReference;
 
 /**
  * Provides Lazy Evaluation to a 3D Reference

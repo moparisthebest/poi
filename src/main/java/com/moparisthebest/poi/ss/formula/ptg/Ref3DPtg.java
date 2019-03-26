@@ -15,14 +15,14 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula.ptg;
+package com.moparisthebest.poi.ss.formula.ptg;
 
-import org.apache.poi.ss.formula.ExternSheetReferenceToken;
-import org.apache.poi.ss.formula.FormulaRenderingWorkbook;
-import org.apache.poi.ss.formula.WorkbookDependentFormula;
-import org.apache.poi.ss.util.CellReference;
-import org.apache.poi.util.LittleEndianInput;
-import org.apache.poi.util.LittleEndianOutput;
+import com.moparisthebest.poi.ss.formula.ExternSheetReferenceToken;
+import com.moparisthebest.poi.ss.formula.FormulaRenderingWorkbook;
+import com.moparisthebest.poi.ss.formula.WorkbookDependentFormula;
+import com.moparisthebest.poi.ss.util.CellReference;
+import com.moparisthebest.poi.util.LittleEndianInput;
+import com.moparisthebest.poi.util.LittleEndianOutput;
 
 /**
  * <p>Title:        Reference 3D Ptg</p>

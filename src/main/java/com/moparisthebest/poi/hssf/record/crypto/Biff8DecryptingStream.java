@@ -15,22 +15,22 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.record.crypto;
+package com.moparisthebest.poi.hssf.record.crypto;
 
 import java.io.InputStream;
 import java.io.PushbackInputStream;
 
-import org.apache.poi.hssf.record.BOFRecord;
-import org.apache.poi.hssf.record.BiffHeaderInput;
-import org.apache.poi.hssf.record.FilePassRecord;
-import org.apache.poi.hssf.record.InterfaceHdrRecord;
-import org.apache.poi.hssf.record.RecordFormatException;
-import org.apache.poi.poifs.crypt.ChunkedCipherInputStream;
-import org.apache.poi.poifs.crypt.Decryptor;
-import org.apache.poi.poifs.crypt.EncryptionInfo;
-import org.apache.poi.util.LittleEndian;
-import org.apache.poi.util.LittleEndianConsts;
-import org.apache.poi.util.LittleEndianInput;
+import com.moparisthebest.poi.hssf.record.BOFRecord;
+import com.moparisthebest.poi.hssf.record.BiffHeaderInput;
+import com.moparisthebest.poi.hssf.record.FilePassRecord;
+import com.moparisthebest.poi.hssf.record.InterfaceHdrRecord;
+import com.moparisthebest.poi.hssf.record.RecordFormatException;
+import com.moparisthebest.poi.poifs.crypt.ChunkedCipherInputStream;
+import com.moparisthebest.poi.poifs.crypt.Decryptor;
+import com.moparisthebest.poi.poifs.crypt.EncryptionInfo;
+import com.moparisthebest.poi.util.LittleEndian;
+import com.moparisthebest.poi.util.LittleEndianConsts;
+import com.moparisthebest.poi.util.LittleEndianInput;
 
 public final class Biff8DecryptingStream implements BiffHeaderInput, LittleEndianInput {
 

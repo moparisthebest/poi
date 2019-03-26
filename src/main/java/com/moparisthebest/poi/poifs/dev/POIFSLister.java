@@ -15,18 +15,18 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.poifs.dev;
+package com.moparisthebest.poi.poifs.dev;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Iterator;
 
-import org.apache.poi.poifs.filesystem.DirectoryNode;
-import org.apache.poi.poifs.filesystem.DocumentNode;
-import org.apache.poi.poifs.filesystem.Entry;
-import org.apache.poi.poifs.filesystem.NPOIFSFileSystem;
-import org.apache.poi.poifs.filesystem.POIFSFileSystem;
+import com.moparisthebest.poi.poifs.filesystem.DirectoryNode;
+import com.moparisthebest.poi.poifs.filesystem.DocumentNode;
+import com.moparisthebest.poi.poifs.filesystem.Entry;
+import com.moparisthebest.poi.poifs.filesystem.NPOIFSFileSystem;
+import com.moparisthebest.poi.poifs.filesystem.POIFSFileSystem;
 
 /**
  * A lister of the entries in POIFS files.

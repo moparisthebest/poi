@@ -15,10 +15,10 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula;
+package com.moparisthebest.poi.ss.formula;
 
-import org.apache.poi.ss.formula.ptg.NamePtg;
-import org.apache.poi.ss.formula.ptg.Ptg;
+import com.moparisthebest.poi.ss.formula.ptg.NamePtg;
+import com.moparisthebest.poi.ss.formula.ptg.Ptg;
 /**
  * Abstracts a name record for formula evaluation.<br/>
  *

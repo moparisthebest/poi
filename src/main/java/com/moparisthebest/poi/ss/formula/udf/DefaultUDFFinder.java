@@ -15,13 +15,13 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula.udf;
+package com.moparisthebest.poi.ss.formula.udf;
 
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 
-import org.apache.poi.ss.formula.functions.FreeRefFunction;
+import com.moparisthebest.poi.ss.formula.functions.FreeRefFunction;
 
 /**
  * Default UDF finder - for adding your own user defined functions.

@@ -15,11 +15,11 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula.ptg;
+package com.moparisthebest.poi.ss.formula.ptg;
 
-import org.apache.poi.ss.formula.SheetNameFormatter;
-import org.apache.poi.ss.usermodel.FormulaError;
-import org.apache.poi.util.LittleEndianOutput;
+import com.moparisthebest.poi.ss.formula.SheetNameFormatter;
+import com.moparisthebest.poi.ss.usermodel.FormulaError;
+import com.moparisthebest.poi.util.LittleEndianOutput;
 
 
 /**

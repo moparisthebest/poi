@@ -15,9 +15,9 @@
    limitations under the License.
 ==================================================================== */
         
-package org.apache.poi.poifs.filesystem;
+package com.moparisthebest.poi.poifs.filesystem;
 
-import org.apache.poi.UnsupportedFileFormatException;
+import com.moparisthebest.poi.UnsupportedFileFormatException;
 
 /**
  * This exception is thrown when we try to open a file that's actually

@@ -15,22 +15,22 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.util;
+package com.moparisthebest.poi.ss.util;
 
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import org.apache.poi.ss.SpreadsheetVersion;
-import org.apache.poi.ss.usermodel.BorderExtent;
-import org.apache.poi.ss.usermodel.BorderStyle;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.IndexedColors;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
+import com.moparisthebest.poi.hssf.usermodel.HSSFWorkbook;
+import com.moparisthebest.poi.ss.SpreadsheetVersion;
+import com.moparisthebest.poi.ss.usermodel.BorderExtent;
+import com.moparisthebest.poi.ss.usermodel.BorderStyle;
+import com.moparisthebest.poi.ss.usermodel.Cell;
+import com.moparisthebest.poi.ss.usermodel.IndexedColors;
+import com.moparisthebest.poi.ss.usermodel.Row;
+import com.moparisthebest.poi.ss.usermodel.Sheet;
+import com.moparisthebest.poi.ss.usermodel.Workbook;
 
 /**
  * <p>
@@ -40,9 +40,9 @@ import org.apache.poi.ss.usermodel.Workbook;
  * sheet in any workbook.
  * 
  * This class requires the full spreadsheet to be in memory, so 
- * {@link org.apache.poi.xssf.streaming.SXSSFWorkbook} Spreadsheets are not
+ * {@link com.moparisthebest.poi.xssf.streaming.SXSSFWorkbook} Spreadsheets are not
  * supported. The same {@link PropertyTemplate} can, however, be applied to both
- * {@link HSSFWorkbook} and {@link org.apache.poi.xssf.usermodel.XSSFWorkbook}
+ * {@link HSSFWorkbook} and {@link com.moparisthebest.poi.xssf.usermodel.XSSFWorkbook}
  * objects if necessary. Portions of the border that fall outside the max range
  * of the {@link Workbook} sheet are ignored.
  * </p>

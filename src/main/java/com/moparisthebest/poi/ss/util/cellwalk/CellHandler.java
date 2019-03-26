@@ -15,9 +15,9 @@
    limitations under the License.
    ==================================================================== */
 
-package org.apache.poi.ss.util.cellwalk;
+package com.moparisthebest.poi.ss.util.cellwalk;
 
-import org.apache.poi.ss.usermodel.Cell;
+import com.moparisthebest.poi.ss.usermodel.Cell;
 
 /**
  * Represents callback for CellWalk traverse method.  

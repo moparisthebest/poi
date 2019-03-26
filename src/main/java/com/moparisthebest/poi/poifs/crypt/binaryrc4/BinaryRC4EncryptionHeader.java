@@ -15,14 +15,14 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.poifs.crypt.binaryrc4;
+package com.moparisthebest.poi.poifs.crypt.binaryrc4;
 
-import org.apache.poi.poifs.crypt.CipherAlgorithm;
-import org.apache.poi.poifs.crypt.CipherProvider;
-import org.apache.poi.poifs.crypt.EncryptionHeader;
-import org.apache.poi.poifs.crypt.HashAlgorithm;
-import org.apache.poi.poifs.crypt.standard.EncryptionRecord;
-import org.apache.poi.util.LittleEndianByteArrayOutputStream;
+import com.moparisthebest.poi.poifs.crypt.CipherAlgorithm;
+import com.moparisthebest.poi.poifs.crypt.CipherProvider;
+import com.moparisthebest.poi.poifs.crypt.EncryptionHeader;
+import com.moparisthebest.poi.poifs.crypt.HashAlgorithm;
+import com.moparisthebest.poi.poifs.crypt.standard.EncryptionRecord;
+import com.moparisthebest.poi.util.LittleEndianByteArrayOutputStream;
 
 public class BinaryRC4EncryptionHeader extends EncryptionHeader implements EncryptionRecord, Cloneable {
 

@@ -15,15 +15,15 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.record.aggregates;
+package com.moparisthebest.poi.hssf.record.aggregates;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.poi.hssf.model.RecordStream;
-import org.apache.poi.hssf.record.CFHeader12Record;
-import org.apache.poi.hssf.record.CFHeaderRecord;
-import org.apache.poi.ss.formula.FormulaShifter;
+import com.moparisthebest.poi.hssf.model.RecordStream;
+import com.moparisthebest.poi.hssf.record.CFHeader12Record;
+import com.moparisthebest.poi.hssf.record.CFHeaderRecord;
+import com.moparisthebest.poi.ss.formula.FormulaShifter;
 
 /**
  * Holds all the conditional formatting for a workbook sheet.<p>

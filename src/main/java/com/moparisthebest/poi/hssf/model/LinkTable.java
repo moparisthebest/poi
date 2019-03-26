@@ -15,29 +15,29 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.model;
+package com.moparisthebest.poi.hssf.model;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.poi.hssf.record.CRNCountRecord;
-import org.apache.poi.hssf.record.CRNRecord;
-import org.apache.poi.hssf.record.CountryRecord;
-import org.apache.poi.hssf.record.ExternSheetRecord;
-import org.apache.poi.hssf.record.ExternalNameRecord;
-import org.apache.poi.hssf.record.NameCommentRecord;
-import org.apache.poi.hssf.record.NameRecord;
-import org.apache.poi.hssf.record.Record;
-import org.apache.poi.hssf.record.SupBookRecord;
-import org.apache.poi.ss.formula.SheetNameFormatter;
-import org.apache.poi.ss.formula.ptg.Area3DPtg;
-import org.apache.poi.ss.formula.ptg.ErrPtg;
-import org.apache.poi.ss.formula.ptg.NameXPtg;
-import org.apache.poi.ss.formula.ptg.Ptg;
-import org.apache.poi.ss.formula.ptg.Ref3DPtg;
-import org.apache.poi.ss.usermodel.Workbook;
+import com.moparisthebest.poi.hssf.record.CRNCountRecord;
+import com.moparisthebest.poi.hssf.record.CRNRecord;
+import com.moparisthebest.poi.hssf.record.CountryRecord;
+import com.moparisthebest.poi.hssf.record.ExternSheetRecord;
+import com.moparisthebest.poi.hssf.record.ExternalNameRecord;
+import com.moparisthebest.poi.hssf.record.NameCommentRecord;
+import com.moparisthebest.poi.hssf.record.NameRecord;
+import com.moparisthebest.poi.hssf.record.Record;
+import com.moparisthebest.poi.hssf.record.SupBookRecord;
+import com.moparisthebest.poi.ss.formula.SheetNameFormatter;
+import com.moparisthebest.poi.ss.formula.ptg.Area3DPtg;
+import com.moparisthebest.poi.ss.formula.ptg.ErrPtg;
+import com.moparisthebest.poi.ss.formula.ptg.NameXPtg;
+import com.moparisthebest.poi.ss.formula.ptg.Ptg;
+import com.moparisthebest.poi.ss.formula.ptg.Ref3DPtg;
+import com.moparisthebest.poi.ss.usermodel.Workbook;
 
 /**
  * Link Table (OOO pdf reference: 4.10.3 ) <p/>
@@ -123,7 +123,7 @@ final class LinkTable {
        /**
         * Create a new block for internal references. It is called when constructing a new LinkTable.
         *
-        * @see org.apache.poi.hssf.model.LinkTable#LinkTable(int, WorkbookRecordList)
+        * @see com.moparisthebest.poi.hssf.model.LinkTable#LinkTable(int, WorkbookRecordList)
         */
        public ExternalBookBlock(int numberOfSheets) {
            _externalBookRecord = SupBookRecord.createInternalReferences((short)numberOfSheets);
@@ -134,7 +134,7 @@ final class LinkTable {
        /**
         * Create a new block for registering add-in functions
         *
-        * @see org.apache.poi.hssf.model.LinkTable#addNameXPtg(String)
+        * @see com.moparisthebest.poi.hssf.model.LinkTable#addNameXPtg(String)
         */
        public ExternalBookBlock() {
            _externalBookRecord = SupBookRecord.createAddInFunctions();

@@ -15,14 +15,14 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.record;
+package com.moparisthebest.poi.hssf.record;
 
 import java.util.Arrays;
 
-import org.apache.poi.hssf.usermodel.HSSFSheet;
-import org.apache.poi.ss.formula.Formula;
-import org.apache.poi.ss.formula.ptg.Ptg;
-import org.apache.poi.util.LittleEndianOutput;
+import com.moparisthebest.poi.hssf.usermodel.HSSFSheet;
+import com.moparisthebest.poi.ss.formula.Formula;
+import com.moparisthebest.poi.ss.formula.ptg.Ptg;
+import com.moparisthebest.poi.util.LittleEndianOutput;
 
 /**
  * Conditional Formatting Rule Record (0x01B1). 

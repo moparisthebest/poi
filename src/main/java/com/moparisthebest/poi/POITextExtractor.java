@@ -14,7 +14,7 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 ==================================================================== */
-package org.apache.poi;
+package com.moparisthebest.poi;
 
 import java.io.Closeable;
 import java.io.IOException;
@@ -24,12 +24,12 @@ import java.io.IOException;
  *  of POI Documents. 
  * You will typically find the implementation of
  *  a given format's text extractor under
- *  org.apache.poi.[format].extractor .
+ *  com.moparisthebest.poi.[format].extractor .
  *  
- * @see org.apache.poi.hssf.extractor.ExcelExtractor
- * @see org.apache.poi.hslf.extractor.PowerPointExtractor
- * @see org.apache.poi.hdgf.extractor.VisioTextExtractor
- * @see org.apache.poi.hwpf.extractor.WordExtractor
+ * @see com.moparisthebest.poi.hssf.extractor.ExcelExtractor
+ * @see com.moparisthebest.poi.hslf.extractor.PowerPointExtractor
+ * @see com.moparisthebest.poi.hdgf.extractor.VisioTextExtractor
+ * @see com.moparisthebest.poi.hwpf.extractor.WordExtractor
  */
 public abstract class POITextExtractor implements Closeable {
     private Closeable fsToClose = null;

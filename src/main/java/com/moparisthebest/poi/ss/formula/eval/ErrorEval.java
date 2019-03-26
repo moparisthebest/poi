@@ -15,12 +15,12 @@
 * limitations under the License.
 */
 
-package org.apache.poi.ss.formula.eval;
+package com.moparisthebest.poi.ss.formula.eval;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import org.apache.poi.ss.usermodel.FormulaError;
+import com.moparisthebest.poi.ss.usermodel.FormulaError;
 
 /**
  * Evaluations for formula errors

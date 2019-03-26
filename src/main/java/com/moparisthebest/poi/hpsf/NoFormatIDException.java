@@ -15,12 +15,12 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hpsf;
+package com.moparisthebest.poi.hpsf;
 
 /**
  * This exception is thrown if a {@link PropertySet} is to be written
  * but does not have a formatID set (see {@link Section#setFormatID(ClassID)} or
- * {@link org.apache.poi.hpsf.Section#setFormatID(byte[])}. 
+ * {@link com.moparisthebest.poi.hpsf.Section#setFormatID(byte[])}. 
  */
 public class NoFormatIDException extends HPSFRuntimeException {
 

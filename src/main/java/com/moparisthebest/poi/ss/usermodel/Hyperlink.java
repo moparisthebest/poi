@@ -14,12 +14,12 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 ==================================================================== */
-package org.apache.poi.ss.usermodel;
+package com.moparisthebest.poi.ss.usermodel;
 
 /**
  * Represents an Excel hyperlink.
  */
-public interface Hyperlink extends org.apache.poi.common.usermodel.Hyperlink {
+public interface Hyperlink extends com.moparisthebest.poi.common.usermodel.Hyperlink {
     /**
      * Return the row of the first cell that contains the hyperlink
      *

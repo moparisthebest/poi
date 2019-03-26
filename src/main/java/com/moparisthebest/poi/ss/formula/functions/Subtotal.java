@@ -15,17 +15,17 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula.functions;
+package com.moparisthebest.poi.ss.formula.functions;
 
-import static org.apache.poi.ss.formula.functions.AggregateFunction.subtotalInstance;
+import static com.moparisthebest.poi.ss.formula.functions.AggregateFunction.subtotalInstance;
 
-import org.apache.poi.ss.formula.LazyRefEval;
-import org.apache.poi.ss.formula.eval.ErrorEval;
-import org.apache.poi.ss.formula.eval.EvaluationException;
-import org.apache.poi.ss.formula.eval.NotImplementedException;
-import org.apache.poi.ss.formula.eval.NotImplementedFunctionException;
-import org.apache.poi.ss.formula.eval.OperandResolver;
-import org.apache.poi.ss.formula.eval.ValueEval;
+import com.moparisthebest.poi.ss.formula.LazyRefEval;
+import com.moparisthebest.poi.ss.formula.eval.ErrorEval;
+import com.moparisthebest.poi.ss.formula.eval.EvaluationException;
+import com.moparisthebest.poi.ss.formula.eval.NotImplementedException;
+import com.moparisthebest.poi.ss.formula.eval.NotImplementedFunctionException;
+import com.moparisthebest.poi.ss.formula.eval.OperandResolver;
+import com.moparisthebest.poi.ss.formula.eval.ValueEval;
 
 import java.util.ArrayList;
 import java.util.Arrays;

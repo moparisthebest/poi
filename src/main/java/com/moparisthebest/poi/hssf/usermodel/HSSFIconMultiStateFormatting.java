@@ -15,19 +15,19 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.usermodel;
+package com.moparisthebest.poi.hssf.usermodel;
 
-import org.apache.poi.hssf.record.CFRule12Record;
-import org.apache.poi.hssf.record.cf.IconMultiStateFormatting;
-import org.apache.poi.hssf.record.cf.IconMultiStateThreshold;
-import org.apache.poi.hssf.record.cf.Threshold;
-import org.apache.poi.ss.usermodel.ConditionalFormattingThreshold;
+import com.moparisthebest.poi.hssf.record.CFRule12Record;
+import com.moparisthebest.poi.hssf.record.cf.IconMultiStateFormatting;
+import com.moparisthebest.poi.hssf.record.cf.IconMultiStateThreshold;
+import com.moparisthebest.poi.hssf.record.cf.Threshold;
+import com.moparisthebest.poi.ss.usermodel.ConditionalFormattingThreshold;
 
 /**
  * High level representation for Icon / Multi-State Formatting 
  *  component of Conditional Formatting settings
  */
-public final class HSSFIconMultiStateFormatting implements org.apache.poi.ss.usermodel.IconMultiStateFormatting {
+public final class HSSFIconMultiStateFormatting implements com.moparisthebest.poi.ss.usermodel.IconMultiStateFormatting {
     private final HSSFSheet sheet;
     private final CFRule12Record cfRule12Record;
     private final IconMultiStateFormatting iconFormatting;

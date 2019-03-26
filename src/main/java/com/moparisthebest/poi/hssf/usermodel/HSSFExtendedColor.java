@@ -15,14 +15,14 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.usermodel;
+package com.moparisthebest.poi.hssf.usermodel;
 
-import static org.apache.poi.hssf.record.common.ExtendedColor.TYPE_AUTO;
-import static org.apache.poi.hssf.record.common.ExtendedColor.TYPE_INDEXED;
-import static org.apache.poi.hssf.record.common.ExtendedColor.TYPE_RGB;
-import static org.apache.poi.hssf.record.common.ExtendedColor.TYPE_THEMED;
+import static com.moparisthebest.poi.hssf.record.common.ExtendedColor.TYPE_AUTO;
+import static com.moparisthebest.poi.hssf.record.common.ExtendedColor.TYPE_INDEXED;
+import static com.moparisthebest.poi.hssf.record.common.ExtendedColor.TYPE_RGB;
+import static com.moparisthebest.poi.hssf.record.common.ExtendedColor.TYPE_THEMED;
 
-import org.apache.poi.ss.usermodel.ExtendedColor;
+import com.moparisthebest.poi.ss.usermodel.ExtendedColor;
 
 /**
  * The HSSF file format normally stores Color information in the
@@ -31,13 +31,13 @@ import org.apache.poi.ss.usermodel.ExtendedColor;
  *  can be used.
  */
 public class HSSFExtendedColor extends ExtendedColor {
-    private org.apache.poi.hssf.record.common.ExtendedColor color;
+    private com.moparisthebest.poi.hssf.record.common.ExtendedColor color;
     
-    public HSSFExtendedColor(org.apache.poi.hssf.record.common.ExtendedColor color) {
+    public HSSFExtendedColor(com.moparisthebest.poi.hssf.record.common.ExtendedColor color) {
         this.color = color;
     }
     
-    protected org.apache.poi.hssf.record.common.ExtendedColor getExtendedColor() {
+    protected com.moparisthebest.poi.hssf.record.common.ExtendedColor getExtendedColor() {
         return color;
     }
 

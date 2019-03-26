@@ -15,9 +15,9 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hpsf;
+package com.moparisthebest.poi.hpsf;
 
-import org.apache.poi.util.Removal;
+import com.moparisthebest.poi.util.Removal;
 
 /**
  * dds writing support to the {@link PropertySet} class.<p>

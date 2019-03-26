@@ -15,14 +15,14 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula;
+package com.moparisthebest.poi.ss.formula;
 
-import org.apache.poi.ss.SpreadsheetVersion;
-import org.apache.poi.ss.formula.ptg.Ptg;
-import org.apache.poi.ss.usermodel.Name;
-import org.apache.poi.ss.usermodel.Table;
-import org.apache.poi.ss.util.AreaReference;
-import org.apache.poi.ss.util.CellReference;
+import com.moparisthebest.poi.ss.SpreadsheetVersion;
+import com.moparisthebest.poi.ss.formula.ptg.Ptg;
+import com.moparisthebest.poi.ss.usermodel.Name;
+import com.moparisthebest.poi.ss.usermodel.Table;
+import com.moparisthebest.poi.ss.util.AreaReference;
+import com.moparisthebest.poi.ss.util.CellReference;
 
 /**
  * Abstracts a workbook for the purpose of formula parsing.<br/>

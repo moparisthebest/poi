@@ -15,11 +15,11 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.usermodel;
+package com.moparisthebest.poi.hssf.usermodel;
 
-import org.apache.poi.hssf.record.HeaderRecord;
-import org.apache.poi.hssf.record.aggregates.PageSettingsBlock;
-import org.apache.poi.ss.usermodel.Header;
+import com.moparisthebest.poi.hssf.record.HeaderRecord;
+import com.moparisthebest.poi.hssf.record.aggregates.PageSettingsBlock;
+import com.moparisthebest.poi.ss.usermodel.Header;
 
 /**
  * Class to read and manipulate the header.

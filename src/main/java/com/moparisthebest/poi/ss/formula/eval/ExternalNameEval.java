@@ -15,9 +15,9 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula.eval;
+package com.moparisthebest.poi.ss.formula.eval;
 
-import org.apache.poi.ss.formula.EvaluationName;
+import com.moparisthebest.poi.ss.formula.EvaluationName;
 
 /**
  * Evaluation of a Name defined in a Sheet or Workbook scope

@@ -15,10 +15,10 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.record;
+package com.moparisthebest.poi.hssf.record;
 
-import org.apache.poi.util.IntList;
-import org.apache.poi.util.LittleEndianOutput;
+import com.moparisthebest.poi.util.IntList;
+import com.moparisthebest.poi.util.LittleEndianOutput;
 
 /**
  * Title:        Index Record (0x020B)<p>

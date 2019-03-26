@@ -1,4 +1,4 @@
-package org.apache.poi.util;
+package com.moparisthebest.poi.util;
 
 /* ====================================================================
    Licensed to the Apache Software Foundation (ASF) under one or more

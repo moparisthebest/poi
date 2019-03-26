@@ -15,17 +15,17 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.util;
+package com.moparisthebest.poi.ss.util;
 
-import static org.apache.poi.util.StringUtil.endsWithIgnoreCase;
+import static com.moparisthebest.poi.util.StringUtil.endsWithIgnoreCase;
 
 import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.apache.poi.ss.SpreadsheetVersion;
-import org.apache.poi.ss.formula.SheetNameFormatter;
-import org.apache.poi.ss.usermodel.Cell;
+import com.moparisthebest.poi.ss.SpreadsheetVersion;
+import com.moparisthebest.poi.ss.formula.SheetNameFormatter;
+import com.moparisthebest.poi.ss.usermodel.Cell;
 
 /**
  * <p>Common conversion functions between Excel style A1, C27 style

@@ -15,21 +15,21 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.record.aggregates;
+package com.moparisthebest.poi.hssf.record.aggregates;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.poi.hssf.record.ArrayRecord;
-import org.apache.poi.hssf.record.FormulaRecord;
-import org.apache.poi.hssf.record.SharedFormulaRecord;
-import org.apache.poi.hssf.record.SharedValueRecordBase;
-import org.apache.poi.hssf.record.TableRecord;
-import org.apache.poi.ss.formula.ptg.ExpPtg;
-import org.apache.poi.hssf.util.CellRangeAddress8Bit;
-import org.apache.poi.ss.util.CellReference;
+import com.moparisthebest.poi.hssf.record.ArrayRecord;
+import com.moparisthebest.poi.hssf.record.FormulaRecord;
+import com.moparisthebest.poi.hssf.record.SharedFormulaRecord;
+import com.moparisthebest.poi.hssf.record.SharedValueRecordBase;
+import com.moparisthebest.poi.hssf.record.TableRecord;
+import com.moparisthebest.poi.ss.formula.ptg.ExpPtg;
+import com.moparisthebest.poi.hssf.util.CellRangeAddress8Bit;
+import com.moparisthebest.poi.ss.util.CellReference;
 
 /**
  * Manages various auxiliary records while constructing a

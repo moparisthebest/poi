@@ -14,10 +14,10 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 ==================================================================== */
-package org.apache.poi.poifs.crypt;
+package com.moparisthebest.poi.poifs.crypt;
 
-import org.apache.poi.EncryptedDocumentException;
-import org.apache.poi.util.Removal;
+import com.moparisthebest.poi.EncryptedDocumentException;
+import com.moparisthebest.poi.util.Removal;
 
 /**
  * Reads and processes OOXML Encryption Headers

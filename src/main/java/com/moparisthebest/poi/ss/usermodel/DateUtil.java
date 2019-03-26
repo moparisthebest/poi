@@ -16,14 +16,14 @@
 ==================================================================== */
 
 
-package org.apache.poi.ss.usermodel;
+package com.moparisthebest.poi.ss.usermodel;
 
 import java.util.Calendar;
 import java.util.Date;
 import java.util.TimeZone;
 import java.util.regex.Pattern;
 
-import org.apache.poi.util.LocaleUtil;
+import com.moparisthebest.poi.util.LocaleUtil;
 
 /**
  * Contains methods for dealing with Excel dates.

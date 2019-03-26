@@ -15,13 +15,13 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.usermodel;
+package com.moparisthebest.poi.hssf.usermodel;
 
-import org.apache.poi.common.usermodel.HyperlinkType;
-import org.apache.poi.hssf.record.common.ExtendedColor;
-import org.apache.poi.ss.usermodel.CreationHelper;
-import org.apache.poi.util.Internal;
-import org.apache.poi.util.Removal;
+import com.moparisthebest.poi.common.usermodel.HyperlinkType;
+import com.moparisthebest.poi.hssf.record.common.ExtendedColor;
+import com.moparisthebest.poi.ss.usermodel.CreationHelper;
+import com.moparisthebest.poi.util.Internal;
+import com.moparisthebest.poi.util.Removal;
 
 public class HSSFCreationHelper implements CreationHelper {
     private final HSSFWorkbook workbook;
@@ -80,7 +80,7 @@ public class HSSFCreationHelper implements CreationHelper {
      * Creates a HSSFClientAnchor. Use this object to position drawing object in a sheet
      *
      * @return a HSSFClientAnchor instance
-     * @see org.apache.poi.ss.usermodel.Drawing
+     * @see com.moparisthebest.poi.ss.usermodel.Drawing
      */
     @Override
     public HSSFClientAnchor createClientAnchor(){

@@ -16,17 +16,17 @@
 ==================================================================== */
 
 
-package org.apache.poi.hssf.usermodel;
+package com.moparisthebest.poi.hssf.usermodel;
 
 import java.io.IOException;
 import java.util.Iterator;
 
-import org.apache.poi.ddf.*;
-import org.apache.poi.hssf.record.*;
-import org.apache.poi.poifs.filesystem.DirectoryEntry;
-import org.apache.poi.poifs.filesystem.Entry;
-import org.apache.poi.ss.usermodel.ObjectData;
-import org.apache.poi.util.HexDump;
+import com.moparisthebest.poi.ddf.*;
+import com.moparisthebest.poi.hssf.record.*;
+import com.moparisthebest.poi.poifs.filesystem.DirectoryEntry;
+import com.moparisthebest.poi.poifs.filesystem.Entry;
+import com.moparisthebest.poi.ss.usermodel.ObjectData;
+import com.moparisthebest.poi.util.HexDump;
 
 /**
  * Represents binary object (i.e. OLE) data stored in the file.  Eg. A GIF, JPEG etc...

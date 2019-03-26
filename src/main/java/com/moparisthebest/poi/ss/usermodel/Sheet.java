@@ -15,17 +15,17 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.usermodel;
+package com.moparisthebest.poi.ss.usermodel;
 
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.poi.ss.util.CellAddress;
-import org.apache.poi.ss.util.CellRangeAddress;
-import org.apache.poi.ss.util.PaneInformation;
-import org.apache.poi.util.Removal;
+import com.moparisthebest.poi.ss.util.CellAddress;
+import com.moparisthebest.poi.ss.util.CellRangeAddress;
+import com.moparisthebest.poi.ss.util.PaneInformation;
+import com.moparisthebest.poi.util.Removal;
 
 /**
  * High level representation of a Excel worksheet.

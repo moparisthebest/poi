@@ -14,7 +14,7 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 ==================================================================== */
-package org.apache.poi.hpsf;
+package com.moparisthebest.poi.hpsf;
 
 import java.io.File;
 import java.io.IOException;
@@ -22,12 +22,12 @@ import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.poi.POIDocument;
-import org.apache.poi.poifs.filesystem.EntryUtils;
-import org.apache.poi.poifs.filesystem.FilteringDirectoryNode;
-import org.apache.poi.poifs.filesystem.NPOIFSFileSystem;
-import org.apache.poi.poifs.filesystem.OPOIFSFileSystem;
-import org.apache.poi.poifs.filesystem.POIFSFileSystem;
+import com.moparisthebest.poi.POIDocument;
+import com.moparisthebest.poi.poifs.filesystem.EntryUtils;
+import com.moparisthebest.poi.poifs.filesystem.FilteringDirectoryNode;
+import com.moparisthebest.poi.poifs.filesystem.NPOIFSFileSystem;
+import com.moparisthebest.poi.poifs.filesystem.OPOIFSFileSystem;
+import com.moparisthebest.poi.poifs.filesystem.POIFSFileSystem;
 
 /**
  * A version of {@link POIDocument} which allows access to the

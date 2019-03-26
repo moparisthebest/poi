@@ -14,7 +14,7 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 ==================================================================== */
-package org.apache.poi.ss.formula;
+package com.moparisthebest.poi.ss.formula;
 
 import java.util.Collections;
 import java.util.HashMap;
@@ -24,8 +24,8 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
-import org.apache.poi.ss.usermodel.FormulaEvaluator;
-import org.apache.poi.util.Internal;
+import com.moparisthebest.poi.ss.usermodel.FormulaEvaluator;
+import com.moparisthebest.poi.util.Internal;
 
 /**
  * Manages a collection of {@link WorkbookEvaluator}s, in order to support 

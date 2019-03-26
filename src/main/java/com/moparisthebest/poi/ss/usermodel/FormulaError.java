@@ -14,11 +14,11 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 ==================================================================== */
-package org.apache.poi.ss.usermodel;
+package com.moparisthebest.poi.ss.usermodel;
 
 import java.util.Map;
 
-import org.apache.poi.util.Internal;
+import com.moparisthebest.poi.util.Internal;
 
 import java.util.HashMap;
 

@@ -17,12 +17,12 @@
 ==================================================================== */
         
 
-package org.apache.poi.poifs.eventfilesystem;
+package com.moparisthebest.poi.poifs.eventfilesystem;
 
 import java.util.*;
 
-import org.apache.poi.poifs.filesystem.DocumentDescriptor;
-import org.apache.poi.poifs.filesystem.POIFSDocumentPath;
+import com.moparisthebest.poi.poifs.filesystem.DocumentDescriptor;
+import com.moparisthebest.poi.poifs.filesystem.POIFSDocumentPath;
 
 /**
  * A registry for POIFSReaderListeners and the DocumentDescriptors of

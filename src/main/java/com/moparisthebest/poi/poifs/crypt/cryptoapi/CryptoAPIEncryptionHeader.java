@@ -15,17 +15,17 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.poifs.crypt.cryptoapi;
+package com.moparisthebest.poi.poifs.crypt.cryptoapi;
 
 import java.io.IOException;
 
-import org.apache.poi.EncryptedDocumentException;
-import org.apache.poi.poifs.crypt.ChainingMode;
-import org.apache.poi.poifs.crypt.CipherAlgorithm;
-import org.apache.poi.poifs.crypt.CipherProvider;
-import org.apache.poi.poifs.crypt.HashAlgorithm;
-import org.apache.poi.poifs.crypt.standard.StandardEncryptionHeader;
-import org.apache.poi.util.LittleEndianInput;
+import com.moparisthebest.poi.EncryptedDocumentException;
+import com.moparisthebest.poi.poifs.crypt.ChainingMode;
+import com.moparisthebest.poi.poifs.crypt.CipherAlgorithm;
+import com.moparisthebest.poi.poifs.crypt.CipherProvider;
+import com.moparisthebest.poi.poifs.crypt.HashAlgorithm;
+import com.moparisthebest.poi.poifs.crypt.standard.StandardEncryptionHeader;
+import com.moparisthebest.poi.util.LittleEndianInput;
 
 public class CryptoAPIEncryptionHeader extends StandardEncryptionHeader implements Cloneable {
 

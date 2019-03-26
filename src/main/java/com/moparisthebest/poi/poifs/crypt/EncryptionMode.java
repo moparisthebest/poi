@@ -15,9 +15,9 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.poifs.crypt;
+package com.moparisthebest.poi.poifs.crypt;
 
-import org.apache.poi.hssf.record.crypto.Biff8EncryptionKey;
+import com.moparisthebest.poi.hssf.record.crypto.Biff8EncryptionKey;
 
 /**
  * Office supports various encryption modes.
@@ -27,15 +27,15 @@ import org.apache.poi.hssf.record.crypto.Biff8EncryptionKey;
  */
 public enum EncryptionMode {
     /* @see <a href="http://msdn.microsoft.com/en-us/library/dd907466(v=office.12).aspx">2.3.6 Office Binary Document RC4 Encryption</a> */
-    binaryRC4("org.apache.poi.poifs.crypt.binaryrc4.BinaryRC4EncryptionInfoBuilder", 1, 1, 0x0),
+    binaryRC4("com.moparisthebest.poi.poifs.crypt.binaryrc4.BinaryRC4EncryptionInfoBuilder", 1, 1, 0x0),
     /* @see <a href="http://msdn.microsoft.com/en-us/library/dd905225(v=office.12).aspx">2.3.5 Office Binary Document RC4 CryptoAPI Encryption</a> */
-    cryptoAPI("org.apache.poi.poifs.crypt.cryptoapi.CryptoAPIEncryptionInfoBuilder", 4, 2, 0x04),
+    cryptoAPI("com.moparisthebest.poi.poifs.crypt.cryptoapi.CryptoAPIEncryptionInfoBuilder", 4, 2, 0x04),
     /* @see <a href="http://msdn.microsoft.com/en-us/library/dd906097(v=office.12).aspx">2.3.4.5 \EncryptionInfo Stream (Standard Encryption)</a> */
-    standard("org.apache.poi.poifs.crypt.standard.StandardEncryptionInfoBuilder", 4, 2, 0x24),
+    standard("com.moparisthebest.poi.poifs.crypt.standard.StandardEncryptionInfoBuilder", 4, 2, 0x24),
     /* @see <a href="http://msdn.microsoft.com/en-us/library/dd925810(v=office.12).aspx">2.3.4.10 \EncryptionInfo Stream (Agile Encryption)</a> */
-    agile("org.apache.poi.poifs.crypt.agile.AgileEncryptionInfoBuilder", 4, 4, 0x40),
+    agile("com.moparisthebest.poi.poifs.crypt.agile.AgileEncryptionInfoBuilder", 4, 4, 0x40),
     /* @see <a href="https://msdn.microsoft.com/en-us/library/dd907599(v=office.12).aspx">XOR Obfuscation</a> */
-    xor("org.apache.poi.poifs.crypt.xor.XOREncryptionInfoBuilder", 0, 0, 0)
+    xor("com.moparisthebest.poi.poifs.crypt.xor.XOREncryptionInfoBuilder", 0, 0, 0)
     ;
     
     public final String builder;

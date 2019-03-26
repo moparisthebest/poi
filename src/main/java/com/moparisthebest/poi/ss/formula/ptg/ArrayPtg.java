@@ -15,13 +15,13 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula.ptg;
+package com.moparisthebest.poi.ss.formula.ptg;
 
-import org.apache.poi.ss.formula.constant.ConstantValueParser;
-import org.apache.poi.ss.formula.constant.ErrorConstant;
-import org.apache.poi.ss.util.NumberToTextConverter;
-import org.apache.poi.util.LittleEndianInput;
-import org.apache.poi.util.LittleEndianOutput;
+import com.moparisthebest.poi.ss.formula.constant.ConstantValueParser;
+import com.moparisthebest.poi.ss.formula.constant.ErrorConstant;
+import com.moparisthebest.poi.ss.util.NumberToTextConverter;
+import com.moparisthebest.poi.util.LittleEndianInput;
+import com.moparisthebest.poi.util.LittleEndianOutput;
 
 /**
  * ArrayPtg - handles arrays

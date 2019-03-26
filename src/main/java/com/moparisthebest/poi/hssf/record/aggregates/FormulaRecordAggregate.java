@@ -15,22 +15,22 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.record.aggregates;
+package com.moparisthebest.poi.hssf.record.aggregates;
 
-import org.apache.poi.hssf.record.ArrayRecord;
-import org.apache.poi.hssf.record.CellValueRecordInterface;
-import org.apache.poi.hssf.record.FormulaRecord;
-import org.apache.poi.hssf.record.Record;
-import org.apache.poi.hssf.record.RecordFormatException;
-import org.apache.poi.hssf.record.SharedFormulaRecord;
-import org.apache.poi.hssf.record.StringRecord;
-import org.apache.poi.hssf.util.CellRangeAddress8Bit;
-import org.apache.poi.ss.formula.ptg.ExpPtg;
-import org.apache.poi.ss.formula.ptg.Ptg;
-import org.apache.poi.ss.formula.Formula;
-import org.apache.poi.ss.usermodel.FormulaError;
-import org.apache.poi.ss.util.CellRangeAddress;
-import org.apache.poi.ss.util.CellReference;
+import com.moparisthebest.poi.hssf.record.ArrayRecord;
+import com.moparisthebest.poi.hssf.record.CellValueRecordInterface;
+import com.moparisthebest.poi.hssf.record.FormulaRecord;
+import com.moparisthebest.poi.hssf.record.Record;
+import com.moparisthebest.poi.hssf.record.RecordFormatException;
+import com.moparisthebest.poi.hssf.record.SharedFormulaRecord;
+import com.moparisthebest.poi.hssf.record.StringRecord;
+import com.moparisthebest.poi.hssf.util.CellRangeAddress8Bit;
+import com.moparisthebest.poi.ss.formula.ptg.ExpPtg;
+import com.moparisthebest.poi.ss.formula.ptg.Ptg;
+import com.moparisthebest.poi.ss.formula.Formula;
+import com.moparisthebest.poi.ss.usermodel.FormulaError;
+import com.moparisthebest.poi.ss.util.CellRangeAddress;
+import com.moparisthebest.poi.ss.util.CellReference;
 
 /**
  * The formula record aggregate is used to join together the formula record and it's

@@ -15,10 +15,10 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.model;
+package com.moparisthebest.poi.hssf.model;
 
-import org.apache.poi.ddf.EscherDggRecord;
-import org.apache.poi.ddf.EscherDgRecord;
+import com.moparisthebest.poi.ddf.EscherDggRecord;
+import com.moparisthebest.poi.ddf.EscherDgRecord;
 
 import java.util.Map;
 import java.util.HashMap;

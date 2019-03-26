@@ -15,14 +15,14 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula.atp;
+package com.moparisthebest.poi.ss.formula.atp;
 
 import java.util.Calendar;
 import java.util.Date;
 
-import org.apache.poi.ss.usermodel.DateUtil;
-import org.apache.poi.util.LocaleUtil;
-import org.apache.poi.util.Removal;
+import com.moparisthebest.poi.ss.usermodel.DateUtil;
+import com.moparisthebest.poi.util.LocaleUtil;
+import com.moparisthebest.poi.util.Removal;
 
 /**
  * A calculator for workdays, considering dates as excel representations.

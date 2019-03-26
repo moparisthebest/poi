@@ -14,10 +14,10 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 ==================================================================== */
-package org.apache.poi.ss.formula;
+package com.moparisthebest.poi.ss.formula;
 
-import org.apache.poi.ss.formula.ptg.*;
-import org.apache.poi.ss.SpreadsheetVersion;
+import com.moparisthebest.poi.ss.formula.ptg.*;
+import com.moparisthebest.poi.ss.SpreadsheetVersion;
 
 /**
  *   Encapsulates logic to convert shared formulaa into non shared equivalent
@@ -34,7 +34,7 @@ public class SharedFormula {
 
     /**
      * Creates a non shared formula from the shared formula counterpart, i.e.
-     * Converts the shared formula into the equivalent {@link org.apache.poi.ss.formula.ptg.Ptg} array that it would have,
+     * Converts the shared formula into the equivalent {@link com.moparisthebest.poi.ss.formula.ptg.Ptg} array that it would have,
      * were it not shared.
      *
      * @param ptgs parsed tokens of the shared formula

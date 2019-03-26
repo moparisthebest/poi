@@ -18,7 +18,7 @@
    Alfresco Software has modified source of this file
    The details of changes as svn diff can be found in svn at location root/projects/3rd-party/src 
 ==================================================================== */
-package org.apache.poi.ss.usermodel;
+package com.moparisthebest.poi.ss.usermodel;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -41,13 +41,13 @@ import java.util.Observer;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.apache.poi.ss.format.CellFormat;
-import org.apache.poi.ss.format.CellFormatResult;
-import org.apache.poi.ss.util.DateFormatConverter;
-import org.apache.poi.ss.util.NumberToTextConverter;
-import org.apache.poi.util.LocaleUtil;
-import org.apache.poi.util.POILogFactory;
-import org.apache.poi.util.POILogger;
+import com.moparisthebest.poi.ss.format.CellFormat;
+import com.moparisthebest.poi.ss.format.CellFormatResult;
+import com.moparisthebest.poi.ss.util.DateFormatConverter;
+import com.moparisthebest.poi.ss.util.NumberToTextConverter;
+import com.moparisthebest.poi.util.LocaleUtil;
+import com.moparisthebest.poi.util.POILogFactory;
+import com.moparisthebest.poi.util.POILogger;
 
 
 /**

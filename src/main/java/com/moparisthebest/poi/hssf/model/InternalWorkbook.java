@@ -15,9 +15,9 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.model;
+package com.moparisthebest.poi.hssf.model;
 
-import static org.apache.poi.util.POILogger.DEBUG;
+import static com.moparisthebest.poi.util.POILogger.DEBUG;
 
 import java.security.AccessControlException;
 import java.security.GeneralSecurityException;
@@ -29,89 +29,89 @@ import java.util.Map.Entry;
 
 import javax.crypto.SecretKey;
 
-import org.apache.poi.EncryptedDocumentException;
-import org.apache.poi.ddf.EscherBSERecord;
-import org.apache.poi.ddf.EscherBoolProperty;
-import org.apache.poi.ddf.EscherContainerRecord;
-import org.apache.poi.ddf.EscherDgRecord;
-import org.apache.poi.ddf.EscherDggRecord;
-import org.apache.poi.ddf.EscherOptRecord;
-import org.apache.poi.ddf.EscherProperties;
-import org.apache.poi.ddf.EscherRGBProperty;
-import org.apache.poi.ddf.EscherRecord;
-import org.apache.poi.ddf.EscherSimpleProperty;
-import org.apache.poi.ddf.EscherSpRecord;
-import org.apache.poi.ddf.EscherSplitMenuColorsRecord;
-import org.apache.poi.hssf.record.BOFRecord;
-import org.apache.poi.hssf.record.BackupRecord;
-import org.apache.poi.hssf.record.BookBoolRecord;
-import org.apache.poi.hssf.record.BoundSheetRecord;
-import org.apache.poi.hssf.record.CodepageRecord;
-import org.apache.poi.hssf.record.CountryRecord;
-import org.apache.poi.hssf.record.DSFRecord;
-import org.apache.poi.hssf.record.DateWindow1904Record;
-import org.apache.poi.hssf.record.DrawingGroupRecord;
-import org.apache.poi.hssf.record.EOFRecord;
-import org.apache.poi.hssf.record.EscherAggregate;
-import org.apache.poi.hssf.record.ExtSSTRecord;
-import org.apache.poi.hssf.record.ExtendedFormatRecord;
-import org.apache.poi.hssf.record.ExternSheetRecord;
-import org.apache.poi.hssf.record.FilePassRecord;
-import org.apache.poi.hssf.record.FileSharingRecord;
-import org.apache.poi.hssf.record.FnGroupCountRecord;
-import org.apache.poi.hssf.record.FontRecord;
-import org.apache.poi.hssf.record.FormatRecord;
-import org.apache.poi.hssf.record.HideObjRecord;
-import org.apache.poi.hssf.record.HyperlinkRecord;
-import org.apache.poi.hssf.record.InterfaceEndRecord;
-import org.apache.poi.hssf.record.InterfaceHdrRecord;
-import org.apache.poi.hssf.record.MMSRecord;
-import org.apache.poi.hssf.record.NameCommentRecord;
-import org.apache.poi.hssf.record.NameRecord;
-import org.apache.poi.hssf.record.PaletteRecord;
-import org.apache.poi.hssf.record.PasswordRecord;
-import org.apache.poi.hssf.record.PasswordRev4Record;
-import org.apache.poi.hssf.record.PrecisionRecord;
-import org.apache.poi.hssf.record.ProtectRecord;
-import org.apache.poi.hssf.record.ProtectionRev4Record;
-import org.apache.poi.hssf.record.RecalcIdRecord;
-import org.apache.poi.hssf.record.Record;
-import org.apache.poi.hssf.record.RefreshAllRecord;
-import org.apache.poi.hssf.record.SSTRecord;
-import org.apache.poi.hssf.record.StyleRecord;
-import org.apache.poi.hssf.record.SupBookRecord;
-import org.apache.poi.hssf.record.TabIdRecord;
-import org.apache.poi.hssf.record.UseSelFSRecord;
-import org.apache.poi.hssf.record.WindowOneRecord;
-import org.apache.poi.hssf.record.WindowProtectRecord;
-import org.apache.poi.hssf.record.WriteAccessRecord;
-import org.apache.poi.hssf.record.WriteProtectRecord;
-import org.apache.poi.hssf.record.common.UnicodeString;
-import org.apache.poi.hssf.record.crypto.Biff8EncryptionKey;
-import org.apache.poi.hssf.util.HSSFColor.HSSFColorPredefined;
-import org.apache.poi.poifs.crypt.CryptoFunctions;
-import org.apache.poi.poifs.crypt.Decryptor;
-import org.apache.poi.poifs.crypt.EncryptionInfo;
-import org.apache.poi.poifs.crypt.EncryptionMode;
-import org.apache.poi.poifs.crypt.Encryptor;
-import org.apache.poi.ss.formula.EvaluationWorkbook.ExternalName;
-import org.apache.poi.ss.formula.EvaluationWorkbook.ExternalSheet;
-import org.apache.poi.ss.formula.EvaluationWorkbook.ExternalSheetRange;
-import org.apache.poi.ss.formula.FormulaShifter;
-import org.apache.poi.ss.formula.ptg.Area3DPtg;
-import org.apache.poi.ss.formula.ptg.NameXPtg;
-import org.apache.poi.ss.formula.ptg.OperandPtg;
-import org.apache.poi.ss.formula.ptg.Ptg;
-import org.apache.poi.ss.formula.ptg.Ref3DPtg;
-import org.apache.poi.ss.formula.udf.UDFFinder;
-import org.apache.poi.ss.usermodel.BuiltinFormats;
-import org.apache.poi.ss.usermodel.SheetVisibility;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.util.Internal;
-import org.apache.poi.util.LocaleUtil;
-import org.apache.poi.util.POILogFactory;
-import org.apache.poi.util.POILogger;
-import org.apache.poi.util.RecordFormatException;
+import com.moparisthebest.poi.EncryptedDocumentException;
+import com.moparisthebest.poi.ddf.EscherBSERecord;
+import com.moparisthebest.poi.ddf.EscherBoolProperty;
+import com.moparisthebest.poi.ddf.EscherContainerRecord;
+import com.moparisthebest.poi.ddf.EscherDgRecord;
+import com.moparisthebest.poi.ddf.EscherDggRecord;
+import com.moparisthebest.poi.ddf.EscherOptRecord;
+import com.moparisthebest.poi.ddf.EscherProperties;
+import com.moparisthebest.poi.ddf.EscherRGBProperty;
+import com.moparisthebest.poi.ddf.EscherRecord;
+import com.moparisthebest.poi.ddf.EscherSimpleProperty;
+import com.moparisthebest.poi.ddf.EscherSpRecord;
+import com.moparisthebest.poi.ddf.EscherSplitMenuColorsRecord;
+import com.moparisthebest.poi.hssf.record.BOFRecord;
+import com.moparisthebest.poi.hssf.record.BackupRecord;
+import com.moparisthebest.poi.hssf.record.BookBoolRecord;
+import com.moparisthebest.poi.hssf.record.BoundSheetRecord;
+import com.moparisthebest.poi.hssf.record.CodepageRecord;
+import com.moparisthebest.poi.hssf.record.CountryRecord;
+import com.moparisthebest.poi.hssf.record.DSFRecord;
+import com.moparisthebest.poi.hssf.record.DateWindow1904Record;
+import com.moparisthebest.poi.hssf.record.DrawingGroupRecord;
+import com.moparisthebest.poi.hssf.record.EOFRecord;
+import com.moparisthebest.poi.hssf.record.EscherAggregate;
+import com.moparisthebest.poi.hssf.record.ExtSSTRecord;
+import com.moparisthebest.poi.hssf.record.ExtendedFormatRecord;
+import com.moparisthebest.poi.hssf.record.ExternSheetRecord;
+import com.moparisthebest.poi.hssf.record.FilePassRecord;
+import com.moparisthebest.poi.hssf.record.FileSharingRecord;
+import com.moparisthebest.poi.hssf.record.FnGroupCountRecord;
+import com.moparisthebest.poi.hssf.record.FontRecord;
+import com.moparisthebest.poi.hssf.record.FormatRecord;
+import com.moparisthebest.poi.hssf.record.HideObjRecord;
+import com.moparisthebest.poi.hssf.record.HyperlinkRecord;
+import com.moparisthebest.poi.hssf.record.InterfaceEndRecord;
+import com.moparisthebest.poi.hssf.record.InterfaceHdrRecord;
+import com.moparisthebest.poi.hssf.record.MMSRecord;
+import com.moparisthebest.poi.hssf.record.NameCommentRecord;
+import com.moparisthebest.poi.hssf.record.NameRecord;
+import com.moparisthebest.poi.hssf.record.PaletteRecord;
+import com.moparisthebest.poi.hssf.record.PasswordRecord;
+import com.moparisthebest.poi.hssf.record.PasswordRev4Record;
+import com.moparisthebest.poi.hssf.record.PrecisionRecord;
+import com.moparisthebest.poi.hssf.record.ProtectRecord;
+import com.moparisthebest.poi.hssf.record.ProtectionRev4Record;
+import com.moparisthebest.poi.hssf.record.RecalcIdRecord;
+import com.moparisthebest.poi.hssf.record.Record;
+import com.moparisthebest.poi.hssf.record.RefreshAllRecord;
+import com.moparisthebest.poi.hssf.record.SSTRecord;
+import com.moparisthebest.poi.hssf.record.StyleRecord;
+import com.moparisthebest.poi.hssf.record.SupBookRecord;
+import com.moparisthebest.poi.hssf.record.TabIdRecord;
+import com.moparisthebest.poi.hssf.record.UseSelFSRecord;
+import com.moparisthebest.poi.hssf.record.WindowOneRecord;
+import com.moparisthebest.poi.hssf.record.WindowProtectRecord;
+import com.moparisthebest.poi.hssf.record.WriteAccessRecord;
+import com.moparisthebest.poi.hssf.record.WriteProtectRecord;
+import com.moparisthebest.poi.hssf.record.common.UnicodeString;
+import com.moparisthebest.poi.hssf.record.crypto.Biff8EncryptionKey;
+import com.moparisthebest.poi.hssf.util.HSSFColor.HSSFColorPredefined;
+import com.moparisthebest.poi.poifs.crypt.CryptoFunctions;
+import com.moparisthebest.poi.poifs.crypt.Decryptor;
+import com.moparisthebest.poi.poifs.crypt.EncryptionInfo;
+import com.moparisthebest.poi.poifs.crypt.EncryptionMode;
+import com.moparisthebest.poi.poifs.crypt.Encryptor;
+import com.moparisthebest.poi.ss.formula.EvaluationWorkbook.ExternalName;
+import com.moparisthebest.poi.ss.formula.EvaluationWorkbook.ExternalSheet;
+import com.moparisthebest.poi.ss.formula.EvaluationWorkbook.ExternalSheetRange;
+import com.moparisthebest.poi.ss.formula.FormulaShifter;
+import com.moparisthebest.poi.ss.formula.ptg.Area3DPtg;
+import com.moparisthebest.poi.ss.formula.ptg.NameXPtg;
+import com.moparisthebest.poi.ss.formula.ptg.OperandPtg;
+import com.moparisthebest.poi.ss.formula.ptg.Ptg;
+import com.moparisthebest.poi.ss.formula.ptg.Ref3DPtg;
+import com.moparisthebest.poi.ss.formula.udf.UDFFinder;
+import com.moparisthebest.poi.ss.usermodel.BuiltinFormats;
+import com.moparisthebest.poi.ss.usermodel.SheetVisibility;
+import com.moparisthebest.poi.ss.usermodel.Workbook;
+import com.moparisthebest.poi.util.Internal;
+import com.moparisthebest.poi.util.LocaleUtil;
+import com.moparisthebest.poi.util.POILogFactory;
+import com.moparisthebest.poi.util.POILogger;
+import com.moparisthebest.poi.util.RecordFormatException;
 
 /**
  * Low level model implementation of a Workbook.  Provides creational methods
@@ -126,7 +126,7 @@ import org.apache.poi.util.RecordFormatException;
  * Kit (Microsoft Press) and the documentation at http://sc.openoffice.org/excelfileformat.pdf
  * before even attempting to use this.
  *
- * @see org.apache.poi.hssf.usermodel.HSSFWorkbook
+ * @see com.moparisthebest.poi.hssf.usermodel.HSSFWorkbook
  */
 @Internal
 public final class InternalWorkbook {
@@ -1021,7 +1021,7 @@ public final class InternalWorkbook {
      * use this function to add a Shared String Table to an existing sheet (say
      * generated by a different java api) without an sst....
      * @see #createExtendedSST()
-     * @see org.apache.poi.hssf.record.SSTRecord
+     * @see com.moparisthebest.poi.hssf.record.SSTRecord
      */
 
     public void insertSST() {
@@ -1493,8 +1493,8 @@ public final class InternalWorkbook {
      * Always sets the sheet's bof to 0.  You'll need to set that yourself.
      * @param id either sheet 0,1 or 2.
      * @return record containing a BoundSheetRecord
-     * @see org.apache.poi.hssf.record.BoundSheetRecord
-     * @see org.apache.poi.hssf.record.Record
+     * @see com.moparisthebest.poi.hssf.record.BoundSheetRecord
+     * @see com.moparisthebest.poi.hssf.record.Record
      */
     private static BoundSheetRecord createBoundSheet(int id) {
         return new BoundSheetRecord("Sheet" + (id+1));
@@ -1774,8 +1774,8 @@ public final class InternalWorkbook {
      * Creates a FormatRecord, inserts it, and returns the index code.
      * @param formatString the format string
      * @return the index code of the format record.
-     * @see org.apache.poi.hssf.record.FormatRecord
-     * @see org.apache.poi.hssf.record.Record
+     * @see com.moparisthebest.poi.hssf.record.FormatRecord
+     * @see com.moparisthebest.poi.hssf.record.Record
      */
     public int createFormat(String formatString) {
 
@@ -2274,7 +2274,7 @@ public final class InternalWorkbook {
      *
      * @return a new RecalcIdRecord
      *
-     * @see org.apache.poi.hssf.usermodel.HSSFWorkbook#setForceFormulaRecalculation(boolean)
+     * @see com.moparisthebest.poi.hssf.usermodel.HSSFWorkbook#setForceFormulaRecalculation(boolean)
      */
     public RecalcIdRecord getRecalcId(){
         RecalcIdRecord record = (RecalcIdRecord)findFirstRecordBySid(RecalcIdRecord.sid);

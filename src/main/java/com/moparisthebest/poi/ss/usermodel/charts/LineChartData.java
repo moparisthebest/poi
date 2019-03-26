@@ -15,11 +15,11 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.usermodel.charts;
+package com.moparisthebest.poi.ss.usermodel.charts;
 
 import java.util.List;
 
-import org.apache.poi.util.Beta;
+import com.moparisthebest.poi.util.Beta;
 
 /**
  * Data for a Line Chart

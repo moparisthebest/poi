@@ -17,7 +17,7 @@
 ==================================================================== */
 
 
-package org.apache.poi.util;
+package com.moparisthebest.poi.util;
 
 import java.util.*;
 

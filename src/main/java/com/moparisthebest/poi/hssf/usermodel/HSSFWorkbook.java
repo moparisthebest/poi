@@ -15,9 +15,9 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.usermodel;
+package com.moparisthebest.poi.hssf.usermodel;
 
-import static org.apache.poi.hssf.model.InternalWorkbook.WORKBOOK_DIR_ENTRY_NAMES;
+import static com.moparisthebest.poi.hssf.model.InternalWorkbook.WORKBOOK_DIR_ENTRY_NAMES;
 
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
@@ -35,67 +35,67 @@ import java.util.NoSuchElementException;
 import java.util.Set;
 import java.util.regex.Pattern;
 
-import org.apache.poi.EncryptedDocumentException;
-import org.apache.poi.POIDocument;
-import org.apache.poi.ddf.EscherBSERecord;
-import org.apache.poi.ddf.EscherBitmapBlip;
-import org.apache.poi.ddf.EscherBlipRecord;
-import org.apache.poi.ddf.EscherMetafileBlip;
-import org.apache.poi.ddf.EscherRecord;
-import org.apache.poi.hpsf.ClassID;
-import org.apache.poi.hssf.OldExcelFormatException;
-import org.apache.poi.hssf.model.DrawingManager2;
-import org.apache.poi.hssf.model.HSSFFormulaParser;
-import org.apache.poi.hssf.model.InternalSheet;
-import org.apache.poi.hssf.model.InternalSheet.UnsupportedBOFType;
-import org.apache.poi.hssf.model.InternalWorkbook;
-import org.apache.poi.hssf.model.RecordStream;
-import org.apache.poi.hssf.record.AbstractEscherHolderRecord;
-import org.apache.poi.hssf.record.BackupRecord;
-import org.apache.poi.hssf.record.BoundSheetRecord;
-import org.apache.poi.hssf.record.DrawingGroupRecord;
-import org.apache.poi.hssf.record.ExtendedFormatRecord;
-import org.apache.poi.hssf.record.FilePassRecord;
-import org.apache.poi.hssf.record.FontRecord;
-import org.apache.poi.hssf.record.LabelRecord;
-import org.apache.poi.hssf.record.LabelSSTRecord;
-import org.apache.poi.hssf.record.NameRecord;
-import org.apache.poi.hssf.record.RecalcIdRecord;
-import org.apache.poi.hssf.record.Record;
-import org.apache.poi.hssf.record.RecordFactory;
-import org.apache.poi.hssf.record.SSTRecord;
-import org.apache.poi.hssf.record.UnknownRecord;
-import org.apache.poi.hssf.record.aggregates.RecordAggregate.RecordVisitor;
-import org.apache.poi.hssf.record.common.UnicodeString;
-import org.apache.poi.hssf.util.CellReference;
-import org.apache.poi.ss.SpreadsheetVersion;
-import org.apache.poi.ss.formula.FormulaShifter;
-import org.apache.poi.ss.formula.FormulaType;
-import org.apache.poi.ss.formula.SheetNameFormatter;
-import org.apache.poi.ss.formula.udf.AggregatingUDFFinder;
-import org.apache.poi.ss.formula.udf.IndexedUDFFinder;
-import org.apache.poi.ss.formula.udf.UDFFinder;
-import org.apache.poi.ss.usermodel.Name;
-import org.apache.poi.ss.usermodel.Row.MissingCellPolicy;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.SheetVisibility;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.util.Configurator;
-import org.apache.poi.util.HexDump;
-import org.apache.poi.util.Internal;
-import org.apache.poi.util.POILogFactory;
-import org.apache.poi.util.POILogger;
-import org.apache.poi.util.Removal;
+import com.moparisthebest.poi.EncryptedDocumentException;
+import com.moparisthebest.poi.POIDocument;
+import com.moparisthebest.poi.ddf.EscherBSERecord;
+import com.moparisthebest.poi.ddf.EscherBitmapBlip;
+import com.moparisthebest.poi.ddf.EscherBlipRecord;
+import com.moparisthebest.poi.ddf.EscherMetafileBlip;
+import com.moparisthebest.poi.ddf.EscherRecord;
+import com.moparisthebest.poi.hpsf.ClassID;
+import com.moparisthebest.poi.hssf.OldExcelFormatException;
+import com.moparisthebest.poi.hssf.model.DrawingManager2;
+import com.moparisthebest.poi.hssf.model.HSSFFormulaParser;
+import com.moparisthebest.poi.hssf.model.InternalSheet;
+import com.moparisthebest.poi.hssf.model.InternalSheet.UnsupportedBOFType;
+import com.moparisthebest.poi.hssf.model.InternalWorkbook;
+import com.moparisthebest.poi.hssf.model.RecordStream;
+import com.moparisthebest.poi.hssf.record.AbstractEscherHolderRecord;
+import com.moparisthebest.poi.hssf.record.BackupRecord;
+import com.moparisthebest.poi.hssf.record.BoundSheetRecord;
+import com.moparisthebest.poi.hssf.record.DrawingGroupRecord;
+import com.moparisthebest.poi.hssf.record.ExtendedFormatRecord;
+import com.moparisthebest.poi.hssf.record.FilePassRecord;
+import com.moparisthebest.poi.hssf.record.FontRecord;
+import com.moparisthebest.poi.hssf.record.LabelRecord;
+import com.moparisthebest.poi.hssf.record.LabelSSTRecord;
+import com.moparisthebest.poi.hssf.record.NameRecord;
+import com.moparisthebest.poi.hssf.record.RecalcIdRecord;
+import com.moparisthebest.poi.hssf.record.Record;
+import com.moparisthebest.poi.hssf.record.RecordFactory;
+import com.moparisthebest.poi.hssf.record.SSTRecord;
+import com.moparisthebest.poi.hssf.record.UnknownRecord;
+import com.moparisthebest.poi.hssf.record.aggregates.RecordAggregate.RecordVisitor;
+import com.moparisthebest.poi.hssf.record.common.UnicodeString;
+import com.moparisthebest.poi.hssf.util.CellReference;
+import com.moparisthebest.poi.ss.SpreadsheetVersion;
+import com.moparisthebest.poi.ss.formula.FormulaShifter;
+import com.moparisthebest.poi.ss.formula.FormulaType;
+import com.moparisthebest.poi.ss.formula.SheetNameFormatter;
+import com.moparisthebest.poi.ss.formula.udf.AggregatingUDFFinder;
+import com.moparisthebest.poi.ss.formula.udf.IndexedUDFFinder;
+import com.moparisthebest.poi.ss.formula.udf.UDFFinder;
+import com.moparisthebest.poi.ss.usermodel.Name;
+import com.moparisthebest.poi.ss.usermodel.Row.MissingCellPolicy;
+import com.moparisthebest.poi.ss.usermodel.Sheet;
+import com.moparisthebest.poi.ss.usermodel.SheetVisibility;
+import com.moparisthebest.poi.ss.usermodel.Workbook;
+import com.moparisthebest.poi.util.Configurator;
+import com.moparisthebest.poi.util.HexDump;
+import com.moparisthebest.poi.util.Internal;
+import com.moparisthebest.poi.util.POILogFactory;
+import com.moparisthebest.poi.util.POILogger;
+import com.moparisthebest.poi.util.Removal;
 
 /**
  * High level representation of a workbook.  This is the first object most users
  * will construct whether they are reading or writing a workbook.  It is also the
  * top level object for creating new sheets/etc.
  *
- * @see org.apache.poi.hssf.model.InternalWorkbook
- * @see org.apache.poi.hssf.usermodel.HSSFSheet
+ * @see com.moparisthebest.poi.hssf.model.InternalWorkbook
+ * @see com.moparisthebest.poi.hssf.usermodel.HSSFSheet
  */
-public final class HSSFWorkbook implements org.apache.poi.ss.usermodel.Workbook {
+public final class HSSFWorkbook implements com.moparisthebest.poi.ss.usermodel.Workbook {
     private static final Pattern COMMA_PATTERN = Pattern.compile(",");
 
     /**
@@ -223,9 +223,9 @@ public final class HSSFWorkbook implements org.apache.poi.ss.usermodel.Workbook 
       *
       * @param records a collection of sheet's records.
       * @param offset the offset to search at
-      * @see org.apache.poi.hssf.record.LabelRecord
-      * @see org.apache.poi.hssf.record.LabelSSTRecord
-      * @see org.apache.poi.hssf.record.SSTRecord
+      * @see com.moparisthebest.poi.hssf.record.LabelRecord
+      * @see com.moparisthebest.poi.hssf.record.LabelSSTRecord
+      * @see com.moparisthebest.poi.hssf.record.SSTRecord
       */
 
      private void convertLabelRecords(List<Record> records, int offset)
@@ -463,7 +463,7 @@ public final class HSSFWorkbook implements org.apache.poi.ss.usermodel.Workbook 
      * This may be different from the "selected sheet" since excel seems to
      * allow you to show the data of one sheet when another is seen "selected"
      * in the tabs (at the bottom).
-     * @see org.apache.poi.hssf.usermodel.HSSFSheet#setSelected(boolean)
+     * @see com.moparisthebest.poi.hssf.usermodel.HSSFSheet#setSelected(boolean)
      */
     @Override
     public int getActiveSheetIndex() {
@@ -498,7 +498,7 @@ public final class HSSFWorkbook implements org.apache.poi.ss.usermodel.Workbook 
      * @throws IllegalArgumentException if the name is null or invalid
      *  or workbook already contains a sheet with this name
      * @see #createSheet(String)
-     * @see org.apache.poi.ss.util.WorkbookUtil#createSafeSheetName(String nameProposal)
+     * @see com.moparisthebest.poi.ss.util.WorkbookUtil#createSafeSheetName(String nameProposal)
      */
     @Override
     public void setSheetName(int sheetIx, String name) {
@@ -594,7 +594,7 @@ public final class HSSFWorkbook implements org.apache.poi.ss.usermodel.Workbook 
      * @return index of the sheet (0 based). <tt>-1</tt> if not found
      */
     @Override
-    public int getSheetIndex(org.apache.poi.ss.usermodel.Sheet sheet) {
+    public int getSheetIndex(com.moparisthebest.poi.ss.usermodel.Sheet sheet) {
         return _sheets.indexOf(sheet);
     }
 
@@ -723,7 +723,7 @@ public final class HSSFWorkbook implements org.apache.poi.ss.usermodel.Workbook 
      * @return Sheet representing the new sheet.
      * @throws IllegalArgumentException if the name is null or invalid
      *  or workbook already contains a sheet with this name
-     * @see org.apache.poi.ss.util.WorkbookUtil#createSafeSheetName(String nameProposal)
+     * @see com.moparisthebest.poi.ss.util.WorkbookUtil#createSafeSheetName(String nameProposal)
      */
     @Override
     public HSSFSheet createSheet(String sheetname)
@@ -1376,8 +1376,8 @@ public final class HSSFWorkbook implements org.apache.poi.ss.usermodel.Workbook 
     /**
      * Returns the instance of HSSFDataFormat for this workbook.
      * @return the HSSFDataFormat object
-     * @see org.apache.poi.hssf.record.FormatRecord
-     * @see org.apache.poi.hssf.record.Record
+     * @see com.moparisthebest.poi.hssf.record.FormatRecord
+     * @see com.moparisthebest.poi.hssf.record.Record
      */
     @Override
     public HSSFDataFormat createDataFormat() {

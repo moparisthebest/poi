@@ -14,24 +14,24 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 ==================================================================== */
-package org.apache.poi.poifs.crypt;
+package com.moparisthebest.poi.poifs.crypt;
 
-import static org.apache.poi.poifs.crypt.EncryptionMode.agile;
-import static org.apache.poi.poifs.crypt.EncryptionMode.binaryRC4;
-import static org.apache.poi.poifs.crypt.EncryptionMode.cryptoAPI;
-import static org.apache.poi.poifs.crypt.EncryptionMode.standard;
-import static org.apache.poi.poifs.crypt.EncryptionMode.xor;
+import static com.moparisthebest.poi.poifs.crypt.EncryptionMode.agile;
+import static com.moparisthebest.poi.poifs.crypt.EncryptionMode.binaryRC4;
+import static com.moparisthebest.poi.poifs.crypt.EncryptionMode.cryptoAPI;
+import static com.moparisthebest.poi.poifs.crypt.EncryptionMode.standard;
+import static com.moparisthebest.poi.poifs.crypt.EncryptionMode.xor;
 
 import java.io.IOException;
 
-import org.apache.poi.EncryptedDocumentException;
-import org.apache.poi.poifs.filesystem.DirectoryNode;
-import org.apache.poi.poifs.filesystem.NPOIFSFileSystem;
-import org.apache.poi.poifs.filesystem.OPOIFSFileSystem;
-import org.apache.poi.poifs.filesystem.POIFSFileSystem;
-import org.apache.poi.util.BitField;
-import org.apache.poi.util.BitFieldFactory;
-import org.apache.poi.util.LittleEndianInput;
+import com.moparisthebest.poi.EncryptedDocumentException;
+import com.moparisthebest.poi.poifs.filesystem.DirectoryNode;
+import com.moparisthebest.poi.poifs.filesystem.NPOIFSFileSystem;
+import com.moparisthebest.poi.poifs.filesystem.OPOIFSFileSystem;
+import com.moparisthebest.poi.poifs.filesystem.POIFSFileSystem;
+import com.moparisthebest.poi.util.BitField;
+import com.moparisthebest.poi.util.BitFieldFactory;
+import com.moparisthebest.poi.util.LittleEndianInput;
 
 /**
  * This class may require {@code poi-ooxml} to be on the classpath to load
@@ -199,7 +199,7 @@ public class EncryptionInfo implements Cloneable {
     /**
      * This method loads the builder class with reflection, which may generate
      * a {@code ClassNotFoundException} if the class is not on the classpath.
-     * For example, {@link org.apache.poi.poifs.crypt.agile.AgileEncryptionInfoBuilder}
+     * For example, {@link com.moparisthebest.poi.poifs.crypt.agile.AgileEncryptionInfoBuilder}
      * is contained in the {@code poi-ooxml} package since the class makes use of some OOXML
      * classes rather than using the {@code poi} package and plain XML DOM calls.
      * As such, you may need to include {@code poi-ooxml} and {@code poi-ooxml-schemas} to load

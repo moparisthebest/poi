@@ -17,7 +17,7 @@
 ==================================================================== */
         
 
-package org.apache.poi.util;
+package com.moparisthebest.poi.util;
 
 /**
  * A common exception thrown by our binary format parsers

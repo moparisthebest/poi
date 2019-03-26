@@ -15,14 +15,14 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.usermodel;
+package com.moparisthebest.poi.hssf.usermodel;
 
-import org.apache.poi.hssf.record.DVRecord;
-import org.apache.poi.hssf.usermodel.DVConstraint.FormulaPair;
-import org.apache.poi.ss.usermodel.DataValidation;
-import org.apache.poi.ss.usermodel.DataValidationConstraint;
-import org.apache.poi.ss.usermodel.DataValidationConstraint.ValidationType;
-import org.apache.poi.ss.util.CellRangeAddressList;
+import com.moparisthebest.poi.hssf.record.DVRecord;
+import com.moparisthebest.poi.hssf.usermodel.DVConstraint.FormulaPair;
+import com.moparisthebest.poi.ss.usermodel.DataValidation;
+import com.moparisthebest.poi.ss.usermodel.DataValidationConstraint;
+import com.moparisthebest.poi.ss.usermodel.DataValidationConstraint.ValidationType;
+import com.moparisthebest.poi.ss.util.CellRangeAddressList;
 
 /**
  * Utility class for creating data validation cells
@@ -57,7 +57,7 @@ public final class HSSFDataValidation implements DataValidation {
 
 
 	/* (non-Javadoc)
-	 * @see org.apache.poi.hssf.usermodel.DataValidation#getConstraint()
+	 * @see com.moparisthebest.poi.hssf.usermodel.DataValidation#getConstraint()
 	 */
 	public DataValidationConstraint getValidationConstraint() {
 		return _constraint;
@@ -73,42 +73,42 @@ public final class HSSFDataValidation implements DataValidation {
 
 
 	/* (non-Javadoc)
-	 * @see org.apache.poi.hssf.usermodel.DataValidation#setErrorStyle(int)
+	 * @see com.moparisthebest.poi.hssf.usermodel.DataValidation#setErrorStyle(int)
 	 */
 	public void setErrorStyle(int error_style) {
 		_errorStyle = error_style;
 	}
 
 	/* (non-Javadoc)
-	 * @see org.apache.poi.hssf.usermodel.DataValidation#getErrorStyle()
+	 * @see com.moparisthebest.poi.hssf.usermodel.DataValidation#getErrorStyle()
 	 */
 	public int getErrorStyle() {
 		return _errorStyle;
 	}
 
 	/* (non-Javadoc)
-	 * @see org.apache.poi.hssf.usermodel.DataValidation#setEmptyCellAllowed(boolean)
+	 * @see com.moparisthebest.poi.hssf.usermodel.DataValidation#setEmptyCellAllowed(boolean)
 	 */
 	public void setEmptyCellAllowed(boolean allowed) {
 		_emptyCellAllowed = allowed;
 	}
 
 	/* (non-Javadoc)
-	 * @see org.apache.poi.hssf.usermodel.DataValidation#getEmptyCellAllowed()
+	 * @see com.moparisthebest.poi.hssf.usermodel.DataValidation#getEmptyCellAllowed()
 	 */
 	public boolean getEmptyCellAllowed() {
 		return _emptyCellAllowed;
 	}
 
 	/* (non-Javadoc)
-	 * @see org.apache.poi.hssf.usermodel.DataValidation#setSuppressDropDownArrow(boolean)
+	 * @see com.moparisthebest.poi.hssf.usermodel.DataValidation#setSuppressDropDownArrow(boolean)
 	 */
 	public void setSuppressDropDownArrow(boolean suppress) {
 		_suppress_dropdown_arrow = suppress;
 	}
 
 	/* (non-Javadoc)
-	 * @see org.apache.poi.hssf.usermodel.DataValidation#getSuppressDropDownArrow()
+	 * @see com.moparisthebest.poi.hssf.usermodel.DataValidation#getSuppressDropDownArrow()
 	 */
 	public boolean getSuppressDropDownArrow() {
 		//noinspection SimplifiableIfStatement
@@ -119,28 +119,28 @@ public final class HSSFDataValidation implements DataValidation {
 	}
 
 	/* (non-Javadoc)
-	 * @see org.apache.poi.hssf.usermodel.DataValidation#setShowPromptBox(boolean)
+	 * @see com.moparisthebest.poi.hssf.usermodel.DataValidation#setShowPromptBox(boolean)
 	 */
 	public void setShowPromptBox(boolean show) {
 		_showPromptBox = show;
 	}
 
 	/* (non-Javadoc)
-	 * @see org.apache.poi.hssf.usermodel.DataValidation#getShowPromptBox()
+	 * @see com.moparisthebest.poi.hssf.usermodel.DataValidation#getShowPromptBox()
 	 */
 	public boolean getShowPromptBox() {
 		return _showPromptBox;
 	}
 
 	/* (non-Javadoc)
-	 * @see org.apache.poi.hssf.usermodel.DataValidation#setShowErrorBox(boolean)
+	 * @see com.moparisthebest.poi.hssf.usermodel.DataValidation#setShowErrorBox(boolean)
 	 */
 	public void setShowErrorBox(boolean show) {
 		_showErrorBox = show;
 	}
 
 	/* (non-Javadoc)
-	 * @see org.apache.poi.hssf.usermodel.DataValidation#getShowErrorBox()
+	 * @see com.moparisthebest.poi.hssf.usermodel.DataValidation#getShowErrorBox()
 	 */
 	public boolean getShowErrorBox() {
 		return _showErrorBox;
@@ -148,7 +148,7 @@ public final class HSSFDataValidation implements DataValidation {
 
 
 	/* (non-Javadoc)
-	 * @see org.apache.poi.hssf.usermodel.DataValidation#createPromptBox(java.lang.String, java.lang.String)
+	 * @see com.moparisthebest.poi.hssf.usermodel.DataValidation#createPromptBox(java.lang.String, java.lang.String)
 	 */
 	public void createPromptBox(String title, String text) {
 		// check length-limits
@@ -164,21 +164,21 @@ public final class HSSFDataValidation implements DataValidation {
 	}
 
 	/* (non-Javadoc)
-	 * @see org.apache.poi.hssf.usermodel.DataValidation#getPromptBoxTitle()
+	 * @see com.moparisthebest.poi.hssf.usermodel.DataValidation#getPromptBoxTitle()
 	 */
 	public String getPromptBoxTitle() {
 		return _prompt_title;
 	}
 
 	/* (non-Javadoc)
-	 * @see org.apache.poi.hssf.usermodel.DataValidation#getPromptBoxText()
+	 * @see com.moparisthebest.poi.hssf.usermodel.DataValidation#getPromptBoxText()
 	 */
 	public String getPromptBoxText() {
 		return _prompt_text;
 	}
 
 	/* (non-Javadoc)
-	 * @see org.apache.poi.hssf.usermodel.DataValidation#createErrorBox(java.lang.String, java.lang.String)
+	 * @see com.moparisthebest.poi.hssf.usermodel.DataValidation#createErrorBox(java.lang.String, java.lang.String)
 	 */
 	public void createErrorBox(String title, String text) {
 		if(title != null && title.length() > 32) {
@@ -193,14 +193,14 @@ public final class HSSFDataValidation implements DataValidation {
 	}
 
 	/* (non-Javadoc)
-	 * @see org.apache.poi.hssf.usermodel.DataValidation#getErrorBoxTitle()
+	 * @see com.moparisthebest.poi.hssf.usermodel.DataValidation#getErrorBoxTitle()
 	 */
 	public String getErrorBoxTitle() {
 		return _error_title;
 	}
 
 	/* (non-Javadoc)
-	 * @see org.apache.poi.hssf.usermodel.DataValidation#getErrorBoxText()
+	 * @see com.moparisthebest.poi.hssf.usermodel.DataValidation#getErrorBoxText()
 	 */
 	public String getErrorBoxText() {
 		return _error_text;

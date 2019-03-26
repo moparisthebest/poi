@@ -15,16 +15,16 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.record.aggregates;
+package com.moparisthebest.poi.hssf.record.aggregates;
 
-import org.apache.poi.hssf.model.RecordStream;
-import org.apache.poi.hssf.record.ObjectProtectRecord;
-import org.apache.poi.hssf.record.PasswordRecord;
-import org.apache.poi.hssf.record.ProtectRecord;
-import org.apache.poi.hssf.record.Record;
-import org.apache.poi.hssf.record.RecordFormatException;
-import org.apache.poi.hssf.record.ScenarioProtectRecord;
-import org.apache.poi.poifs.crypt.CryptoFunctions;
+import com.moparisthebest.poi.hssf.model.RecordStream;
+import com.moparisthebest.poi.hssf.record.ObjectProtectRecord;
+import com.moparisthebest.poi.hssf.record.PasswordRecord;
+import com.moparisthebest.poi.hssf.record.ProtectRecord;
+import com.moparisthebest.poi.hssf.record.Record;
+import com.moparisthebest.poi.hssf.record.RecordFormatException;
+import com.moparisthebest.poi.hssf.record.ScenarioProtectRecord;
+import com.moparisthebest.poi.poifs.crypt.CryptoFunctions;
 
 /**
  * Groups the sheet protection records for a worksheet.

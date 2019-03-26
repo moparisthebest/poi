@@ -15,17 +15,17 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.usermodel;
+package com.moparisthebest.poi.ss.usermodel;
 
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.Iterator;
 import java.util.List;
 
-import org.apache.poi.ss.SpreadsheetVersion;
-import org.apache.poi.ss.formula.udf.UDFFinder;
-import org.apache.poi.ss.usermodel.Row.MissingCellPolicy;
-import org.apache.poi.util.Removal;
+import com.moparisthebest.poi.ss.SpreadsheetVersion;
+import com.moparisthebest.poi.ss.formula.udf.UDFFinder;
+import com.moparisthebest.poi.ss.usermodel.Row.MissingCellPolicy;
+import com.moparisthebest.poi.util.Removal;
 
 /**
  * High level representation of a Excel workbook.  This is the first object most users
@@ -142,14 +142,14 @@ public interface Workbook extends Iterable<Sheet> {
     /**
      * Set the sheet name.
      * <p>
-     * See {@link org.apache.poi.ss.util.WorkbookUtil#createSafeSheetName(String nameProposal)}
+     * See {@link com.moparisthebest.poi.ss.util.WorkbookUtil#createSafeSheetName(String nameProposal)}
      *      for a safe way to create valid names
      * </p>
      * @param sheet number (0 based)
      * @throws IllegalArgumentException if the name is null or invalid
      *  or workbook already contains a sheet with this name
      * @see #createSheet(String)
-     * @see org.apache.poi.ss.util.WorkbookUtil#createSafeSheetName(String nameProposal)
+     * @see com.moparisthebest.poi.ss.util.WorkbookUtil#createSafeSheetName(String nameProposal)
      */
     void setSheetName(int sheet, String name);
 
@@ -223,14 +223,14 @@ public interface Workbook extends Iterable<Sheet> {
      * </p>
      *
      * <p>
-     * See {@link org.apache.poi.ss.util.WorkbookUtil#createSafeSheetName(String nameProposal)}
+     * See {@link com.moparisthebest.poi.ss.util.WorkbookUtil#createSafeSheetName(String nameProposal)}
      *      for a safe way to create valid names
      * </p>
      * @param sheetname The name to set for the sheet.
      * @return Sheet representing the new sheet.
      * @throws IllegalArgumentException if the name is null or invalid
      *  or workbook already contains a sheet with this name
-     * @see org.apache.poi.ss.util.WorkbookUtil#createSafeSheetName(String nameProposal)
+     * @see com.moparisthebest.poi.ss.util.WorkbookUtil#createSafeSheetName(String nameProposal)
      */
     Sheet createSheet(String sheetname);
 

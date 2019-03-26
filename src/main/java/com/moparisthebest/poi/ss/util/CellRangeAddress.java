@@ -15,12 +15,12 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.util;
+package com.moparisthebest.poi.ss.util;
 
-import org.apache.poi.hssf.record.RecordInputStream;
-import org.apache.poi.hssf.record.SelectionRecord;
-import org.apache.poi.ss.formula.SheetNameFormatter;
-import org.apache.poi.util.LittleEndianOutput;
+import com.moparisthebest.poi.hssf.record.RecordInputStream;
+import com.moparisthebest.poi.hssf.record.SelectionRecord;
+import com.moparisthebest.poi.ss.formula.SheetNameFormatter;
+import com.moparisthebest.poi.util.LittleEndianOutput;
 
 /**
  * See OOO documentation: excelfileformat.pdf sec 2.5.14 - 'Cell Range Address'<p/>
@@ -33,7 +33,7 @@ import org.apache.poi.util.LittleEndianOutput;
  */
 public class CellRangeAddress extends CellRangeAddressBase {
 	/*
-	 * TODO - replace  org.apache.poi.hssf.util.Region
+	 * TODO - replace  com.moparisthebest.poi.hssf.util.Region
 	 */
 	public static final int ENCODED_SIZE = 8;
 

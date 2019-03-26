@@ -16,17 +16,17 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ddf;
+package com.moparisthebest.poi.ddf;
 
 import java.io.PrintWriter;
 import java.util.Collections;
 import java.util.List;
 
-import org.apache.poi.util.BitField;
-import org.apache.poi.util.BitFieldFactory;
-import org.apache.poi.util.HexDump;
-import org.apache.poi.util.Internal;
-import org.apache.poi.util.LittleEndian;
+import com.moparisthebest.poi.util.BitField;
+import com.moparisthebest.poi.util.BitFieldFactory;
+import com.moparisthebest.poi.util.HexDump;
+import com.moparisthebest.poi.util.Internal;
+import com.moparisthebest.poi.util.LittleEndian;
 
 /**
  * The base abstract record from which all escher records are defined.  Subclasses will need
@@ -53,7 +53,7 @@ public abstract class EscherRecord implements Cloneable {
      * @param f the escher record factory
      * @return The number of bytes written.
      * 
-     * @see #fillFields(byte[], int, org.apache.poi.ddf.EscherRecordFactory)
+     * @see #fillFields(byte[], int, com.moparisthebest.poi.ddf.EscherRecordFactory)
      */
     protected int fillFields( byte[] data, EscherRecordFactory f )
     {
@@ -159,7 +159,7 @@ public abstract class EscherRecord implements Cloneable {
      * @param data      the data array to serialize to.
      * @return          The number of bytes written.
      *
-     * @see #serialize(int, byte[], org.apache.poi.ddf.EscherSerializationListener)
+     * @see #serialize(int, byte[], com.moparisthebest.poi.ddf.EscherSerializationListener)
      */
     public int serialize( int offset, byte[] data)
     {

@@ -1,10 +1,10 @@
-//package org.apache.poi.hssf.usermodel.examples;
+//package com.moparisthebest.poi.hssf.usermodel.examples;
 
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import com.moparisthebest.poi.hssf.usermodel.HSSFWorkbook;
 import org.junit.Test;
-import org.apache.poi.ss.SpreadsheetVersion;
-import org.apache.poi.ss.usermodel.*;
-//import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import com.moparisthebest.poi.ss.SpreadsheetVersion;
+import com.moparisthebest.poi.ss.usermodel.*;
+//import com.moparisthebest.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -32,17 +32,17 @@ public class CalculationTest {
 
     /*
     public static Workbook newXSSFWorkbookNoFormulaValidation() {
-        final org.apache.poi.xssf.usermodel.XSSFWorkbook wb = new XSSFWorkbook();
+        final com.moparisthebest.poi.xssf.usermodel.XSSFWorkbook wb = new XSSFWorkbook();
         wb.setCellFormulaValidation(false);
         return wb;
     }
     */
 
     public static void runAssert(final int maxRow, final double expected) {
-        //runAssert(new org.apache.poi.hssf.usermodel.GenericSSEvaluationWorkbook(), maxRow, expected);
-        runAssert(new org.apache.poi.hssf.usermodel.HSSFWorkbook(), maxRow, expected);
+        //runAssert(new com.moparisthebest.poi.hssf.usermodel.GenericSSEvaluationWorkbook(), maxRow, expected);
+        runAssert(new com.moparisthebest.poi.hssf.usermodel.HSSFWorkbook(), maxRow, expected);
         if(maxRow <= SpreadsheetVersion.EXCEL97.getMaxRows())
-            runAssert(new org.apache.poi.hssf.usermodel.HSSFWorkbook(SpreadsheetVersion.EXCEL97), maxRow, expected);
+            runAssert(new com.moparisthebest.poi.hssf.usermodel.HSSFWorkbook(SpreadsheetVersion.EXCEL97), maxRow, expected);
         //runAssert(newXSSFWorkbookNoFormulaValidation(), maxRow, expected);
     }
 

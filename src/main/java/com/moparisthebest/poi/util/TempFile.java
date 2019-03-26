@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.util;
+package com.moparisthebest.poi.util;
 
 import java.io.File;
 import java.io.IOException;
@@ -71,7 +71,7 @@ public final class TempFile {
     }
     
     /**
-     * @deprecated POI 3.15 beta 3. Moved to {@link org.apache.poi.util.DefaultTempFileCreationStrategy}.
+     * @deprecated POI 3.15 beta 3. Moved to {@link com.moparisthebest.poi.util.DefaultTempFileCreationStrategy}.
      */
-    public static class DefaultTempFileCreationStrategy extends org.apache.poi.util.DefaultTempFileCreationStrategy {}
+    public static class DefaultTempFileCreationStrategy extends com.moparisthebest.poi.util.DefaultTempFileCreationStrategy {}
 }

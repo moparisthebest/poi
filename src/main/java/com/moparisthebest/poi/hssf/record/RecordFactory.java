@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.record;
+package com.moparisthebest.poi.hssf.record;
 
 import java.io.InputStream;
 import java.lang.reflect.Constructor;
@@ -31,37 +31,37 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 
-import org.apache.poi.EncryptedDocumentException;
-import org.apache.poi.hssf.record.chart.BeginRecord;
-import org.apache.poi.hssf.record.chart.CatLabRecord;
-import org.apache.poi.hssf.record.chart.ChartEndBlockRecord;
-import org.apache.poi.hssf.record.chart.ChartEndObjectRecord;
-import org.apache.poi.hssf.record.chart.ChartFRTInfoRecord;
-import org.apache.poi.hssf.record.chart.ChartRecord;
-import org.apache.poi.hssf.record.chart.ChartStartBlockRecord;
-import org.apache.poi.hssf.record.chart.ChartStartObjectRecord;
-import org.apache.poi.hssf.record.chart.ChartTitleFormatRecord;
-import org.apache.poi.hssf.record.chart.DataFormatRecord;
-import org.apache.poi.hssf.record.chart.EndRecord;
-import org.apache.poi.hssf.record.chart.LegendRecord;
-import org.apache.poi.hssf.record.chart.LinkedDataRecord;
-import org.apache.poi.hssf.record.chart.SeriesRecord;
-import org.apache.poi.hssf.record.chart.SeriesTextRecord;
-import org.apache.poi.hssf.record.chart.SeriesToChartGroupRecord;
-import org.apache.poi.hssf.record.chart.ValueRangeRecord;
-import org.apache.poi.hssf.record.pivottable.DataItemRecord;
-import org.apache.poi.hssf.record.pivottable.ExtendedPivotTableViewFieldsRecord;
-import org.apache.poi.hssf.record.pivottable.PageItemRecord;
-import org.apache.poi.hssf.record.pivottable.StreamIDRecord;
-import org.apache.poi.hssf.record.pivottable.ViewDefinitionRecord;
-import org.apache.poi.hssf.record.pivottable.ViewFieldsRecord;
-import org.apache.poi.hssf.record.pivottable.ViewSourceRecord;
+import com.moparisthebest.poi.EncryptedDocumentException;
+import com.moparisthebest.poi.hssf.record.chart.BeginRecord;
+import com.moparisthebest.poi.hssf.record.chart.CatLabRecord;
+import com.moparisthebest.poi.hssf.record.chart.ChartEndBlockRecord;
+import com.moparisthebest.poi.hssf.record.chart.ChartEndObjectRecord;
+import com.moparisthebest.poi.hssf.record.chart.ChartFRTInfoRecord;
+import com.moparisthebest.poi.hssf.record.chart.ChartRecord;
+import com.moparisthebest.poi.hssf.record.chart.ChartStartBlockRecord;
+import com.moparisthebest.poi.hssf.record.chart.ChartStartObjectRecord;
+import com.moparisthebest.poi.hssf.record.chart.ChartTitleFormatRecord;
+import com.moparisthebest.poi.hssf.record.chart.DataFormatRecord;
+import com.moparisthebest.poi.hssf.record.chart.EndRecord;
+import com.moparisthebest.poi.hssf.record.chart.LegendRecord;
+import com.moparisthebest.poi.hssf.record.chart.LinkedDataRecord;
+import com.moparisthebest.poi.hssf.record.chart.SeriesRecord;
+import com.moparisthebest.poi.hssf.record.chart.SeriesTextRecord;
+import com.moparisthebest.poi.hssf.record.chart.SeriesToChartGroupRecord;
+import com.moparisthebest.poi.hssf.record.chart.ValueRangeRecord;
+import com.moparisthebest.poi.hssf.record.pivottable.DataItemRecord;
+import com.moparisthebest.poi.hssf.record.pivottable.ExtendedPivotTableViewFieldsRecord;
+import com.moparisthebest.poi.hssf.record.pivottable.PageItemRecord;
+import com.moparisthebest.poi.hssf.record.pivottable.StreamIDRecord;
+import com.moparisthebest.poi.hssf.record.pivottable.ViewDefinitionRecord;
+import com.moparisthebest.poi.hssf.record.pivottable.ViewFieldsRecord;
+import com.moparisthebest.poi.hssf.record.pivottable.ViewSourceRecord;
 
 /**
  * Title:  Record Factory<p>
  * Description:  Takes a stream and outputs an array of Record objects.
  *
- * @see org.apache.poi.hssf.eventmodel.EventRecordFactory
+ * @see com.moparisthebest.poi.hssf.eventmodel.EventRecordFactory
  */
 public final class RecordFactory {
     private static final int NUM_RECORDS = 512;
@@ -90,12 +90,12 @@ public final class RecordFactory {
                 throw new RuntimeException(e);
             } catch (InvocationTargetException e) {
                 Throwable t = e.getTargetException();
-                if (t instanceof org.apache.poi.util.RecordFormatException) {
-                    throw (org.apache.poi.util.RecordFormatException)t;
+                if (t instanceof com.moparisthebest.poi.util.RecordFormatException) {
+                    throw (com.moparisthebest.poi.util.RecordFormatException)t;
                 } else if (t instanceof EncryptedDocumentException) {
                     throw (EncryptedDocumentException)t;
                 } else {
-                    throw new org.apache.poi.util.RecordFormatException("Unable to construct record instance" , t);
+                    throw new com.moparisthebest.poi.util.RecordFormatException("Unable to construct record instance" , t);
                 }
             }
         }
@@ -123,7 +123,7 @@ public final class RecordFactory {
             } catch (IllegalAccessException e) {
                 throw new RuntimeException(e);
             } catch (InvocationTargetException e) {
-                throw new org.apache.poi.util.RecordFormatException("Unable to construct record instance" , e.getTargetException());
+                throw new com.moparisthebest.poi.util.RecordFormatException("Unable to construct record instance" , e.getTargetException());
             }
         }
         @Override
@@ -422,7 +422,7 @@ public final class RecordFactory {
     /**
      * gets the record constructors and sticks them in the map by SID
      * @return map of SIDs to short,short,byte[] constructors for Record classes
-     * most of org.apache.poi.hssf.record.*
+     * most of com.moparisthebest.poi.hssf.record.*
      */
     private static Map<Integer, I_RecordCreator> recordsToMap(Class<? extends Record> [] records) {
         Map<Integer, I_RecordCreator> result = new HashMap<Integer, I_RecordCreator>();
@@ -443,7 +443,7 @@ public final class RecordFactory {
             try {
                 sid = recClass.getField("sid").getShort(null);
             } catch (Exception illegalArgumentException) {
-                throw new org.apache.poi.util.RecordFormatException(
+                throw new com.moparisthebest.poi.util.RecordFormatException(
                         "Unable to determine record types");
             }
             Integer key = Integer.valueOf(sid);
@@ -482,9 +482,9 @@ public final class RecordFactory {
      *
      * @return an array of Records created from the InputStream
      *
-     * @exception org.apache.poi.util.RecordFormatException on error processing the InputStream
+     * @exception com.moparisthebest.poi.util.RecordFormatException on error processing the InputStream
      */
-    public static List<Record> createRecords(InputStream in) throws org.apache.poi.util.RecordFormatException {
+    public static List<Record> createRecords(InputStream in) throws com.moparisthebest.poi.util.RecordFormatException {
 
         List<Record> records = new ArrayList<Record>(NUM_RECORDS);
 

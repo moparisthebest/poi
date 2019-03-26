@@ -15,14 +15,14 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula;
+package com.moparisthebest.poi.ss.formula;
 
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.apache.poi.ss.formula.eval.ValueEval;
-import org.apache.poi.ss.formula.FormulaUsedBlankCellSet.BookSheetKey;
+import com.moparisthebest.poi.ss.formula.eval.ValueEval;
+import com.moparisthebest.poi.ss.formula.FormulaUsedBlankCellSet.BookSheetKey;
 
 
 /**

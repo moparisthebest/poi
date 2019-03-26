@@ -15,18 +15,18 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.usermodel;
+package com.moparisthebest.poi.hssf.usermodel;
 
-import org.apache.poi.hssf.record.CFRule12Record;
-import org.apache.poi.hssf.record.cf.DataBarFormatting;
-import org.apache.poi.hssf.record.cf.DataBarThreshold;
-import org.apache.poi.ss.usermodel.Color;
+import com.moparisthebest.poi.hssf.record.CFRule12Record;
+import com.moparisthebest.poi.hssf.record.cf.DataBarFormatting;
+import com.moparisthebest.poi.hssf.record.cf.DataBarThreshold;
+import com.moparisthebest.poi.ss.usermodel.Color;
 
 /**
  * High level representation for DataBar / Data-Bar Formatting 
  *  component of Conditional Formatting settings
  */
-public final class HSSFDataBarFormatting implements org.apache.poi.ss.usermodel.DataBarFormatting {
+public final class HSSFDataBarFormatting implements com.moparisthebest.poi.ss.usermodel.DataBarFormatting {
     private final HSSFSheet sheet;
     private final CFRule12Record cfRule12Record;
     private final DataBarFormatting databarFormatting;

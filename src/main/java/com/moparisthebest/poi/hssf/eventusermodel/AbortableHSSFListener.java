@@ -16,10 +16,10 @@
 ==================================================================== */
 
 
-package org.apache.poi.hssf.eventusermodel;
+package com.moparisthebest.poi.hssf.eventusermodel;
 
-import org.apache.poi.hssf.record.Record;
-import org.apache.poi.hssf.eventusermodel.HSSFUserException;
+import com.moparisthebest.poi.hssf.record.Record;
+import com.moparisthebest.poi.hssf.eventusermodel.HSSFUserException;
 
 /**
  * Abstract class for use with the HSSFRequest and HSSFEventFactory, which
@@ -30,9 +30,9 @@ import org.apache.poi.hssf.eventusermodel.HSSFUserException;
  * This should then be registered with the HSSFRequest (associating
  * it with Record SID's) as usual.
  *
- * @see org.apache.poi.hssf.eventusermodel.HSSFEventFactory
- * @see org.apache.poi.hssf.eventusermodel.HSSFRequest
- * @see org.apache.poi.hssf.eventusermodel.HSSFUserException
+ * @see com.moparisthebest.poi.hssf.eventusermodel.HSSFEventFactory
+ * @see com.moparisthebest.poi.hssf.eventusermodel.HSSFRequest
+ * @see com.moparisthebest.poi.hssf.eventusermodel.HSSFUserException
  */
 
 public abstract class AbortableHSSFListener implements HSSFListener

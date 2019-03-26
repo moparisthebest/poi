@@ -14,7 +14,7 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 ==================================================================== */
-package org.apache.poi.ss.format;
+package com.moparisthebest.poi.ss.format;
 
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
@@ -29,9 +29,9 @@ import java.util.ListIterator;
 import java.util.Set;
 import java.util.TreeSet;
 
-import org.apache.poi.util.LocaleUtil;
-import org.apache.poi.util.POILogFactory;
-import org.apache.poi.util.POILogger;
+import com.moparisthebest.poi.util.LocaleUtil;
+import com.moparisthebest.poi.util.POILogFactory;
+import com.moparisthebest.poi.util.POILogger;
 
 /**
  * This class implements printing out a value using a number format.

@@ -15,27 +15,27 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.record.aggregates;
+package com.moparisthebest.poi.hssf.record.aggregates;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.poi.hssf.model.RecordStream;
-import org.apache.poi.hssf.record.CFHeader12Record;
-import org.apache.poi.hssf.record.CFHeaderBase;
-import org.apache.poi.hssf.record.CFHeaderRecord;
-import org.apache.poi.hssf.record.CFRule12Record;
-import org.apache.poi.hssf.record.CFRuleBase;
-import org.apache.poi.hssf.record.CFRuleRecord;
-import org.apache.poi.hssf.record.Record;
-import org.apache.poi.ss.formula.FormulaShifter;
-import org.apache.poi.ss.formula.ptg.AreaErrPtg;
-import org.apache.poi.ss.formula.ptg.AreaPtg;
-import org.apache.poi.ss.formula.ptg.Ptg;
-import org.apache.poi.ss.util.CellRangeAddress;
-import org.apache.poi.util.POILogFactory;
-import org.apache.poi.util.POILogger;
-import org.apache.poi.util.RecordFormatException;
+import com.moparisthebest.poi.hssf.model.RecordStream;
+import com.moparisthebest.poi.hssf.record.CFHeader12Record;
+import com.moparisthebest.poi.hssf.record.CFHeaderBase;
+import com.moparisthebest.poi.hssf.record.CFHeaderRecord;
+import com.moparisthebest.poi.hssf.record.CFRule12Record;
+import com.moparisthebest.poi.hssf.record.CFRuleBase;
+import com.moparisthebest.poi.hssf.record.CFRuleRecord;
+import com.moparisthebest.poi.hssf.record.Record;
+import com.moparisthebest.poi.ss.formula.FormulaShifter;
+import com.moparisthebest.poi.ss.formula.ptg.AreaErrPtg;
+import com.moparisthebest.poi.ss.formula.ptg.AreaPtg;
+import com.moparisthebest.poi.ss.formula.ptg.Ptg;
+import com.moparisthebest.poi.ss.util.CellRangeAddress;
+import com.moparisthebest.poi.util.POILogFactory;
+import com.moparisthebest.poi.util.POILogger;
+import com.moparisthebest.poi.util.RecordFormatException;
 
 /**
  * <p>CFRecordsAggregate - aggregates Conditional Formatting records CFHeaderRecord 

@@ -15,45 +15,45 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula;
+package com.moparisthebest.poi.ss.formula;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Modifier;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.apache.poi.ss.formula.ptg.AbstractFunctionPtg;
-import org.apache.poi.ss.formula.ptg.AddPtg;
-import org.apache.poi.ss.formula.ptg.ConcatPtg;
-import org.apache.poi.ss.formula.ptg.DividePtg;
-import org.apache.poi.ss.formula.ptg.EqualPtg;
-import org.apache.poi.ss.formula.ptg.GreaterEqualPtg;
-import org.apache.poi.ss.formula.ptg.GreaterThanPtg;
-import org.apache.poi.ss.formula.ptg.IntersectionPtg;
-import org.apache.poi.ss.formula.ptg.LessEqualPtg;
-import org.apache.poi.ss.formula.ptg.LessThanPtg;
-import org.apache.poi.ss.formula.ptg.MultiplyPtg;
-import org.apache.poi.ss.formula.ptg.NotEqualPtg;
-import org.apache.poi.ss.formula.ptg.OperationPtg;
-import org.apache.poi.ss.formula.ptg.PercentPtg;
-import org.apache.poi.ss.formula.ptg.PowerPtg;
-import org.apache.poi.ss.formula.ptg.RangePtg;
-import org.apache.poi.ss.formula.ptg.SubtractPtg;
-import org.apache.poi.ss.formula.ptg.UnaryMinusPtg;
-import org.apache.poi.ss.formula.ptg.UnaryPlusPtg;
-import org.apache.poi.ss.formula.eval.ConcatEval;
-import org.apache.poi.ss.formula.eval.FunctionEval;
-import org.apache.poi.ss.formula.eval.IntersectionEval;
-import org.apache.poi.ss.formula.eval.PercentEval;
-import org.apache.poi.ss.formula.eval.RangeEval;
-import org.apache.poi.ss.formula.eval.RelationalOperationEval;
-import org.apache.poi.ss.formula.eval.TwoOperandNumericOperation;
-import org.apache.poi.ss.formula.eval.UnaryMinusEval;
-import org.apache.poi.ss.formula.eval.UnaryPlusEval;
-import org.apache.poi.ss.formula.eval.ValueEval;
-import org.apache.poi.ss.formula.function.FunctionMetadataRegistry;
-import org.apache.poi.ss.formula.functions.Function;
-import org.apache.poi.ss.formula.functions.Indirect;
+import com.moparisthebest.poi.ss.formula.ptg.AbstractFunctionPtg;
+import com.moparisthebest.poi.ss.formula.ptg.AddPtg;
+import com.moparisthebest.poi.ss.formula.ptg.ConcatPtg;
+import com.moparisthebest.poi.ss.formula.ptg.DividePtg;
+import com.moparisthebest.poi.ss.formula.ptg.EqualPtg;
+import com.moparisthebest.poi.ss.formula.ptg.GreaterEqualPtg;
+import com.moparisthebest.poi.ss.formula.ptg.GreaterThanPtg;
+import com.moparisthebest.poi.ss.formula.ptg.IntersectionPtg;
+import com.moparisthebest.poi.ss.formula.ptg.LessEqualPtg;
+import com.moparisthebest.poi.ss.formula.ptg.LessThanPtg;
+import com.moparisthebest.poi.ss.formula.ptg.MultiplyPtg;
+import com.moparisthebest.poi.ss.formula.ptg.NotEqualPtg;
+import com.moparisthebest.poi.ss.formula.ptg.OperationPtg;
+import com.moparisthebest.poi.ss.formula.ptg.PercentPtg;
+import com.moparisthebest.poi.ss.formula.ptg.PowerPtg;
+import com.moparisthebest.poi.ss.formula.ptg.RangePtg;
+import com.moparisthebest.poi.ss.formula.ptg.SubtractPtg;
+import com.moparisthebest.poi.ss.formula.ptg.UnaryMinusPtg;
+import com.moparisthebest.poi.ss.formula.ptg.UnaryPlusPtg;
+import com.moparisthebest.poi.ss.formula.eval.ConcatEval;
+import com.moparisthebest.poi.ss.formula.eval.FunctionEval;
+import com.moparisthebest.poi.ss.formula.eval.IntersectionEval;
+import com.moparisthebest.poi.ss.formula.eval.PercentEval;
+import com.moparisthebest.poi.ss.formula.eval.RangeEval;
+import com.moparisthebest.poi.ss.formula.eval.RelationalOperationEval;
+import com.moparisthebest.poi.ss.formula.eval.TwoOperandNumericOperation;
+import com.moparisthebest.poi.ss.formula.eval.UnaryMinusEval;
+import com.moparisthebest.poi.ss.formula.eval.UnaryPlusEval;
+import com.moparisthebest.poi.ss.formula.eval.ValueEval;
+import com.moparisthebest.poi.ss.formula.function.FunctionMetadataRegistry;
+import com.moparisthebest.poi.ss.formula.functions.Function;
+import com.moparisthebest.poi.ss.formula.functions.Indirect;
 
 /**
  * This class creates <tt>OperationEval</tt> instances to help evaluate <tt>OperationPtg</tt>

@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula;
+package com.moparisthebest.poi.ss.formula;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -23,25 +23,25 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.poi.ss.formula.eval.BlankEval;
-import org.apache.poi.ss.formula.eval.BoolEval;
-import org.apache.poi.ss.formula.eval.ErrorEval;
-import org.apache.poi.ss.formula.eval.NumberEval;
-import org.apache.poi.ss.formula.eval.RefEval;
-import org.apache.poi.ss.formula.eval.StringEval;
-import org.apache.poi.ss.formula.eval.ValueEval;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.CellType;
-import org.apache.poi.ss.usermodel.DataValidation;
-import org.apache.poi.ss.usermodel.DataValidationConstraint;
-import org.apache.poi.ss.usermodel.DataValidationConstraint.OperatorType;
-import org.apache.poi.ss.usermodel.DataValidationConstraint.ValidationType;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.ss.util.CellRangeAddressBase;
-import org.apache.poi.ss.util.CellRangeAddressList;
-import org.apache.poi.ss.util.CellReference;
-import org.apache.poi.ss.util.SheetUtil;
+import com.moparisthebest.poi.ss.formula.eval.BlankEval;
+import com.moparisthebest.poi.ss.formula.eval.BoolEval;
+import com.moparisthebest.poi.ss.formula.eval.ErrorEval;
+import com.moparisthebest.poi.ss.formula.eval.NumberEval;
+import com.moparisthebest.poi.ss.formula.eval.RefEval;
+import com.moparisthebest.poi.ss.formula.eval.StringEval;
+import com.moparisthebest.poi.ss.formula.eval.ValueEval;
+import com.moparisthebest.poi.ss.usermodel.Cell;
+import com.moparisthebest.poi.ss.usermodel.CellType;
+import com.moparisthebest.poi.ss.usermodel.DataValidation;
+import com.moparisthebest.poi.ss.usermodel.DataValidationConstraint;
+import com.moparisthebest.poi.ss.usermodel.DataValidationConstraint.OperatorType;
+import com.moparisthebest.poi.ss.usermodel.DataValidationConstraint.ValidationType;
+import com.moparisthebest.poi.ss.usermodel.Sheet;
+import com.moparisthebest.poi.ss.usermodel.Workbook;
+import com.moparisthebest.poi.ss.util.CellRangeAddressBase;
+import com.moparisthebest.poi.ss.util.CellRangeAddressList;
+import com.moparisthebest.poi.ss.util.CellReference;
+import com.moparisthebest.poi.ss.util.SheetUtil;
 
 /**
  * Evaluates Data Validation constraints.<p/>
@@ -341,7 +341,7 @@ public class DataValidationEvaluator {
             /**
              * Note the formula result must either be a boolean result, or anything not in error.
              * If boolean, value must be true to pass, anything else valid is also passing, errors fail.
-             * @see org.apache.poi.ss.formula.DataValidationEvaluator.ValidationEnum#isValidValue(org.apache.poi.ss.usermodel.Cell, org.apache.poi.ss.usermodel.DataValidationConstraint, org.apache.poi.ss.formula.WorkbookEvaluator)
+             * @see com.moparisthebest.poi.ss.formula.DataValidationEvaluator.ValidationEnum#isValidValue(com.moparisthebest.poi.ss.usermodel.Cell, com.moparisthebest.poi.ss.usermodel.DataValidationConstraint, com.moparisthebest.poi.ss.formula.WorkbookEvaluator)
              */
             public boolean isValidValue(Cell cell, DataValidationContext context) {
                 ValueEval comp = context.getEvaluator().getWorkbookEvaluator().evaluate(context.getFormula1(), context.getTarget(), context.getRegion());

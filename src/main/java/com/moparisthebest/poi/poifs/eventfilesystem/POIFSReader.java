@@ -17,26 +17,26 @@
 ==================================================================== */
         
 
-package org.apache.poi.poifs.eventfilesystem;
+package com.moparisthebest.poi.poifs.eventfilesystem;
 
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Iterator;
 
-import org.apache.poi.poifs.filesystem.DocumentInputStream;
-import org.apache.poi.poifs.filesystem.OPOIFSDocument;
-import org.apache.poi.poifs.filesystem.POIFSDocumentPath;
-import org.apache.poi.poifs.property.DirectoryProperty;
-import org.apache.poi.poifs.property.Property;
-import org.apache.poi.poifs.property.PropertyTable;
-import org.apache.poi.poifs.property.RootProperty;
-import org.apache.poi.poifs.storage.BlockAllocationTableReader;
-import org.apache.poi.poifs.storage.BlockList;
-import org.apache.poi.poifs.storage.HeaderBlock;
-import org.apache.poi.poifs.storage.RawDataBlockList;
-import org.apache.poi.poifs.storage.SmallBlockTableReader;
-import org.apache.poi.util.IOUtils;
+import com.moparisthebest.poi.poifs.filesystem.DocumentInputStream;
+import com.moparisthebest.poi.poifs.filesystem.OPOIFSDocument;
+import com.moparisthebest.poi.poifs.filesystem.POIFSDocumentPath;
+import com.moparisthebest.poi.poifs.property.DirectoryProperty;
+import com.moparisthebest.poi.poifs.property.Property;
+import com.moparisthebest.poi.poifs.property.PropertyTable;
+import com.moparisthebest.poi.poifs.property.RootProperty;
+import com.moparisthebest.poi.poifs.storage.BlockAllocationTableReader;
+import com.moparisthebest.poi.poifs.storage.BlockList;
+import com.moparisthebest.poi.poifs.storage.HeaderBlock;
+import com.moparisthebest.poi.poifs.storage.RawDataBlockList;
+import com.moparisthebest.poi.poifs.storage.SmallBlockTableReader;
+import com.moparisthebest.poi.util.IOUtils;
 
 /**
  * An event-driven reader for POIFS file systems. Users of this class

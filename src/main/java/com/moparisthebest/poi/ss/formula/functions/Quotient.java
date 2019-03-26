@@ -15,12 +15,12 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula.functions;
+package com.moparisthebest.poi.ss.formula.functions;
 
-import org.apache.poi.ss.formula.OperationEvaluationContext;
-import org.apache.poi.ss.formula.eval.ValueEval;
+import com.moparisthebest.poi.ss.formula.OperationEvaluationContext;
+import com.moparisthebest.poi.ss.formula.eval.ValueEval;
 
-import org.apache.poi.ss.formula.eval.*;
+import com.moparisthebest.poi.ss.formula.eval.*;
 
 /**
  * <p>Implementation for Excel QUOTIENT () function.<p/>

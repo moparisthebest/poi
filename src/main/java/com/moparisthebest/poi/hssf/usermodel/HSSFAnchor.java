@@ -15,14 +15,14 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.usermodel;
+package com.moparisthebest.poi.hssf.usermodel;
 
 
-import org.apache.poi.ddf.EscherChildAnchorRecord;
-import org.apache.poi.ddf.EscherClientAnchorRecord;
-import org.apache.poi.ddf.EscherContainerRecord;
-import org.apache.poi.ddf.EscherRecord;
-import org.apache.poi.ss.usermodel.ChildAnchor;
+import com.moparisthebest.poi.ddf.EscherChildAnchorRecord;
+import com.moparisthebest.poi.ddf.EscherClientAnchorRecord;
+import com.moparisthebest.poi.ddf.EscherContainerRecord;
+import com.moparisthebest.poi.ddf.EscherRecord;
+import com.moparisthebest.poi.ss.usermodel.ChildAnchor;
 
 /**
  * An anchor is what specifics the position of a shape within a client object

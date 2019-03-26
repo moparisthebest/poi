@@ -15,12 +15,12 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula.ptg;
+package com.moparisthebest.poi.ss.formula.ptg;
 
-import org.apache.poi.ss.formula.EvaluationWorkbook.ExternalSheet;
-import org.apache.poi.ss.formula.EvaluationWorkbook.ExternalSheetRange;
-import org.apache.poi.ss.formula.FormulaRenderingWorkbook;
-import org.apache.poi.ss.formula.SheetNameFormatter;
+import com.moparisthebest.poi.ss.formula.EvaluationWorkbook.ExternalSheet;
+import com.moparisthebest.poi.ss.formula.EvaluationWorkbook.ExternalSheetRange;
+import com.moparisthebest.poi.ss.formula.FormulaRenderingWorkbook;
+import com.moparisthebest.poi.ss.formula.SheetNameFormatter;
 
 /**
  * @author Josh Micich

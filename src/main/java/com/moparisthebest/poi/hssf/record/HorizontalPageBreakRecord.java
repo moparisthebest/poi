@@ -15,7 +15,7 @@
  limitations under the License.
  ==================================================================== */
 
-package org.apache.poi.hssf.record;
+package com.moparisthebest.poi.hssf.record;
 
 import java.util.Iterator;
 

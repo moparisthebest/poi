@@ -18,11 +18,11 @@
 /*
  * HSSF Chart Title Format Record Type
  */
-package org.apache.poi.hssf.record.chart;
+package com.moparisthebest.poi.hssf.record.chart;
 
-import org.apache.poi.hssf.record.RecordInputStream;
-import org.apache.poi.hssf.record.StandardRecord;
-import org.apache.poi.util.LittleEndianOutput;
+import com.moparisthebest.poi.hssf.record.RecordInputStream;
+import com.moparisthebest.poi.hssf.record.StandardRecord;
+import com.moparisthebest.poi.util.LittleEndianOutput;
 
 /**
  * CHARTTITLEFORMAT (0x1050)<p>

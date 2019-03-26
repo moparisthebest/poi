@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.usermodel.charts;
+package com.moparisthebest.poi.ss.usermodel.charts;
 
 /**
  * Enumeration of all possible chart legend positions.

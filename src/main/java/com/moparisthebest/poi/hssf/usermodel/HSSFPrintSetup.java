@@ -16,10 +16,10 @@
 ==================================================================== */
 
 
-package org.apache.poi.hssf.usermodel;
+package com.moparisthebest.poi.hssf.usermodel;
 
-import org.apache.poi.hssf.record.PrintSetupRecord;
-import org.apache.poi.ss.usermodel.PrintSetup;
+import com.moparisthebest.poi.hssf.record.PrintSetupRecord;
+import com.moparisthebest.poi.ss.usermodel.PrintSetup;
 
 /**
  * Used to modify the print setup.

@@ -17,9 +17,9 @@
 ==================================================================== */
         
 
-package org.apache.poi.poifs.common;
+package com.moparisthebest.poi.poifs.common;
 
-import org.apache.poi.util.LittleEndianConsts;
+import com.moparisthebest.poi.util.LittleEndianConsts;
 
 /**
  * <p>A class describing attributes of the Big Block Size</p>

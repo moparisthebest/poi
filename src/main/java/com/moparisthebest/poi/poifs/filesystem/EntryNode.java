@@ -17,9 +17,9 @@
 ==================================================================== */
         
 
-package org.apache.poi.poifs.filesystem;
+package com.moparisthebest.poi.poifs.filesystem;
 
-import org.apache.poi.poifs.property.Property;
+import com.moparisthebest.poi.poifs.property.Property;
 
 /**
  * Abstract implementation of Entry

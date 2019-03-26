@@ -15,9 +15,9 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.usermodel;
+package com.moparisthebest.poi.ss.usermodel;
 
-import org.apache.poi.util.Removal;
+import com.moparisthebest.poi.util.Removal;
 
 /**
  * @deprecated 3.16 beta1. This interface isn't implemented ...

@@ -15,11 +15,11 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.usermodel;
+package com.moparisthebest.poi.hssf.usermodel;
 
 import java.util.List;
 
-import org.apache.poi.ss.usermodel.ShapeContainer;
+import com.moparisthebest.poi.ss.usermodel.ShapeContainer;
 
 /**
  * An interface that indicates whether a class can contain children.

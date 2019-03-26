@@ -14,16 +14,16 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 ==================================================================== */
-package org.apache.poi.ss.format;
+package com.moparisthebest.poi.ss.format;
 
 import java.util.LinkedList;
 import java.util.List;
 import java.util.ListIterator;
 import java.util.regex.Matcher;
 
-import org.apache.poi.ss.format.CellFormatPart.PartHandler;
-import org.apache.poi.ss.format.CellNumberFormatter.Special;
-import org.apache.poi.util.Internal;
+import com.moparisthebest.poi.ss.format.CellFormatPart.PartHandler;
+import com.moparisthebest.poi.ss.format.CellNumberFormatter.Special;
+import com.moparisthebest.poi.util.Internal;
 
 /**
  * Internal helper class for CellNumberFormatter

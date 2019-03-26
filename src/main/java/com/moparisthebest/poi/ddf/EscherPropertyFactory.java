@@ -15,12 +15,12 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ddf;
+package com.moparisthebest.poi.ddf;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.poi.util.LittleEndian;
+import com.moparisthebest.poi.util.LittleEndian;
 
 /**
  * Generates a property given a reference into the byte array storing that property.

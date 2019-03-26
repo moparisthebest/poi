@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.record.common;
+package com.moparisthebest.poi.hssf.record.common;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -23,16 +23,16 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
-import org.apache.poi.hssf.record.RecordInputStream;
-import org.apache.poi.hssf.record.cont.ContinuableRecordInput;
-import org.apache.poi.hssf.record.cont.ContinuableRecordOutput;
-import org.apache.poi.util.BitField;
-import org.apache.poi.util.BitFieldFactory;
-import org.apache.poi.util.LittleEndianInput;
-import org.apache.poi.util.LittleEndianOutput;
-import org.apache.poi.util.POILogFactory;
-import org.apache.poi.util.POILogger;
-import org.apache.poi.util.StringUtil;
+import com.moparisthebest.poi.hssf.record.RecordInputStream;
+import com.moparisthebest.poi.hssf.record.cont.ContinuableRecordInput;
+import com.moparisthebest.poi.hssf.record.cont.ContinuableRecordOutput;
+import com.moparisthebest.poi.util.BitField;
+import com.moparisthebest.poi.util.BitFieldFactory;
+import com.moparisthebest.poi.util.LittleEndianInput;
+import com.moparisthebest.poi.util.LittleEndianOutput;
+import com.moparisthebest.poi.util.POILogFactory;
+import com.moparisthebest.poi.util.POILogger;
+import com.moparisthebest.poi.util.StringUtil;
 
 /**
  * Title: Unicode String<p/>

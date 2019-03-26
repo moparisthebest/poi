@@ -15,10 +15,10 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.poifs.property;
+package com.moparisthebest.poi.poifs.property;
 
-import org.apache.poi.poifs.common.POIFSConstants;
-import org.apache.poi.poifs.storage.SmallDocumentBlock;
+import com.moparisthebest.poi.poifs.common.POIFSConstants;
+import com.moparisthebest.poi.poifs.storage.SmallDocumentBlock;
 
 /**
  * Root property

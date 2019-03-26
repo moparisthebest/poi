@@ -14,7 +14,7 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 ==================================================================== */
-package org.apache.poi.ddf;
+package com.moparisthebest.poi.ddf;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -22,8 +22,8 @@ import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
 
-import org.apache.poi.util.HexDump;
-import org.apache.poi.util.LittleEndian;
+import com.moparisthebest.poi.util.HexDump;
+import com.moparisthebest.poi.util.LittleEndian;
 
 /**
  * Common abstract class for {@link EscherOptRecord} and

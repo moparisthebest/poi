@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi;
+package com.moparisthebest.poi;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -26,20 +26,20 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.List;
 
-import org.apache.poi.hpsf.DocumentSummaryInformation;
-import org.apache.poi.hpsf.PropertySet;
-import org.apache.poi.hpsf.PropertySetFactory;
-import org.apache.poi.hpsf.SummaryInformation;
-import org.apache.poi.poifs.crypt.EncryptionInfo;
-import org.apache.poi.poifs.crypt.cryptoapi.CryptoAPIDecryptor;
-import org.apache.poi.poifs.filesystem.DirectoryNode;
-import org.apache.poi.poifs.filesystem.DocumentInputStream;
-import org.apache.poi.poifs.filesystem.NPOIFSFileSystem;
-import org.apache.poi.poifs.filesystem.OPOIFSFileSystem;
-import org.apache.poi.poifs.filesystem.POIFSFileSystem;
-import org.apache.poi.util.Internal;
-import org.apache.poi.util.POILogFactory;
-import org.apache.poi.util.POILogger;
+import com.moparisthebest.poi.hpsf.DocumentSummaryInformation;
+import com.moparisthebest.poi.hpsf.PropertySet;
+import com.moparisthebest.poi.hpsf.PropertySetFactory;
+import com.moparisthebest.poi.hpsf.SummaryInformation;
+import com.moparisthebest.poi.poifs.crypt.EncryptionInfo;
+import com.moparisthebest.poi.poifs.crypt.cryptoapi.CryptoAPIDecryptor;
+import com.moparisthebest.poi.poifs.filesystem.DirectoryNode;
+import com.moparisthebest.poi.poifs.filesystem.DocumentInputStream;
+import com.moparisthebest.poi.poifs.filesystem.NPOIFSFileSystem;
+import com.moparisthebest.poi.poifs.filesystem.OPOIFSFileSystem;
+import com.moparisthebest.poi.poifs.filesystem.POIFSFileSystem;
+import com.moparisthebest.poi.util.Internal;
+import com.moparisthebest.poi.util.POILogFactory;
+import com.moparisthebest.poi.util.POILogger;
 
 /**
  * This holds the common functionality for all POI
@@ -309,7 +309,7 @@ public abstract class POIDocument implements Closeable {
             outFS.createOrUpdateDocument(bIn, name);
 
             logger.log(POILogger.INFO, "Wrote property set " + name + " of size " + data.length);
-        } catch(org.apache.poi.hpsf.WritingNotSupportedException wnse) {
+        } catch(com.moparisthebest.poi.hpsf.WritingNotSupportedException wnse) {
             logger.log( POILogger.ERROR, "Couldn't write property set with name " + name + " as not supported by HPSF yet");
         }
     }

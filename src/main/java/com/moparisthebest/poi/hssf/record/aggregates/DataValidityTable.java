@@ -15,14 +15,14 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.record.aggregates;
+package com.moparisthebest.poi.hssf.record.aggregates;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.poi.hssf.model.RecordStream;
-import org.apache.poi.hssf.record.DVALRecord;
-import org.apache.poi.hssf.record.DVRecord;
+import com.moparisthebest.poi.hssf.model.RecordStream;
+import com.moparisthebest.poi.hssf.record.DVALRecord;
+import com.moparisthebest.poi.hssf.record.DVRecord;
 
 /**
  * Manages the DVALRecord and DVRecords for a single sheet<p>

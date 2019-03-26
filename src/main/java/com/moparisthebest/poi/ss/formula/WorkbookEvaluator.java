@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula;
+package com.moparisthebest.poi.ss.formula;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -25,36 +25,36 @@ import java.util.Map;
 import java.util.Stack;
 import java.util.TreeSet;
 
-import org.apache.poi.ss.SpreadsheetVersion;
-import org.apache.poi.ss.formula.CollaboratingWorkbooksEnvironment.WorkbookNotFoundException;
-import org.apache.poi.ss.formula.atp.AnalysisToolPak;
-import org.apache.poi.ss.formula.eval.BlankEval;
-import org.apache.poi.ss.formula.eval.BoolEval;
-import org.apache.poi.ss.formula.eval.ErrorEval;
-import org.apache.poi.ss.formula.eval.EvaluationException;
-import org.apache.poi.ss.formula.eval.ExternalNameEval;
-import org.apache.poi.ss.formula.eval.FunctionEval;
-import org.apache.poi.ss.formula.eval.FunctionNameEval;
-import org.apache.poi.ss.formula.eval.MissingArgEval;
-import org.apache.poi.ss.formula.eval.NotImplementedException;
-import org.apache.poi.ss.formula.eval.NumberEval;
-import org.apache.poi.ss.formula.eval.OperandResolver;
-import org.apache.poi.ss.formula.eval.StringEval;
-import org.apache.poi.ss.formula.eval.ValueEval;
-import org.apache.poi.ss.formula.function.FunctionMetadataRegistry;
-import org.apache.poi.ss.formula.functions.Choose;
-import org.apache.poi.ss.formula.functions.FreeRefFunction;
-import org.apache.poi.ss.formula.functions.Function;
-import org.apache.poi.ss.formula.functions.IfFunc;
-import org.apache.poi.ss.formula.ptg.*;
-import org.apache.poi.ss.formula.udf.AggregatingUDFFinder;
-import org.apache.poi.ss.formula.udf.UDFFinder;
-import org.apache.poi.ss.usermodel.CellType;
-import org.apache.poi.ss.util.CellRangeAddressBase;
-import org.apache.poi.ss.util.CellReference;
-import org.apache.poi.util.Internal;
-import org.apache.poi.util.POILogFactory;
-import org.apache.poi.util.POILogger;
+import com.moparisthebest.poi.ss.SpreadsheetVersion;
+import com.moparisthebest.poi.ss.formula.CollaboratingWorkbooksEnvironment.WorkbookNotFoundException;
+import com.moparisthebest.poi.ss.formula.atp.AnalysisToolPak;
+import com.moparisthebest.poi.ss.formula.eval.BlankEval;
+import com.moparisthebest.poi.ss.formula.eval.BoolEval;
+import com.moparisthebest.poi.ss.formula.eval.ErrorEval;
+import com.moparisthebest.poi.ss.formula.eval.EvaluationException;
+import com.moparisthebest.poi.ss.formula.eval.ExternalNameEval;
+import com.moparisthebest.poi.ss.formula.eval.FunctionEval;
+import com.moparisthebest.poi.ss.formula.eval.FunctionNameEval;
+import com.moparisthebest.poi.ss.formula.eval.MissingArgEval;
+import com.moparisthebest.poi.ss.formula.eval.NotImplementedException;
+import com.moparisthebest.poi.ss.formula.eval.NumberEval;
+import com.moparisthebest.poi.ss.formula.eval.OperandResolver;
+import com.moparisthebest.poi.ss.formula.eval.StringEval;
+import com.moparisthebest.poi.ss.formula.eval.ValueEval;
+import com.moparisthebest.poi.ss.formula.function.FunctionMetadataRegistry;
+import com.moparisthebest.poi.ss.formula.functions.Choose;
+import com.moparisthebest.poi.ss.formula.functions.FreeRefFunction;
+import com.moparisthebest.poi.ss.formula.functions.Function;
+import com.moparisthebest.poi.ss.formula.functions.IfFunc;
+import com.moparisthebest.poi.ss.formula.ptg.*;
+import com.moparisthebest.poi.ss.formula.udf.AggregatingUDFFinder;
+import com.moparisthebest.poi.ss.formula.udf.UDFFinder;
+import com.moparisthebest.poi.ss.usermodel.CellType;
+import com.moparisthebest.poi.ss.util.CellRangeAddressBase;
+import com.moparisthebest.poi.ss.util.CellReference;
+import com.moparisthebest.poi.util.Internal;
+import com.moparisthebest.poi.util.POILogFactory;
+import com.moparisthebest.poi.util.POILogger;
 /**
  * Evaluates formula cells.<p/>
  *
@@ -409,7 +409,7 @@ public final class WorkbookEvaluator {
             EVAL_LOG.log(POILogger.WARN, dbgIndentStr
                                + "- evaluateFormula('" + ec.getRefEvaluatorForCurrentSheet().getSheetNameRange()
                                + "'/" + new CellReference(ec.getRowIndex(), ec.getColumnIndex()).formatAsString()
-                               + "): " + Arrays.toString(ptgs).replaceAll("\\Qorg.apache.poi.ss.formula.ptg.\\E", ""));
+                               + "): " + Arrays.toString(ptgs).replaceAll("\\Qcom.moparisthebest.poi.ss.formula.ptg.\\E", ""));
             dbgEvaluationOutputIndent++;
         }
 

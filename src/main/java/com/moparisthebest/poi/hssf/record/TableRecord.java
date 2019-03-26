@@ -15,15 +15,15 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.record;
+package com.moparisthebest.poi.hssf.record;
 
-import org.apache.poi.ss.formula.ptg.TblPtg;
-import org.apache.poi.hssf.util.CellRangeAddress8Bit;
-import org.apache.poi.hssf.util.CellReference;
-import org.apache.poi.util.BitField;
-import org.apache.poi.util.BitFieldFactory;
-import org.apache.poi.util.HexDump;
-import org.apache.poi.util.LittleEndianOutput;
+import com.moparisthebest.poi.ss.formula.ptg.TblPtg;
+import com.moparisthebest.poi.hssf.util.CellRangeAddress8Bit;
+import com.moparisthebest.poi.hssf.util.CellReference;
+import com.moparisthebest.poi.util.BitField;
+import com.moparisthebest.poi.util.BitFieldFactory;
+import com.moparisthebest.poi.util.HexDump;
+import com.moparisthebest.poi.util.LittleEndianOutput;
 /**
  * DATATABLE (0x0236)<p>
  *

@@ -15,16 +15,16 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.poifs.storage;
+package com.moparisthebest.poi.poifs.storage;
 
 import java.io.IOException;
 import java.io.OutputStream;
 import java.nio.ByteBuffer;
 
-import org.apache.poi.poifs.common.POIFSBigBlockSize;
-import org.apache.poi.poifs.common.POIFSConstants;
-import org.apache.poi.poifs.filesystem.BATManaged;
-import org.apache.poi.util.IntList;
+import com.moparisthebest.poi.poifs.common.POIFSBigBlockSize;
+import com.moparisthebest.poi.poifs.common.POIFSConstants;
+import com.moparisthebest.poi.poifs.filesystem.BATManaged;
+import com.moparisthebest.poi.util.IntList;
 
 /**
  * This class manages and creates the Block Allocation Table, which is

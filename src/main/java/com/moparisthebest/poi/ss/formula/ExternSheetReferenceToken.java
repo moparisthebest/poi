@@ -15,10 +15,10 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula;
+package com.moparisthebest.poi.ss.formula;
 
 /**
- * Should be implemented by any {@link org.apache.poi.ss.formula.ptg.Ptg} subclass that needs has an extern sheet index <br/>
+ * Should be implemented by any {@link com.moparisthebest.poi.ss.formula.ptg.Ptg} subclass that needs has an extern sheet index <br/>
  *
  * For POI internal use only
  *

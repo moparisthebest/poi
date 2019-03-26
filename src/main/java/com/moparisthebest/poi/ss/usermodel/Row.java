@@ -15,11 +15,11 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.usermodel;
+package com.moparisthebest.poi.ss.usermodel;
 
 import java.util.Iterator;
 
-import org.apache.poi.util.Removal;
+import com.moparisthebest.poi.util.Removal;
 
 /**
  * High level representation of a row of a spreadsheet.
@@ -105,12 +105,12 @@ public interface Row extends Iterable<Cell> {
      *
      * @param cellnum  0 based column number
      * @return Cell representing that column or null if undefined.
-     * @see #getCell(int, org.apache.poi.ss.usermodel.Row.MissingCellPolicy)
+     * @see #getCell(int, com.moparisthebest.poi.ss.usermodel.Row.MissingCellPolicy)
      */
     Cell getCell(int cellnum);
     
     /**
-     * Returns the cell at the given (0 based) index, with the specified {@link org.apache.poi.ss.usermodel.Row.MissingCellPolicy}
+     * Returns the cell at the given (0 based) index, with the specified {@link com.moparisthebest.poi.ss.usermodel.Row.MissingCellPolicy}
      *
      * @return the cell at the given (0 based) index
      * @throws IllegalArgumentException if cellnum &lt; 0 or the specified MissingCellPolicy is invalid

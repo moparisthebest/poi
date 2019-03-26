@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.record.aggregates;
+package com.moparisthebest.poi.hssf.record.aggregates;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -23,10 +23,10 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.poi.hssf.model.RecordStream;
-import org.apache.poi.hssf.model.InternalSheet;
-import org.apache.poi.hssf.record.*;
-import org.apache.poi.util.HexDump;
+import com.moparisthebest.poi.hssf.model.RecordStream;
+import com.moparisthebest.poi.hssf.model.InternalSheet;
+import com.moparisthebest.poi.hssf.record.*;
+import com.moparisthebest.poi.util.HexDump;
 
 /**
  * Groups the page settings records for a worksheet.<p>
@@ -91,7 +91,7 @@ public final class PageSettingsBlock extends RecordAggregate {
     /**
      * HeaderFooterRecord records belonging to preceding CustomViewSettingsRecordAggregates.
      * The indicator of such records is a non-zero GUID,
-     *  see {@link  org.apache.poi.hssf.record.HeaderFooterRecord#getGuid()}
+     *  see {@link  com.moparisthebest.poi.hssf.record.HeaderFooterRecord#getGuid()}
      */
     private final List<HeaderFooterRecord> _sviewHeaderFooters = new ArrayList<HeaderFooterRecord>();
     private Record _printSize;
@@ -222,7 +222,7 @@ public final class PageSettingsBlock extends RecordAggregate {
 
     private void checkNotPresent(Record rec) {
         if (rec != null) {
-            throw new org.apache.poi.util.RecordFormatException("Duplicate PageSettingsBlock record (sid=0x"
+            throw new com.moparisthebest.poi.util.RecordFormatException("Duplicate PageSettingsBlock record (sid=0x"
                     + Integer.toHexString(rec.getSid()) + ")");
         }
     }
@@ -333,8 +333,8 @@ public final class PageSettingsBlock extends RecordAggregate {
 
     /**
      * creates the PrintSetup Record and sets it to defaults and marks it invalid
-     * @see org.apache.poi.hssf.record.PrintSetupRecord
-     * @see org.apache.poi.hssf.record.Record
+     * @see com.moparisthebest.poi.hssf.record.PrintSetupRecord
+     * @see com.moparisthebest.poi.hssf.record.Record
      * @return record containing a PrintSetupRecord
      */
     private static PrintSetupRecord createPrintSetup() {
@@ -614,7 +614,7 @@ public final class PageSettingsBlock extends RecordAggregate {
             throw new IllegalStateException("This page settings block already has a header/footer record");
         }
         if (rec.getSid() != HeaderFooterRecord.sid) {
-            throw new org.apache.poi.util.RecordFormatException("Unexpected header-footer record sid: 0x" + Integer.toHexString(rec.getSid()));
+            throw new com.moparisthebest.poi.util.RecordFormatException("Unexpected header-footer record sid: 0x" + Integer.toHexString(rec.getSid()));
         }
         _headerFooter = rec;
     }
@@ -647,7 +647,7 @@ public final class PageSettingsBlock extends RecordAggregate {
      *
      * @param rs the RecordStream to read from
      * 
-     * @throws  org.apache.poi.util.RecordFormatException if any PSB record encountered has the same type (sid) as
+     * @throws  com.moparisthebest.poi.util.RecordFormatException if any PSB record encountered has the same type (sid) as
      * a record that is already part of this PageSettingsBlock
      */
     public void addLateRecords(RecordStream rs) {

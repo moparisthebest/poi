@@ -15,30 +15,30 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula.eval.forked;
+package com.moparisthebest.poi.ss.formula.eval.forked;
 
-import org.apache.poi.ss.formula.eval.BoolEval;
-import org.apache.poi.ss.formula.eval.ErrorEval;
-import org.apache.poi.ss.formula.eval.NumberEval;
-import org.apache.poi.ss.formula.eval.StringEval;
-import org.apache.poi.ss.formula.eval.ValueEval;
-import org.apache.poi.ss.formula.udf.UDFFinder;
+import com.moparisthebest.poi.ss.formula.eval.BoolEval;
+import com.moparisthebest.poi.ss.formula.eval.ErrorEval;
+import com.moparisthebest.poi.ss.formula.eval.NumberEval;
+import com.moparisthebest.poi.ss.formula.eval.StringEval;
+import com.moparisthebest.poi.ss.formula.eval.ValueEval;
+import com.moparisthebest.poi.ss.formula.udf.UDFFinder;
 
 import java.lang.reflect.Method;
 
-import org.apache.poi.hssf.usermodel.HSSFEvaluationWorkbook;
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import org.apache.poi.ss.formula.CollaboratingWorkbooksEnvironment;
-import org.apache.poi.ss.formula.EvaluationCell;
-import org.apache.poi.ss.formula.EvaluationWorkbook;
-import org.apache.poi.ss.formula.IStabilityClassifier;
-import org.apache.poi.ss.formula.WorkbookEvaluator;
-import org.apache.poi.ss.usermodel.Workbook;
+import com.moparisthebest.poi.hssf.usermodel.HSSFEvaluationWorkbook;
+import com.moparisthebest.poi.hssf.usermodel.HSSFWorkbook;
+import com.moparisthebest.poi.ss.formula.CollaboratingWorkbooksEnvironment;
+import com.moparisthebest.poi.ss.formula.EvaluationCell;
+import com.moparisthebest.poi.ss.formula.EvaluationWorkbook;
+import com.moparisthebest.poi.ss.formula.IStabilityClassifier;
+import com.moparisthebest.poi.ss.formula.WorkbookEvaluator;
+import com.moparisthebest.poi.ss.usermodel.Workbook;
 
 /**
  * An alternative workbook evaluator that saves memory in situations where a single workbook is
  * concurrently and independently evaluated many times.  With standard formula evaluation, around
- * 90% of memory consumption is due to loading of the {@link HSSFWorkbook} or {@link org.apache.poi.xssf.usermodel.XSSFWorkbook}.
+ * 90% of memory consumption is due to loading of the {@link HSSFWorkbook} or {@link com.moparisthebest.poi.xssf.usermodel.XSSFWorkbook}.
  * This class enables a 'master workbook' to be loaded just once and shared between many evaluation
  * clients.  Each evaluation client creates its own {@link ForkedEvaluator} and can set cell values
  * that will be used for local evaluations (and don't disturb evaluations on other evaluators).
@@ -58,8 +58,8 @@ public final class ForkedEvaluator {
 		} else {
 		    try {
 		        // TODO: check if this is Java 9 compatible ...
-		        Class<?> evalWB = Class.forName("org.apache.poi.xssf.usermodel.XSSFEvaluationWorkbook");
-		        Class<?> xssfWB = Class.forName("org.apache.poi.xssf.usermodel.XSSFWorkbook");
+		        Class<?> evalWB = Class.forName("com.moparisthebest.poi.xssf.usermodel.XSSFEvaluationWorkbook");
+		        Class<?> xssfWB = Class.forName("com.moparisthebest.poi.xssf.usermodel.XSSFWorkbook");
 		        Method createM = evalWB.getDeclaredMethod("create", xssfWB);
 		        return (EvaluationWorkbook)createM.invoke(null, wb);
 		    } catch (Exception e) {

@@ -15,10 +15,10 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula.udf;
+package com.moparisthebest.poi.ss.formula.udf;
 
-import org.apache.poi.ss.formula.atp.AnalysisToolPak;
-import org.apache.poi.ss.formula.functions.FreeRefFunction;
+import com.moparisthebest.poi.ss.formula.atp.AnalysisToolPak;
+import com.moparisthebest.poi.ss.formula.functions.FreeRefFunction;
 
 import java.util.ArrayList;
 import java.util.Arrays;

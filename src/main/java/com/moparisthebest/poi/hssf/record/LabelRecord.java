@@ -15,18 +15,18 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.record;
+package com.moparisthebest.poi.hssf.record;
 
-import org.apache.poi.util.HexDump;
-import org.apache.poi.util.POILogFactory;
-import org.apache.poi.util.POILogger;
+import com.moparisthebest.poi.util.HexDump;
+import com.moparisthebest.poi.util.POILogFactory;
+import com.moparisthebest.poi.util.POILogger;
 
 /**
  * Label Record (0x0204) - read only support for strings stored directly in the cell...
  * Don't use this (except to read), use LabelSST instead <P>
  * REFERENCE:  PG 325 Microsoft Excel 97 Developer's Kit (ISBN: 1-57231-498-2)
  * 
- * @see org.apache.poi.hssf.record.LabelSSTRecord
+ * @see com.moparisthebest.poi.hssf.record.LabelSSTRecord
  */
 public final class LabelRecord extends Record implements CellValueRecordInterface, Cloneable {
     private final static POILogger logger = POILogFactory.getLogger(LabelRecord.class);

@@ -15,10 +15,10 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.usermodel;
+package com.moparisthebest.poi.ss.usermodel;
 
-import org.apache.poi.ss.formula.FormulaType;
-import org.apache.poi.util.Internal;
+import com.moparisthebest.poi.ss.formula.FormulaType;
+import com.moparisthebest.poi.util.Internal;
 
 /**
  * @since POI 3.15 beta 3

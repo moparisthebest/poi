@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.record.aggregates;
+package com.moparisthebest.poi.hssf.record.aggregates;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -23,10 +23,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
-import org.apache.poi.hssf.model.RecordStream;
-import org.apache.poi.hssf.record.*;
-import org.apache.poi.ss.SpreadsheetVersion;
-import org.apache.poi.ss.formula.FormulaShifter;
+import com.moparisthebest.poi.hssf.model.RecordStream;
+import com.moparisthebest.poi.hssf.record.*;
+import com.moparisthebest.poi.ss.SpreadsheetVersion;
+import com.moparisthebest.poi.ss.formula.FormulaShifter;
 
 /**
  *
@@ -363,7 +363,7 @@ public final class RowRecordsAggregate extends RecordAggregate {
      *
      * @param rowNumber row number
      * @return RowRecord created for the passed in row number
-     * @see org.apache.poi.hssf.record.RowRecord
+     * @see com.moparisthebest.poi.hssf.record.RowRecord
      */
     public static RowRecord createRow(int rowNumber) {
         return new RowRecord(rowNumber);

@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.poifs.crypt.cryptoapi;
+package com.moparisthebest.poi.poifs.crypt.cryptoapi;
 
 import java.io.ByteArrayInputStream;
 import java.io.File;
@@ -31,25 +31,25 @@ import java.util.Random;
 import javax.crypto.Cipher;
 import javax.crypto.SecretKey;
 
-import org.apache.poi.EncryptedDocumentException;
-import org.apache.poi.hpsf.DocumentSummaryInformation;
-import org.apache.poi.hpsf.PropertySetFactory;
-import org.apache.poi.hpsf.SummaryInformation;
-import org.apache.poi.hpsf.WritingNotSupportedException;
-import org.apache.poi.poifs.crypt.ChunkedCipherOutputStream;
-import org.apache.poi.poifs.crypt.CryptoFunctions;
-import org.apache.poi.poifs.crypt.DataSpaceMapUtils;
-import org.apache.poi.poifs.crypt.EncryptionInfo;
-import org.apache.poi.poifs.crypt.Encryptor;
-import org.apache.poi.poifs.crypt.HashAlgorithm;
-import org.apache.poi.poifs.crypt.cryptoapi.CryptoAPIDecryptor.StreamDescriptorEntry;
-import org.apache.poi.poifs.crypt.standard.EncryptionRecord;
-import org.apache.poi.poifs.filesystem.DirectoryNode;
-import org.apache.poi.poifs.filesystem.DocumentInputStream;
-import org.apache.poi.util.IOUtils;
-import org.apache.poi.util.LittleEndian;
-import org.apache.poi.util.LittleEndianByteArrayOutputStream;
-import org.apache.poi.util.StringUtil;
+import com.moparisthebest.poi.EncryptedDocumentException;
+import com.moparisthebest.poi.hpsf.DocumentSummaryInformation;
+import com.moparisthebest.poi.hpsf.PropertySetFactory;
+import com.moparisthebest.poi.hpsf.SummaryInformation;
+import com.moparisthebest.poi.hpsf.WritingNotSupportedException;
+import com.moparisthebest.poi.poifs.crypt.ChunkedCipherOutputStream;
+import com.moparisthebest.poi.poifs.crypt.CryptoFunctions;
+import com.moparisthebest.poi.poifs.crypt.DataSpaceMapUtils;
+import com.moparisthebest.poi.poifs.crypt.EncryptionInfo;
+import com.moparisthebest.poi.poifs.crypt.Encryptor;
+import com.moparisthebest.poi.poifs.crypt.HashAlgorithm;
+import com.moparisthebest.poi.poifs.crypt.cryptoapi.CryptoAPIDecryptor.StreamDescriptorEntry;
+import com.moparisthebest.poi.poifs.crypt.standard.EncryptionRecord;
+import com.moparisthebest.poi.poifs.filesystem.DirectoryNode;
+import com.moparisthebest.poi.poifs.filesystem.DocumentInputStream;
+import com.moparisthebest.poi.util.IOUtils;
+import com.moparisthebest.poi.util.LittleEndian;
+import com.moparisthebest.poi.util.LittleEndianByteArrayOutputStream;
+import com.moparisthebest.poi.util.StringUtil;
 
 public class CryptoAPIEncryptor extends Encryptor implements Cloneable {
     

@@ -15,9 +15,9 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.record.cf;
+package com.moparisthebest.poi.hssf.record.cf;
 
-import org.apache.poi.util.LittleEndianInput;
+import com.moparisthebest.poi.util.LittleEndianInput;
 
 /**
  * Data Bar specific Threshold / value (CFVO),

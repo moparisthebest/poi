@@ -17,12 +17,12 @@
 ==================================================================== */
         
 
-package org.apache.poi.poifs.storage;
+package com.moparisthebest.poi.poifs.storage;
 
-import org.apache.poi.poifs.common.POIFSConstants;
-import org.apache.poi.util.IOUtils;
-import org.apache.poi.util.POILogFactory;
-import org.apache.poi.util.POILogger;
+import com.moparisthebest.poi.poifs.common.POIFSConstants;
+import com.moparisthebest.poi.util.IOUtils;
+import com.moparisthebest.poi.util.POILogFactory;
+import com.moparisthebest.poi.util.POILogger;
 
 import java.io.*;
 
@@ -58,7 +58,7 @@ public class RawDataBlock
      *
      * @param stream the InputStream from which the data will be read
      * @param blockSize the size of the POIFS blocks, normally 512 bytes
-     * {@link org.apache.poi.poifs.common.POIFSConstants#SMALLER_BIG_BLOCK_SIZE}
+     * {@link com.moparisthebest.poi.poifs.common.POIFSConstants#SMALLER_BIG_BLOCK_SIZE}
      *
      * @exception IOException on I/O errors, and if an insufficient
      *            amount of data is read (the InputStream must

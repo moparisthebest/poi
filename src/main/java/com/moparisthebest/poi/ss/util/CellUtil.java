@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.util;
+package com.moparisthebest.poi.ss.util;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -26,19 +26,19 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
-import org.apache.poi.ss.usermodel.BorderStyle;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.CellStyle;
-import org.apache.poi.ss.usermodel.FillPatternType;
-import org.apache.poi.ss.usermodel.Font;
-import org.apache.poi.ss.usermodel.HorizontalAlignment;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.VerticalAlignment;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.util.POILogFactory;
-import org.apache.poi.util.POILogger;
-import org.apache.poi.util.Removal;
+import com.moparisthebest.poi.ss.usermodel.BorderStyle;
+import com.moparisthebest.poi.ss.usermodel.Cell;
+import com.moparisthebest.poi.ss.usermodel.CellStyle;
+import com.moparisthebest.poi.ss.usermodel.FillPatternType;
+import com.moparisthebest.poi.ss.usermodel.Font;
+import com.moparisthebest.poi.ss.usermodel.HorizontalAlignment;
+import com.moparisthebest.poi.ss.usermodel.Row;
+import com.moparisthebest.poi.ss.usermodel.Sheet;
+import com.moparisthebest.poi.ss.usermodel.VerticalAlignment;
+import com.moparisthebest.poi.ss.usermodel.Workbook;
+import com.moparisthebest.poi.util.POILogFactory;
+import com.moparisthebest.poi.util.POILogger;
+import com.moparisthebest.poi.util.Removal;
 
 /**
  * Various utility functions that make working with a cells and rows easier. The various methods
@@ -297,7 +297,7 @@ public final class CellUtil {
      * <p>This is necessary because Excel has an upper limit on the number of styles that it supports.</p>
      * 
      * <p>This function is more efficient than multiple calls to
-     * {@link #setCellStyleProperty(org.apache.poi.ss.usermodel.Cell, org.apache.poi.ss.usermodel.Workbook, String, Object)}
+     * {@link #setCellStyleProperty(com.moparisthebest.poi.ss.usermodel.Cell, com.moparisthebest.poi.ss.usermodel.Workbook, String, Object)}
      * if adding multiple cell styles.</p>
      * 
      * <p>For performance reasons, if this is the only cell in a workbook that uses a cell style,
@@ -352,7 +352,7 @@ public final class CellUtil {
      * same style.</p>
      * 
      * <p>If setting more than one cell style property on a cell, use
-     * {@link #setCellStyleProperties(org.apache.poi.ss.usermodel.Cell, Map)},
+     * {@link #setCellStyleProperties(com.moparisthebest.poi.ss.usermodel.Cell, Map)},
      * which is faster and does not add unnecessary intermediate CellStyles to the workbook.</p>
      * 
      * @param cell The cell that is to be changed.
@@ -379,7 +379,7 @@ public final class CellUtil {
      * same style.</p>
      * 
      * <p>If setting more than one cell style property on a cell, use
-     * {@link #setCellStyleProperties(org.apache.poi.ss.usermodel.Cell, Map)},
+     * {@link #setCellStyleProperties(com.moparisthebest.poi.ss.usermodel.Cell, Map)},
      * which is faster and does not add unnecessary intermediate CellStyles to the workbook.</p>
      * 
      * @param cell The cell that is to be changed.
@@ -399,7 +399,7 @@ public final class CellUtil {
      *
      * @param style cell style
      * @return map of format properties (String -> Object)
-     * @see #setFormatProperties(org.apache.poi.ss.usermodel.CellStyle, org.apache.poi.ss.usermodel.Workbook, java.util.Map)
+     * @see #setFormatProperties(com.moparisthebest.poi.ss.usermodel.CellStyle, com.moparisthebest.poi.ss.usermodel.Workbook, java.util.Map)
      */
     private static Map<String, Object> getFormatProperties(CellStyle style) {
         Map<String, Object> properties = new HashMap<String, Object>();

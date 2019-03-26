@@ -17,9 +17,9 @@
 ==================================================================== */
         
 
-package org.apache.poi.hssf.record;
+package com.moparisthebest.poi.hssf.record;
 
-import org.apache.poi.util.LittleEndianOutput;
+import com.moparisthebest.poi.util.LittleEndianOutput;
 
 /**
  * Title:        Calc Count Record
@@ -30,7 +30,7 @@ import org.apache.poi.util.LittleEndianOutput;
  *               loop in the event the formulas are not independant. <P>
  * REFERENCE:  PG 292 Microsoft Excel 97 Developer's Kit (ISBN: 1-57231-498-2)<P>
  * @version 2.0-pre
- * @see org.apache.poi.hssf.record.CalcModeRecord
+ * @see com.moparisthebest.poi.hssf.record.CalcModeRecord
  */
 
 public final class CalcCountRecord extends StandardRecord implements Cloneable {

@@ -15,12 +15,12 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.poifs.crypt.cryptoapi;
+package com.moparisthebest.poi.poifs.crypt.cryptoapi;
 
 import java.io.IOException;
 
-import org.apache.poi.poifs.crypt.*;
-import org.apache.poi.util.LittleEndianInput;
+import com.moparisthebest.poi.poifs.crypt.*;
+import com.moparisthebest.poi.util.LittleEndianInput;
 
 public class CryptoAPIEncryptionInfoBuilder implements EncryptionInfoBuilder {
     public CryptoAPIEncryptionInfoBuilder() {

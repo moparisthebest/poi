@@ -15,9 +15,9 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula.functions;
+package com.moparisthebest.poi.ss.formula.functions;
 
-import org.apache.poi.ss.formula.eval.*;
+import com.moparisthebest.poi.ss.formula.eval.*;
 
 /**
  * Implementation for Excel CODE () function.<p/>

@@ -15,9 +15,9 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.record;
+package com.moparisthebest.poi.hssf.record;
 
-import org.apache.poi.util.HexDump;
+import com.moparisthebest.poi.util.HexDump;
 
 /**
  * Title:        Bound Sheet Record (aka BundleSheet) (0x0085) for BIFF 5<P>

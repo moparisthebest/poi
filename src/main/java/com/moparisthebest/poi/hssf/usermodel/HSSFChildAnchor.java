@@ -15,11 +15,11 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.usermodel;
+package com.moparisthebest.poi.hssf.usermodel;
 
 
-import org.apache.poi.ddf.EscherChildAnchorRecord;
-import org.apache.poi.ddf.EscherRecord;
+import com.moparisthebest.poi.ddf.EscherChildAnchorRecord;
+import com.moparisthebest.poi.ddf.EscherRecord;
 
 public final class HSSFChildAnchor extends HSSFAnchor {
 

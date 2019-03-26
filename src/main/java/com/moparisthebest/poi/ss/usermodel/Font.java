@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.usermodel;
+package com.moparisthebest.poi.ss.usermodel;
 
 
 public interface Font {
@@ -203,7 +203,7 @@ public interface Font {
      * @return color to use
      * @see #COLOR_NORMAL
      * @see #COLOR_RED
-     * @see org.apache.poi.hssf.usermodel.HSSFPalette#getColor(short)
+     * @see com.moparisthebest.poi.hssf.usermodel.HSSFPalette#getColor(short)
      */
     short getColor();
 

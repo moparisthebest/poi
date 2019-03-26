@@ -17,9 +17,9 @@
  * ====================================================================
  */
 
-package org.apache.poi.ss.usermodel;
+package com.moparisthebest.poi.ss.usermodel;
 
-import org.apache.poi.hssf.record.cf.Threshold;
+import com.moparisthebest.poi.hssf.record.cf.Threshold;
 
 /**
  * High level representation for the Color Scale / Colour Scale /

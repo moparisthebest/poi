@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.poifs.crypt.binaryrc4;
+package com.moparisthebest.poi.poifs.crypt.binaryrc4;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -27,12 +27,12 @@ import javax.crypto.Cipher;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
 
-import org.apache.poi.EncryptedDocumentException;
-import org.apache.poi.poifs.crypt.*;
-import org.apache.poi.poifs.filesystem.DirectoryNode;
-import org.apache.poi.poifs.filesystem.DocumentInputStream;
-import org.apache.poi.util.LittleEndian;
-import org.apache.poi.util.StringUtil;
+import com.moparisthebest.poi.EncryptedDocumentException;
+import com.moparisthebest.poi.poifs.crypt.*;
+import com.moparisthebest.poi.poifs.filesystem.DirectoryNode;
+import com.moparisthebest.poi.poifs.filesystem.DocumentInputStream;
+import com.moparisthebest.poi.util.LittleEndian;
+import com.moparisthebest.poi.util.StringUtil;
 
 public class BinaryRC4Decryptor extends Decryptor implements Cloneable {
     private long length = -1L;

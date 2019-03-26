@@ -15,9 +15,9 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.usermodel;
+package com.moparisthebest.poi.ss.usermodel;
 
-import org.apache.poi.ss.util.CellAddress;
+import com.moparisthebest.poi.ss.util.CellAddress;
 
 public interface Comment {
 

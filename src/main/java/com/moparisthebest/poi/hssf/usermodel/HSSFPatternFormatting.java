@@ -15,17 +15,17 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.usermodel;
+package com.moparisthebest.poi.hssf.usermodel;
 
-import org.apache.poi.hssf.record.CFRuleBase;
-import org.apache.poi.hssf.record.cf.PatternFormatting;
-import org.apache.poi.hssf.util.HSSFColor;
-import org.apache.poi.ss.usermodel.Color;
+import com.moparisthebest.poi.hssf.record.CFRuleBase;
+import com.moparisthebest.poi.hssf.record.cf.PatternFormatting;
+import com.moparisthebest.poi.hssf.util.HSSFColor;
+import com.moparisthebest.poi.ss.usermodel.Color;
 
 /**
  * High level representation for Conditional Formatting settings
  */
-public class HSSFPatternFormatting implements org.apache.poi.ss.usermodel.PatternFormatting {
+public class HSSFPatternFormatting implements com.moparisthebest.poi.ss.usermodel.PatternFormatting {
     private final HSSFWorkbook workbook;
     private final CFRuleBase cfRuleRecord;
     private final PatternFormatting patternFormatting;
@@ -50,7 +50,7 @@ public class HSSFPatternFormatting implements org.apache.poi.ss.usermodel.Patter
     }
 
     /**
-     * @see org.apache.poi.hssf.record.cf.PatternFormatting#getFillBackgroundColor()
+     * @see com.moparisthebest.poi.hssf.record.cf.PatternFormatting#getFillBackgroundColor()
      */
     public short getFillBackgroundColor()
     {
@@ -58,7 +58,7 @@ public class HSSFPatternFormatting implements org.apache.poi.ss.usermodel.Patter
     }
 
     /**
-     * @see org.apache.poi.hssf.record.cf.PatternFormatting#getFillForegroundColor()
+     * @see com.moparisthebest.poi.hssf.record.cf.PatternFormatting#getFillForegroundColor()
      */
     public short getFillForegroundColor()
     {
@@ -66,7 +66,7 @@ public class HSSFPatternFormatting implements org.apache.poi.ss.usermodel.Patter
     }
 
     /**
-     * @see org.apache.poi.hssf.record.cf.PatternFormatting#getFillPattern()
+     * @see com.moparisthebest.poi.hssf.record.cf.PatternFormatting#getFillPattern()
      */
     public short getFillPattern()
     {
@@ -93,7 +93,7 @@ public class HSSFPatternFormatting implements org.apache.poi.ss.usermodel.Patter
 
     /**
      * @param bg
-     * @see org.apache.poi.hssf.record.cf.PatternFormatting#setFillBackgroundColor(int)
+     * @see com.moparisthebest.poi.hssf.record.cf.PatternFormatting#setFillBackgroundColor(int)
      */
     public void setFillBackgroundColor(short bg)
     {
@@ -106,7 +106,7 @@ public class HSSFPatternFormatting implements org.apache.poi.ss.usermodel.Patter
 
     /**
      * @param fg
-     * @see org.apache.poi.hssf.record.cf.PatternFormatting#setFillForegroundColor(int)
+     * @see com.moparisthebest.poi.hssf.record.cf.PatternFormatting#setFillForegroundColor(int)
      */
     public void setFillForegroundColor(short fg)
     {
@@ -119,7 +119,7 @@ public class HSSFPatternFormatting implements org.apache.poi.ss.usermodel.Patter
 
     /**
      * @param fp
-     * @see org.apache.poi.hssf.record.cf.PatternFormatting#setFillPattern(int)
+     * @see com.moparisthebest.poi.hssf.record.cf.PatternFormatting#setFillPattern(int)
      */
     public void setFillPattern(short fp)
     {

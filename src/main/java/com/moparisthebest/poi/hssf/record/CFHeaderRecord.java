@@ -15,9 +15,9 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.record;
+package com.moparisthebest.poi.hssf.record;
 
-import org.apache.poi.ss.util.CellRangeAddress;
+import com.moparisthebest.poi.ss.util.CellRangeAddress;
 
 /**
  * Conditional Formatting Header record CFHEADER (0x01B0).

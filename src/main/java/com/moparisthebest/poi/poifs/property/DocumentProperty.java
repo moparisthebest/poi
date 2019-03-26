@@ -17,9 +17,9 @@
 ==================================================================== */
         
 
-package org.apache.poi.poifs.property;
+package com.moparisthebest.poi.poifs.property;
 
-import org.apache.poi.poifs.filesystem.OPOIFSDocument;
+import com.moparisthebest.poi.poifs.filesystem.OPOIFSDocument;
 
 /**
  * Trivial extension of Property for POIFSDocuments

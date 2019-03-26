@@ -16,7 +16,7 @@
 ==================================================================== */
 
 
-package org.apache.poi.hssf.usermodel;
+package com.moparisthebest.poi.hssf.usermodel;
 
 import java.awt.BasicStroke;
 import java.awt.Color;
@@ -46,7 +46,7 @@ import java.text.AttributedCharacterIterator;
 import java.util.Arrays;
 import java.util.Map;
 
-import org.apache.poi.util.Internal;
+import com.moparisthebest.poi.util.Internal;
 
 public class DummyGraphics2d extends Graphics2D {
     private BufferedImage bufimg;

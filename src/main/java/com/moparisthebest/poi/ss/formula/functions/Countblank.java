@@ -15,11 +15,11 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula.functions;
+package com.moparisthebest.poi.ss.formula.functions;
 
-import org.apache.poi.ss.formula.ThreeDEval;
-import org.apache.poi.ss.formula.eval.*;
-import org.apache.poi.ss.formula.functions.CountUtils.I_MatchPredicate;
+import com.moparisthebest.poi.ss.formula.ThreeDEval;
+import com.moparisthebest.poi.ss.formula.eval.*;
+import com.moparisthebest.poi.ss.formula.functions.CountUtils.I_MatchPredicate;
 
 /**
  * Implementation for the function COUNTBLANK

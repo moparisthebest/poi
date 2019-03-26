@@ -15,30 +15,30 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.usermodel;
+package com.moparisthebest.poi.hssf.usermodel;
 
-import org.apache.poi.hssf.model.InternalWorkbook;
-import org.apache.poi.hssf.record.NameRecord;
-import org.apache.poi.hssf.record.aggregates.FormulaRecordAggregate;
-import org.apache.poi.ss.SpreadsheetVersion;
-import org.apache.poi.ss.formula.EvaluationCell;
-import org.apache.poi.ss.formula.EvaluationName;
-import org.apache.poi.ss.formula.EvaluationSheet;
-import org.apache.poi.ss.formula.EvaluationWorkbook;
-import org.apache.poi.ss.formula.FormulaParsingWorkbook;
-import org.apache.poi.ss.formula.FormulaRenderingWorkbook;
-import org.apache.poi.ss.formula.SheetIdentifier;
-import org.apache.poi.ss.formula.SheetRangeIdentifier;
-import org.apache.poi.ss.formula.ptg.Area3DPtg;
-import org.apache.poi.ss.formula.ptg.NamePtg;
-import org.apache.poi.ss.formula.ptg.NameXPtg;
-import org.apache.poi.ss.formula.ptg.Ptg;
-import org.apache.poi.ss.formula.ptg.Ref3DPtg;
-import org.apache.poi.ss.formula.udf.UDFFinder;
-import org.apache.poi.ss.usermodel.Table;
-import org.apache.poi.ss.util.AreaReference;
-import org.apache.poi.ss.util.CellReference;
-import org.apache.poi.util.Internal;
+import com.moparisthebest.poi.hssf.model.InternalWorkbook;
+import com.moparisthebest.poi.hssf.record.NameRecord;
+import com.moparisthebest.poi.hssf.record.aggregates.FormulaRecordAggregate;
+import com.moparisthebest.poi.ss.SpreadsheetVersion;
+import com.moparisthebest.poi.ss.formula.EvaluationCell;
+import com.moparisthebest.poi.ss.formula.EvaluationName;
+import com.moparisthebest.poi.ss.formula.EvaluationSheet;
+import com.moparisthebest.poi.ss.formula.EvaluationWorkbook;
+import com.moparisthebest.poi.ss.formula.FormulaParsingWorkbook;
+import com.moparisthebest.poi.ss.formula.FormulaRenderingWorkbook;
+import com.moparisthebest.poi.ss.formula.SheetIdentifier;
+import com.moparisthebest.poi.ss.formula.SheetRangeIdentifier;
+import com.moparisthebest.poi.ss.formula.ptg.Area3DPtg;
+import com.moparisthebest.poi.ss.formula.ptg.NamePtg;
+import com.moparisthebest.poi.ss.formula.ptg.NameXPtg;
+import com.moparisthebest.poi.ss.formula.ptg.Ptg;
+import com.moparisthebest.poi.ss.formula.ptg.Ref3DPtg;
+import com.moparisthebest.poi.ss.formula.udf.UDFFinder;
+import com.moparisthebest.poi.ss.usermodel.Table;
+import com.moparisthebest.poi.ss.util.AreaReference;
+import com.moparisthebest.poi.ss.util.CellReference;
+import com.moparisthebest.poi.util.Internal;
 
 /**
  * Internal POI use only

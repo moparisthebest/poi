@@ -14,9 +14,9 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 ==================================================================== */
-package org.apache.poi.hssf.record.crypto;
+package com.moparisthebest.poi.hssf.record.crypto;
 
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import com.moparisthebest.poi.hssf.usermodel.HSSFWorkbook;
 
 public final class Biff8EncryptionKey {
 	/**

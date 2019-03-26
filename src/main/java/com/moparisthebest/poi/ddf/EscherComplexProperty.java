@@ -15,12 +15,12 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ddf;
+package com.moparisthebest.poi.ddf;
 
 import java.util.Arrays;
 
-import org.apache.poi.util.HexDump;
-import org.apache.poi.util.LittleEndian;
+import com.moparisthebest.poi.util.HexDump;
+import com.moparisthebest.poi.util.LittleEndian;
 
 /**
  * A complex property differs from a simple property in that the data can not fit inside a 32 bit

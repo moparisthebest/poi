@@ -16,14 +16,14 @@
 ==================================================================== */
 
 
-package org.apache.poi.hssf.usermodel;
+package com.moparisthebest.poi.hssf.usermodel;
 
-import org.apache.poi.ddf.EscherBitmapBlip;
-import org.apache.poi.ddf.EscherBlipRecord;
-import org.apache.poi.ddf.EscherMetafileBlip;
-import org.apache.poi.ss.usermodel.PictureData;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.util.PngUtils;
+import com.moparisthebest.poi.ddf.EscherBitmapBlip;
+import com.moparisthebest.poi.ddf.EscherBlipRecord;
+import com.moparisthebest.poi.ddf.EscherMetafileBlip;
+import com.moparisthebest.poi.ss.usermodel.PictureData;
+import com.moparisthebest.poi.ss.usermodel.Workbook;
+import com.moparisthebest.poi.util.PngUtils;
 
 /**
  * Represents binary data stored in the file.  Eg. A GIF, JPEG etc...
@@ -56,7 +56,7 @@ public class HSSFPictureData implements PictureData
     }
 
     /* (non-Javadoc)
-     * @see org.apache.poi.hssf.usermodel.PictureData#getData()
+     * @see com.moparisthebest.poi.hssf.usermodel.PictureData#getData()
      */
     public byte[] getData()
     {

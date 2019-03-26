@@ -15,9 +15,9 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.record;
+package com.moparisthebest.poi.hssf.record;
 
-import org.apache.poi.util.*;
+import com.moparisthebest.poi.util.*;
 
 /**
  * Record for the top margin.

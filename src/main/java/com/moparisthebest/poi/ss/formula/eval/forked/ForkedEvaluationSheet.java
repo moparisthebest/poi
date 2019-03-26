@@ -15,20 +15,20 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula.eval.forked;
+package com.moparisthebest.poi.ss.formula.eval.forked;
 
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.apache.poi.ss.formula.EvaluationCell;
-import org.apache.poi.ss.formula.EvaluationSheet;
-import org.apache.poi.ss.formula.EvaluationWorkbook;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.util.CellReference;
-import org.apache.poi.util.Internal;
+import com.moparisthebest.poi.ss.formula.EvaluationCell;
+import com.moparisthebest.poi.ss.formula.EvaluationSheet;
+import com.moparisthebest.poi.ss.formula.EvaluationWorkbook;
+import com.moparisthebest.poi.ss.usermodel.Cell;
+import com.moparisthebest.poi.ss.usermodel.Row;
+import com.moparisthebest.poi.ss.usermodel.Sheet;
+import com.moparisthebest.poi.ss.util.CellReference;
+import com.moparisthebest.poi.util.Internal;
 
 /**
  * Represents a sheet being used for forked evaluation.  Initially, objects of this class contain
@@ -106,7 +106,7 @@ final class ForkedEvaluationSheet implements EvaluationSheet {
 
     /* (non-Javadoc)
      * leave the map alone, if it needs resetting, reusing this class is probably a bad idea.
-     * @see org.apache.poi.ss.formula.EvaluationSheet#clearAllCachedResultValues()
+     * @see com.moparisthebest.poi.ss.formula.EvaluationSheet#clearAllCachedResultValues()
      * 
      * @since POI 3.15 beta 3
      */
@@ -115,7 +115,7 @@ final class ForkedEvaluationSheet implements EvaluationSheet {
         _masterSheet.clearAllCachedResultValues();
     }
     
-    // FIXME: serves same purpose as org.apache.poi.xssf.usermodel.XSSFEvaluationSheet$CellKey
+    // FIXME: serves same purpose as com.moparisthebest.poi.xssf.usermodel.XSSFEvaluationSheet$CellKey
     private static final class RowColKey implements Comparable<RowColKey>{
         private final int _rowIndex;
         private final int _columnIndex;

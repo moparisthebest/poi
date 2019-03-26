@@ -17,17 +17,17 @@
 ==================================================================== */
 
 
-package org.apache.poi.poifs.filesystem;
+package com.moparisthebest.poi.poifs.filesystem;
 
 import java.io.IOException;
 import java.io.OutputStream;
 import java.nio.ByteBuffer;
 import java.util.Iterator;
 
-import org.apache.poi.poifs.common.POIFSConstants;
-import org.apache.poi.poifs.filesystem.BlockStore.ChainLoopDetector;
-import org.apache.poi.poifs.property.Property;
-import org.apache.poi.poifs.storage.HeaderBlock;
+import com.moparisthebest.poi.poifs.common.POIFSConstants;
+import com.moparisthebest.poi.poifs.filesystem.BlockStore.ChainLoopDetector;
+import com.moparisthebest.poi.poifs.property.Property;
+import com.moparisthebest.poi.poifs.storage.HeaderBlock;
 
 /**
  * This handles reading and writing a stream within a

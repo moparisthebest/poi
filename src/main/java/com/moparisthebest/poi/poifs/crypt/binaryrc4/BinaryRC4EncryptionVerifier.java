@@ -15,13 +15,13 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.poifs.crypt.binaryrc4;
+package com.moparisthebest.poi.poifs.crypt.binaryrc4;
 
-import org.apache.poi.EncryptedDocumentException;
-import org.apache.poi.poifs.crypt.*;
-import org.apache.poi.poifs.crypt.standard.EncryptionRecord;
-import org.apache.poi.util.LittleEndianByteArrayOutputStream;
-import org.apache.poi.util.LittleEndianInput;
+import com.moparisthebest.poi.EncryptedDocumentException;
+import com.moparisthebest.poi.poifs.crypt.*;
+import com.moparisthebest.poi.poifs.crypt.standard.EncryptionRecord;
+import com.moparisthebest.poi.util.LittleEndianByteArrayOutputStream;
+import com.moparisthebest.poi.util.LittleEndianInput;
 
 public class BinaryRC4EncryptionVerifier extends EncryptionVerifier implements EncryptionRecord, Cloneable {
 

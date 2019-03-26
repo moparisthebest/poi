@@ -17,13 +17,13 @@
 ==================================================================== */
         
 
-package org.apache.poi.poifs.dev;
+package com.moparisthebest.poi.poifs.dev;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
-import org.apache.poi.poifs.filesystem.NPOIFSFileSystem;
+import com.moparisthebest.poi.poifs.filesystem.NPOIFSFileSystem;
 
 /**
  * A simple viewer for POIFS files

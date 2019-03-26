@@ -17,7 +17,7 @@
 ==================================================================== */
 
 
-package org.apache.poi.poifs.filesystem;
+package com.moparisthebest.poi.poifs.filesystem;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -29,11 +29,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import org.apache.poi.hpsf.ClassID;
-import org.apache.poi.poifs.dev.POIFSViewable;
-import org.apache.poi.poifs.property.DirectoryProperty;
-import org.apache.poi.poifs.property.DocumentProperty;
-import org.apache.poi.poifs.property.Property;
+import com.moparisthebest.poi.hpsf.ClassID;
+import com.moparisthebest.poi.poifs.dev.POIFSViewable;
+import com.moparisthebest.poi.poifs.property.DirectoryProperty;
+import com.moparisthebest.poi.poifs.property.DocumentProperty;
+import com.moparisthebest.poi.poifs.property.Property;
 
 /**
  * Simple implementation of DirectoryEntry

@@ -15,22 +15,22 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula.eval.forked;
+package com.moparisthebest.poi.ss.formula.eval.forked;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import org.apache.poi.ss.SpreadsheetVersion;
-import org.apache.poi.ss.formula.EvaluationCell;
-import org.apache.poi.ss.formula.EvaluationName;
-import org.apache.poi.ss.formula.EvaluationSheet;
-import org.apache.poi.ss.formula.EvaluationWorkbook;
-import org.apache.poi.ss.formula.ptg.NamePtg;
-import org.apache.poi.ss.formula.ptg.NameXPtg;
-import org.apache.poi.ss.formula.ptg.Ptg;
-import org.apache.poi.ss.formula.udf.UDFFinder;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.util.Internal;
+import com.moparisthebest.poi.ss.SpreadsheetVersion;
+import com.moparisthebest.poi.ss.formula.EvaluationCell;
+import com.moparisthebest.poi.ss.formula.EvaluationName;
+import com.moparisthebest.poi.ss.formula.EvaluationSheet;
+import com.moparisthebest.poi.ss.formula.EvaluationWorkbook;
+import com.moparisthebest.poi.ss.formula.ptg.NamePtg;
+import com.moparisthebest.poi.ss.formula.ptg.NameXPtg;
+import com.moparisthebest.poi.ss.formula.ptg.Ptg;
+import com.moparisthebest.poi.ss.formula.udf.UDFFinder;
+import com.moparisthebest.poi.ss.usermodel.Workbook;
+import com.moparisthebest.poi.util.Internal;
 
 /**
  * Represents a workbook being used for forked evaluation. Most operations are delegated to the
@@ -162,7 +162,7 @@ final class ForkedEvaluationWorkbook implements EvaluationWorkbook {
     
     /* (non-Javadoc)
      * leave the map alone, if it needs resetting, reusing this class is probably a bad idea.
-     * @see org.apache.poi.ss.formula.EvaluationSheet#clearAllCachedResultValues()
+     * @see com.moparisthebest.poi.ss.formula.EvaluationSheet#clearAllCachedResultValues()
      * 
      * @since POI 3.15 beta 3
      */

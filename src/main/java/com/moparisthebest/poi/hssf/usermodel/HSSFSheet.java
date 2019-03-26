@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.usermodel;
+package com.moparisthebest.poi.hssf.usermodel;
 
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -26,61 +26,61 @@ import java.util.Map;
 import java.util.TreeMap;
 import java.util.TreeSet;
 
-import org.apache.poi.ddf.EscherRecord;
-import org.apache.poi.hssf.model.DrawingManager2;
-import org.apache.poi.hssf.model.HSSFFormulaParser;
-import org.apache.poi.hssf.model.InternalSheet;
-import org.apache.poi.hssf.model.InternalWorkbook;
-import org.apache.poi.hssf.record.AutoFilterInfoRecord;
-import org.apache.poi.hssf.record.CellValueRecordInterface;
-import org.apache.poi.hssf.record.DVRecord;
-import org.apache.poi.hssf.record.DimensionsRecord;
-import org.apache.poi.hssf.record.DrawingRecord;
-import org.apache.poi.hssf.record.EscherAggregate;
-import org.apache.poi.hssf.record.ExtendedFormatRecord;
-import org.apache.poi.hssf.record.HyperlinkRecord;
-import org.apache.poi.hssf.record.NameRecord;
-import org.apache.poi.hssf.record.Record;
-import org.apache.poi.hssf.record.RecordBase;
-import org.apache.poi.hssf.record.RowRecord;
-import org.apache.poi.hssf.record.SCLRecord;
-import org.apache.poi.hssf.record.WSBoolRecord;
-import org.apache.poi.hssf.record.WindowTwoRecord;
-import org.apache.poi.hssf.record.aggregates.DataValidityTable;
-import org.apache.poi.hssf.record.aggregates.FormulaRecordAggregate;
-import org.apache.poi.hssf.record.aggregates.RecordAggregate.RecordVisitor;
-import org.apache.poi.hssf.record.aggregates.WorksheetProtectionBlock;
-import org.apache.poi.hssf.usermodel.helpers.HSSFRowShifter;
-import org.apache.poi.ss.SpreadsheetVersion;
-import org.apache.poi.ss.formula.FormulaShifter;
-import org.apache.poi.ss.formula.FormulaType;
-import org.apache.poi.ss.formula.ptg.Area3DPtg;
-import org.apache.poi.ss.formula.ptg.MemFuncPtg;
-import org.apache.poi.ss.formula.ptg.Ptg;
-import org.apache.poi.ss.formula.ptg.UnionPtg;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.CellRange;
-import org.apache.poi.ss.usermodel.CellStyle;
-import org.apache.poi.ss.usermodel.CellType;
-import org.apache.poi.ss.usermodel.DataValidation;
-import org.apache.poi.ss.usermodel.DataValidationHelper;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.helpers.RowShifter;
-import org.apache.poi.ss.util.CellAddress;
-import org.apache.poi.ss.util.CellRangeAddress;
-import org.apache.poi.ss.util.CellRangeAddressList;
-import org.apache.poi.ss.util.CellReference;
-import org.apache.poi.ss.util.PaneInformation;
-import org.apache.poi.ss.util.SSCellRange;
-import org.apache.poi.ss.util.SheetUtil;
-import org.apache.poi.util.Configurator;
-import org.apache.poi.util.POILogFactory;
-import org.apache.poi.util.POILogger;
+import com.moparisthebest.poi.ddf.EscherRecord;
+import com.moparisthebest.poi.hssf.model.DrawingManager2;
+import com.moparisthebest.poi.hssf.model.HSSFFormulaParser;
+import com.moparisthebest.poi.hssf.model.InternalSheet;
+import com.moparisthebest.poi.hssf.model.InternalWorkbook;
+import com.moparisthebest.poi.hssf.record.AutoFilterInfoRecord;
+import com.moparisthebest.poi.hssf.record.CellValueRecordInterface;
+import com.moparisthebest.poi.hssf.record.DVRecord;
+import com.moparisthebest.poi.hssf.record.DimensionsRecord;
+import com.moparisthebest.poi.hssf.record.DrawingRecord;
+import com.moparisthebest.poi.hssf.record.EscherAggregate;
+import com.moparisthebest.poi.hssf.record.ExtendedFormatRecord;
+import com.moparisthebest.poi.hssf.record.HyperlinkRecord;
+import com.moparisthebest.poi.hssf.record.NameRecord;
+import com.moparisthebest.poi.hssf.record.Record;
+import com.moparisthebest.poi.hssf.record.RecordBase;
+import com.moparisthebest.poi.hssf.record.RowRecord;
+import com.moparisthebest.poi.hssf.record.SCLRecord;
+import com.moparisthebest.poi.hssf.record.WSBoolRecord;
+import com.moparisthebest.poi.hssf.record.WindowTwoRecord;
+import com.moparisthebest.poi.hssf.record.aggregates.DataValidityTable;
+import com.moparisthebest.poi.hssf.record.aggregates.FormulaRecordAggregate;
+import com.moparisthebest.poi.hssf.record.aggregates.RecordAggregate.RecordVisitor;
+import com.moparisthebest.poi.hssf.record.aggregates.WorksheetProtectionBlock;
+import com.moparisthebest.poi.hssf.usermodel.helpers.HSSFRowShifter;
+import com.moparisthebest.poi.ss.SpreadsheetVersion;
+import com.moparisthebest.poi.ss.formula.FormulaShifter;
+import com.moparisthebest.poi.ss.formula.FormulaType;
+import com.moparisthebest.poi.ss.formula.ptg.Area3DPtg;
+import com.moparisthebest.poi.ss.formula.ptg.MemFuncPtg;
+import com.moparisthebest.poi.ss.formula.ptg.Ptg;
+import com.moparisthebest.poi.ss.formula.ptg.UnionPtg;
+import com.moparisthebest.poi.ss.usermodel.Cell;
+import com.moparisthebest.poi.ss.usermodel.CellRange;
+import com.moparisthebest.poi.ss.usermodel.CellStyle;
+import com.moparisthebest.poi.ss.usermodel.CellType;
+import com.moparisthebest.poi.ss.usermodel.DataValidation;
+import com.moparisthebest.poi.ss.usermodel.DataValidationHelper;
+import com.moparisthebest.poi.ss.usermodel.Row;
+import com.moparisthebest.poi.ss.usermodel.helpers.RowShifter;
+import com.moparisthebest.poi.ss.util.CellAddress;
+import com.moparisthebest.poi.ss.util.CellRangeAddress;
+import com.moparisthebest.poi.ss.util.CellRangeAddressList;
+import com.moparisthebest.poi.ss.util.CellReference;
+import com.moparisthebest.poi.ss.util.PaneInformation;
+import com.moparisthebest.poi.ss.util.SSCellRange;
+import com.moparisthebest.poi.ss.util.SheetUtil;
+import com.moparisthebest.poi.util.Configurator;
+import com.moparisthebest.poi.util.POILogFactory;
+import com.moparisthebest.poi.util.POILogger;
 
 /**
  * High level representation of a worksheet.
  */
-public final class HSSFSheet implements org.apache.poi.ss.usermodel.Sheet {
+public final class HSSFSheet implements com.moparisthebest.poi.ss.usermodel.Sheet {
     private static final POILogger log = POILogFactory.getLogger(HSSFSheet.class);
     private static final int DEBUG = POILogger.DEBUG;
 
@@ -120,7 +120,7 @@ public final class HSSFSheet implements org.apache.poi.ss.usermodel.Sheet {
      * scratch.  You should not be calling this from application code (its protected anyhow).
      *
      * @param workbook - The HSSF Workbook object associated with the sheet.
-     * @see org.apache.poi.hssf.usermodel.HSSFWorkbook#createSheet()
+     * @see com.moparisthebest.poi.hssf.usermodel.HSSFWorkbook#createSheet()
      */
     protected HSSFSheet(HSSFWorkbook workbook) {
         _sheet = InternalSheet.createSheet(workbook.getSpreadsheetVersion());
@@ -135,7 +135,7 @@ public final class HSSFSheet implements org.apache.poi.ss.usermodel.Sheet {
      *
      * @param workbook - The HSSF Workbook object associated with the sheet.
      * @param sheet    - lowlevel Sheet object this sheet will represent
-     * @see org.apache.poi.hssf.usermodel.HSSFWorkbook#createSheet()
+     * @see com.moparisthebest.poi.hssf.usermodel.HSSFWorkbook#createSheet()
      */
     protected HSSFSheet(HSSFWorkbook workbook, InternalSheet sheet) {
         this._sheet = sheet;
@@ -251,8 +251,8 @@ public final class HSSFSheet implements org.apache.poi.ss.usermodel.Sheet {
      *
      * @param rownum row number
      * @return High level HSSFRow object representing a row in the sheet
-     * @see org.apache.poi.hssf.usermodel.HSSFRow
-     * @see #removeRow(org.apache.poi.ss.usermodel.Row)
+     * @see com.moparisthebest.poi.hssf.usermodel.HSSFRow
+     * @see #removeRow(com.moparisthebest.poi.ss.usermodel.Row)
      */
     @Override
     public HSSFRow createRow(int rownum) {
@@ -806,17 +806,17 @@ public final class HSSFSheet implements org.apache.poi.ss.usermodel.Sheet {
      * Control if Excel should be asked to recalculate all formulas on this sheet
      * when the workbook is opened.<p>
      * 
-     * Calculating the formula values with {@link org.apache.poi.ss.usermodel.FormulaEvaluator} is the
+     * Calculating the formula values with {@link com.moparisthebest.poi.ss.usermodel.FormulaEvaluator} is the
      * recommended solution, but this may be used for certain cases where
      * evaluation in POI is not possible.<p>
      * 
      * It is recommended to force recalcuation of formulas on workbook level using
-     * {@link org.apache.poi.ss.usermodel.Workbook#setForceFormulaRecalculation(boolean)}
+     * {@link com.moparisthebest.poi.ss.usermodel.Workbook#setForceFormulaRecalculation(boolean)}
      * to ensure that all cross-worksheet formuals and external dependencies are updated.
      *
      * @param value true if the application will perform a full recalculation of
      *              this worksheet values when the workbook is opened
-     * @see org.apache.poi.ss.usermodel.Workbook#setForceFormulaRecalculation(boolean)
+     * @see com.moparisthebest.poi.ss.usermodel.Workbook#setForceFormulaRecalculation(boolean)
      */
     @Override
     public void setForceFormulaRecalculation(boolean value) {

@@ -15,12 +15,12 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hpsf;
+package com.moparisthebest.poi.hpsf;
 
 import java.util.Date;
 
-import org.apache.poi.hpsf.wellknown.PropertyIDMap;
-import org.apache.poi.hpsf.wellknown.SectionIDMap;
+import com.moparisthebest.poi.hpsf.wellknown.PropertyIDMap;
+import com.moparisthebest.poi.hpsf.wellknown.SectionIDMap;
 
 /**
  * Convenience class representing a Summary Information stream in a

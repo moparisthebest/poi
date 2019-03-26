@@ -15,18 +15,18 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.usermodel;
+package com.moparisthebest.poi.hssf.usermodel;
 
-import org.apache.poi.hssf.record.FontRecord;
-import org.apache.poi.hssf.util.HSSFColor;
-import org.apache.poi.ss.usermodel.Font;
+import com.moparisthebest.poi.hssf.record.FontRecord;
+import com.moparisthebest.poi.hssf.util.HSSFColor;
+import com.moparisthebest.poi.ss.usermodel.Font;
 
 /**
  * Represents a Font used in a workbook.
  * 
- * @see org.apache.poi.hssf.usermodel.HSSFWorkbook#createFont()
- * @see org.apache.poi.hssf.usermodel.HSSFWorkbook#getFontAt(short)
- * @see org.apache.poi.hssf.usermodel.HSSFCellStyle#setFont(HSSFFont)
+ * @see com.moparisthebest.poi.hssf.usermodel.HSSFWorkbook#createFont()
+ * @see com.moparisthebest.poi.hssf.usermodel.HSSFWorkbook#getFontAt(short)
+ * @see com.moparisthebest.poi.hssf.usermodel.HSSFCellStyle#setFont(HSSFFont)
  */
 public final class HSSFFont implements Font {
 
@@ -184,7 +184,7 @@ public final class HSSFFont implements Font {
      * @return color to use
      * @see #COLOR_NORMAL
      * @see #COLOR_RED
-     * @see org.apache.poi.hssf.usermodel.HSSFPalette#getColor(short)
+     * @see com.moparisthebest.poi.hssf.usermodel.HSSFPalette#getColor(short)
      */
     public short getColor()
     {
@@ -345,7 +345,7 @@ public final class HSSFFont implements Font {
 
     public String toString()
     {
-        return "org.apache.poi.hssf.usermodel.HSSFFont{" +
+        return "com.moparisthebest.poi.hssf.usermodel.HSSFFont{" +
                  font +
                 "}";
     }

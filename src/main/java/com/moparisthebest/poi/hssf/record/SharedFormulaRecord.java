@@ -15,15 +15,15 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.record;
+package com.moparisthebest.poi.hssf.record;
 
-import org.apache.poi.ss.formula.ptg.*;
-import org.apache.poi.hssf.util.CellRangeAddress8Bit;
-import org.apache.poi.ss.formula.Formula;
-import org.apache.poi.ss.SpreadsheetVersion;
-import org.apache.poi.ss.formula.SharedFormula;
-import org.apache.poi.util.HexDump;
-import org.apache.poi.util.LittleEndianOutput;
+import com.moparisthebest.poi.ss.formula.ptg.*;
+import com.moparisthebest.poi.hssf.util.CellRangeAddress8Bit;
+import com.moparisthebest.poi.ss.formula.Formula;
+import com.moparisthebest.poi.ss.SpreadsheetVersion;
+import com.moparisthebest.poi.ss.formula.SharedFormula;
+import com.moparisthebest.poi.util.HexDump;
+import com.moparisthebest.poi.util.LittleEndianOutput;
 
 /**
  * Title:        SHAREDFMLA (0x04BC) SharedFormulaRecord

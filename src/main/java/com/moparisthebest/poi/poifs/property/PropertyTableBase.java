@@ -15,17 +15,17 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.poifs.property;
+package com.moparisthebest.poi.poifs.property;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-import org.apache.poi.poifs.filesystem.BATManaged;
-import org.apache.poi.poifs.storage.HeaderBlock;
-import org.apache.poi.util.POILogFactory;
-import org.apache.poi.util.POILogger;
+import com.moparisthebest.poi.poifs.filesystem.BATManaged;
+import com.moparisthebest.poi.poifs.storage.HeaderBlock;
+import com.moparisthebest.poi.util.POILogFactory;
+import com.moparisthebest.poi.util.POILogger;
 
 /**
  * This class embodies the Property Table for the filesystem,

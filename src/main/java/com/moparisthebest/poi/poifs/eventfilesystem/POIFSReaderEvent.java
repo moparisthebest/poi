@@ -17,10 +17,10 @@
 ==================================================================== */
         
 
-package org.apache.poi.poifs.eventfilesystem;
+package com.moparisthebest.poi.poifs.eventfilesystem;
 
-import org.apache.poi.poifs.filesystem.DocumentInputStream;
-import org.apache.poi.poifs.filesystem.POIFSDocumentPath;
+import com.moparisthebest.poi.poifs.filesystem.DocumentInputStream;
+import com.moparisthebest.poi.poifs.filesystem.POIFSDocumentPath;
 
 /**
  * Class POIFSReaderEvent

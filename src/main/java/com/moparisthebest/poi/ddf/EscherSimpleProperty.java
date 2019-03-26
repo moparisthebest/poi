@@ -15,10 +15,10 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ddf;
+package com.moparisthebest.poi.ddf;
 
-import org.apache.poi.util.LittleEndian;
-import org.apache.poi.util.HexDump;
+import com.moparisthebest.poi.util.LittleEndian;
+import com.moparisthebest.poi.util.HexDump;
 
 /**
  * A simple property is of fixed length and as a property number in addition

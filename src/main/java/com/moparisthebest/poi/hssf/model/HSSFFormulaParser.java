@@ -15,18 +15,18 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.model;
+package com.moparisthebest.poi.hssf.model;
 
-import org.apache.poi.hssf.usermodel.HSSFEvaluationWorkbook;
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import org.apache.poi.ss.formula.FormulaParseException;
-import org.apache.poi.ss.formula.FormulaParser;
-import org.apache.poi.ss.formula.FormulaParsingWorkbook;
-import org.apache.poi.ss.formula.FormulaRenderer;
-import org.apache.poi.ss.formula.FormulaType;
-import org.apache.poi.ss.formula.ptg.Ptg;
-import org.apache.poi.util.Internal;
-import org.apache.poi.util.Removal;
+import com.moparisthebest.poi.hssf.usermodel.HSSFEvaluationWorkbook;
+import com.moparisthebest.poi.hssf.usermodel.HSSFWorkbook;
+import com.moparisthebest.poi.ss.formula.FormulaParseException;
+import com.moparisthebest.poi.ss.formula.FormulaParser;
+import com.moparisthebest.poi.ss.formula.FormulaParsingWorkbook;
+import com.moparisthebest.poi.ss.formula.FormulaRenderer;
+import com.moparisthebest.poi.ss.formula.FormulaType;
+import com.moparisthebest.poi.ss.formula.ptg.Ptg;
+import com.moparisthebest.poi.util.Internal;
+import com.moparisthebest.poi.util.Removal;
 
 /**
  * HSSF wrapper for the {@link FormulaParser} and {@link FormulaRenderer}

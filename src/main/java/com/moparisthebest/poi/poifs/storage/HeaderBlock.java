@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.poifs.storage;
+package com.moparisthebest.poi.poifs.storage;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -23,18 +23,18 @@ import java.io.OutputStream;
 import java.nio.ByteBuffer;
 import java.util.Arrays;
 
-import org.apache.poi.hssf.OldExcelFormatException;
-import org.apache.poi.poifs.common.POIFSBigBlockSize;
-import org.apache.poi.poifs.common.POIFSConstants;
-import org.apache.poi.poifs.filesystem.NotOLE2FileException;
-import org.apache.poi.poifs.filesystem.OfficeXmlFileException;
-import org.apache.poi.util.HexDump;
-import org.apache.poi.util.IOUtils;
-import org.apache.poi.util.IntegerField;
-import org.apache.poi.util.LittleEndian;
-import org.apache.poi.util.LittleEndianConsts;
-import org.apache.poi.util.LongField;
-import org.apache.poi.util.ShortField;
+import com.moparisthebest.poi.hssf.OldExcelFormatException;
+import com.moparisthebest.poi.poifs.common.POIFSBigBlockSize;
+import com.moparisthebest.poi.poifs.common.POIFSConstants;
+import com.moparisthebest.poi.poifs.filesystem.NotOLE2FileException;
+import com.moparisthebest.poi.poifs.filesystem.OfficeXmlFileException;
+import com.moparisthebest.poi.util.HexDump;
+import com.moparisthebest.poi.util.IOUtils;
+import com.moparisthebest.poi.util.IntegerField;
+import com.moparisthebest.poi.util.LittleEndian;
+import com.moparisthebest.poi.util.LittleEndianConsts;
+import com.moparisthebest.poi.util.LongField;
+import com.moparisthebest.poi.util.ShortField;
 
 /**
  * The block containing the archive header

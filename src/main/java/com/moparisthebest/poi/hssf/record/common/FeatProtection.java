@@ -15,16 +15,16 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.record.common;
+package com.moparisthebest.poi.hssf.record.common;
 
-import org.apache.poi.hssf.record.FeatRecord;
-import org.apache.poi.hssf.record.PasswordRecord;
-import org.apache.poi.hssf.record.PasswordRev4Record;
-//import org.apache.poi.hssf.record.Feat11Record;
-//import org.apache.poi.hssf.record.Feat12Record;
-import org.apache.poi.hssf.record.RecordInputStream;
-import org.apache.poi.util.LittleEndianOutput;
-import org.apache.poi.util.StringUtil;
+import com.moparisthebest.poi.hssf.record.FeatRecord;
+import com.moparisthebest.poi.hssf.record.PasswordRecord;
+import com.moparisthebest.poi.hssf.record.PasswordRev4Record;
+//import com.moparisthebest.poi.hssf.record.Feat11Record;
+//import com.moparisthebest.poi.hssf.record.Feat12Record;
+import com.moparisthebest.poi.hssf.record.RecordInputStream;
+import com.moparisthebest.poi.util.LittleEndianOutput;
+import com.moparisthebest.poi.util.StringUtil;
 
 /**
  * Title: FeatProtection (Protection Shared Feature) common record part

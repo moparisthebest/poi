@@ -15,23 +15,23 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.poifs.dev;
+package com.moparisthebest.poi.poifs.dev;
 
 import java.io.FileInputStream;
 import java.io.InputStream;
 
-import org.apache.poi.poifs.common.POIFSBigBlockSize;
-import org.apache.poi.poifs.common.POIFSConstants;
-import org.apache.poi.poifs.property.DirectoryProperty;
-import org.apache.poi.poifs.property.Property;
-import org.apache.poi.poifs.property.PropertyTable;
-import org.apache.poi.poifs.storage.BlockAllocationTableReader;
-import org.apache.poi.poifs.storage.HeaderBlock;
-import org.apache.poi.poifs.storage.ListManagedBlock;
-import org.apache.poi.poifs.storage.RawDataBlockList;
-import org.apache.poi.poifs.storage.SmallBlockTableReader;
-import org.apache.poi.util.HexDump;
-import org.apache.poi.util.IntList;
+import com.moparisthebest.poi.poifs.common.POIFSBigBlockSize;
+import com.moparisthebest.poi.poifs.common.POIFSConstants;
+import com.moparisthebest.poi.poifs.property.DirectoryProperty;
+import com.moparisthebest.poi.poifs.property.Property;
+import com.moparisthebest.poi.poifs.property.PropertyTable;
+import com.moparisthebest.poi.poifs.storage.BlockAllocationTableReader;
+import com.moparisthebest.poi.poifs.storage.HeaderBlock;
+import com.moparisthebest.poi.poifs.storage.ListManagedBlock;
+import com.moparisthebest.poi.poifs.storage.RawDataBlockList;
+import com.moparisthebest.poi.poifs.storage.SmallBlockTableReader;
+import com.moparisthebest.poi.util.HexDump;
+import com.moparisthebest.poi.util.IntList;
 
 /**
  * A very low level debugging tool, for printing out core 

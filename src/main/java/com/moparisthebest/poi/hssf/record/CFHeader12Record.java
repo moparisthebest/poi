@@ -15,12 +15,12 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.record;
+package com.moparisthebest.poi.hssf.record;
 
-import org.apache.poi.hssf.record.common.FtrHeader;
-import org.apache.poi.hssf.record.common.FutureRecord;
-import org.apache.poi.ss.util.CellRangeAddress;
-import org.apache.poi.util.LittleEndianOutput;
+import com.moparisthebest.poi.hssf.record.common.FtrHeader;
+import com.moparisthebest.poi.hssf.record.common.FutureRecord;
+import com.moparisthebest.poi.ss.util.CellRangeAddress;
+import com.moparisthebest.poi.util.LittleEndianOutput;
 
 /**
  * Conditional Formatting Header v12 record CFHEADER12 (0x0879),

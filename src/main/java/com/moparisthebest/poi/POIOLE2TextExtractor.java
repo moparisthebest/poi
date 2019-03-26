@@ -14,24 +14,24 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 ==================================================================== */
-package org.apache.poi;
+package com.moparisthebest.poi;
 
-import org.apache.poi.hpsf.DocumentSummaryInformation;
-import org.apache.poi.hpsf.SummaryInformation;
-import org.apache.poi.hpsf.extractor.HPSFPropertiesExtractor;
-import org.apache.poi.poifs.filesystem.DirectoryEntry;
+import com.moparisthebest.poi.hpsf.DocumentSummaryInformation;
+import com.moparisthebest.poi.hpsf.SummaryInformation;
+import com.moparisthebest.poi.hpsf.extractor.HPSFPropertiesExtractor;
+import com.moparisthebest.poi.poifs.filesystem.DirectoryEntry;
 
 /**
  * Common Parent for OLE2 based Text Extractors
  *  of POI Documents, such as .doc, .xls
  * You will typically find the implementation of
  *  a given format's text extractor under
- *  org.apache.poi.[format].extractor .
+ *  com.moparisthebest.poi.[format].extractor .
  *  
- * @see org.apache.poi.hssf.extractor.ExcelExtractor
- * @see org.apache.poi.hslf.extractor.PowerPointExtractor
- * @see org.apache.poi.hdgf.extractor.VisioTextExtractor
- * @see org.apache.poi.hwpf.extractor.WordExtractor
+ * @see com.moparisthebest.poi.hssf.extractor.ExcelExtractor
+ * @see com.moparisthebest.poi.hslf.extractor.PowerPointExtractor
+ * @see com.moparisthebest.poi.hdgf.extractor.VisioTextExtractor
+ * @see com.moparisthebest.poi.hwpf.extractor.WordExtractor
  */
 public abstract class POIOLE2TextExtractor extends POITextExtractor {
 	/** The POIDocument that's open */

@@ -15,18 +15,18 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula;
+package com.moparisthebest.poi.ss.formula;
 
 import java.util.Map;
 
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.CellType;
-import org.apache.poi.ss.usermodel.CellValue;
-import org.apache.poi.ss.usermodel.FormulaEvaluator;
-import org.apache.poi.ss.usermodel.RichTextString;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
+import com.moparisthebest.poi.ss.usermodel.Cell;
+import com.moparisthebest.poi.ss.usermodel.CellType;
+import com.moparisthebest.poi.ss.usermodel.CellValue;
+import com.moparisthebest.poi.ss.usermodel.FormulaEvaluator;
+import com.moparisthebest.poi.ss.usermodel.RichTextString;
+import com.moparisthebest.poi.ss.usermodel.Row;
+import com.moparisthebest.poi.ss.usermodel.Sheet;
+import com.moparisthebest.poi.ss.usermodel.Workbook;
 
 /**
  * Common functionality across file formats for evaluating formula cells.<p/>
@@ -154,7 +154,7 @@ public abstract class BaseFormulaEvaluator implements FormulaEvaluator, Workbook
      * int evaluatedCellType = evaluator.evaluateFormulaCell(cell);
      * </pre>
      * Be aware that your cell will hold both the formula, and the result. If you want the cell
-     * replaced with the result of the formula, use {@link #evaluateInCell(org.apache.poi.ss.usermodel.Cell)}
+     * replaced with the result of the formula, use {@link #evaluateInCell(com.moparisthebest.poi.ss.usermodel.Cell)}
      * @param cell The cell to evaluate
      * @return -1 for non-formula cells, or the type of the <em>formula result</em>
      * @deprecated 3.15. Will return a {@link CellType} enum in the future.
@@ -178,7 +178,7 @@ public abstract class BaseFormulaEvaluator implements FormulaEvaluator, Workbook
      * </pre>
      * Be aware that your cell will hold both the formula,
      *  and the result. If you want the cell replaced with
-     *  the result of the formula, use {@link #evaluate(org.apache.poi.ss.usermodel.Cell)} }
+     *  the result of the formula, use {@link #evaluate(com.moparisthebest.poi.ss.usermodel.Cell)} }
      * @param cell The cell to evaluate
      * @return The type of the formula result (the cell's type remains as CellType.FORMULA however)
      *         If cell is not a formula cell, returns {@link CellType#_NONE} rather than throwing an exception.

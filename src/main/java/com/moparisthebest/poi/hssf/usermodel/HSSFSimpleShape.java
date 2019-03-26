@@ -15,26 +15,26 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.usermodel;
+package com.moparisthebest.poi.hssf.usermodel;
 
-import org.apache.poi.ddf.DefaultEscherRecordFactory;
-import org.apache.poi.ddf.EscherBoolProperty;
-import org.apache.poi.ddf.EscherClientDataRecord;
-import org.apache.poi.ddf.EscherContainerRecord;
-import org.apache.poi.ddf.EscherOptRecord;
-import org.apache.poi.ddf.EscherProperties;
-import org.apache.poi.ddf.EscherRGBProperty;
-import org.apache.poi.ddf.EscherShapePathProperty;
-import org.apache.poi.ddf.EscherSimpleProperty;
-import org.apache.poi.ddf.EscherSpRecord;
-import org.apache.poi.ddf.EscherTextboxRecord;
-import org.apache.poi.hssf.record.CommonObjectDataSubRecord;
-import org.apache.poi.hssf.record.EndSubRecord;
-import org.apache.poi.hssf.record.EscherAggregate;
-import org.apache.poi.hssf.record.ObjRecord;
-import org.apache.poi.hssf.record.TextObjectRecord;
-import org.apache.poi.ss.usermodel.RichTextString;
-import org.apache.poi.ss.usermodel.SimpleShape;
+import com.moparisthebest.poi.ddf.DefaultEscherRecordFactory;
+import com.moparisthebest.poi.ddf.EscherBoolProperty;
+import com.moparisthebest.poi.ddf.EscherClientDataRecord;
+import com.moparisthebest.poi.ddf.EscherContainerRecord;
+import com.moparisthebest.poi.ddf.EscherOptRecord;
+import com.moparisthebest.poi.ddf.EscherProperties;
+import com.moparisthebest.poi.ddf.EscherRGBProperty;
+import com.moparisthebest.poi.ddf.EscherShapePathProperty;
+import com.moparisthebest.poi.ddf.EscherSimpleProperty;
+import com.moparisthebest.poi.ddf.EscherSpRecord;
+import com.moparisthebest.poi.ddf.EscherTextboxRecord;
+import com.moparisthebest.poi.hssf.record.CommonObjectDataSubRecord;
+import com.moparisthebest.poi.hssf.record.EndSubRecord;
+import com.moparisthebest.poi.hssf.record.EscherAggregate;
+import com.moparisthebest.poi.hssf.record.ObjRecord;
+import com.moparisthebest.poi.hssf.record.TextObjectRecord;
+import com.moparisthebest.poi.ss.usermodel.RichTextString;
+import com.moparisthebest.poi.ss.usermodel.SimpleShape;
 
 /**
  * Represents a simple shape such as a line, rectangle or oval.

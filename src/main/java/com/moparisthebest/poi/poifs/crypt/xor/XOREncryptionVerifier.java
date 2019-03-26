@@ -15,12 +15,12 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.poifs.crypt.xor;
+package com.moparisthebest.poi.poifs.crypt.xor;
 
-import org.apache.poi.poifs.crypt.EncryptionVerifier;
-import org.apache.poi.poifs.crypt.standard.EncryptionRecord;
-import org.apache.poi.util.LittleEndianByteArrayOutputStream;
-import org.apache.poi.util.LittleEndianInput;
+import com.moparisthebest.poi.poifs.crypt.EncryptionVerifier;
+import com.moparisthebest.poi.poifs.crypt.standard.EncryptionRecord;
+import com.moparisthebest.poi.util.LittleEndianByteArrayOutputStream;
+import com.moparisthebest.poi.util.LittleEndianInput;
 
 public class XOREncryptionVerifier extends EncryptionVerifier implements EncryptionRecord, Cloneable {
 

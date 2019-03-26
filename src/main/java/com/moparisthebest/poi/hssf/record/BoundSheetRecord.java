@@ -15,20 +15,20 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.record;
+package com.moparisthebest.poi.hssf.record;
 
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
-import org.apache.poi.util.BitField;
-import org.apache.poi.util.BitFieldFactory;
-import org.apache.poi.util.HexDump;
-import org.apache.poi.util.LittleEndian;
-import org.apache.poi.util.LittleEndianConsts;
-import org.apache.poi.util.LittleEndianOutput;
-import org.apache.poi.util.StringUtil;
-import org.apache.poi.ss.util.WorkbookUtil;
+import com.moparisthebest.poi.util.BitField;
+import com.moparisthebest.poi.util.BitFieldFactory;
+import com.moparisthebest.poi.util.HexDump;
+import com.moparisthebest.poi.util.LittleEndian;
+import com.moparisthebest.poi.util.LittleEndianConsts;
+import com.moparisthebest.poi.util.LittleEndianOutput;
+import com.moparisthebest.poi.util.StringUtil;
+import com.moparisthebest.poi.ss.util.WorkbookUtil;
 
 /**
  * Title:        Bound Sheet Record (aka BundleSheet) (0x0085)<P>
@@ -89,7 +89,7 @@ public final class BoundSheetRecord extends StandardRecord {
 	/**
 	 * Set the sheetname for this sheet.  (this appears in the tabs at the bottom)
 	 * @param sheetName the name of the sheet
-	 * @see org.apache.poi.ss.util.WorkbookUtil#createSafeSheetName(String nameProposal)
+	 * @see com.moparisthebest.poi.ss.util.WorkbookUtil#createSafeSheetName(String nameProposal)
 	 *      for a safe way to create valid names
 	 * @throws IllegalArgumentException if sheet name will cause excel to crash.
 	 */

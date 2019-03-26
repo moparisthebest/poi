@@ -17,9 +17,9 @@
  * ====================================================================
  */
 
-package org.apache.poi.ss.formula.functions;
+package com.moparisthebest.poi.ss.formula.functions;
 
-import org.apache.poi.ss.formula.eval.*;
+import com.moparisthebest.poi.ss.formula.eval.*;
 
 /**
   * Compute the interest portion of a payment.

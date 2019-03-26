@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.util;
+package com.moparisthebest.poi.hssf.util;
 
 import java.util.Collections;
 import java.util.EnumMap;
@@ -23,8 +23,8 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 
-import org.apache.poi.ss.usermodel.Color;
-import org.apache.poi.util.Removal;
+import com.moparisthebest.poi.ss.usermodel.Color;
+import com.moparisthebest.poi.util.Removal;
 
 
 /**

@@ -15,9 +15,9 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ddf;
+package com.moparisthebest.poi.ddf;
 
-import org.apache.poi.util.HexDump;
+import com.moparisthebest.poi.util.HexDump;
 
 /**
  * A color property.

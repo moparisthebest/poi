@@ -15,14 +15,14 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss.formula.atp;
+package com.moparisthebest.poi.ss.formula.atp;
 
 import java.util.Calendar;
 import java.util.regex.Pattern;
 
-import org.apache.poi.ss.formula.eval.ErrorEval;
-import org.apache.poi.ss.formula.eval.EvaluationException;
-import org.apache.poi.util.LocaleUtil;
+import com.moparisthebest.poi.ss.formula.eval.ErrorEval;
+import com.moparisthebest.poi.ss.formula.eval.EvaluationException;
+import com.moparisthebest.poi.util.LocaleUtil;
 
 /**
  * Parser for java dates.

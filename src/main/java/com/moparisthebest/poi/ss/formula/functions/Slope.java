@@ -17,10 +17,10 @@
  * ====================================================================
  */
 
-package org.apache.poi.ss.formula.functions;
+package com.moparisthebest.poi.ss.formula.functions;
 
-import org.apache.poi.ss.formula.eval.ValueEval;
-import org.apache.poi.ss.formula.functions.LinearRegressionFunction.FUNCTION;
+import com.moparisthebest.poi.ss.formula.eval.ValueEval;
+import com.moparisthebest.poi.ss.formula.functions.LinearRegressionFunction.FUNCTION;
 
 /**
  * Implementation of Excel function SLOPE()<p/>

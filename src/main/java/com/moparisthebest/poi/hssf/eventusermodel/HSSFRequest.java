@@ -15,23 +15,23 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.eventusermodel;
+package com.moparisthebest.poi.hssf.eventusermodel;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Map;
 
-import org.apache.poi.hssf.record.Record;
-import org.apache.poi.hssf.record.RecordFactory;
+import com.moparisthebest.poi.hssf.record.Record;
+import com.moparisthebest.poi.hssf.record.RecordFactory;
 
 /**
  * An HSSFRequest object should be constructed registering an instance or multiple
  * instances of HSSFListener with each Record.sid you wish to listen for.
  *
- * @see org.apache.poi.hssf.eventusermodel.HSSFEventFactory
- * @see org.apache.poi.hssf.eventusermodel.HSSFListener
- * @see org.apache.poi.hssf.eventusermodel.HSSFUserException
+ * @see com.moparisthebest.poi.hssf.eventusermodel.HSSFEventFactory
+ * @see com.moparisthebest.poi.hssf.eventusermodel.HSSFListener
+ * @see com.moparisthebest.poi.hssf.eventusermodel.HSSFUserException
  */
 public class HSSFRequest {
 	private final Map<Short, List<HSSFListener>> _records;
@@ -66,7 +66,7 @@ public class HSSFRequest {
 
 	/**
 	 * This is the equivalent of calling addListener(myListener, sid) for EVERY
-	 * record in the org.apache.poi.hssf.record package. This is for lazy
+	 * record in the com.moparisthebest.poi.hssf.record package. This is for lazy
 	 * people like me. You can call this more than once with more than one listener, but
 	 * that seems like a bad thing to do from a practice-perspective unless you have a
 	 * compelling reason to do so (like maybe you send the event two places or log it or

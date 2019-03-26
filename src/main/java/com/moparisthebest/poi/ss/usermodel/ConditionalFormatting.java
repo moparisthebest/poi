@@ -17,9 +17,9 @@
  * ====================================================================
  */
 
-package org.apache.poi.ss.usermodel;
+package com.moparisthebest.poi.ss.usermodel;
 
-import org.apache.poi.ss.util.CellRangeAddress;
+import com.moparisthebest.poi.ss.util.CellRangeAddress;
 
 /**
  * The ConditionalFormatting class encapsulates all settings of Conditional Formatting.
@@ -43,7 +43,7 @@ import org.apache.poi.ss.util.CellRangeAddress;
  *  </LI>
  *  </UL>
  *
- * Use {@link org.apache.poi.ss.usermodel.Sheet#getSheetConditionalFormatting()}
+ * Use {@link com.moparisthebest.poi.ss.usermodel.Sheet#getSheetConditionalFormatting()}
  * to get access to an instance of this class.
  * <P>
  * To create a new Conditional Formatting set use the following approach:

@@ -17,11 +17,11 @@
  * ====================================================================
  */
 
-package org.apache.poi.ss.usermodel.charts;
+package com.moparisthebest.poi.ss.usermodel.charts;
 
-import org.apache.poi.ss.usermodel.*;
-import org.apache.poi.ss.util.CellRangeAddress;
-import org.apache.poi.util.Beta;
+import com.moparisthebest.poi.ss.usermodel.*;
+import com.moparisthebest.poi.ss.util.CellRangeAddress;
+import com.moparisthebest.poi.util.Beta;
 
 /**
  * Class {@code DataSources} is a factory for {@link ChartDataSource} instances.

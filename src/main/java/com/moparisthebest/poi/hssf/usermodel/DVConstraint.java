@@ -15,23 +15,23 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.usermodel;
+package com.moparisthebest.poi.hssf.usermodel;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.regex.Pattern;
 
-import org.apache.poi.hssf.model.HSSFFormulaParser;
-import org.apache.poi.hssf.record.DVRecord;
-import org.apache.poi.ss.formula.FormulaRenderer;
-import org.apache.poi.ss.formula.FormulaRenderingWorkbook;
-import org.apache.poi.ss.formula.FormulaType;
-import org.apache.poi.ss.formula.ptg.NumberPtg;
-import org.apache.poi.ss.formula.ptg.Ptg;
-import org.apache.poi.ss.formula.ptg.StringPtg;
-import org.apache.poi.ss.usermodel.DataValidationConstraint;
-import org.apache.poi.util.LocaleUtil;
+import com.moparisthebest.poi.hssf.model.HSSFFormulaParser;
+import com.moparisthebest.poi.hssf.record.DVRecord;
+import com.moparisthebest.poi.ss.formula.FormulaRenderer;
+import com.moparisthebest.poi.ss.formula.FormulaRenderingWorkbook;
+import com.moparisthebest.poi.ss.formula.FormulaType;
+import com.moparisthebest.poi.ss.formula.ptg.NumberPtg;
+import com.moparisthebest.poi.ss.formula.ptg.Ptg;
+import com.moparisthebest.poi.ss.formula.ptg.StringPtg;
+import com.moparisthebest.poi.ss.usermodel.DataValidationConstraint;
+import com.moparisthebest.poi.util.LocaleUtil;
 
 /**
  * Data Validation Constraint
@@ -90,11 +90,11 @@ public class DVConstraint implements DataValidationConstraint {
 	 * can be either standard Excel formulas or formatted number values. If the expression starts 
 	 * with '=' it is parsed as a formula, otherwise it is parsed as a formatted number. 
 	 * 
-	 * @param validationType one of {@link org.apache.poi.ss.usermodel.DataValidationConstraint.ValidationType#ANY},
-     * {@link org.apache.poi.ss.usermodel.DataValidationConstraint.ValidationType#DECIMAL},
-     * {@link org.apache.poi.ss.usermodel.DataValidationConstraint.ValidationType#INTEGER},
-     * {@link org.apache.poi.ss.usermodel.DataValidationConstraint.ValidationType#TEXT_LENGTH}
-	 * @param comparisonOperator any constant from {@link org.apache.poi.ss.usermodel.DataValidationConstraint.OperatorType} enum
+	 * @param validationType one of {@link com.moparisthebest.poi.ss.usermodel.DataValidationConstraint.ValidationType#ANY},
+     * {@link com.moparisthebest.poi.ss.usermodel.DataValidationConstraint.ValidationType#DECIMAL},
+     * {@link com.moparisthebest.poi.ss.usermodel.DataValidationConstraint.ValidationType#INTEGER},
+     * {@link com.moparisthebest.poi.ss.usermodel.DataValidationConstraint.ValidationType#TEXT_LENGTH}
+	 * @param comparisonOperator any constant from {@link com.moparisthebest.poi.ss.usermodel.DataValidationConstraint.OperatorType} enum
 	 * @param expr1 date formula (when first char is '=') or formatted number value
 	 * @param expr2 date formula (when first char is '=') or formatted number value
 	 */
@@ -142,7 +142,7 @@ public class DVConstraint implements DataValidationConstraint {
 	 * formatted times, two formats are supported:  "HH:MM" or "HH:MM:SS".  This is contrary to 
 	 * Excel which uses the default time format from the OS.
 	 * 
-	 * @param comparisonOperator constant from {@link org.apache.poi.ss.usermodel.DataValidationConstraint.OperatorType} enum
+	 * @param comparisonOperator constant from {@link com.moparisthebest.poi.ss.usermodel.DataValidationConstraint.OperatorType} enum
 	 * @param expr1 date formula (when first char is '=') or formatted time value
 	 * @param expr2 date formula (when first char is '=') or formatted time value
 	 */
@@ -168,7 +168,7 @@ public class DVConstraint implements DataValidationConstraint {
 	 * the same convention).  To parse formatted dates, a date format needs to be specified.  This
 	 * is contrary to Excel which uses the default short date format from the OS.
 	 * 
-	 * @param comparisonOperator constant from {@link org.apache.poi.ss.usermodel.DataValidationConstraint.OperatorType} enum
+	 * @param comparisonOperator constant from {@link com.moparisthebest.poi.ss.usermodel.DataValidationConstraint.OperatorType} enum
 	 * @param expr1 date formula (when first char is '=') or formatted date value
 	 * @param expr2 date formula (when first char is '=') or formatted date value
 	 * @param dateFormat ignored if both expr1 and expr2 are formulas.  Default value is "YYYY/MM/DD"
@@ -274,7 +274,7 @@ public class DVConstraint implements DataValidationConstraint {
 	}
 	
 	/* (non-Javadoc)
-	 * @see org.apache.poi.hssf.usermodel.DataValidationConstraint#getValidationType()
+	 * @see com.moparisthebest.poi.hssf.usermodel.DataValidationConstraint#getValidationType()
 	 */
 	public int getValidationType() {
 		return _validationType;
@@ -294,26 +294,26 @@ public class DVConstraint implements DataValidationConstraint {
 		return _validationType == ValidationType.LIST && _explicitListValues != null;
 	}
 	/* (non-Javadoc)
-	 * @see org.apache.poi.hssf.usermodel.DataValidationConstraint#getOperator()
+	 * @see com.moparisthebest.poi.hssf.usermodel.DataValidationConstraint#getOperator()
 	 */
 	public int getOperator() {
 		return _operator;
 	}
 	/* (non-Javadoc)
-	 * @see org.apache.poi.hssf.usermodel.DataValidationConstraint#setOperator(int)
+	 * @see com.moparisthebest.poi.hssf.usermodel.DataValidationConstraint#setOperator(int)
 	 */
 	public void setOperator(int operator) {
 		_operator = operator;
 	}
 	
 	/* (non-Javadoc)
-	 * @see org.apache.poi.hssf.usermodel.DataValidationConstraint#getExplicitListValues()
+	 * @see com.moparisthebest.poi.hssf.usermodel.DataValidationConstraint#getExplicitListValues()
 	 */
 	public String[] getExplicitListValues() {
 		return _explicitListValues;
 	}
 	/* (non-Javadoc)
-	 * @see org.apache.poi.hssf.usermodel.DataValidationConstraint#setExplicitListValues(java.lang.String[])
+	 * @see com.moparisthebest.poi.hssf.usermodel.DataValidationConstraint#setExplicitListValues(java.lang.String[])
 	 */
 	public void setExplicitListValues(String[] explicitListValues) {
 		if (_validationType != ValidationType.LIST) {
@@ -324,13 +324,13 @@ public class DVConstraint implements DataValidationConstraint {
 	}
 
 	/* (non-Javadoc)
-	 * @see org.apache.poi.hssf.usermodel.DataValidationConstraint#getFormula1()
+	 * @see com.moparisthebest.poi.hssf.usermodel.DataValidationConstraint#getFormula1()
 	 */
 	public String getFormula1() {
 		return _formula1;
 	}
 	/* (non-Javadoc)
-	 * @see org.apache.poi.hssf.usermodel.DataValidationConstraint#setFormula1(java.lang.String)
+	 * @see com.moparisthebest.poi.hssf.usermodel.DataValidationConstraint#setFormula1(java.lang.String)
 	 */
 	public void setFormula1(String formula1) {
 		_value1 = null;
@@ -339,13 +339,13 @@ public class DVConstraint implements DataValidationConstraint {
 	}
 
 	/* (non-Javadoc)
-	 * @see org.apache.poi.hssf.usermodel.DataValidationConstraint#getFormula2()
+	 * @see com.moparisthebest.poi.hssf.usermodel.DataValidationConstraint#getFormula2()
 	 */
 	public String getFormula2() {
 		return _formula2;
 	}
 	/* (non-Javadoc)
-	 * @see org.apache.poi.hssf.usermodel.DataValidationConstraint#setFormula2(java.lang.String)
+	 * @see com.moparisthebest.poi.hssf.usermodel.DataValidationConstraint#setFormula2(java.lang.String)
 	 */
 	public void setFormula2(String formula2) {
 		_value2 = null;

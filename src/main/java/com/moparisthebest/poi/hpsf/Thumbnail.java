@@ -15,9 +15,9 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hpsf;
+package com.moparisthebest.poi.hpsf;
 
-import org.apache.poi.util.LittleEndian;
+import com.moparisthebest.poi.util.LittleEndian;
 /**
  * <p>Class to manipulate data in the Clipboard Variant ({@link
  * Variant#VT_CF VT_CF}) format.</p>

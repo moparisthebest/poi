@@ -14,7 +14,7 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 ==================================================================== */
-package org.apache.poi.poifs.crypt;
+package com.moparisthebest.poi.poifs.crypt;
 
 import java.io.EOFException;
 import java.io.IOException;
@@ -26,9 +26,9 @@ import javax.crypto.Cipher;
 import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.ShortBufferException;
 
-import org.apache.poi.EncryptedDocumentException;
-import org.apache.poi.util.Internal;
-import org.apache.poi.util.LittleEndianInputStream;
+import com.moparisthebest.poi.EncryptedDocumentException;
+import com.moparisthebest.poi.util.Internal;
+import com.moparisthebest.poi.util.LittleEndianInputStream;
 
 @Internal
 public abstract class ChunkedCipherInputStream extends LittleEndianInputStream {

@@ -15,13 +15,13 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.usermodel;
+package com.moparisthebest.poi.hssf.usermodel;
 
-import org.apache.poi.ddf.EscherClientAnchorRecord;
-import org.apache.poi.ddf.EscherRecord;
-import org.apache.poi.ss.SpreadsheetVersion;
-import org.apache.poi.ss.usermodel.ClientAnchor;
-import org.apache.poi.util.Removal;
+import com.moparisthebest.poi.ddf.EscherClientAnchorRecord;
+import com.moparisthebest.poi.ddf.EscherRecord;
+import com.moparisthebest.poi.ss.SpreadsheetVersion;
+import com.moparisthebest.poi.ss.usermodel.ClientAnchor;
+import com.moparisthebest.poi.util.Removal;
 
 /**
  * A client anchor is attached to an excel worksheet.  It anchors against a

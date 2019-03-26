@@ -17,13 +17,13 @@
 ==================================================================== */
         
 
-package org.apache.poi.poifs.storage;
+package com.moparisthebest.poi.poifs.storage;
 
-import org.apache.poi.poifs.common.POIFSBigBlockSize;
-import org.apache.poi.poifs.common.POIFSConstants;
-import org.apache.poi.poifs.filesystem.BATManaged;
-import org.apache.poi.poifs.filesystem.OPOIFSDocument;
-import org.apache.poi.poifs.property.RootProperty;
+import com.moparisthebest.poi.poifs.common.POIFSBigBlockSize;
+import com.moparisthebest.poi.poifs.common.POIFSConstants;
+import com.moparisthebest.poi.poifs.filesystem.BATManaged;
+import com.moparisthebest.poi.poifs.filesystem.OPOIFSDocument;
+import com.moparisthebest.poi.poifs.property.RootProperty;
 
 import java.util.*;
 

@@ -15,13 +15,13 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ddf;
+package com.moparisthebest.poi.ddf;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-import org.apache.poi.util.HexDump;
-import org.apache.poi.util.LittleEndian;
+import com.moparisthebest.poi.util.HexDump;
+import com.moparisthebest.poi.util.LittleEndian;
 
 /**
  * Escher array properties are the most weird construction ever invented

@@ -15,9 +15,9 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ss;
+package com.moparisthebest.poi.ss;
 
-import org.apache.poi.ss.util.CellReference;
+import com.moparisthebest.poi.ss.util.CellReference;
 
 /**
  * This enum allows spreadsheets from multiple Excel versions to be handled by the common code.

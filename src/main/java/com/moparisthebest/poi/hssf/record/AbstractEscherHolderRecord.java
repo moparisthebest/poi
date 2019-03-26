@@ -15,18 +15,18 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hssf.record;
+package com.moparisthebest.poi.hssf.record;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.poi.ddf.DefaultEscherRecordFactory;
-import org.apache.poi.ddf.EscherContainerRecord;
-import org.apache.poi.ddf.EscherRecord;
-import org.apache.poi.ddf.EscherRecordFactory;
-import org.apache.poi.ddf.NullEscherSerializationListener;
-import org.apache.poi.util.LittleEndian;
-import org.apache.poi.hssf.util.LazilyConcatenatedByteArray;
+import com.moparisthebest.poi.ddf.DefaultEscherRecordFactory;
+import com.moparisthebest.poi.ddf.EscherContainerRecord;
+import com.moparisthebest.poi.ddf.EscherRecord;
+import com.moparisthebest.poi.ddf.EscherRecordFactory;
+import com.moparisthebest.poi.ddf.NullEscherSerializationListener;
+import com.moparisthebest.poi.util.LittleEndian;
+import com.moparisthebest.poi.hssf.util.LazilyConcatenatedByteArray;
 
 /**
  * The escher container record is used to hold escher records.  It is abstract and

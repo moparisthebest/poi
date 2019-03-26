@@ -15,10 +15,10 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.ddf;
+package com.moparisthebest.poi.ddf;
 
-import org.apache.poi.util.LittleEndian;
-import org.apache.poi.util.HexDump;
+import com.moparisthebest.poi.util.LittleEndian;
+import com.moparisthebest.poi.util.HexDump;
 
 public class EscherBlipRecord extends EscherRecord {
     public static final short  RECORD_ID_START    = (short) 0xF018;

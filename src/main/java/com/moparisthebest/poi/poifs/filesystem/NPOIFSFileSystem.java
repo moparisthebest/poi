@@ -17,7 +17,7 @@
 ==================================================================== */
 
 
-package org.apache.poi.poifs.filesystem;
+package com.moparisthebest.poi.poifs.filesystem;
 
 import java.io.Closeable;
 import java.io.File;
@@ -36,29 +36,29 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
-import org.apache.poi.EmptyFileException;
-import org.apache.poi.poifs.common.POIFSBigBlockSize;
-import org.apache.poi.poifs.common.POIFSConstants;
-import org.apache.poi.poifs.dev.POIFSViewable;
-import org.apache.poi.poifs.nio.ByteArrayBackedDataSource;
-import org.apache.poi.poifs.nio.DataSource;
-import org.apache.poi.poifs.nio.FileBackedDataSource;
-import org.apache.poi.poifs.property.DirectoryProperty;
-import org.apache.poi.poifs.property.DocumentProperty;
-import org.apache.poi.poifs.property.NPropertyTable;
-import org.apache.poi.poifs.storage.BATBlock;
-import org.apache.poi.poifs.storage.BATBlock.BATBlockAndIndex;
-import org.apache.poi.poifs.storage.BlockAllocationTableReader;
-import org.apache.poi.poifs.storage.BlockAllocationTableWriter;
-import org.apache.poi.poifs.storage.HeaderBlock;
-import org.apache.poi.poifs.storage.HeaderBlockConstants;
-import org.apache.poi.poifs.storage.HeaderBlockWriter;
-import org.apache.poi.util.CloseIgnoringInputStream;
-import org.apache.poi.util.IOUtils;
-import org.apache.poi.util.Internal;
-import org.apache.poi.util.LongField;
-import org.apache.poi.util.POILogFactory;
-import org.apache.poi.util.POILogger;
+import com.moparisthebest.poi.EmptyFileException;
+import com.moparisthebest.poi.poifs.common.POIFSBigBlockSize;
+import com.moparisthebest.poi.poifs.common.POIFSConstants;
+import com.moparisthebest.poi.poifs.dev.POIFSViewable;
+import com.moparisthebest.poi.poifs.nio.ByteArrayBackedDataSource;
+import com.moparisthebest.poi.poifs.nio.DataSource;
+import com.moparisthebest.poi.poifs.nio.FileBackedDataSource;
+import com.moparisthebest.poi.poifs.property.DirectoryProperty;
+import com.moparisthebest.poi.poifs.property.DocumentProperty;
+import com.moparisthebest.poi.poifs.property.NPropertyTable;
+import com.moparisthebest.poi.poifs.storage.BATBlock;
+import com.moparisthebest.poi.poifs.storage.BATBlock.BATBlockAndIndex;
+import com.moparisthebest.poi.poifs.storage.BlockAllocationTableReader;
+import com.moparisthebest.poi.poifs.storage.BlockAllocationTableWriter;
+import com.moparisthebest.poi.poifs.storage.HeaderBlock;
+import com.moparisthebest.poi.poifs.storage.HeaderBlockConstants;
+import com.moparisthebest.poi.poifs.storage.HeaderBlockWriter;
+import com.moparisthebest.poi.util.CloseIgnoringInputStream;
+import com.moparisthebest.poi.util.IOUtils;
+import com.moparisthebest.poi.util.Internal;
+import com.moparisthebest.poi.util.LongField;
+import com.moparisthebest.poi.util.POILogFactory;
+import com.moparisthebest.poi.util.POILogger;
 
 /**
  * <p>This is the main class of the POIFS system; it manages the entire

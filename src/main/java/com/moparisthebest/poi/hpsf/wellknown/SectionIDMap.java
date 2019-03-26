@@ -15,11 +15,11 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.hpsf.wellknown;
+package com.moparisthebest.poi.hpsf.wellknown;
 
 import java.util.HashMap;
 
-import org.apache.poi.util.StringUtil;
+import com.moparisthebest.poi.util.StringUtil;
 
 /**
  * <p>Maps section format IDs to {@link PropertyIDMap}s. It is

@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package org.apache.poi.poifs.property;
+package com.moparisthebest.poi.poifs.property;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -23,13 +23,13 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Iterator;
 
-import org.apache.poi.hpsf.ClassID;
-import org.apache.poi.poifs.common.POIFSConstants;
-import org.apache.poi.poifs.dev.POIFSViewable;
-import org.apache.poi.util.ByteField;
-import org.apache.poi.util.IntegerField;
-import org.apache.poi.util.LittleEndianConsts;
-import org.apache.poi.util.ShortField;
+import com.moparisthebest.poi.hpsf.ClassID;
+import com.moparisthebest.poi.poifs.common.POIFSConstants;
+import com.moparisthebest.poi.poifs.dev.POIFSViewable;
+import com.moparisthebest.poi.util.ByteField;
+import com.moparisthebest.poi.util.IntegerField;
+import com.moparisthebest.poi.util.LittleEndianConsts;
+import com.moparisthebest.poi.util.ShortField;
 
 /**
  * This abstract base class is the ancestor of all classes
