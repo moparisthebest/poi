@@ -27,7 +27,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.moparisthebest.poi</groupId>
     <artifactId>poi-fast-calc</artifactId>
-    <version>3.16</version>
+    <version>3.17-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>POI Fast Calc</name>
     <url>https://code.moparisthebest.com/moparisthebest/poi</url>
