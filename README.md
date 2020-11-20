@@ -1,7 +1,7 @@
 POI Fast Calc
 ======================
 
-[![Travis-CI Build Status](https://api.travis-ci.org/moparisthebest/poi.svg?branch=master)](https://travis-ci.org/moparisthebest/poi)
+[![Build Status](https://ci.moparisthe.best/job/moparisthebest/job/poi/job/master/badge/icon%3Fstyle=plastic)](https://ci.moparisthe.best/job/moparisthebest/job/poi/job/master/)
 
 A Java library to calculate Excel formulas quickly.
 
